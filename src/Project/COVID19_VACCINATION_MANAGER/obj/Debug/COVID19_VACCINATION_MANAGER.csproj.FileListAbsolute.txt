@@ -1,0 +1,10 @@
+D:\workzone\Learning\PBL2\Project\COVID19_VACCINATION_MANAGER\bin\Debug\COVID19_VACCINATION_MANAGER.exe.config
+D:\workzone\Learning\PBL2\Project\COVID19_VACCINATION_MANAGER\bin\Debug\COVID19_VACCINATION_MANAGER.exe
+D:\workzone\Learning\PBL2\Project\COVID19_VACCINATION_MANAGER\bin\Debug\COVID19_VACCINATION_MANAGER.pdb
+D:\workzone\Learning\PBL2\Project\COVID19_VACCINATION_MANAGER\obj\Debug\COVID19_VACCINATION_MANAGER.csproj.AssemblyReference.cache
+D:\workzone\Learning\PBL2\Project\COVID19_VACCINATION_MANAGER\obj\Debug\COVID19_VACCINATION_MANAGER.Main.resources
+D:\workzone\Learning\PBL2\Project\COVID19_VACCINATION_MANAGER\obj\Debug\COVID19_VACCINATION_MANAGER.Properties.Resources.resources
+D:\workzone\Learning\PBL2\Project\COVID19_VACCINATION_MANAGER\obj\Debug\COVID19_VACCINATION_MANAGER.csproj.GenerateResource.cache
+D:\workzone\Learning\PBL2\Project\COVID19_VACCINATION_MANAGER\obj\Debug\COVID19_VACCINATION_MANAGER.csproj.CoreCompileInputs.cache
+D:\workzone\Learning\PBL2\Project\COVID19_VACCINATION_MANAGER\obj\Debug\COVID19_VACCINATION_MANAGER.exe
+D:\workzone\Learning\PBL2\Project\COVID19_VACCINATION_MANAGER\obj\Debug\COVID19_VACCINATION_MANAGER.pdb

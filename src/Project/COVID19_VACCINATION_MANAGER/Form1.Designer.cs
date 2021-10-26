@@ -554,6 +554,7 @@ namespace COVID19_VACCINATION_MANAGER
             this.Controls.Add(this.Manager);
             this.Name = "Main";
             this.Text = "COVID19_VACCINATION_MANAGER";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Main_FormClosing);
             this.Manager.ResumeLayout(false);
             this.loginTab.ResumeLayout(false);
             this.loginTab.PerformLayout();

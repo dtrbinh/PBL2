@@ -339,5 +339,15 @@ namespace COVID19_VACCINATION_MANAGER
             else MessageBox.Show("Mật khẩu không thể để trống.\nHãy nhập lại.", "THÔNG BÁO");
             checkUser();
         }
+
+        private void Main_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if (MessageBox.Show("Bạn có muốn thoát khỏi chương trình?", "THÔNG BÁO", MessageBoxButtons.YesNo) == DialogResult.Yes)
+                Application.Exit();
+            else
+            {
+               
+            }
+        }
     }
 }

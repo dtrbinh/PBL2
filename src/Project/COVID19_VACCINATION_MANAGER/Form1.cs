@@ -38,6 +38,7 @@ namespace COVID19_VACCINATION_MANAGER
                 accountManager_loginAlert.Visible = false;
                 bt_logout.Visible = true;
                 bt_refresh.Visible = true;
+                dataManager_menu.Visible = true;
             }
             else
             {
@@ -49,6 +50,7 @@ namespace COVID19_VACCINATION_MANAGER
                 accountManager_loginAlert.Visible = true;
                 bt_logout.Visible = false;
                 bt_refresh.Visible = false;
+                dataManager_menu.Visible = false;
             }
         }
         
@@ -139,12 +141,8 @@ namespace COVID19_VACCINATION_MANAGER
             {
                 loginBox_status.ForeColor = Color.Green;
                 loginBox_status.Text = "Đăng nhập thành công!";
-                accountManager_Info.Visible = true;
-                accountManager_changer.Visible = true;
-                accountManager_tabChanger.Visible = true;
-                accountManager_loginAlert.Visible = false;
-                bt_logout.Visible = true;
-                bt_refresh.Visible = true;
+                checkStatus();
+           
                 checkUser();
             }
             else
@@ -152,12 +150,8 @@ namespace COVID19_VACCINATION_MANAGER
                 MessageBox.Show("Sai tên tài khoản hoặc mật khẩu.", "THÔNG BÁO");
                 loginBox_status.ForeColor = Color.Red;
                 loginBox_status.Text = "Đăng nhập thất bại!";
-                accountManager_Info.Visible = false;
-                accountManager_changer.Visible = false;
-                accountManager_tabChanger.Visible = false;
-                accountManager_loginAlert.Visible = true;
-                bt_logout.Visible = false;
-                bt_refresh.Visible = false;
+                checkStatus();
+                
             }
 
 
@@ -190,42 +184,7 @@ namespace COVID19_VACCINATION_MANAGER
             }
         }
 
-        private void label1_Click_1(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label3_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void accountManager_Info_Enter(object sender, EventArgs e)
-        {
-
-        }
-
-        private void accoutManager_text1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label1_Click_2(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label2_Click_1(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label3_Click_1(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label4_Click(object sender, EventArgs e)
         {
 
         }
@@ -290,16 +249,6 @@ namespace COVID19_VACCINATION_MANAGER
 
         }
 
-        private void accountManager_username_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void bt_showPassword_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void button1_Click_1(object sender, EventArgs e)
         {
             Status.loginStatus = false;
@@ -348,6 +297,165 @@ namespace COVID19_VACCINATION_MANAGER
             {
                
             }
+        }
+
+
+        private void từFileToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void sortData_Click(object sender, EventArgs e)
+        {
+            if (Status.loginStatus == true) 
+            {
+                box_sortData.Visible = true;
+                box_inputFile.Visible = false;
+                box_inputHand.Visible = false;
+                box_deleteData.Visible = false;
+            }
+        }
+
+        private void inputHand_Click(object sender, EventArgs e)
+        {
+            if (Status.loginStatus == true)
+            {
+                box_inputHand.Visible = true;
+                box_inputFile.Visible = false;
+                box_sortData.Visible = false;
+                box_deleteData.Visible = false;
+            }        }
+
+        private void inputFile_Click(object sender, EventArgs e)
+        {
+            if (Status.loginStatus == true)
+            {
+                box_inputFile.Visible = true;
+                box_inputHand.Visible = false;
+                box_sortData.Visible = false;
+                box_deleteData.Visible = false;
+            }
+        }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void deleteData_Click(object sender, EventArgs e)
+        {
+            if (Status.loginStatus == true)
+            {
+                box_deleteData.Visible = true;
+                box_inputFile.Visible = false;
+                box_inputHand.Visible = false;
+                box_sortData.Visible = false;
+            }
+        }
+
+        private void Manager_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dữLiệuTiêmChủngToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dataManager_menu_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+
+        }
+
+        private void box_inputHand_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void box_sortData_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dataManagerTab_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void accountManager_tabChanger_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dataManager_input_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tabPage4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void accountManagerTab_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dữLiệuCôngDânToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void loginBox_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void box_deleteData_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void accountManager_newPassword_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dataManager_output_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tabPage3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void text3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void loginBox_password_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void accountManager_newPasswordCheck_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void toànBộThôngTinToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void accountManager_changer_Enter(object sender, EventArgs e)
+        {
+
         }
     }
 }

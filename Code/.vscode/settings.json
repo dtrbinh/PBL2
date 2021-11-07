@@ -5,6 +5,7 @@
         "string": "cpp",
         "ostream": "cpp",
         "fstream": "cpp",
-        "istream": "cpp"
+        "istream": "cpp",
+        "xiosbase": "cpp"
     }
 }

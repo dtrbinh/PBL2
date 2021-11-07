@@ -1,4 +1,3 @@
-#include"CongDan.h"
 #include"DanhSachCongDan.h"
 #include<string>
 #include<iostream>

@@ -31,6 +31,7 @@ class DSCD
         }
 
         // Chèn công dân vào vị trí bất kì mà vẫn giữ nguyên thứ tự
+        template <typename T>
         void Insert(CongDan CD[], CongDan cd, T tieuchi,  bool (*func_ptr)(T, T) = ascending);
 
         // Hàm tìm kiếm công dân
@@ -42,8 +43,8 @@ class DSCD
         void Sort(CongDan CD[], int n, T tieuchi, bool (*func_ptr)(T, T) = ascending);
         // 
         void Delete();
-
+        ~DSCD();
 };
 #endif
 template <typename T>
-void swap(int &num1, int &num2);
+void swap(T &x, T &y);

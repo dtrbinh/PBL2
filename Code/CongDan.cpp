@@ -1,0 +1,72 @@
+#include "CongDan.h"
+#include <string.h>
+#include <iostream>
+using namespace std;
+
+CongDan ::CongDan(int ma_CD, string fullname, int sex, string phone, string so_BHXH,
+                 string so_CMND, string address, string ngay_DK, string ma_DK, string noi_DK,
+                 bool mui1, bool mui2, string ngay_M1, string ngay_M2): ma_CD(ma_CD), fullName(fullname),
+                 sex(sex), phone(phone), so_BHXH(so_BHXH), so_CMND(so_CMND), address(address), ngay_DK(ngay_DK),
+                 ma_DK(ma_DK), mui1(mui1), mui2(mui2), ngay_M1(ngay_M1), ngay_M2(ngay_M2)
+{
+    count++;
+};
+
+CongDan ::~CongDan()
+{
+
+}
+
+istream &operator >> (istream &in, CongDan &CD)
+{
+    cout<<"Nhap vao ma cong dan: ";
+    in>>CD.ma_CD;
+    cout<<"Nhap vao ho ten: ";
+    fflush(stdin);
+    getline(in, CD.fullName);
+    cout<<"Nhap vao gioi tinh: ";
+    in>>CD.sex;
+    cout<<"Nhap vao so dien thoai: ";
+    fflush(stdin);
+    getline(in, CD.phone);
+    cout<<"Nhap vao so BHXH: ";
+    fflush(stdin);
+    getline(in, CD.so_BHXH);
+    cout<<"Nhap vao so CMND: ";
+    fflush(stdin);
+    getline(in, CD.so_CMND);
+    cout<<"Nhap vao dia chi: ";
+    fflush(stdin);
+    getline(in, CD.address);
+    cout<<"Nhap vao ngay dang ki: ";
+    fflush(stdin);
+    getline(in, CD.ngay_DK);
+    cout<<"Nhap vao ma dang ki: ";
+    fflush(stdin);
+    getline(in, CD.ma_DK);
+    cout<<"Nhap vao noi dang ki: ";
+    fflush(stdin);
+    getline(in, CD.noi_DK);
+    cout<<"Da tiem mui 1 chua: ";
+    in>>CD.mui1;
+    if (CD.mui1)
+    {
+        cout<<"Da tiem mui 2 chua: ";
+        in>>CD.mui2;
+    }
+    if(CD.mui1)
+    {
+        cout<<"Nhap ngay tiem mui 1: ";
+        fflush(stdin);
+        getline(in, CD.ngay_M1);
+    }
+
+    if(CD.mui2)
+    {
+        cout<<"Nhap ngay tiem mui 1: ";
+        fflush(stdin);
+        getline(in, CD.ngay_M2);
+    }
+    return in;
+
+}

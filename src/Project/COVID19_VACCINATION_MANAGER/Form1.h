@@ -1,0 +1,1367 @@
+﻿#pragma once
+#include<string.h>
+
+namespace CppCLRWinformsProjekt {
+
+	using namespace System;
+	using namespace System::ComponentModel;
+	using namespace System::Collections;
+	using namespace System::Windows::Forms;
+	using namespace System::Data;
+	using namespace System::Drawing;
+
+	/// <summary>
+	/// Zusammenfassung für Form1
+	/// </summary>
+	public ref class Form1 : public System::Windows::Forms::Form
+	{
+    private:
+        static bool loginStatus = false;
+        static int currentUser_ID = NULL;
+        static String ^currentUser_permission = "";
+        static String ^ADMIN0 = "admin", ^PASS0 = "admin", ^PER0 = "admin", ^NAME0 = "Administrator";
+        static String ^ADMIN1 = "dotranbinh", ^PASS1 = "dotranbinh", ^PER1 = "full per-user", ^NAME1 = L"Đỗ Trần Bình";
+        static String ^ADMIN2 = "lephiduy", ^PASS2 = "lephiduy", ^PER2 = "full per-user", ^NAME2 = L"Lê Phi Duy";
+    private: System::Windows::Forms::GroupBox^ boxDataManager;
+
+    private: System::Windows::Forms::GroupBox^ box_deleteData;
+    private: System::Windows::Forms::GroupBox^ box_sortData;
+    private: System::Windows::Forms::GroupBox^ box_inputHand;
+    private: System::Windows::Forms::GroupBox^ box_inputFile;
+    private: System::Windows::Forms::Button^ bt_inputFile;
+    private: System::Windows::Forms::TextBox^ fileName3;
+    private: System::Windows::Forms::TextBox^ fileName2;
+    private: System::Windows::Forms::Label^ label_fileName3;
+    private: System::Windows::Forms::Label^ label_fileName2;
+    private: System::Windows::Forms::Label^ label_fileName1;
+    private: System::Windows::Forms::TextBox^ fileName1;
+    private: System::Windows::Forms::MenuStrip^ dataManager_menu;
+
+    private: System::Windows::Forms::ToolStripMenuItem^ dataManager_input;
+
+    private: System::Windows::Forms::ToolStripMenuItem^ toolStripMenuItem2;
+    private: System::Windows::Forms::ToolStripMenuItem^ inputFile;
+    private: System::Windows::Forms::ToolStripMenuItem^ inputHand;
+
+
+    private: System::Windows::Forms::ToolStripMenuItem^ sortData;
+    private: System::Windows::Forms::ToolStripMenuItem^ deleteData;
+
+
+
+
+    private: System::Windows::Forms::ToolStripMenuItem^ dataManager_output;
+
+    private: System::Windows::Forms::ToolStripMenuItem^ toolStripMenuItem8;
+    private: System::Windows::Forms::ToolStripMenuItem^ toolStripMenuItem9;
+    private: System::Windows::Forms::ToolStripMenuItem^ toolStripMenuItem10;
+    private: System::Windows::Forms::GroupBox^ box_searchData;
+    private: System::Windows::Forms::ToolStripMenuItem^ searchData;
+    private: System::Windows::Forms::Label^ dataManager_loginAlert;
+
+    public: 
+        void checkStatus() {
+            if (loginStatus == true)
+            {
+                this->loginBox_status->ForeColor = Color::Green;
+                this->loginBox_status->Text = L"Đăng nhập thành công!";
+                this->accountManager_Info->Visible = true;
+                this->accountManager_changer->Visible = true;
+                this->accountManager_tabChanger->Visible = true;
+                this->accountManager_loginAlert->Visible = false;
+                this->dataManager_loginAlert->Visible = false;
+                this->bt_logout->Visible = true;
+                this->bt_refresh->Visible = true;
+                this->boxDataManager->Visible = true;
+               
+            }
+            else {
+                this->loginBox_status->ForeColor = Color::Red;
+                this->loginBox_status->Text = L"Chưa đăng nhập";
+                this->accountManager_Info->Visible = false;
+                this->accountManager_changer->Visible = false;
+                this->accountManager_tabChanger->Visible = false;
+                this->accountManager_loginAlert->Visible = true;
+                this->dataManager_loginAlert->Visible = true;
+                this->bt_logout->Visible = false;
+                this->bt_refresh->Visible = false;
+                this->boxDataManager->Visible = false;
+            
+            }
+        }
+        void checkUser() {
+            switch (currentUser_ID)
+            {
+            case 0:
+                this->accountManager_username->Text = ADMIN0;
+                this->accountManager_password->Text = PASS0;
+                this->currentUser_permission = PER0;
+                this->accountManager_permission->Text = currentUser_permission;
+                this->accountManager_fullname->Text = NAME0;
+                break;
+            case 1:
+                this->accountManager_username->Text = ADMIN1;
+                this->accountManager_password->Text = PASS1;
+                this->currentUser_permission = PER1;
+                this->accountManager_permission->Text = currentUser_permission;
+                this->accountManager_fullname->Text = NAME1;
+                break;
+            case 2:
+                this->accountManager_username->Text = ADMIN2;
+                this->accountManager_password->Text = PASS2;
+                this->currentUser_permission = PER2;
+                this->accountManager_permission->Text = currentUser_permission;
+                this->accountManager_fullname->Text = NAME2;
+                break;
+            default:
+                this->accountManager_username->Text = L"error";
+                this->accountManager_password->Text = L"error";
+                this->currentUser_permission = L"Permission Denied!";
+                this->accountManager_permission->Text = L"Permission Denied!";
+                this->accountManager_fullname->Text = L"error";
+                break;
+            }
+        }
+
+        void checkLoginStatus() {
+            if (loginStatus == true)
+            {
+                this->loginBox_status->ForeColor = Color::Green;
+                this->loginBox_status->Text = L"Đăng nhập thành công!";
+                checkStatus();
+                checkUser();
+            }
+            else
+            {
+                MessageBox::Show(L"Sai tên tài khoản hoặc mật khẩu.", L"THÔNG BÁO");
+                this->loginBox_status->ForeColor = Color::Red;
+                this->loginBox_status->Text = L"Đăng nhập thất bại!";
+                checkStatus();
+                checkUser();
+
+            }
+        }
+	public:
+		Form1(void)
+		{
+			InitializeComponent();
+			//
+			//TODO: Konstruktorcode hier hinzufügen.
+			//
+		}
+
+	protected:
+		/// <summary>
+		/// Verwendete Ressourcen bereinigen.
+		/// </summary>
+		~Form1()
+		{
+			if (components)
+			{
+				delete components;
+			}
+		}
+    private: System::Windows::Forms::Label^ accountManager_permission;
+    protected:
+    private: System::Windows::Forms::Button^ bt_saveFullname;
+    private: System::Windows::Forms::Label^ accountManager_fullname;
+    private: System::Windows::Forms::Label^ accountManager_password;
+    private: System::Windows::Forms::Label^ accountManager_username;
+    private: System::Windows::Forms::Label^ accoutManager_text4;
+    private: System::Windows::Forms::Label^ accountManager_text3;
+    private: System::Windows::Forms::Label^ accountManager_text2;
+    private: System::Windows::Forms::Label^ accoutManager_text1;
+    private: System::Windows::Forms::TabPage^ dataManagerTab;
+    private: System::Windows::Forms::TextBox^ accountManager_newFullname;
+    private: System::Windows::Forms::Label^ label4;
+    private: System::Windows::Forms::TabControl^ Manager;
+    private: System::Windows::Forms::TabPage^ loginTab;
+    private: System::Windows::Forms::Button^ bt_quit;
+    private: System::Windows::Forms::GroupBox^ loginBox;
+    private: System::Windows::Forms::Label^ text3;
+    private: System::Windows::Forms::Label^ loginBox_status;
+    private: System::Windows::Forms::Button^ bt_showPassword;
+    private: System::Windows::Forms::Button^ bt_login;
+    private: System::Windows::Forms::TextBox^ loginBox_password;
+    private: System::Windows::Forms::TextBox^ loginBox_username;
+    private: System::Windows::Forms::Label^ text2;
+    private: System::Windows::Forms::Label^ text1;
+    private: System::Windows::Forms::TabPage^ accountManagerTab;
+    private: System::Windows::Forms::Button^ bt_logout;
+    private: System::Windows::Forms::Label^ accountManager_loginAlert;
+    private: System::Windows::Forms::Button^ bt_refresh;
+    private: System::Windows::Forms::GroupBox^ accountManager_changer;
+    private: System::Windows::Forms::TabControl^ accountManager_tabChanger;
+    private: System::Windows::Forms::TabPage^ tabPage2;
+    private: System::Windows::Forms::Button^ bt_saveUsername;
+    private: System::Windows::Forms::TextBox^ accountManager_newUsername;
+    private: System::Windows::Forms::Label^ label1;
+    private: System::Windows::Forms::TabPage^ tabPage3;
+    private: System::Windows::Forms::TextBox^ accountManager_newPasswordCheck;
+    private: System::Windows::Forms::Label^ label3;
+    private: System::Windows::Forms::Button^ bt_savePassword;
+    private: System::Windows::Forms::TextBox^ accountManager_newPassword;
+    private: System::Windows::Forms::Label^ label2;
+    private: System::Windows::Forms::TabPage^ tabPage4;
+    private: System::Windows::Forms::GroupBox^ accountManager_Info;
+
+    protected:
+
+
+	private:
+		/// <summary>
+		/// Erforderliche Designervariable.
+		/// </summary>
+		System::ComponentModel::Container ^components;
+
+#pragma region Windows Form Designer generated code
+		/// <summary>
+		/// Erforderliche Methode für die Designerunterstützung.
+		/// Der Inhalt der Methode darf nicht mit dem Code-Editor geändert werden.
+		/// </summary>
+		void InitializeComponent(void)
+		{
+            this->accountManager_permission = (gcnew System::Windows::Forms::Label());
+            this->bt_saveFullname = (gcnew System::Windows::Forms::Button());
+            this->accountManager_fullname = (gcnew System::Windows::Forms::Label());
+            this->accountManager_password = (gcnew System::Windows::Forms::Label());
+            this->accountManager_username = (gcnew System::Windows::Forms::Label());
+            this->accoutManager_text4 = (gcnew System::Windows::Forms::Label());
+            this->accountManager_text3 = (gcnew System::Windows::Forms::Label());
+            this->accountManager_text2 = (gcnew System::Windows::Forms::Label());
+            this->accoutManager_text1 = (gcnew System::Windows::Forms::Label());
+            this->dataManagerTab = (gcnew System::Windows::Forms::TabPage());
+            this->boxDataManager = (gcnew System::Windows::Forms::GroupBox());
+            this->box_searchData = (gcnew System::Windows::Forms::GroupBox());
+            this->dataManager_menu = (gcnew System::Windows::Forms::MenuStrip());
+            this->dataManager_input = (gcnew System::Windows::Forms::ToolStripMenuItem());
+            this->toolStripMenuItem2 = (gcnew System::Windows::Forms::ToolStripMenuItem());
+            this->inputFile = (gcnew System::Windows::Forms::ToolStripMenuItem());
+            this->inputHand = (gcnew System::Windows::Forms::ToolStripMenuItem());
+            this->sortData = (gcnew System::Windows::Forms::ToolStripMenuItem());
+            this->deleteData = (gcnew System::Windows::Forms::ToolStripMenuItem());
+            this->searchData = (gcnew System::Windows::Forms::ToolStripMenuItem());
+            this->dataManager_output = (gcnew System::Windows::Forms::ToolStripMenuItem());
+            this->toolStripMenuItem8 = (gcnew System::Windows::Forms::ToolStripMenuItem());
+            this->toolStripMenuItem9 = (gcnew System::Windows::Forms::ToolStripMenuItem());
+            this->toolStripMenuItem10 = (gcnew System::Windows::Forms::ToolStripMenuItem());
+            this->box_deleteData = (gcnew System::Windows::Forms::GroupBox());
+            this->box_sortData = (gcnew System::Windows::Forms::GroupBox());
+            this->box_inputHand = (gcnew System::Windows::Forms::GroupBox());
+            this->box_inputFile = (gcnew System::Windows::Forms::GroupBox());
+            this->bt_inputFile = (gcnew System::Windows::Forms::Button());
+            this->fileName3 = (gcnew System::Windows::Forms::TextBox());
+            this->fileName2 = (gcnew System::Windows::Forms::TextBox());
+            this->label_fileName3 = (gcnew System::Windows::Forms::Label());
+            this->label_fileName2 = (gcnew System::Windows::Forms::Label());
+            this->label_fileName1 = (gcnew System::Windows::Forms::Label());
+            this->fileName1 = (gcnew System::Windows::Forms::TextBox());
+            this->accountManager_newFullname = (gcnew System::Windows::Forms::TextBox());
+            this->label4 = (gcnew System::Windows::Forms::Label());
+            this->Manager = (gcnew System::Windows::Forms::TabControl());
+            this->loginTab = (gcnew System::Windows::Forms::TabPage());
+            this->bt_quit = (gcnew System::Windows::Forms::Button());
+            this->loginBox = (gcnew System::Windows::Forms::GroupBox());
+            this->text3 = (gcnew System::Windows::Forms::Label());
+            this->loginBox_status = (gcnew System::Windows::Forms::Label());
+            this->bt_showPassword = (gcnew System::Windows::Forms::Button());
+            this->bt_login = (gcnew System::Windows::Forms::Button());
+            this->loginBox_password = (gcnew System::Windows::Forms::TextBox());
+            this->loginBox_username = (gcnew System::Windows::Forms::TextBox());
+            this->text2 = (gcnew System::Windows::Forms::Label());
+            this->text1 = (gcnew System::Windows::Forms::Label());
+            this->accountManagerTab = (gcnew System::Windows::Forms::TabPage());
+            this->bt_logout = (gcnew System::Windows::Forms::Button());
+            this->accountManager_loginAlert = (gcnew System::Windows::Forms::Label());
+            this->bt_refresh = (gcnew System::Windows::Forms::Button());
+            this->accountManager_changer = (gcnew System::Windows::Forms::GroupBox());
+            this->accountManager_tabChanger = (gcnew System::Windows::Forms::TabControl());
+            this->tabPage2 = (gcnew System::Windows::Forms::TabPage());
+            this->bt_saveUsername = (gcnew System::Windows::Forms::Button());
+            this->accountManager_newUsername = (gcnew System::Windows::Forms::TextBox());
+            this->label1 = (gcnew System::Windows::Forms::Label());
+            this->tabPage3 = (gcnew System::Windows::Forms::TabPage());
+            this->accountManager_newPasswordCheck = (gcnew System::Windows::Forms::TextBox());
+            this->label3 = (gcnew System::Windows::Forms::Label());
+            this->bt_savePassword = (gcnew System::Windows::Forms::Button());
+            this->accountManager_newPassword = (gcnew System::Windows::Forms::TextBox());
+            this->label2 = (gcnew System::Windows::Forms::Label());
+            this->tabPage4 = (gcnew System::Windows::Forms::TabPage());
+            this->accountManager_Info = (gcnew System::Windows::Forms::GroupBox());
+            this->dataManager_loginAlert = (gcnew System::Windows::Forms::Label());
+            this->dataManagerTab->SuspendLayout();
+            this->boxDataManager->SuspendLayout();
+            this->dataManager_menu->SuspendLayout();
+            this->box_inputFile->SuspendLayout();
+            this->Manager->SuspendLayout();
+            this->loginTab->SuspendLayout();
+            this->loginBox->SuspendLayout();
+            this->accountManagerTab->SuspendLayout();
+            this->accountManager_changer->SuspendLayout();
+            this->accountManager_tabChanger->SuspendLayout();
+            this->tabPage2->SuspendLayout();
+            this->tabPage3->SuspendLayout();
+            this->tabPage4->SuspendLayout();
+            this->accountManager_Info->SuspendLayout();
+            this->SuspendLayout();
+            // 
+            // accountManager_permission
+            // 
+            this->accountManager_permission->AutoSize = true;
+            this->accountManager_permission->Font = (gcnew System::Drawing::Font(L"MS Reference Sans Serif", 9, System::Drawing::FontStyle::Regular,
+                System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
+            this->accountManager_permission->Location = System::Drawing::Point(188, 121);
+            this->accountManager_permission->Name = L"accountManager_permission";
+            this->accountManager_permission->Size = System::Drawing::Size(54, 19);
+            this->accountManager_permission->TabIndex = 7;
+            this->accountManager_permission->Text = L"admin";
+            // 
+            // bt_saveFullname
+            // 
+            this->bt_saveFullname->Font = (gcnew System::Drawing::Font(L"MS Reference Sans Serif", 9, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+                static_cast<System::Byte>(0)));
+            this->bt_saveFullname->Location = System::Drawing::Point(181, 89);
+            this->bt_saveFullname->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
+            this->bt_saveFullname->Name = L"bt_saveFullname";
+            this->bt_saveFullname->Size = System::Drawing::Size(75, 31);
+            this->bt_saveFullname->TabIndex = 5;
+            this->bt_saveFullname->Text = L"Lưu";
+            this->bt_saveFullname->UseVisualStyleBackColor = true;
+            this->bt_saveFullname->Click += gcnew System::EventHandler(this, &Form1::bt_saveFullname_Click);
+            // 
+            // accountManager_fullname
+            // 
+            this->accountManager_fullname->AutoSize = true;
+            this->accountManager_fullname->Font = (gcnew System::Drawing::Font(L"MS Reference Sans Serif", 9, System::Drawing::FontStyle::Regular,
+                System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
+            this->accountManager_fullname->Location = System::Drawing::Point(188, 90);
+            this->accountManager_fullname->Name = L"accountManager_fullname";
+            this->accountManager_fullname->Size = System::Drawing::Size(54, 19);
+            this->accountManager_fullname->TabIndex = 6;
+            this->accountManager_fullname->Text = L"admin";
+            // 
+            // accountManager_password
+            // 
+            this->accountManager_password->AutoSize = true;
+            this->accountManager_password->Font = (gcnew System::Drawing::Font(L"MS Reference Sans Serif", 9, System::Drawing::FontStyle::Regular,
+                System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
+            this->accountManager_password->Location = System::Drawing::Point(188, 60);
+            this->accountManager_password->Name = L"accountManager_password";
+            this->accountManager_password->Size = System::Drawing::Size(54, 19);
+            this->accountManager_password->TabIndex = 5;
+            this->accountManager_password->Text = L"admin";
+            // 
+            // accountManager_username
+            // 
+            this->accountManager_username->AutoSize = true;
+            this->accountManager_username->Font = (gcnew System::Drawing::Font(L"MS Reference Sans Serif", 9, System::Drawing::FontStyle::Regular,
+                System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
+            this->accountManager_username->Location = System::Drawing::Point(188, 30);
+            this->accountManager_username->Name = L"accountManager_username";
+            this->accountManager_username->Size = System::Drawing::Size(54, 19);
+            this->accountManager_username->TabIndex = 4;
+            this->accountManager_username->Text = L"admin";
+            // 
+            // accoutManager_text4
+            // 
+            this->accoutManager_text4->AutoSize = true;
+            this->accoutManager_text4->Font = (gcnew System::Drawing::Font(L"MS Reference Sans Serif", 9, System::Drawing::FontStyle::Regular,
+                System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
+            this->accoutManager_text4->Location = System::Drawing::Point(20, 121);
+            this->accoutManager_text4->Name = L"accoutManager_text4";
+            this->accoutManager_text4->Size = System::Drawing::Size(95, 19);
+            this->accoutManager_text4->TabIndex = 3;
+            this->accoutManager_text4->Text = L"Phân quyền";
+            // 
+            // accountManager_text3
+            // 
+            this->accountManager_text3->AutoSize = true;
+            this->accountManager_text3->Font = (gcnew System::Drawing::Font(L"MS Reference Sans Serif", 9, System::Drawing::FontStyle::Regular,
+                System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
+            this->accountManager_text3->Location = System::Drawing::Point(20, 90);
+            this->accountManager_text3->Name = L"accountManager_text3";
+            this->accountManager_text3->Size = System::Drawing::Size(141, 19);
+            this->accountManager_text3->TabIndex = 2;
+            this->accountManager_text3->Text = L"Tên chủ tài khoản";
+            // 
+            // accountManager_text2
+            // 
+            this->accountManager_text2->AutoSize = true;
+            this->accountManager_text2->Font = (gcnew System::Drawing::Font(L"MS Reference Sans Serif", 9, System::Drawing::FontStyle::Regular,
+                System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
+            this->accountManager_text2->Location = System::Drawing::Point(20, 60);
+            this->accountManager_text2->Name = L"accountManager_text2";
+            this->accountManager_text2->Size = System::Drawing::Size(78, 19);
+            this->accountManager_text2->TabIndex = 1;
+            this->accountManager_text2->Text = L"Mật khẩu";
+            // 
+            // accoutManager_text1
+            // 
+            this->accoutManager_text1->AutoSize = true;
+            this->accoutManager_text1->Font = (gcnew System::Drawing::Font(L"MS Reference Sans Serif", 9, System::Drawing::FontStyle::Regular,
+                System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
+            this->accoutManager_text1->Location = System::Drawing::Point(20, 30);
+            this->accoutManager_text1->Name = L"accoutManager_text1";
+            this->accoutManager_text1->Size = System::Drawing::Size(118, 19);
+            this->accoutManager_text1->TabIndex = 0;
+            this->accoutManager_text1->Text = L"Tên đăng nhập";
+            // 
+            // dataManagerTab
+            // 
+            this->dataManagerTab->Controls->Add(this->boxDataManager);
+            this->dataManagerTab->Font = (gcnew System::Drawing::Font(L"MS Reference Sans Serif", 9, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+                static_cast<System::Byte>(0)));
+            this->dataManagerTab->Location = System::Drawing::Point(4, 28);
+            this->dataManagerTab->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
+            this->dataManagerTab->Name = L"dataManagerTab";
+            this->dataManagerTab->Padding = System::Windows::Forms::Padding(3, 2, 3, 2);
+            this->dataManagerTab->Size = System::Drawing::Size(650, 397);
+            this->dataManagerTab->TabIndex = 2;
+            this->dataManagerTab->Text = L"Quản lý dữ liệu";
+            this->dataManagerTab->UseVisualStyleBackColor = true;
+            this->dataManagerTab->Click += gcnew System::EventHandler(this, &Form1::dataManagerTab_Click);
+            // 
+            // boxDataManager
+            // 
+            this->boxDataManager->Controls->Add(this->box_searchData);
+            this->boxDataManager->Controls->Add(this->dataManager_menu);
+            this->boxDataManager->Controls->Add(this->box_deleteData);
+            this->boxDataManager->Controls->Add(this->box_sortData);
+            this->boxDataManager->Controls->Add(this->box_inputHand);
+            this->boxDataManager->Controls->Add(this->box_inputFile);
+            this->boxDataManager->Location = System::Drawing::Point(-4, 0);
+            this->boxDataManager->Name = L"boxDataManager";
+            this->boxDataManager->Size = System::Drawing::Size(654, 397);
+            this->boxDataManager->TabIndex = 3;
+            this->boxDataManager->TabStop = false;
+            // 
+            // box_searchData
+            // 
+            this->box_searchData->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Bottom)
+                | System::Windows::Forms::AnchorStyles::Left)
+                | System::Windows::Forms::AnchorStyles::Right));
+            this->box_searchData->Font = (gcnew System::Drawing::Font(L"MS Reference Sans Serif", 9, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+                static_cast<System::Byte>(0)));
+            this->box_searchData->Location = System::Drawing::Point(0, 51);
+            this->box_searchData->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
+            this->box_searchData->Name = L"box_searchData";
+            this->box_searchData->Padding = System::Windows::Forms::Padding(3, 2, 3, 2);
+            this->box_searchData->Size = System::Drawing::Size(654, 346);
+            this->box_searchData->TabIndex = 5;
+            this->box_searchData->TabStop = false;
+            this->box_searchData->Text = L"Tìm kiếm";
+            this->box_searchData->Visible = false;
+            // 
+            // dataManager_menu
+            // 
+            this->dataManager_menu->Font = (gcnew System::Drawing::Font(L"MS Reference Sans Serif", 9, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+                static_cast<System::Byte>(0)));
+            this->dataManager_menu->ImageScalingSize = System::Drawing::Size(20, 20);
+            this->dataManager_menu->Items->AddRange(gcnew cli::array< System::Windows::Forms::ToolStripItem^  >(2) {
+                this->dataManager_input,
+                    this->dataManager_output
+            });
+            this->dataManager_menu->Location = System::Drawing::Point(3, 22);
+            this->dataManager_menu->Name = L"dataManager_menu";
+            this->dataManager_menu->Padding = System::Windows::Forms::Padding(5, 2, 0, 2);
+            this->dataManager_menu->Size = System::Drawing::Size(648, 27);
+            this->dataManager_menu->TabIndex = 7;
+            this->dataManager_menu->Text = L"menuStrip1";
+            // 
+            // dataManager_input
+            // 
+            this->dataManager_input->DropDownItems->AddRange(gcnew cli::array< System::Windows::Forms::ToolStripItem^  >(4) {
+                this->toolStripMenuItem2,
+                    this->sortData, this->deleteData, this->searchData
+            });
+            this->dataManager_input->Font = (gcnew System::Drawing::Font(L"MS Reference Sans Serif", 9, System::Drawing::FontStyle::Regular,
+                System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
+            this->dataManager_input->Name = L"dataManager_input";
+            this->dataManager_input->Size = System::Drawing::Size(149, 23);
+            this->dataManager_input->Text = L"Chỉnh sửa dữ liệu";
+            // 
+            // toolStripMenuItem2
+            // 
+            this->toolStripMenuItem2->DropDownItems->AddRange(gcnew cli::array< System::Windows::Forms::ToolStripItem^  >(2) {
+                this->inputFile,
+                    this->inputHand
+            });
+            this->toolStripMenuItem2->Font = (gcnew System::Drawing::Font(L"MS Reference Sans Serif", 9, System::Drawing::FontStyle::Regular,
+                System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
+            this->toolStripMenuItem2->Name = L"toolStripMenuItem2";
+            this->toolStripMenuItem2->Size = System::Drawing::Size(224, 26);
+            this->toolStripMenuItem2->Text = L"Nhập dữ liệu";
+            // 
+            // inputFile
+            // 
+            this->inputFile->Font = (gcnew System::Drawing::Font(L"MS Reference Sans Serif", 9, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+                static_cast<System::Byte>(0)));
+            this->inputFile->Name = L"inputFile";
+            this->inputFile->Size = System::Drawing::Size(224, 26);
+            this->inputFile->Text = L"Từ tập tin dữ liệu";
+            this->inputFile->Click += gcnew System::EventHandler(this, &Form1::inputFile_Click);
+            // 
+            // inputHand
+            // 
+            this->inputHand->Font = (gcnew System::Drawing::Font(L"MS Reference Sans Serif", 9, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+                static_cast<System::Byte>(0)));
+            this->inputHand->Name = L"inputHand";
+            this->inputHand->Size = System::Drawing::Size(224, 26);
+            this->inputHand->Text = L"Thủ công";
+            this->inputHand->Click += gcnew System::EventHandler(this, &Form1::inputHand_Click);
+            // 
+            // sortData
+            // 
+            this->sortData->Font = (gcnew System::Drawing::Font(L"MS Reference Sans Serif", 9, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+                static_cast<System::Byte>(0)));
+            this->sortData->Name = L"sortData";
+            this->sortData->Size = System::Drawing::Size(224, 26);
+            this->sortData->Text = L"Sắp xếp dữ liệu";
+            this->sortData->Click += gcnew System::EventHandler(this, &Form1::sortData_Click_1);
+            // 
+            // deleteData
+            // 
+            this->deleteData->Font = (gcnew System::Drawing::Font(L"MS Reference Sans Serif", 9, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+                static_cast<System::Byte>(0)));
+            this->deleteData->Name = L"deleteData";
+            this->deleteData->Size = System::Drawing::Size(224, 26);
+            this->deleteData->Text = L"Xoá dữ liệu";
+            this->deleteData->Click += gcnew System::EventHandler(this, &Form1::deleteData_Click_1);
+            // 
+            // searchData
+            // 
+            this->searchData->Name = L"searchData";
+            this->searchData->Size = System::Drawing::Size(224, 26);
+            this->searchData->Text = L"Tìm kiếm";
+            this->searchData->Click += gcnew System::EventHandler(this, &Form1::searchData_Click);
+            // 
+            // dataManager_output
+            // 
+            this->dataManager_output->DropDownItems->AddRange(gcnew cli::array< System::Windows::Forms::ToolStripItem^  >(3) {
+                this->toolStripMenuItem8,
+                    this->toolStripMenuItem9, this->toolStripMenuItem10
+            });
+            this->dataManager_output->Font = (gcnew System::Drawing::Font(L"MS Reference Sans Serif", 9, System::Drawing::FontStyle::Regular,
+                System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
+            this->dataManager_output->Name = L"dataManager_output";
+            this->dataManager_output->Size = System::Drawing::Size(110, 23);
+            this->dataManager_output->Text = L"Xuất dữ liệu";
+            // 
+            // toolStripMenuItem8
+            // 
+            this->toolStripMenuItem8->Font = (gcnew System::Drawing::Font(L"MS Reference Sans Serif", 9, System::Drawing::FontStyle::Regular,
+                System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
+            this->toolStripMenuItem8->Name = L"toolStripMenuItem8";
+            this->toolStripMenuItem8->Size = System::Drawing::Size(229, 26);
+            this->toolStripMenuItem8->Text = L"Toàn bộ dữ liệu";
+            // 
+            // toolStripMenuItem9
+            // 
+            this->toolStripMenuItem9->Font = (gcnew System::Drawing::Font(L"MS Reference Sans Serif", 9, System::Drawing::FontStyle::Regular,
+                System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
+            this->toolStripMenuItem9->Name = L"toolStripMenuItem9";
+            this->toolStripMenuItem9->Size = System::Drawing::Size(229, 26);
+            this->toolStripMenuItem9->Text = L"Dữ liệu công dân";
+            // 
+            // toolStripMenuItem10
+            // 
+            this->toolStripMenuItem10->Font = (gcnew System::Drawing::Font(L"MS Reference Sans Serif", 9, System::Drawing::FontStyle::Regular,
+                System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
+            this->toolStripMenuItem10->Name = L"toolStripMenuItem10";
+            this->toolStripMenuItem10->Size = System::Drawing::Size(229, 26);
+            this->toolStripMenuItem10->Text = L"Dữ liệu tiêm chủng";
+            // 
+            // box_deleteData
+            // 
+            this->box_deleteData->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Bottom)
+                | System::Windows::Forms::AnchorStyles::Left)
+                | System::Windows::Forms::AnchorStyles::Right));
+            this->box_deleteData->Font = (gcnew System::Drawing::Font(L"MS Reference Sans Serif", 9, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+                static_cast<System::Byte>(0)));
+            this->box_deleteData->Location = System::Drawing::Point(0, 51);
+            this->box_deleteData->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
+            this->box_deleteData->Name = L"box_deleteData";
+            this->box_deleteData->Padding = System::Windows::Forms::Padding(3, 2, 3, 2);
+            this->box_deleteData->Size = System::Drawing::Size(654, 346);
+            this->box_deleteData->TabIndex = 4;
+            this->box_deleteData->TabStop = false;
+            this->box_deleteData->Text = L"Xoá dữ liệu";
+            this->box_deleteData->Visible = false;
+            // 
+            // box_sortData
+            // 
+            this->box_sortData->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Bottom)
+                | System::Windows::Forms::AnchorStyles::Left)
+                | System::Windows::Forms::AnchorStyles::Right));
+            this->box_sortData->Font = (gcnew System::Drawing::Font(L"MS Reference Sans Serif", 9, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+                static_cast<System::Byte>(0)));
+            this->box_sortData->Location = System::Drawing::Point(0, 51);
+            this->box_sortData->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
+            this->box_sortData->Name = L"box_sortData";
+            this->box_sortData->Padding = System::Windows::Forms::Padding(3, 2, 3, 2);
+            this->box_sortData->Size = System::Drawing::Size(654, 346);
+            this->box_sortData->TabIndex = 3;
+            this->box_sortData->TabStop = false;
+            this->box_sortData->Text = L"Sắp xếp dữ liệu";
+            this->box_sortData->Visible = false;
+            // 
+            // box_inputHand
+            // 
+            this->box_inputHand->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Bottom)
+                | System::Windows::Forms::AnchorStyles::Left)
+                | System::Windows::Forms::AnchorStyles::Right));
+            this->box_inputHand->Font = (gcnew System::Drawing::Font(L"MS Reference Sans Serif", 9, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+                static_cast<System::Byte>(0)));
+            this->box_inputHand->Location = System::Drawing::Point(0, 51);
+            this->box_inputHand->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
+            this->box_inputHand->Name = L"box_inputHand";
+            this->box_inputHand->Padding = System::Windows::Forms::Padding(3, 2, 3, 2);
+            this->box_inputHand->Size = System::Drawing::Size(654, 346);
+            this->box_inputHand->TabIndex = 6;
+            this->box_inputHand->TabStop = false;
+            this->box_inputHand->Text = L"Nhập dữ liệu thủ công";
+            this->box_inputHand->Visible = false;
+            // 
+            // box_inputFile
+            // 
+            this->box_inputFile->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Bottom)
+                | System::Windows::Forms::AnchorStyles::Left)
+                | System::Windows::Forms::AnchorStyles::Right));
+            this->box_inputFile->Controls->Add(this->bt_inputFile);
+            this->box_inputFile->Controls->Add(this->fileName3);
+            this->box_inputFile->Controls->Add(this->fileName2);
+            this->box_inputFile->Controls->Add(this->label_fileName3);
+            this->box_inputFile->Controls->Add(this->label_fileName2);
+            this->box_inputFile->Controls->Add(this->label_fileName1);
+            this->box_inputFile->Controls->Add(this->fileName1);
+            this->box_inputFile->Font = (gcnew System::Drawing::Font(L"MS Reference Sans Serif", 9, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+                static_cast<System::Byte>(0)));
+            this->box_inputFile->Location = System::Drawing::Point(0, 51);
+            this->box_inputFile->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
+            this->box_inputFile->Name = L"box_inputFile";
+            this->box_inputFile->Padding = System::Windows::Forms::Padding(3, 2, 3, 2);
+            this->box_inputFile->Size = System::Drawing::Size(654, 346);
+            this->box_inputFile->TabIndex = 5;
+            this->box_inputFile->TabStop = false;
+            this->box_inputFile->Text = L"Nhập dữ liệu từ tập tin";
+            this->box_inputFile->Visible = false;
+            // 
+            // bt_inputFile
+            // 
+            this->bt_inputFile->Location = System::Drawing::Point(363, 162);
+            this->bt_inputFile->Margin = System::Windows::Forms::Padding(4);
+            this->bt_inputFile->Name = L"bt_inputFile";
+            this->bt_inputFile->Size = System::Drawing::Size(100, 28);
+            this->bt_inputFile->TabIndex = 6;
+            this->bt_inputFile->Text = L"Nhập";
+            this->bt_inputFile->UseVisualStyleBackColor = true;
+            // 
+            // fileName3
+            // 
+            this->fileName3->Location = System::Drawing::Point(320, 117);
+            this->fileName3->Margin = System::Windows::Forms::Padding(4);
+            this->fileName3->Name = L"fileName3";
+            this->fileName3->Size = System::Drawing::Size(185, 26);
+            this->fileName3->TabIndex = 5;
+            // 
+            // fileName2
+            // 
+            this->fileName2->Location = System::Drawing::Point(320, 80);
+            this->fileName2->Margin = System::Windows::Forms::Padding(4);
+            this->fileName2->Name = L"fileName2";
+            this->fileName2->Size = System::Drawing::Size(185, 26);
+            this->fileName2->TabIndex = 4;
+            // 
+            // label_fileName3
+            // 
+            this->label_fileName3->AutoSize = true;
+            this->label_fileName3->Location = System::Drawing::Point(40, 117);
+            this->label_fileName3->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
+            this->label_fileName3->Name = L"label_fileName3";
+            this->label_fileName3->Size = System::Drawing::Size(236, 19);
+            this->label_fileName3->TabIndex = 3;
+            this->label_fileName3->Text = L"Nhập file dữ liệu tiêm chủng(*)";
+            // 
+            // label_fileName2
+            // 
+            this->label_fileName2->AutoSize = true;
+            this->label_fileName2->Location = System::Drawing::Point(40, 80);
+            this->label_fileName2->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
+            this->label_fileName2->Name = L"label_fileName2";
+            this->label_fileName2->Size = System::Drawing::Size(222, 19);
+            this->label_fileName2->TabIndex = 2;
+            this->label_fileName2->Text = L"Nhập file dữ liệu công dân(*)";
+            // 
+            // label_fileName1
+            // 
+            this->label_fileName1->AutoSize = true;
+            this->label_fileName1->Location = System::Drawing::Point(40, 43);
+            this->label_fileName1->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
+            this->label_fileName1->Name = L"label_fileName1";
+            this->label_fileName1->Size = System::Drawing::Size(165, 19);
+            this->label_fileName1->TabIndex = 1;
+            this->label_fileName1->Text = L"Nhập file đăng ký (*)";
+            // 
+            // fileName1
+            // 
+            this->fileName1->Location = System::Drawing::Point(320, 43);
+            this->fileName1->Margin = System::Windows::Forms::Padding(4);
+            this->fileName1->Name = L"fileName1";
+            this->fileName1->Size = System::Drawing::Size(185, 26);
+            this->fileName1->TabIndex = 0;
+            // 
+            // accountManager_newFullname
+            // 
+            this->accountManager_newFullname->Font = (gcnew System::Drawing::Font(L"MS Reference Sans Serif", 9, System::Drawing::FontStyle::Regular,
+                System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
+            this->accountManager_newFullname->Location = System::Drawing::Point(213, 36);
+            this->accountManager_newFullname->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
+            this->accountManager_newFullname->Name = L"accountManager_newFullname";
+            this->accountManager_newFullname->Size = System::Drawing::Size(175, 26);
+            this->accountManager_newFullname->TabIndex = 4;
+            // 
+            // label4
+            // 
+            this->label4->AutoSize = true;
+            this->label4->Font = (gcnew System::Drawing::Font(L"MS Reference Sans Serif", 9, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+                static_cast<System::Byte>(0)));
+            this->label4->Location = System::Drawing::Point(12, 39);
+            this->label4->Name = L"label4";
+            this->label4->Size = System::Drawing::Size(174, 19);
+            this->label4->TabIndex = 3;
+            this->label4->Text = L"Tên chủ tài khoản mới";
+            // 
+            // Manager
+            // 
+            this->Manager->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Bottom)
+                | System::Windows::Forms::AnchorStyles::Left)
+                | System::Windows::Forms::AnchorStyles::Right));
+            this->Manager->Controls->Add(this->loginTab);
+            this->Manager->Controls->Add(this->accountManagerTab);
+            this->Manager->Controls->Add(this->dataManagerTab);
+            this->Manager->Font = (gcnew System::Drawing::Font(L"MS Reference Sans Serif", 9, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+                static_cast<System::Byte>(0)));
+            this->Manager->Location = System::Drawing::Point(12, 12);
+            this->Manager->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
+            this->Manager->Name = L"Manager";
+            this->Manager->SelectedIndex = 0;
+            this->Manager->Size = System::Drawing::Size(658, 429);
+            this->Manager->TabIndex = 1;
+            // 
+            // loginTab
+            // 
+            this->loginTab->Controls->Add(this->bt_quit);
+            this->loginTab->Controls->Add(this->loginBox);
+            this->loginTab->Font = (gcnew System::Drawing::Font(L"MS Reference Sans Serif", 9, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+                static_cast<System::Byte>(0)));
+            this->loginTab->ForeColor = System::Drawing::SystemColors::ActiveCaptionText;
+            this->loginTab->Location = System::Drawing::Point(4, 28);
+            this->loginTab->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
+            this->loginTab->Name = L"loginTab";
+            this->loginTab->Padding = System::Windows::Forms::Padding(3, 2, 3, 2);
+            this->loginTab->Size = System::Drawing::Size(650, 397);
+            this->loginTab->TabIndex = 0;
+            this->loginTab->Text = L"Đăng nhập";
+            this->loginTab->UseVisualStyleBackColor = true;
+            // 
+            // bt_quit
+            // 
+            this->bt_quit->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((System::Windows::Forms::AnchorStyles::Bottom | System::Windows::Forms::AnchorStyles::Right));
+            this->bt_quit->Font = (gcnew System::Drawing::Font(L"MS Reference Sans Serif", 9, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+                static_cast<System::Byte>(0)));
+            this->bt_quit->Location = System::Drawing::Point(570, 362);
+            this->bt_quit->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
+            this->bt_quit->Name = L"bt_quit";
+            this->bt_quit->Size = System::Drawing::Size(75, 28);
+            this->bt_quit->TabIndex = 1;
+            this->bt_quit->Text = L"Thoát";
+            this->bt_quit->UseVisualStyleBackColor = true;
+            // 
+            // loginBox
+            // 
+            this->loginBox->Anchor = System::Windows::Forms::AnchorStyles::None;
+            this->loginBox->AutoSize = true;
+            this->loginBox->BackColor = System::Drawing::Color::LightGray;
+            this->loginBox->Controls->Add(this->text3);
+            this->loginBox->Controls->Add(this->loginBox_status);
+            this->loginBox->Controls->Add(this->bt_showPassword);
+            this->loginBox->Controls->Add(this->bt_login);
+            this->loginBox->Controls->Add(this->loginBox_password);
+            this->loginBox->Controls->Add(this->loginBox_username);
+            this->loginBox->Controls->Add(this->text2);
+            this->loginBox->Controls->Add(this->text1);
+            this->loginBox->Font = (gcnew System::Drawing::Font(L"MS Reference Sans Serif", 9, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+                static_cast<System::Byte>(0)));
+            this->loginBox->ForeColor = System::Drawing::SystemColors::ActiveCaptionText;
+            this->loginBox->Location = System::Drawing::Point(133, 106);
+            this->loginBox->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
+            this->loginBox->Name = L"loginBox";
+            this->loginBox->Padding = System::Windows::Forms::Padding(3, 2, 3, 2);
+            this->loginBox->Size = System::Drawing::Size(389, 198);
+            this->loginBox->TabIndex = 0;
+            this->loginBox->TabStop = false;
+            this->loginBox->Text = L"Thông tin đăng nhập";
+            // 
+            // text3
+            // 
+            this->text3->AutoSize = true;
+            this->text3->Font = (gcnew System::Drawing::Font(L"MS Reference Sans Serif", 9, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+                static_cast<System::Byte>(0)));
+            this->text3->Location = System::Drawing::Point(72, 149);
+            this->text3->Name = L"text3";
+            this->text3->Size = System::Drawing::Size(83, 19);
+            this->text3->TabIndex = 7;
+            this->text3->Text = L"Trạng thái";
+            // 
+            // loginBox_status
+            // 
+            this->loginBox_status->AutoSize = true;
+            this->loginBox_status->Font = (gcnew System::Drawing::Font(L"MS Reference Sans Serif", 9, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+                static_cast<System::Byte>(0)));
+            this->loginBox_status->ForeColor = System::Drawing::Color::Red;
+            this->loginBox_status->Location = System::Drawing::Point(168, 149);
+            this->loginBox_status->Name = L"loginBox_status";
+            this->loginBox_status->Size = System::Drawing::Size(130, 19);
+            this->loginBox_status->TabIndex = 6;
+            this->loginBox_status->Text = L"Chưa đăng nhập";
+            // 
+            // bt_showPassword
+            // 
+            this->bt_showPassword->Font = (gcnew System::Drawing::Font(L"MS Reference Sans Serif", 9, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+                static_cast<System::Byte>(0)));
+            this->bt_showPassword->ForeColor = System::Drawing::SystemColors::ActiveCaptionText;
+            this->bt_showPassword->Location = System::Drawing::Point(331, 78);
+            this->bt_showPassword->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
+            this->bt_showPassword->Name = L"bt_showPassword";
+            this->bt_showPassword->Size = System::Drawing::Size(31, 25);
+            this->bt_showPassword->TabIndex = 5;
+            this->bt_showPassword->UseVisualStyleBackColor = true;
+            this->bt_showPassword->MouseDown += gcnew System::Windows::Forms::MouseEventHandler(this, &Form1::bt_showPassword_MouseDown);
+            this->bt_showPassword->MouseUp += gcnew System::Windows::Forms::MouseEventHandler(this, &Form1::bt_showPassword_MouseUp);
+            // 
+            // bt_login
+            // 
+            this->bt_login->Font = (gcnew System::Drawing::Font(L"MS Reference Sans Serif", 9, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+                static_cast<System::Byte>(0)));
+            this->bt_login->Location = System::Drawing::Point(184, 113);
+            this->bt_login->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
+            this->bt_login->Name = L"bt_login";
+            this->bt_login->Size = System::Drawing::Size(125, 30);
+            this->bt_login->TabIndex = 4;
+            this->bt_login->Text = L"Đăng nhập";
+            this->bt_login->UseVisualStyleBackColor = true;
+            this->bt_login->Click += gcnew System::EventHandler(this, &Form1::bt_login_Click);
+            // 
+            // loginBox_password
+            // 
+            this->loginBox_password->Font = (gcnew System::Drawing::Font(L"MS Reference Sans Serif", 9, System::Drawing::FontStyle::Regular,
+                System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
+            this->loginBox_password->Location = System::Drawing::Point(171, 78);
+            this->loginBox_password->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
+            this->loginBox_password->Name = L"loginBox_password";
+            this->loginBox_password->PasswordChar = '*';
+            this->loginBox_password->Size = System::Drawing::Size(152, 26);
+            this->loginBox_password->TabIndex = 3;
+            // 
+            // loginBox_username
+            // 
+            this->loginBox_username->Font = (gcnew System::Drawing::Font(L"MS Reference Sans Serif", 9, System::Drawing::FontStyle::Regular,
+                System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
+            this->loginBox_username->Location = System::Drawing::Point(171, 47);
+            this->loginBox_username->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
+            this->loginBox_username->Name = L"loginBox_username";
+            this->loginBox_username->Size = System::Drawing::Size(152, 26);
+            this->loginBox_username->TabIndex = 2;
+            // 
+            // text2
+            // 
+            this->text2->AutoSize = true;
+            this->text2->Font = (gcnew System::Drawing::Font(L"MS Reference Sans Serif", 9, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+                static_cast<System::Byte>(0)));
+            this->text2->Location = System::Drawing::Point(76, 81);
+            this->text2->Name = L"text2";
+            this->text2->Size = System::Drawing::Size(78, 19);
+            this->text2->TabIndex = 1;
+            this->text2->Text = L"Mật khẩu";
+            // 
+            // text1
+            // 
+            this->text1->AutoSize = true;
+            this->text1->Font = (gcnew System::Drawing::Font(L"MS Reference Sans Serif", 9, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+                static_cast<System::Byte>(0)));
+            this->text1->Location = System::Drawing::Point(33, 50);
+            this->text1->Name = L"text1";
+            this->text1->Size = System::Drawing::Size(118, 19);
+            this->text1->TabIndex = 0;
+            this->text1->Text = L"Tên đăng nhập";
+            // 
+            // accountManagerTab
+            // 
+            this->accountManagerTab->Controls->Add(this->bt_logout);
+            this->accountManagerTab->Controls->Add(this->accountManager_loginAlert);
+            this->accountManagerTab->Controls->Add(this->bt_refresh);
+            this->accountManagerTab->Controls->Add(this->accountManager_changer);
+            this->accountManagerTab->Controls->Add(this->accountManager_Info);
+            this->accountManagerTab->Font = (gcnew System::Drawing::Font(L"MS Reference Sans Serif", 9, System::Drawing::FontStyle::Regular,
+                System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
+            this->accountManagerTab->Location = System::Drawing::Point(4, 28);
+            this->accountManagerTab->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
+            this->accountManagerTab->Name = L"accountManagerTab";
+            this->accountManagerTab->Padding = System::Windows::Forms::Padding(3, 2, 3, 2);
+            this->accountManagerTab->Size = System::Drawing::Size(650, 397);
+            this->accountManagerTab->TabIndex = 1;
+            this->accountManagerTab->Text = L"Quản lý tài khoản";
+            this->accountManagerTab->UseVisualStyleBackColor = true;
+            // 
+            // bt_logout
+            // 
+            this->bt_logout->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((System::Windows::Forms::AnchorStyles::Bottom | System::Windows::Forms::AnchorStyles::Right));
+            this->bt_logout->Font = (gcnew System::Drawing::Font(L"MS Reference Sans Serif", 9, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+                static_cast<System::Byte>(0)));
+            this->bt_logout->Location = System::Drawing::Point(526, 292);
+            this->bt_logout->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
+            this->bt_logout->Name = L"bt_logout";
+            this->bt_logout->Size = System::Drawing::Size(127, 30);
+            this->bt_logout->TabIndex = 5;
+            this->bt_logout->Text = L"Đăng xuất";
+            this->bt_logout->UseVisualStyleBackColor = true;
+            this->bt_logout->Visible = false;
+            this->bt_logout->Click += gcnew System::EventHandler(this, &Form1::bt_logout_Click);
+            // 
+            // accountManager_loginAlert
+            // 
+            this->accountManager_loginAlert->Anchor = System::Windows::Forms::AnchorStyles::None;
+            this->accountManager_loginAlert->AutoSize = true;
+            this->accountManager_loginAlert->Font = (gcnew System::Drawing::Font(L"MS Reference Sans Serif", 9, System::Drawing::FontStyle::Regular,
+                System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
+            this->accountManager_loginAlert->Location = System::Drawing::Point(134, 176);
+            this->accountManager_loginAlert->Name = L"accountManager_loginAlert";
+            this->accountManager_loginAlert->Size = System::Drawing::Size(376, 19);
+            this->accountManager_loginAlert->TabIndex = 4;
+            this->accountManager_loginAlert->Text = L"Bạn chưa đăng nhập. Hãy đăng nhập để thao tác.";
+            // 
+            // bt_refresh
+            // 
+            this->bt_refresh->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((System::Windows::Forms::AnchorStyles::Bottom | System::Windows::Forms::AnchorStyles::Right));
+            this->bt_refresh->Font = (gcnew System::Drawing::Font(L"MS Reference Sans Serif", 9, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+                static_cast<System::Byte>(0)));
+            this->bt_refresh->Location = System::Drawing::Point(526, 327);
+            this->bt_refresh->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
+            this->bt_refresh->Name = L"bt_refresh";
+            this->bt_refresh->Size = System::Drawing::Size(127, 30);
+            this->bt_refresh->TabIndex = 3;
+            this->bt_refresh->Text = L"Tải lại";
+            this->bt_refresh->UseVisualStyleBackColor = true;
+            this->bt_refresh->Visible = false;
+            this->bt_refresh->Click += gcnew System::EventHandler(this, &Form1::bt_refresh_Click);
+            // 
+            // accountManager_changer
+            // 
+            this->accountManager_changer->Anchor = System::Windows::Forms::AnchorStyles::None;
+            this->accountManager_changer->Controls->Add(this->accountManager_tabChanger);
+            this->accountManager_changer->Font = (gcnew System::Drawing::Font(L"MS Reference Sans Serif", 9, System::Drawing::FontStyle::Regular,
+                System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
+            this->accountManager_changer->Location = System::Drawing::Point(23, 198);
+            this->accountManager_changer->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
+            this->accountManager_changer->Name = L"accountManager_changer";
+            this->accountManager_changer->Padding = System::Windows::Forms::Padding(3, 2, 3, 2);
+            this->accountManager_changer->Size = System::Drawing::Size(459, 192);
+            this->accountManager_changer->TabIndex = 2;
+            this->accountManager_changer->TabStop = false;
+            this->accountManager_changer->Text = L"Cập nhật thông tin tài khoản";
+            this->accountManager_changer->Visible = false;
+            // 
+            // accountManager_tabChanger
+            // 
+            this->accountManager_tabChanger->Controls->Add(this->tabPage2);
+            this->accountManager_tabChanger->Controls->Add(this->tabPage3);
+            this->accountManager_tabChanger->Controls->Add(this->tabPage4);
+            this->accountManager_tabChanger->Font = (gcnew System::Drawing::Font(L"MS Reference Sans Serif", 9, System::Drawing::FontStyle::Regular,
+                System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
+            this->accountManager_tabChanger->Location = System::Drawing::Point(5, 23);
+            this->accountManager_tabChanger->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
+            this->accountManager_tabChanger->Name = L"accountManager_tabChanger";
+            this->accountManager_tabChanger->SelectedIndex = 0;
+            this->accountManager_tabChanger->Size = System::Drawing::Size(448, 162);
+            this->accountManager_tabChanger->TabIndex = 1;
+            this->accountManager_tabChanger->Visible = false;
+            // 
+            // tabPage2
+            // 
+            this->tabPage2->Controls->Add(this->bt_saveUsername);
+            this->tabPage2->Controls->Add(this->accountManager_newUsername);
+            this->tabPage2->Controls->Add(this->label1);
+            this->tabPage2->Font = (gcnew System::Drawing::Font(L"MS Reference Sans Serif", 9, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+                static_cast<System::Byte>(0)));
+            this->tabPage2->Location = System::Drawing::Point(4, 28);
+            this->tabPage2->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
+            this->tabPage2->Name = L"tabPage2";
+            this->tabPage2->Padding = System::Windows::Forms::Padding(3, 2, 3, 2);
+            this->tabPage2->Size = System::Drawing::Size(440, 130);
+            this->tabPage2->TabIndex = 0;
+            this->tabPage2->Text = L"Tên tài khoản";
+            this->tabPage2->UseVisualStyleBackColor = true;
+            // 
+            // bt_saveUsername
+            // 
+            this->bt_saveUsername->Font = (gcnew System::Drawing::Font(L"MS Reference Sans Serif", 9, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+                static_cast<System::Byte>(0)));
+            this->bt_saveUsername->Location = System::Drawing::Point(181, 89);
+            this->bt_saveUsername->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
+            this->bt_saveUsername->Name = L"bt_saveUsername";
+            this->bt_saveUsername->Size = System::Drawing::Size(75, 31);
+            this->bt_saveUsername->TabIndex = 2;
+            this->bt_saveUsername->Text = L"Lưu";
+            this->bt_saveUsername->UseVisualStyleBackColor = true;
+            this->bt_saveUsername->Click += gcnew System::EventHandler(this, &Form1::bt_saveUsername_Click);
+            // 
+            // accountManager_newUsername
+            // 
+            this->accountManager_newUsername->Font = (gcnew System::Drawing::Font(L"MS Reference Sans Serif", 9, System::Drawing::FontStyle::Regular,
+                System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
+            this->accountManager_newUsername->Location = System::Drawing::Point(200, 33);
+            this->accountManager_newUsername->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
+            this->accountManager_newUsername->Name = L"accountManager_newUsername";
+            this->accountManager_newUsername->Size = System::Drawing::Size(175, 26);
+            this->accountManager_newUsername->TabIndex = 1;
+            // 
+            // label1
+            // 
+            this->label1->AutoSize = true;
+            this->label1->Font = (gcnew System::Drawing::Font(L"MS Reference Sans Serif", 9, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+                static_cast<System::Byte>(0)));
+            this->label1->Location = System::Drawing::Point(20, 36);
+            this->label1->Name = L"label1";
+            this->label1->Size = System::Drawing::Size(151, 19);
+            this->label1->TabIndex = 0;
+            this->label1->Text = L"Tên đăng nhập mới";
+            // 
+            // tabPage3
+            // 
+            this->tabPage3->Controls->Add(this->accountManager_newPasswordCheck);
+            this->tabPage3->Controls->Add(this->label3);
+            this->tabPage3->Controls->Add(this->bt_savePassword);
+            this->tabPage3->Controls->Add(this->accountManager_newPassword);
+            this->tabPage3->Controls->Add(this->label2);
+            this->tabPage3->Font = (gcnew System::Drawing::Font(L"MS Reference Sans Serif", 9, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+                static_cast<System::Byte>(0)));
+            this->tabPage3->Location = System::Drawing::Point(4, 28);
+            this->tabPage3->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
+            this->tabPage3->Name = L"tabPage3";
+            this->tabPage3->Padding = System::Windows::Forms::Padding(3, 2, 3, 2);
+            this->tabPage3->Size = System::Drawing::Size(440, 130);
+            this->tabPage3->TabIndex = 1;
+            this->tabPage3->Text = L"Mật khẩu";
+            this->tabPage3->UseVisualStyleBackColor = true;
+            // 
+            // accountManager_newPasswordCheck
+            // 
+            this->accountManager_newPasswordCheck->Font = (gcnew System::Drawing::Font(L"MS Reference Sans Serif", 9, System::Drawing::FontStyle::Regular,
+                System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
+            this->accountManager_newPasswordCheck->Location = System::Drawing::Point(200, 54);
+            this->accountManager_newPasswordCheck->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
+            this->accountManager_newPasswordCheck->Name = L"accountManager_newPasswordCheck";
+            this->accountManager_newPasswordCheck->Size = System::Drawing::Size(175, 26);
+            this->accountManager_newPasswordCheck->TabIndex = 7;
+            // 
+            // label3
+            // 
+            this->label3->AutoSize = true;
+            this->label3->Font = (gcnew System::Drawing::Font(L"MS Reference Sans Serif", 9, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+                static_cast<System::Byte>(0)));
+            this->label3->Location = System::Drawing::Point(8, 57);
+            this->label3->Name = L"label3";
+            this->label3->Size = System::Drawing::Size(153, 19);
+            this->label3->TabIndex = 6;
+            this->label3->Text = L"Xác nhận mật khẩu";
+            // 
+            // bt_savePassword
+            // 
+            this->bt_savePassword->Font = (gcnew System::Drawing::Font(L"MS Reference Sans Serif", 9, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+                static_cast<System::Byte>(0)));
+            this->bt_savePassword->Location = System::Drawing::Point(181, 89);
+            this->bt_savePassword->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
+            this->bt_savePassword->Name = L"bt_savePassword";
+            this->bt_savePassword->Size = System::Drawing::Size(75, 31);
+            this->bt_savePassword->TabIndex = 5;
+            this->bt_savePassword->Text = L"Lưu";
+            this->bt_savePassword->UseVisualStyleBackColor = true;
+            this->bt_savePassword->Click += gcnew System::EventHandler(this, &Form1::bt_savePassword_Click);
+            // 
+            // accountManager_newPassword
+            // 
+            this->accountManager_newPassword->Font = (gcnew System::Drawing::Font(L"MS Reference Sans Serif", 9, System::Drawing::FontStyle::Regular,
+                System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
+            this->accountManager_newPassword->Location = System::Drawing::Point(200, 14);
+            this->accountManager_newPassword->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
+            this->accountManager_newPassword->Name = L"accountManager_newPassword";
+            this->accountManager_newPassword->Size = System::Drawing::Size(175, 26);
+            this->accountManager_newPassword->TabIndex = 4;
+            // 
+            // label2
+            // 
+            this->label2->AutoSize = true;
+            this->label2->Font = (gcnew System::Drawing::Font(L"MS Reference Sans Serif", 9, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+                static_cast<System::Byte>(0)));
+            this->label2->Location = System::Drawing::Point(8, 17);
+            this->label2->Name = L"label2";
+            this->label2->Size = System::Drawing::Size(111, 19);
+            this->label2->TabIndex = 3;
+            this->label2->Text = L"Mật khẩu mới";
+            // 
+            // tabPage4
+            // 
+            this->tabPage4->Controls->Add(this->bt_saveFullname);
+            this->tabPage4->Controls->Add(this->accountManager_newFullname);
+            this->tabPage4->Controls->Add(this->label4);
+            this->tabPage4->Font = (gcnew System::Drawing::Font(L"MS Reference Sans Serif", 9, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+                static_cast<System::Byte>(0)));
+            this->tabPage4->Location = System::Drawing::Point(4, 28);
+            this->tabPage4->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
+            this->tabPage4->Name = L"tabPage4";
+            this->tabPage4->Padding = System::Windows::Forms::Padding(3, 2, 3, 2);
+            this->tabPage4->Size = System::Drawing::Size(440, 130);
+            this->tabPage4->TabIndex = 2;
+            this->tabPage4->Text = L"Tên chủ tài khoản";
+            this->tabPage4->UseVisualStyleBackColor = true;
+            // 
+            // accountManager_Info
+            // 
+            this->accountManager_Info->Anchor = System::Windows::Forms::AnchorStyles::None;
+            this->accountManager_Info->Controls->Add(this->accountManager_permission);
+            this->accountManager_Info->Controls->Add(this->accountManager_fullname);
+            this->accountManager_Info->Controls->Add(this->accountManager_password);
+            this->accountManager_Info->Controls->Add(this->accountManager_username);
+            this->accountManager_Info->Controls->Add(this->accoutManager_text4);
+            this->accountManager_Info->Controls->Add(this->accountManager_text3);
+            this->accountManager_Info->Controls->Add(this->accountManager_text2);
+            this->accountManager_Info->Controls->Add(this->accoutManager_text1);
+            this->accountManager_Info->Font = (gcnew System::Drawing::Font(L"MS Reference Sans Serif", 9, System::Drawing::FontStyle::Regular,
+                System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
+            this->accountManager_Info->Location = System::Drawing::Point(23, 7);
+            this->accountManager_Info->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
+            this->accountManager_Info->Name = L"accountManager_Info";
+            this->accountManager_Info->Padding = System::Windows::Forms::Padding(3, 2, 3, 2);
+            this->accountManager_Info->Size = System::Drawing::Size(407, 158);
+            this->accountManager_Info->TabIndex = 0;
+            this->accountManager_Info->TabStop = false;
+            this->accountManager_Info->Text = L"Thông tin tài khoản";
+            this->accountManager_Info->Visible = false;
+            // 
+            // dataManager_loginAlert
+            // 
+            this->dataManager_loginAlert->Anchor = System::Windows::Forms::AnchorStyles::None;
+            this->dataManager_loginAlert->AutoSize = true;
+            this->dataManager_loginAlert->Font = (gcnew System::Drawing::Font(L"MS Reference Sans Serif", 9, System::Drawing::FontStyle::Regular,
+                System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
+            this->dataManager_loginAlert->Location = System::Drawing::Point(137, 173);
+            this->dataManager_loginAlert->Name = L"dataManager_loginAlert";
+            this->dataManager_loginAlert->Size = System::Drawing::Size(376, 19);
+            this->dataManager_loginAlert->TabIndex = 5;
+            this->dataManager_loginAlert->Text = L"Bạn chưa đăng nhập. Hãy đăng nhập để thao tác.";
+            // 
+            // Form1
+            // 
+            this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
+            this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
+            this->ClientSize = System::Drawing::Size(682, 453);
+            this->Controls->Add(this->Manager);
+            this->Name = L"Form1";
+            this->Text = L"COVID19_VACCINATION_MANAGER";
+            this->dataManagerTab->ResumeLayout(false);
+            this->boxDataManager->ResumeLayout(false);
+            this->boxDataManager->PerformLayout();
+            this->dataManager_menu->ResumeLayout(false);
+            this->dataManager_menu->PerformLayout();
+            this->box_inputFile->ResumeLayout(false);
+            this->box_inputFile->PerformLayout();
+            this->Manager->ResumeLayout(false);
+            this->loginTab->ResumeLayout(false);
+            this->loginTab->PerformLayout();
+            this->loginBox->ResumeLayout(false);
+            this->loginBox->PerformLayout();
+            this->accountManagerTab->ResumeLayout(false);
+            this->accountManagerTab->PerformLayout();
+            this->accountManager_changer->ResumeLayout(false);
+            this->accountManager_tabChanger->ResumeLayout(false);
+            this->tabPage2->ResumeLayout(false);
+            this->tabPage2->PerformLayout();
+            this->tabPage3->ResumeLayout(false);
+            this->tabPage3->PerformLayout();
+            this->tabPage4->ResumeLayout(false);
+            this->tabPage4->PerformLayout();
+            this->accountManager_Info->ResumeLayout(false);
+            this->accountManager_Info->PerformLayout();
+            this->ResumeLayout(false);
+
+        }
+#pragma endregion
+    private: System::Void bt_showPassword_Click(System::Object^ sender, System::EventArgs^ e) {
+    }
+private: System::Void bt_login_Click(System::Object^ sender, System::EventArgs^ e) {
+    loginStatus = false;
+    if ((loginBox_username->Text == ADMIN0) && (loginBox_password->Text == PASS0))
+    {
+        this->loginStatus = true;
+        this->currentUser_ID = 0;
+    }
+    else if ((loginBox_username->Text == ADMIN1) && (loginBox_password->Text == PASS1))
+    {
+        this->loginStatus = true;
+        this->currentUser_ID = 1;
+    }
+    else if ((loginBox_username->Text == ADMIN2) && (loginBox_password->Text == PASS2))
+    {
+        this->loginStatus = true;
+        this->currentUser_ID = 2;
+    }
+    else 
+    {
+        this->loginStatus = false;
+        this->currentUser_ID = NULL;
+    }
+    checkLoginStatus();
+}
+
+private: System::Void bt_showPassword_MouseDown(System::Object^ sender, System::Windows::Forms::MouseEventArgs^ e) {
+    this->loginBox_password->PasswordChar = char::MinValue;
+}
+private: System::Void bt_showPassword_MouseUp(System::Object^ sender, System::Windows::Forms::MouseEventArgs^ e) {
+    this->loginBox_password->PasswordChar = char::MaxValue;
+    this->loginBox_password->PasswordChar = '*';
+}
+private: System::Void bt_saveUsername_Click(System::Object^ sender, System::EventArgs^ e) {
+    if (accountManager_newUsername->Text != "")
+    {
+        switch (currentUser_ID)
+        {
+        case 0:
+            ADMIN0 = accountManager_newUsername->Text;
+            break;
+        case 1:
+            ADMIN1 = accountManager_newUsername->Text;
+            break;
+        case 2:
+            ADMIN2 = accountManager_newUsername->Text;
+            break;
+        default:
+
+            break;
+        }
+    }
+    else MessageBox::Show(L"Tên đăng nhập không thể để trống.\nHãy nhập lại.", L"THÔNG BÁO");
+    checkUser();
+}
+private: System::Void bt_savePassword_Click(System::Object^ sender, System::EventArgs^ e) {
+    String ^newPassword = accountManager_newPassword->Text, ^newPasswordCheck = accountManager_newPasswordCheck->Text;
+    if (newPassword != "")
+    {
+        if (newPassword == newPasswordCheck)
+        {
+            switch (currentUser_ID)
+            {
+            case 0:
+                PASS0 = accountManager_newPassword->Text;
+                break;
+            case 1:
+                PASS1 = accountManager_newPassword->Text;
+                break;
+            case 2:
+                PASS2 = accountManager_newPassword->Text;
+                break;
+            default:
+
+                break;
+            }
+        }
+        else MessageBox::Show(L"Mật khẩu không trùng khớp.\nHãy nhập lại.", L"THÔNG BÁO");
+    }
+    else MessageBox::Show(L"Mật khẩu không thể để trống.\nHãy nhập lại.", L"THÔNG BÁO");
+    checkUser();
+}
+private: System::Void bt_saveFullname_Click(System::Object^ sender, System::EventArgs^ e) {
+    if (accountManager_newFullname->Text != "")
+    {
+        switch (currentUser_ID)
+        {
+        case 0:
+            NAME0 = accountManager_newFullname->Text;
+            break;
+        case 1:
+            NAME1 = accountManager_newFullname->Text;
+            break;
+        case 2:
+            NAME2 = accountManager_newFullname->Text;
+            break;
+        default:
+
+            break;
+        }
+    }
+    else MessageBox::Show(L"Tên chủ tài khoản không thể để trống.\nHãy nhập lại.", L"THÔNG BÁO");
+
+    checkUser();
+}
+private: System::Void bt_logout_Click(System::Object^ sender, System::EventArgs^ e) {
+    loginStatus = false;
+    checkStatus();
+}
+private: System::Void bt_refresh_Click(System::Object^ sender, System::EventArgs^ e) {
+    checkUser();
+}
+private: System::Void dataManager_menu_ItemClicked(System::Object^ sender, System::Windows::Forms::ToolStripItemClickedEventArgs^ e) {
+}
+private: System::Void dataManagerTab_Click(System::Object^ sender, System::EventArgs^ e) {
+}
+
+private: System::Void sortData_Click_1(System::Object^ sender, System::EventArgs^ e) {
+    if (loginStatus == true)
+    {
+        this->box_inputHand->Visible = false;
+        this->box_inputFile->Visible = false;
+        this->box_sortData->Visible = true;
+        this->box_deleteData->Visible = false;
+        this->box_searchData->Visible = false;
+    
+    }
+}
+private: System::Void deleteData_Click_1(System::Object^ sender, System::EventArgs^ e) {
+    if (loginStatus == true)
+    {
+        this->box_inputHand->Visible = false;
+        this->box_inputFile->Visible = false;
+        this->box_sortData->Visible = false;
+        this->box_deleteData->Visible = true;
+        this->box_searchData->Visible = false;
+    
+    }
+}
+private: System::Void searchData_Click(System::Object^ sender, System::EventArgs^ e) {
+        this->box_searchData->Visible = true;
+        this->box_inputHand->Visible = false;
+        this->box_inputFile->Visible = false;
+        this->box_sortData->Visible = false;
+        this->box_deleteData->Visible = false;
+}
+private: System::Void inputHand_Click(System::Object^ sender, System::EventArgs^ e) {
+    if (loginStatus == true)
+    {
+        this->box_inputHand->Visible = true;
+        this->box_inputFile->Visible = false;
+        this->box_sortData->Visible = false;
+        this->box_deleteData->Visible = false;
+        this->box_searchData->Visible = false;
+    }
+}
+private: System::Void inputFile_Click(System::Object^ sender, System::EventArgs^ e) {
+    if (loginStatus == true)
+    {
+        this->box_inputHand->Visible = false;
+        this->box_inputFile->Visible = true;
+        this->box_sortData->Visible = false;
+        this->box_deleteData->Visible = false;
+        this->box_searchData->Visible = false;
+    }
+}
+};
+}

@@ -45,6 +45,7 @@ class DSCD
         void Delete();
         ~DSCD();
 };
-#endif
+// Hàm hoán vị
 template <typename T>
 void swap(T &x, T &y);
+#endif

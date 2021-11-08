@@ -1,9 +1,9 @@
 #ifndef CONGDAN_H
 #define CONGDAN_H
 
-#include <string>
-
-#include <iostream>
+#include<string>
+#include<string.h>
+#include<iostream>
 using namespace std;
 
 class CongDan
@@ -22,6 +22,8 @@ class CongDan
         bool mui1, mui2;
         string ngay_M1, ngay_M2;
     public:
+        CongDan();
+        ~CongDan();
         friend istream operator << (istream&, CongDan&);
         friend ostream operator >> (ostream&, const CongDan&);
         friend class DSCD;

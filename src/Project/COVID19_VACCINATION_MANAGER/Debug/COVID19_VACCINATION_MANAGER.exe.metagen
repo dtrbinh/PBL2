@@ -21,3 +21,4 @@ Class CppCLRWinformsProjekt.Form1: AutoLayout, AnsiClass, Class, Public, BeforeF
     checkStatus(): PrivateScope, Public, HideBySig
     checkUser(): PrivateScope, Public, HideBySig
     checkLoginStatus(): PrivateScope, Public, HideBySig
+    convertString(String, basic_string<char\,std::char_traits<char>\,std::allocator<char> >* IsImplicitlyDereferenced): PrivateScope, Public, HideBySig

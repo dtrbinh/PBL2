@@ -1,5 +1,9 @@
 ﻿#pragma once
 #include<string.h>
+#include"src/CongDan.h"
+#include"src/DanhSachCongDan.h"
+//#include"src/CongDan.cpp"
+//#include"src/DanhSachCongDan.cpp"
 
 namespace CppCLRWinformsProjekt {
 
@@ -9,13 +13,17 @@ namespace CppCLRWinformsProjekt {
 	using namespace System::Windows::Forms;
 	using namespace System::Data;
 	using namespace System::Drawing;
+    using namespace System::IO;
 
 	/// <summary>
 	/// Zusammenfassung für Form1
 	/// </summary>
-	public ref class Form1 : public System::Windows::Forms::Form
+    static DSCD DN;
+    public ref class Form1 : public System::Windows::Forms::Form 
 	{
+
     private:
+ 
         static bool loginStatus = false;
         static int currentUser_ID = NULL;
         static String ^currentUser_permission = "";
@@ -31,9 +39,14 @@ namespace CppCLRWinformsProjekt {
     private: System::Windows::Forms::Button^ bt_inputFile;
     private: System::Windows::Forms::TextBox^ fileName3;
     private: System::Windows::Forms::TextBox^ fileName2;
+
+
     private: System::Windows::Forms::Label^ label_fileName3;
-    private: System::Windows::Forms::Label^ label_fileName2;
     private: System::Windows::Forms::Label^ label_fileName1;
+
+    private: System::Windows::Forms::Label^ label_fileName2;
+
+
     private: System::Windows::Forms::TextBox^ fileName1;
     private: System::Windows::Forms::MenuStrip^ dataManager_menu;
 
@@ -60,6 +73,28 @@ namespace CppCLRWinformsProjekt {
     private: System::Windows::Forms::Button^ bt_selectFile3;
     private: System::Windows::Forms::Button^ bt_selectFile2;
     private: System::Windows::Forms::Button^ bt_selectFile1;
+    private: System::Windows::Forms::GroupBox^ exportData_people;
+    private: System::Windows::Forms::DataGridView^ view_exportData_people;
+    private: System::Windows::Forms::Button^ bt_modData_people;
+
+    private: System::Windows::Forms::Button^ button1;
+    private: System::Windows::Forms::Button^ bt_loadData_people;
+    private: System::Windows::Forms::Button^ bt_saveData_people;
+    private: System::Windows::Forms::DataGridViewTextBoxColumn^ ma_CD;
+    private: System::Windows::Forms::DataGridViewTextBoxColumn^ fullName;
+    private: System::Windows::Forms::DataGridViewTextBoxColumn^ sex;
+    private: System::Windows::Forms::DataGridViewTextBoxColumn^ birth;
+    private: System::Windows::Forms::DataGridViewTextBoxColumn^ phone;
+    private: System::Windows::Forms::DataGridViewTextBoxColumn^ so_BHXH;
+    private: System::Windows::Forms::DataGridViewTextBoxColumn^ so_CMND;
+    private: System::Windows::Forms::DataGridViewTextBoxColumn^ address;
+    private: System::Windows::Forms::ToolStripMenuItem^ xuấtToànBộDữLiệuToolStripMenuItem;
+
+
+
+
+
+
 
     private: System::Windows::Forms::Label^ dataManager_loginAlert;
 
@@ -145,6 +180,15 @@ namespace CppCLRWinformsProjekt {
 
             }
         }
+
+        void convertString(String^ s, string& os) {
+            using namespace Runtime::InteropServices;
+            const char* chars =
+                (const char*)(Marshal::StringToHGlobalAnsi(s)).ToPointer();
+            os = chars;
+            Marshal::FreeHGlobal(IntPtr((void*)chars));
+        }
+        
 	public:
 		Form1(void)
 		{
@@ -236,6 +280,20 @@ namespace CppCLRWinformsProjekt {
             this->accoutManager_text1 = (gcnew System::Windows::Forms::Label());
             this->dataManagerTab = (gcnew System::Windows::Forms::TabPage());
             this->boxDataManager = (gcnew System::Windows::Forms::GroupBox());
+            this->exportData_people = (gcnew System::Windows::Forms::GroupBox());
+            this->bt_saveData_people = (gcnew System::Windows::Forms::Button());
+            this->bt_loadData_people = (gcnew System::Windows::Forms::Button());
+            this->bt_modData_people = (gcnew System::Windows::Forms::Button());
+            this->button1 = (gcnew System::Windows::Forms::Button());
+            this->view_exportData_people = (gcnew System::Windows::Forms::DataGridView());
+            this->ma_CD = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
+            this->fullName = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
+            this->sex = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
+            this->birth = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
+            this->phone = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
+            this->so_BHXH = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
+            this->so_CMND = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
+            this->address = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
             this->box_searchData = (gcnew System::Windows::Forms::GroupBox());
             this->dataManager_menu = (gcnew System::Windows::Forms::MenuStrip());
             this->dataManager_input = (gcnew System::Windows::Forms::ToolStripMenuItem());
@@ -249,6 +307,7 @@ namespace CppCLRWinformsProjekt {
             this->toolStripMenuItem8 = (gcnew System::Windows::Forms::ToolStripMenuItem());
             this->toolStripMenuItem9 = (gcnew System::Windows::Forms::ToolStripMenuItem());
             this->toolStripMenuItem10 = (gcnew System::Windows::Forms::ToolStripMenuItem());
+            this->xuấtToànBộDữLiệuToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
             this->box_deleteData = (gcnew System::Windows::Forms::GroupBox());
             this->box_sortData = (gcnew System::Windows::Forms::GroupBox());
             this->box_inputHand = (gcnew System::Windows::Forms::GroupBox());
@@ -260,8 +319,8 @@ namespace CppCLRWinformsProjekt {
             this->fileName3 = (gcnew System::Windows::Forms::TextBox());
             this->fileName2 = (gcnew System::Windows::Forms::TextBox());
             this->label_fileName3 = (gcnew System::Windows::Forms::Label());
-            this->label_fileName2 = (gcnew System::Windows::Forms::Label());
             this->label_fileName1 = (gcnew System::Windows::Forms::Label());
+            this->label_fileName2 = (gcnew System::Windows::Forms::Label());
             this->fileName1 = (gcnew System::Windows::Forms::TextBox());
             this->accountManager_newFullname = (gcnew System::Windows::Forms::TextBox());
             this->label4 = (gcnew System::Windows::Forms::Label());
@@ -298,6 +357,8 @@ namespace CppCLRWinformsProjekt {
             this->dataManager_loginAlert = (gcnew System::Windows::Forms::Label());
             this->dataManagerTab->SuspendLayout();
             this->boxDataManager->SuspendLayout();
+            this->exportData_people->SuspendLayout();
+            (cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->view_exportData_people))->BeginInit();
             this->dataManager_menu->SuspendLayout();
             this->box_inputFile->SuspendLayout();
             this->Manager->SuspendLayout();
@@ -422,7 +483,7 @@ namespace CppCLRWinformsProjekt {
             this->dataManagerTab->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
             this->dataManagerTab->Name = L"dataManagerTab";
             this->dataManagerTab->Padding = System::Windows::Forms::Padding(3, 2, 3, 2);
-            this->dataManagerTab->Size = System::Drawing::Size(650, 397);
+            this->dataManagerTab->Size = System::Drawing::Size(650, 468);
             this->dataManagerTab->TabIndex = 2;
             this->dataManagerTab->Text = L"Quản lý dữ liệu";
             this->dataManagerTab->UseVisualStyleBackColor = true;
@@ -433,6 +494,7 @@ namespace CppCLRWinformsProjekt {
             this->boxDataManager->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Bottom)
                 | System::Windows::Forms::AnchorStyles::Left)
                 | System::Windows::Forms::AnchorStyles::Right));
+            this->boxDataManager->Controls->Add(this->exportData_people);
             this->boxDataManager->Controls->Add(this->box_searchData);
             this->boxDataManager->Controls->Add(this->dataManager_menu);
             this->boxDataManager->Controls->Add(this->box_deleteData);
@@ -441,9 +503,157 @@ namespace CppCLRWinformsProjekt {
             this->boxDataManager->Controls->Add(this->box_inputFile);
             this->boxDataManager->Location = System::Drawing::Point(-4, 0);
             this->boxDataManager->Name = L"boxDataManager";
-            this->boxDataManager->Size = System::Drawing::Size(654, 397);
+            this->boxDataManager->Size = System::Drawing::Size(654, 468);
             this->boxDataManager->TabIndex = 3;
             this->boxDataManager->TabStop = false;
+            // 
+            // exportData_people
+            // 
+            this->exportData_people->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Bottom)
+                | System::Windows::Forms::AnchorStyles::Left)
+                | System::Windows::Forms::AnchorStyles::Right));
+            this->exportData_people->Controls->Add(this->bt_saveData_people);
+            this->exportData_people->Controls->Add(this->bt_loadData_people);
+            this->exportData_people->Controls->Add(this->bt_modData_people);
+            this->exportData_people->Controls->Add(this->button1);
+            this->exportData_people->Controls->Add(this->view_exportData_people);
+            this->exportData_people->Font = (gcnew System::Drawing::Font(L"MS Reference Sans Serif", 9, System::Drawing::FontStyle::Regular,
+                System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
+            this->exportData_people->Location = System::Drawing::Point(0, 51);
+            this->exportData_people->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
+            this->exportData_people->Name = L"exportData_people";
+            this->exportData_people->Padding = System::Windows::Forms::Padding(3, 2, 3, 2);
+            this->exportData_people->Size = System::Drawing::Size(654, 417);
+            this->exportData_people->TabIndex = 6;
+            this->exportData_people->TabStop = false;
+            this->exportData_people->Text = L"Dữ liệu công dân";
+            this->exportData_people->Visible = false;
+            // 
+            // bt_saveData_people
+            // 
+            this->bt_saveData_people->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((System::Windows::Forms::AnchorStyles::Bottom | System::Windows::Forms::AnchorStyles::Right));
+            this->bt_saveData_people->Location = System::Drawing::Point(551, 377);
+            this->bt_saveData_people->Name = L"bt_saveData_people";
+            this->bt_saveData_people->Size = System::Drawing::Size(91, 30);
+            this->bt_saveData_people->TabIndex = 4;
+            this->bt_saveData_people->Text = L"Lưu";
+            this->bt_saveData_people->UseVisualStyleBackColor = true;
+            // 
+            // bt_loadData_people
+            // 
+            this->bt_loadData_people->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((System::Windows::Forms::AnchorStyles::Bottom | System::Windows::Forms::AnchorStyles::Right));
+            this->bt_loadData_people->Location = System::Drawing::Point(279, 377);
+            this->bt_loadData_people->Name = L"bt_loadData_people";
+            this->bt_loadData_people->Size = System::Drawing::Size(130, 30);
+            this->bt_loadData_people->TabIndex = 3;
+            this->bt_loadData_people->Text = L"Tải dữ liệu";
+            this->bt_loadData_people->UseVisualStyleBackColor = true;
+            this->bt_loadData_people->Click += gcnew System::EventHandler(this, &Form1::button3_Click);
+            // 
+            // bt_modData_people
+            // 
+            this->bt_modData_people->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((System::Windows::Forms::AnchorStyles::Bottom | System::Windows::Forms::AnchorStyles::Right));
+            this->bt_modData_people->Location = System::Drawing::Point(415, 377);
+            this->bt_modData_people->Name = L"bt_modData_people";
+            this->bt_modData_people->Size = System::Drawing::Size(130, 30);
+            this->bt_modData_people->TabIndex = 2;
+            this->bt_modData_people->Text = L"Chỉnh sửa";
+            this->bt_modData_people->UseVisualStyleBackColor = true;
+            this->bt_modData_people->Click += gcnew System::EventHandler(this, &Form1::button2_Click);
+            // 
+            // button1
+            // 
+            this->button1->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((System::Windows::Forms::AnchorStyles::Bottom | System::Windows::Forms::AnchorStyles::Right));
+            this->button1->Location = System::Drawing::Point(551, 388);
+            this->button1->Name = L"button1";
+            this->button1->Size = System::Drawing::Size(0, 0);
+            this->button1->TabIndex = 1;
+            this->button1->Text = L"button1";
+            this->button1->UseVisualStyleBackColor = true;
+            // 
+            // view_exportData_people
+            // 
+            this->view_exportData_people->AllowUserToAddRows = false;
+            this->view_exportData_people->AllowUserToDeleteRows = false;
+            this->view_exportData_people->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Bottom)
+                | System::Windows::Forms::AnchorStyles::Left)
+                | System::Windows::Forms::AnchorStyles::Right));
+            this->view_exportData_people->ColumnHeadersHeightSizeMode = System::Windows::Forms::DataGridViewColumnHeadersHeightSizeMode::AutoSize;
+            this->view_exportData_people->Columns->AddRange(gcnew cli::array< System::Windows::Forms::DataGridViewColumn^  >(8) {
+                this->ma_CD,
+                    this->fullName, this->sex, this->birth, this->phone, this->so_BHXH, this->so_CMND, this->address
+            });
+            this->view_exportData_people->Location = System::Drawing::Point(10, 24);
+            this->view_exportData_people->Name = L"view_exportData_people";
+            this->view_exportData_people->ReadOnly = true;
+            this->view_exportData_people->RowHeadersWidth = 51;
+            this->view_exportData_people->RowTemplate->Height = 24;
+            this->view_exportData_people->Size = System::Drawing::Size(644, 342);
+            this->view_exportData_people->TabIndex = 0;
+            // 
+            // ma_CD
+            // 
+            this->ma_CD->HeaderText = L"Mã CD";
+            this->ma_CD->MinimumWidth = 6;
+            this->ma_CD->Name = L"ma_CD";
+            this->ma_CD->ReadOnly = true;
+            this->ma_CD->Width = 125;
+            // 
+            // fullName
+            // 
+            this->fullName->HeaderText = L"Họ và tên";
+            this->fullName->MinimumWidth = 6;
+            this->fullName->Name = L"fullName";
+            this->fullName->ReadOnly = true;
+            this->fullName->Width = 125;
+            // 
+            // sex
+            // 
+            this->sex->HeaderText = L"Giới tính";
+            this->sex->MinimumWidth = 6;
+            this->sex->Name = L"sex";
+            this->sex->ReadOnly = true;
+            this->sex->Width = 125;
+            // 
+            // birth
+            // 
+            this->birth->HeaderText = L"Ngày sinh";
+            this->birth->MinimumWidth = 6;
+            this->birth->Name = L"birth";
+            this->birth->ReadOnly = true;
+            this->birth->Width = 125;
+            // 
+            // phone
+            // 
+            this->phone->HeaderText = L"SĐT";
+            this->phone->MinimumWidth = 6;
+            this->phone->Name = L"phone";
+            this->phone->ReadOnly = true;
+            this->phone->Width = 125;
+            // 
+            // so_BHXH
+            // 
+            this->so_BHXH->HeaderText = L"BHXH";
+            this->so_BHXH->MinimumWidth = 6;
+            this->so_BHXH->Name = L"so_BHXH";
+            this->so_BHXH->ReadOnly = true;
+            this->so_BHXH->Width = 125;
+            // 
+            // so_CMND
+            // 
+            this->so_CMND->HeaderText = L"CMND/CCCD";
+            this->so_CMND->MinimumWidth = 6;
+            this->so_CMND->Name = L"so_CMND";
+            this->so_CMND->ReadOnly = true;
+            this->so_CMND->Width = 125;
+            // 
+            // address
+            // 
+            this->address->HeaderText = L"Địa chỉ";
+            this->address->MinimumWidth = 6;
+            this->address->Name = L"address";
+            this->address->ReadOnly = true;
+            this->address->Width = 125;
             // 
             // box_searchData
             // 
@@ -452,11 +662,11 @@ namespace CppCLRWinformsProjekt {
                 | System::Windows::Forms::AnchorStyles::Right));
             this->box_searchData->Font = (gcnew System::Drawing::Font(L"MS Reference Sans Serif", 9, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
                 static_cast<System::Byte>(0)));
-            this->box_searchData->Location = System::Drawing::Point(0, 366);
+            this->box_searchData->Location = System::Drawing::Point(0, 51);
             this->box_searchData->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
             this->box_searchData->Name = L"box_searchData";
             this->box_searchData->Padding = System::Windows::Forms::Padding(3, 2, 3, 2);
-            this->box_searchData->Size = System::Drawing::Size(654, 31);
+            this->box_searchData->Size = System::Drawing::Size(654, 417);
             this->box_searchData->TabIndex = 5;
             this->box_searchData->TabStop = false;
             this->box_searchData->Text = L"Tìm kiếm";
@@ -547,9 +757,9 @@ namespace CppCLRWinformsProjekt {
             // 
             // dataManager_output
             // 
-            this->dataManager_output->DropDownItems->AddRange(gcnew cli::array< System::Windows::Forms::ToolStripItem^  >(3) {
+            this->dataManager_output->DropDownItems->AddRange(gcnew cli::array< System::Windows::Forms::ToolStripItem^  >(4) {
                 this->toolStripMenuItem8,
-                    this->toolStripMenuItem9, this->toolStripMenuItem10
+                    this->toolStripMenuItem9, this->toolStripMenuItem10, this->xuấtToànBộDữLiệuToolStripMenuItem
             });
             this->dataManager_output->Font = (gcnew System::Drawing::Font(L"MS Reference Sans Serif", 9, System::Drawing::FontStyle::Regular,
                 System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
@@ -562,24 +772,31 @@ namespace CppCLRWinformsProjekt {
             this->toolStripMenuItem8->Font = (gcnew System::Drawing::Font(L"MS Reference Sans Serif", 9, System::Drawing::FontStyle::Regular,
                 System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
             this->toolStripMenuItem8->Name = L"toolStripMenuItem8";
-            this->toolStripMenuItem8->Size = System::Drawing::Size(229, 26);
-            this->toolStripMenuItem8->Text = L"Toàn bộ dữ liệu";
+            this->toolStripMenuItem8->Size = System::Drawing::Size(242, 26);
+            this->toolStripMenuItem8->Text = L"Dữ liệu công dân";
+            this->toolStripMenuItem8->Click += gcnew System::EventHandler(this, &Form1::toolStripMenuItem8_Click);
             // 
             // toolStripMenuItem9
             // 
             this->toolStripMenuItem9->Font = (gcnew System::Drawing::Font(L"MS Reference Sans Serif", 9, System::Drawing::FontStyle::Regular,
                 System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
             this->toolStripMenuItem9->Name = L"toolStripMenuItem9";
-            this->toolStripMenuItem9->Size = System::Drawing::Size(229, 26);
-            this->toolStripMenuItem9->Text = L"Dữ liệu công dân";
+            this->toolStripMenuItem9->Size = System::Drawing::Size(242, 26);
+            this->toolStripMenuItem9->Text = L"Dữ liệu đăng ký";
             // 
             // toolStripMenuItem10
             // 
             this->toolStripMenuItem10->Font = (gcnew System::Drawing::Font(L"MS Reference Sans Serif", 9, System::Drawing::FontStyle::Regular,
                 System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
             this->toolStripMenuItem10->Name = L"toolStripMenuItem10";
-            this->toolStripMenuItem10->Size = System::Drawing::Size(229, 26);
+            this->toolStripMenuItem10->Size = System::Drawing::Size(242, 26);
             this->toolStripMenuItem10->Text = L"Dữ liệu tiêm chủng";
+            // 
+            // xuấtToànBộDữLiệuToolStripMenuItem
+            // 
+            this->xuấtToànBộDữLiệuToolStripMenuItem->Name = L"xuấtToànBộDữLiệuToolStripMenuItem";
+            this->xuấtToànBộDữLiệuToolStripMenuItem->Size = System::Drawing::Size(242, 26);
+            this->xuấtToànBộDữLiệuToolStripMenuItem->Text = L"Xuất toàn bộ dữ liệu";
             // 
             // box_deleteData
             // 
@@ -588,11 +805,11 @@ namespace CppCLRWinformsProjekt {
                 | System::Windows::Forms::AnchorStyles::Right));
             this->box_deleteData->Font = (gcnew System::Drawing::Font(L"MS Reference Sans Serif", 9, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
                 static_cast<System::Byte>(0)));
-            this->box_deleteData->Location = System::Drawing::Point(0, 339);
+            this->box_deleteData->Location = System::Drawing::Point(0, 51);
             this->box_deleteData->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
             this->box_deleteData->Name = L"box_deleteData";
             this->box_deleteData->Padding = System::Windows::Forms::Padding(3, 2, 3, 2);
-            this->box_deleteData->Size = System::Drawing::Size(654, 58);
+            this->box_deleteData->Size = System::Drawing::Size(654, 417);
             this->box_deleteData->TabIndex = 4;
             this->box_deleteData->TabStop = false;
             this->box_deleteData->Text = L"Xoá dữ liệu";
@@ -605,11 +822,11 @@ namespace CppCLRWinformsProjekt {
                 | System::Windows::Forms::AnchorStyles::Right));
             this->box_sortData->Font = (gcnew System::Drawing::Font(L"MS Reference Sans Serif", 9, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
                 static_cast<System::Byte>(0)));
-            this->box_sortData->Location = System::Drawing::Point(0, 318);
+            this->box_sortData->Location = System::Drawing::Point(0, 51);
             this->box_sortData->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
             this->box_sortData->Name = L"box_sortData";
             this->box_sortData->Padding = System::Windows::Forms::Padding(3, 2, 3, 2);
-            this->box_sortData->Size = System::Drawing::Size(654, 79);
+            this->box_sortData->Size = System::Drawing::Size(654, 417);
             this->box_sortData->TabIndex = 3;
             this->box_sortData->TabStop = false;
             this->box_sortData->Text = L"Sắp xếp dữ liệu";
@@ -622,11 +839,11 @@ namespace CppCLRWinformsProjekt {
                 | System::Windows::Forms::AnchorStyles::Right));
             this->box_inputHand->Font = (gcnew System::Drawing::Font(L"MS Reference Sans Serif", 9, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
                 static_cast<System::Byte>(0)));
-            this->box_inputHand->Location = System::Drawing::Point(0, 301);
+            this->box_inputHand->Location = System::Drawing::Point(0, 51);
             this->box_inputHand->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
             this->box_inputHand->Name = L"box_inputHand";
             this->box_inputHand->Padding = System::Windows::Forms::Padding(3, 2, 3, 2);
-            this->box_inputHand->Size = System::Drawing::Size(654, 96);
+            this->box_inputHand->Size = System::Drawing::Size(654, 417);
             this->box_inputHand->TabIndex = 6;
             this->box_inputHand->TabStop = false;
             this->box_inputHand->Text = L"Nhập dữ liệu thủ công";
@@ -644,8 +861,8 @@ namespace CppCLRWinformsProjekt {
             this->box_inputFile->Controls->Add(this->fileName3);
             this->box_inputFile->Controls->Add(this->fileName2);
             this->box_inputFile->Controls->Add(this->label_fileName3);
-            this->box_inputFile->Controls->Add(this->label_fileName2);
             this->box_inputFile->Controls->Add(this->label_fileName1);
+            this->box_inputFile->Controls->Add(this->label_fileName2);
             this->box_inputFile->Controls->Add(this->fileName1);
             this->box_inputFile->Font = (gcnew System::Drawing::Font(L"MS Reference Sans Serif", 9, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
                 static_cast<System::Byte>(0)));
@@ -653,7 +870,7 @@ namespace CppCLRWinformsProjekt {
             this->box_inputFile->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
             this->box_inputFile->Name = L"box_inputFile";
             this->box_inputFile->Padding = System::Windows::Forms::Padding(3, 2, 3, 2);
-            this->box_inputFile->Size = System::Drawing::Size(654, 346);
+            this->box_inputFile->Size = System::Drawing::Size(654, 417);
             this->box_inputFile->TabIndex = 5;
             this->box_inputFile->TabStop = false;
             this->box_inputFile->Text = L"Nhập dữ liệu từ tập tin";
@@ -728,25 +945,25 @@ namespace CppCLRWinformsProjekt {
             this->label_fileName3->TabIndex = 3;
             this->label_fileName3->Text = L"Nhập file dữ liệu tiêm chủng(*)";
             // 
-            // label_fileName2
-            // 
-            this->label_fileName2->AutoSize = true;
-            this->label_fileName2->Location = System::Drawing::Point(40, 80);
-            this->label_fileName2->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
-            this->label_fileName2->Name = L"label_fileName2";
-            this->label_fileName2->Size = System::Drawing::Size(222, 19);
-            this->label_fileName2->TabIndex = 2;
-            this->label_fileName2->Text = L"Nhập file dữ liệu công dân(*)";
-            // 
             // label_fileName1
             // 
             this->label_fileName1->AutoSize = true;
             this->label_fileName1->Location = System::Drawing::Point(40, 43);
             this->label_fileName1->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
             this->label_fileName1->Name = L"label_fileName1";
-            this->label_fileName1->Size = System::Drawing::Size(165, 19);
-            this->label_fileName1->TabIndex = 1;
-            this->label_fileName1->Text = L"Nhập file đăng ký (*)";
+            this->label_fileName1->Size = System::Drawing::Size(222, 19);
+            this->label_fileName1->TabIndex = 2;
+            this->label_fileName1->Text = L"Nhập file dữ liệu công dân(*)";
+            // 
+            // label_fileName2
+            // 
+            this->label_fileName2->AutoSize = true;
+            this->label_fileName2->Location = System::Drawing::Point(40, 80);
+            this->label_fileName2->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
+            this->label_fileName2->Name = L"label_fileName2";
+            this->label_fileName2->Size = System::Drawing::Size(165, 19);
+            this->label_fileName2->TabIndex = 1;
+            this->label_fileName2->Text = L"Nhập file đăng ký (*)";
             // 
             // fileName1
             // 
@@ -792,7 +1009,7 @@ namespace CppCLRWinformsProjekt {
             this->Manager->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
             this->Manager->Name = L"Manager";
             this->Manager->SelectedIndex = 0;
-            this->Manager->Size = System::Drawing::Size(658, 429);
+            this->Manager->Size = System::Drawing::Size(658, 500);
             this->Manager->TabIndex = 1;
             // 
             // loginTab
@@ -806,7 +1023,7 @@ namespace CppCLRWinformsProjekt {
             this->loginTab->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
             this->loginTab->Name = L"loginTab";
             this->loginTab->Padding = System::Windows::Forms::Padding(3, 2, 3, 2);
-            this->loginTab->Size = System::Drawing::Size(650, 397);
+            this->loginTab->Size = System::Drawing::Size(650, 468);
             this->loginTab->TabIndex = 0;
             this->loginTab->Text = L"Đăng nhập";
             this->loginTab->UseVisualStyleBackColor = true;
@@ -816,7 +1033,7 @@ namespace CppCLRWinformsProjekt {
             this->bt_quit->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((System::Windows::Forms::AnchorStyles::Bottom | System::Windows::Forms::AnchorStyles::Right));
             this->bt_quit->Font = (gcnew System::Drawing::Font(L"MS Reference Sans Serif", 9, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
                 static_cast<System::Byte>(0)));
-            this->bt_quit->Location = System::Drawing::Point(570, 362);
+            this->bt_quit->Location = System::Drawing::Point(570, 433);
             this->bt_quit->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
             this->bt_quit->Name = L"bt_quit";
             this->bt_quit->Size = System::Drawing::Size(75, 28);
@@ -840,7 +1057,7 @@ namespace CppCLRWinformsProjekt {
             this->loginBox->Font = (gcnew System::Drawing::Font(L"MS Reference Sans Serif", 9, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
                 static_cast<System::Byte>(0)));
             this->loginBox->ForeColor = System::Drawing::SystemColors::ActiveCaptionText;
-            this->loginBox->Location = System::Drawing::Point(133, 106);
+            this->loginBox->Location = System::Drawing::Point(133, 142);
             this->loginBox->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
             this->loginBox->Name = L"loginBox";
             this->loginBox->Padding = System::Windows::Forms::Padding(3, 2, 3, 2);
@@ -955,7 +1172,7 @@ namespace CppCLRWinformsProjekt {
             this->accountManagerTab->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
             this->accountManagerTab->Name = L"accountManagerTab";
             this->accountManagerTab->Padding = System::Windows::Forms::Padding(3, 2, 3, 2);
-            this->accountManagerTab->Size = System::Drawing::Size(650, 397);
+            this->accountManagerTab->Size = System::Drawing::Size(650, 468);
             this->accountManagerTab->TabIndex = 1;
             this->accountManagerTab->Text = L"Quản lý tài khoản";
             this->accountManagerTab->UseVisualStyleBackColor = true;
@@ -965,7 +1182,7 @@ namespace CppCLRWinformsProjekt {
             this->bt_logout->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((System::Windows::Forms::AnchorStyles::Bottom | System::Windows::Forms::AnchorStyles::Right));
             this->bt_logout->Font = (gcnew System::Drawing::Font(L"MS Reference Sans Serif", 9, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
                 static_cast<System::Byte>(0)));
-            this->bt_logout->Location = System::Drawing::Point(501, 292);
+            this->bt_logout->Location = System::Drawing::Point(501, 363);
             this->bt_logout->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
             this->bt_logout->Name = L"bt_logout";
             this->bt_logout->Size = System::Drawing::Size(127, 30);
@@ -981,7 +1198,7 @@ namespace CppCLRWinformsProjekt {
             this->accountManager_loginAlert->AutoSize = true;
             this->accountManager_loginAlert->Font = (gcnew System::Drawing::Font(L"MS Reference Sans Serif", 9, System::Drawing::FontStyle::Regular,
                 System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
-            this->accountManager_loginAlert->Location = System::Drawing::Point(134, 176);
+            this->accountManager_loginAlert->Location = System::Drawing::Point(134, 212);
             this->accountManager_loginAlert->Name = L"accountManager_loginAlert";
             this->accountManager_loginAlert->Size = System::Drawing::Size(376, 19);
             this->accountManager_loginAlert->TabIndex = 4;
@@ -992,7 +1209,7 @@ namespace CppCLRWinformsProjekt {
             this->bt_refresh->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((System::Windows::Forms::AnchorStyles::Bottom | System::Windows::Forms::AnchorStyles::Right));
             this->bt_refresh->Font = (gcnew System::Drawing::Font(L"MS Reference Sans Serif", 9, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
                 static_cast<System::Byte>(0)));
-            this->bt_refresh->Location = System::Drawing::Point(501, 327);
+            this->bt_refresh->Location = System::Drawing::Point(501, 398);
             this->bt_refresh->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
             this->bt_refresh->Name = L"bt_refresh";
             this->bt_refresh->Size = System::Drawing::Size(127, 30);
@@ -1008,7 +1225,7 @@ namespace CppCLRWinformsProjekt {
             this->accountManager_changer->Controls->Add(this->accountManager_tabChanger);
             this->accountManager_changer->Font = (gcnew System::Drawing::Font(L"MS Reference Sans Serif", 9, System::Drawing::FontStyle::Regular,
                 System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
-            this->accountManager_changer->Location = System::Drawing::Point(23, 198);
+            this->accountManager_changer->Location = System::Drawing::Point(23, 234);
             this->accountManager_changer->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
             this->accountManager_changer->Name = L"accountManager_changer";
             this->accountManager_changer->Padding = System::Windows::Forms::Padding(3, 2, 3, 2);
@@ -1185,7 +1402,7 @@ namespace CppCLRWinformsProjekt {
             this->accountManager_Info->Controls->Add(this->accoutManager_text1);
             this->accountManager_Info->Font = (gcnew System::Drawing::Font(L"MS Reference Sans Serif", 9, System::Drawing::FontStyle::Regular,
                 System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
-            this->accountManager_Info->Location = System::Drawing::Point(23, 7);
+            this->accountManager_Info->Location = System::Drawing::Point(23, 43);
             this->accountManager_Info->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
             this->accountManager_Info->Name = L"accountManager_Info";
             this->accountManager_Info->Padding = System::Windows::Forms::Padding(3, 2, 3, 2);
@@ -1211,7 +1428,7 @@ namespace CppCLRWinformsProjekt {
             // 
             this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
             this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
-            this->ClientSize = System::Drawing::Size(682, 453);
+            this->ClientSize = System::Drawing::Size(682, 524);
             this->Controls->Add(this->Manager);
             this->Name = L"Form1";
             this->StartPosition = System::Windows::Forms::FormStartPosition::CenterScreen;
@@ -1219,6 +1436,8 @@ namespace CppCLRWinformsProjekt {
             this->dataManagerTab->ResumeLayout(false);
             this->boxDataManager->ResumeLayout(false);
             this->boxDataManager->PerformLayout();
+            this->exportData_people->ResumeLayout(false);
+            (cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->view_exportData_people))->EndInit();
             this->dataManager_menu->ResumeLayout(false);
             this->dataManager_menu->PerformLayout();
             this->box_inputFile->ResumeLayout(false);
@@ -1370,7 +1589,7 @@ private: System::Void sortData_Click_1(System::Object^ sender, System::EventArgs
         this->box_sortData->Visible = true;
         this->box_deleteData->Visible = false;
         this->box_searchData->Visible = false;
-    
+        this->exportData_people->Visible = false;
     }
 }
 private: System::Void deleteData_Click_1(System::Object^ sender, System::EventArgs^ e) {
@@ -1381,6 +1600,7 @@ private: System::Void deleteData_Click_1(System::Object^ sender, System::EventAr
         this->box_sortData->Visible = false;
         this->box_deleteData->Visible = true;
         this->box_searchData->Visible = false;
+        this->exportData_people->Visible = false;
     
     }
 }
@@ -1390,6 +1610,7 @@ private: System::Void searchData_Click(System::Object^ sender, System::EventArgs
         this->box_inputFile->Visible = false;
         this->box_sortData->Visible = false;
         this->box_deleteData->Visible = false;
+        this->exportData_people->Visible = false;
 }
 private: System::Void inputHand_Click(System::Object^ sender, System::EventArgs^ e) {
     if (loginStatus == true)
@@ -1399,6 +1620,7 @@ private: System::Void inputHand_Click(System::Object^ sender, System::EventArgs^
         this->box_sortData->Visible = false;
         this->box_deleteData->Visible = false;
         this->box_searchData->Visible = false;
+        this->exportData_people->Visible = false;
     }
 }
 private: System::Void inputFile_Click(System::Object^ sender, System::EventArgs^ e) {
@@ -1409,6 +1631,7 @@ private: System::Void inputFile_Click(System::Object^ sender, System::EventArgs^
         this->box_sortData->Visible = false;
         this->box_deleteData->Visible = false;
         this->box_searchData->Visible = false;
+        this->exportData_people->Visible = false;
     }
 }
 
@@ -1454,14 +1677,53 @@ private: System::Void bt_inputFile_Click(System::Object^ sender, System::EventAr
     String ^f1 = fileName1->Text;
     String ^f2 = fileName2->Text;
     String ^f3 = fileName3->Text;
+    string path1, path2, path3;
     if ((f1 != "") && (f2 != "") && (f3 != "")) {
         //gọi hàm đọc file
-        MessageBox::Show(L"Gọi hàm đọc file", L"THÔNG BÁO");
+        convertString(f1, path1);
+        convertString(f2, path2);
+        convertString(f3, path3);
+        DN.nhapFile(path1, path2, path3);
+        MessageBox::Show(L"Đã nhập dữ liệu", L"THÔNG BÁO");
     }
     else {
     MessageBox::Show(L"Thiếu file.\nBạn phải nhập đủ 3 file dữ liệu đầu vào.", L"THÔNG BÁO");
     }
     
 }
+private: System::Void table_exportData_full_Paint(System::Object^ sender, System::Windows::Forms::PaintEventArgs^ e) {
+}
+
+private: System::Void button2_Click(System::Object^ sender, System::EventArgs^ e) {
+}
+private: System::Void button3_Click(System::Object^ sender, System::EventArgs^ e) {
+    this->view_exportData_people->RowCount = DN.getRows();
+    int n = DN.getRows();
+    string x = DN.get(DN, "ma_CD", 5);
+        for (int i = 1; i <= n; i++) {
+            //phải convert từ dạng standard string về system string
+            //this->view_exportData_people->Rows[i]->Cells[1]->Value = "null";//gcnew String(DN.get(DN, "ma_CD", i).c_str());
+            //this->view_exportData_people->Rows[i]->Cells[2]->Value = "null";//gcnew String(DN.get(DN, "fullName", i).c_str());
+            //this->view_exportData_people->Rows[i]->Cells[3]->Value = "null";//gcnew String(DN.get(DN, "sex", i).c_str());
+            //this->view_exportData_people->Rows[i]->Cells[4]->Value = "null";//gcnew String(DN.get(DN, "birth", i).c_str());
+            //this->view_exportData_people->Rows[i]->Cells[5]->Value = "null";//gcnew String(DN.get(DN, "phone", i).c_str());
+            //this->view_exportData_people->Rows[i]->Cells[6]->Value = "null";//gcnew String(DN.get(DN, "so_BHXH", i).c_str());
+            //this->view_exportData_people->Rows[i]->Cells[7]->Value = "null";//gcnew String(DN.get(DN, "so_CMND", i).c_str());
+            //this->view_exportData_people->Rows[i]->Cells[8]->Value = "null";//gcnew String(DN.get(DN, "address", i).c_str());
+        };
+}
+private: System::Void toolStripMenuItem8_Click(System::Object^ sender, System::EventArgs^ e) {
+    if (loginStatus == true)
+    {   
+        this->exportData_people->Visible = true;
+        this->box_inputHand->Visible = false;
+        this->box_inputFile->Visible = false;
+        this->box_sortData->Visible = false;
+        this->box_deleteData->Visible = false;
+        this->box_searchData->Visible = false;
+    }
+
+}
+
 };
 }

@@ -3,18 +3,13 @@
 #include <iostream>
 using namespace std;
 
-CongDan ::CongDan(int ma_CD, string fullname, int sex, string phone, string so_BHXH,
-                 string so_CMND, string address, string ngay_DK, string ma_DK, string noi_DK,
-                 bool mui1, bool mui2, string ngay_M1, string ngay_M2): ma_CD(ma_CD), fullName(fullname),
-                 sex(sex), phone(phone), so_BHXH(so_BHXH), so_CMND(so_CMND), address(address), ngay_DK(ngay_DK),
-                 ma_DK(ma_DK), mui1(mui1), mui2(mui2), ngay_M1(ngay_M1), ngay_M2(ngay_M2)
-{
-    count++;
-};
+CongDan::CongDan(){
 
-CongDan ::~CongDan()
-{
+}
 
+CongDan::~CongDan()
+{
+    
 }
 
 istream &operator >> (istream &in, CongDan &CD)
@@ -68,5 +63,26 @@ istream &operator >> (istream &in, CongDan &CD)
         getline(in, CD.ngay_M2);
     }
     return in;
+}
 
+const CongDan& CongDan :: operator = (const CongDan &CD) 
+{
+    if (this != &CD) {
+        this->ma_CD = CD.ma_CD;
+        this->fullName = CD.fullName;
+        this->birth = CD.birth;
+        this->sex = CD.sex;
+        this->phone = CD.phone;
+        this->so_BHXH = CD.so_BHXH;
+        this->so_CMND = CD.so_CMND;
+        this->address = CD.address;
+        this->ngay_DK = CD.ngay_DK;
+        this->ma_DK = CD.ma_DK;
+        this->noi_DK = CD.noi_DK;
+        this->mui1 = CD.mui1;
+        this->mui2 = CD.mui2;
+        this->ngay_M1 = CD.ngay_M1;
+        this->ngay_M2 = CD.ngay_M2;
+    }
+    return *this;
 }

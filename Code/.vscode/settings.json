@@ -7,5 +7,6 @@
         "fstream": "cpp",
         "istream": "cpp",
         "xiosbase": "cpp"
-    }
+    },
+    "C_Cpp.errorSquiggles": "Disabled"
 }

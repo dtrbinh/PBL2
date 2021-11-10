@@ -18,7 +18,7 @@ class DSCD
 
         // Hàm đọc file
         void nhapFile(string f1, string f2,string f3);
-        string get(DSCD x, string type, int i);
+        string get(string type, int i);
         // Hàm nhập dữ liệu bằng tay
         void nhapTay(int n, CongDan CD[]);
 
@@ -61,5 +61,7 @@ class DSCD
 };
 template <typename T>
 void swap(int &num1, int &num2);
+
+
 
 #endif

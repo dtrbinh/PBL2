@@ -7,29 +7,29 @@
 
 namespace CppCLRWinformsProjekt {
 
-	using namespace System;
-	using namespace System::ComponentModel;
-	using namespace System::Collections;
-	using namespace System::Windows::Forms;
-	using namespace System::Data;
-	using namespace System::Drawing;
+    using namespace System;
+    using namespace System::ComponentModel;
+    using namespace System::Collections;
+    using namespace System::Windows::Forms;
+    using namespace System::Data;
+    using namespace System::Drawing;
     using namespace System::IO;
 
-	/// <summary>
-	/// Zusammenfassung für Form1
-	/// </summary>
+    /// <summary>
+    /// Zusammenfassung für Form1
+    /// </summary>
     static DSCD DN;
-    public ref class Form1 : public System::Windows::Forms::Form 
-	{
+    public ref class Form1 : public System::Windows::Forms::Form
+    {
 
     private:
- 
+
         static bool loginStatus = false;
         static int currentUser_ID = NULL;
-        static String ^currentUser_permission = "";
-        static String ^ADMIN0 = "admin", ^PASS0 = "admin", ^PER0 = "admin", ^NAME0 = "Administrator";
-        static String ^ADMIN1 = "dotranbinh", ^PASS1 = "dotranbinh", ^PER1 = "full per-user", ^NAME1 = L"Đỗ Trần Bình";
-        static String ^ADMIN2 = "lephiduy", ^PASS2 = "lephiduy", ^PER2 = "full per-user", ^NAME2 = L"Lê Phi Duy";
+        static String^ currentUser_permission = "";
+        static String^ ADMIN0 = "admin", ^ PASS0 = "admin", ^ PER0 = "admin", ^ NAME0 = "Administrator";
+        static String^ ADMIN1 = "dotranbinh", ^ PASS1 = "dotranbinh", ^ PER1 = "full per-user", ^ NAME1 = L"Đỗ Trần Bình";
+        static String^ ADMIN2 = "lephiduy", ^ PASS2 = "lephiduy", ^ PER2 = "full per-user", ^ NAME2 = L"Lê Phi Duy";
     private: System::Windows::Forms::GroupBox^ boxDataManager;
 
     private: System::Windows::Forms::GroupBox^ box_deleteData;
@@ -89,6 +89,34 @@ namespace CppCLRWinformsProjekt {
     private: System::Windows::Forms::DataGridViewTextBoxColumn^ so_CMND;
     private: System::Windows::Forms::DataGridViewTextBoxColumn^ address;
     private: System::Windows::Forms::ToolStripMenuItem^ xuấtToànBộDữLiệuToolStripMenuItem;
+    private: System::Windows::Forms::GroupBox^ exportData_registry;
+    private: System::Windows::Forms::Button^ bt_saveData_registry;
+
+
+
+
+    private: System::Windows::Forms::Button^ bt_loadData_registry;
+    private: System::Windows::Forms::Button^ bt_modData_registry;
+
+
+    private: System::Windows::Forms::Button^ button5;
+    private: System::Windows::Forms::DataGridView^ view_exportData_registry;
+
+    private: System::Windows::Forms::DataGridViewTextBoxColumn^ fullName2;
+    private: System::Windows::Forms::DataGridViewTextBoxColumn^ ma_DK;
+    private: System::Windows::Forms::DataGridViewTextBoxColumn^ ngay_DK;
+    private: System::Windows::Forms::DataGridViewTextBoxColumn^ noi_DK;
+    private: System::Windows::Forms::GroupBox^ exportData_vaccination;
+    private: System::Windows::Forms::Button^ bt_saveData_vaccination;
+    private: System::Windows::Forms::Button^ bt_loadData_vaccination;
+    private: System::Windows::Forms::Button^ bt_modData_vaccination;
+    private: System::Windows::Forms::Button^ button6;
+    private: System::Windows::Forms::DataGridView^ view_exportData_vaccination;
+    private: System::Windows::Forms::DataGridViewTextBoxColumn^ fullName3;
+    private: System::Windows::Forms::DataGridViewTextBoxColumn^ mui1;
+    private: System::Windows::Forms::DataGridViewTextBoxColumn^ ngay_M1;
+    private: System::Windows::Forms::DataGridViewTextBoxColumn^ mui2;
+    private: System::Windows::Forms::DataGridViewTextBoxColumn^ ngay_M2;
 
 
 
@@ -98,7 +126,7 @@ namespace CppCLRWinformsProjekt {
 
     private: System::Windows::Forms::Label^ dataManager_loginAlert;
 
-    public: 
+    public:
         void checkStatus() {
             if (loginStatus == true)
             {
@@ -112,7 +140,7 @@ namespace CppCLRWinformsProjekt {
                 this->bt_logout->Visible = true;
                 this->bt_refresh->Visible = true;
                 this->boxDataManager->Visible = true;
-               
+
             }
             else {
                 this->loginBox_status->ForeColor = Color::Red;
@@ -125,7 +153,7 @@ namespace CppCLRWinformsProjekt {
                 this->bt_logout->Visible = false;
                 this->bt_refresh->Visible = false;
                 this->boxDataManager->Visible = false;
-            
+
             }
         }
         void checkUser() {
@@ -188,27 +216,27 @@ namespace CppCLRWinformsProjekt {
             os = chars;
             Marshal::FreeHGlobal(IntPtr((void*)chars));
         }
-        
-	public:
-		Form1(void)
-		{
-			InitializeComponent();
-			//
-			//TODO: Konstruktorcode hier hinzufügen.
-			//
-		}
 
-	protected:
-		/// <summary>
-		/// Verwendete Ressourcen bereinigen.
-		/// </summary>
-		~Form1()
-		{
-			if (components)
-			{
-				delete components;
-			}
-		}
+    public:
+        Form1(void)
+        {
+            InitializeComponent();
+            //
+            //TODO: Konstruktorcode hier hinzufügen.
+            //
+        }
+
+    protected:
+        /// <summary>
+        /// Verwendete Ressourcen bereinigen.
+        /// </summary>
+        ~Form1()
+        {
+            if (components)
+            {
+                delete components;
+            }
+        }
     private: System::Windows::Forms::Label^ accountManager_permission;
     protected:
     private: System::Windows::Forms::Button^ bt_saveFullname;
@@ -256,19 +284,19 @@ namespace CppCLRWinformsProjekt {
     protected:
 
 
-	private:
-		/// <summary>
-		/// Erforderliche Designervariable.
-		/// </summary>
-		System::ComponentModel::Container ^components;
+    private:
+        /// <summary>
+        /// Erforderliche Designervariable.
+        /// </summary>
+        System::ComponentModel::Container^ components;
 
 #pragma region Windows Form Designer generated code
-		/// <summary>
-		/// Erforderliche Methode für die Designerunterstützung.
-		/// Der Inhalt der Methode darf nicht mit dem Code-Editor geändert werden.
-		/// </summary>
-		void InitializeComponent(void)
-		{
+        /// <summary>
+        /// Erforderliche Methode für die Designerunterstützung.
+        /// Der Inhalt der Methode darf nicht mit dem Code-Editor geändert werden.
+        /// </summary>
+        void InitializeComponent(void)
+        {
             this->accountManager_permission = (gcnew System::Windows::Forms::Label());
             this->bt_saveFullname = (gcnew System::Windows::Forms::Button());
             this->accountManager_fullname = (gcnew System::Windows::Forms::Label());
@@ -280,6 +308,27 @@ namespace CppCLRWinformsProjekt {
             this->accoutManager_text1 = (gcnew System::Windows::Forms::Label());
             this->dataManagerTab = (gcnew System::Windows::Forms::TabPage());
             this->boxDataManager = (gcnew System::Windows::Forms::GroupBox());
+            this->exportData_vaccination = (gcnew System::Windows::Forms::GroupBox());
+            this->bt_saveData_vaccination = (gcnew System::Windows::Forms::Button());
+            this->bt_loadData_vaccination = (gcnew System::Windows::Forms::Button());
+            this->bt_modData_vaccination = (gcnew System::Windows::Forms::Button());
+            this->button6 = (gcnew System::Windows::Forms::Button());
+            this->view_exportData_vaccination = (gcnew System::Windows::Forms::DataGridView());
+            this->fullName3 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
+            this->mui1 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
+            this->ngay_M1 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
+            this->mui2 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
+            this->ngay_M2 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
+            this->exportData_registry = (gcnew System::Windows::Forms::GroupBox());
+            this->bt_saveData_registry = (gcnew System::Windows::Forms::Button());
+            this->bt_loadData_registry = (gcnew System::Windows::Forms::Button());
+            this->bt_modData_registry = (gcnew System::Windows::Forms::Button());
+            this->button5 = (gcnew System::Windows::Forms::Button());
+            this->view_exportData_registry = (gcnew System::Windows::Forms::DataGridView());
+            this->fullName2 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
+            this->ma_DK = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
+            this->ngay_DK = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
+            this->noi_DK = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
             this->exportData_people = (gcnew System::Windows::Forms::GroupBox());
             this->bt_saveData_people = (gcnew System::Windows::Forms::Button());
             this->bt_loadData_people = (gcnew System::Windows::Forms::Button());
@@ -357,6 +406,10 @@ namespace CppCLRWinformsProjekt {
             this->dataManager_loginAlert = (gcnew System::Windows::Forms::Label());
             this->dataManagerTab->SuspendLayout();
             this->boxDataManager->SuspendLayout();
+            this->exportData_vaccination->SuspendLayout();
+            (cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->view_exportData_vaccination))->BeginInit();
+            this->exportData_registry->SuspendLayout();
+            (cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->view_exportData_registry))->BeginInit();
             this->exportData_people->SuspendLayout();
             (cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->view_exportData_people))->BeginInit();
             this->dataManager_menu->SuspendLayout();
@@ -494,6 +547,8 @@ namespace CppCLRWinformsProjekt {
             this->boxDataManager->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Bottom)
                 | System::Windows::Forms::AnchorStyles::Left)
                 | System::Windows::Forms::AnchorStyles::Right));
+            this->boxDataManager->Controls->Add(this->exportData_vaccination);
+            this->boxDataManager->Controls->Add(this->exportData_registry);
             this->boxDataManager->Controls->Add(this->exportData_people);
             this->boxDataManager->Controls->Add(this->box_searchData);
             this->boxDataManager->Controls->Add(this->dataManager_menu);
@@ -506,6 +561,244 @@ namespace CppCLRWinformsProjekt {
             this->boxDataManager->Size = System::Drawing::Size(654, 468);
             this->boxDataManager->TabIndex = 3;
             this->boxDataManager->TabStop = false;
+            // 
+            // exportData_vaccination
+            // 
+            this->exportData_vaccination->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Bottom)
+                | System::Windows::Forms::AnchorStyles::Left)
+                | System::Windows::Forms::AnchorStyles::Right));
+            this->exportData_vaccination->Controls->Add(this->bt_saveData_vaccination);
+            this->exportData_vaccination->Controls->Add(this->bt_loadData_vaccination);
+            this->exportData_vaccination->Controls->Add(this->bt_modData_vaccination);
+            this->exportData_vaccination->Controls->Add(this->button6);
+            this->exportData_vaccination->Controls->Add(this->view_exportData_vaccination);
+            this->exportData_vaccination->Font = (gcnew System::Drawing::Font(L"MS Reference Sans Serif", 9, System::Drawing::FontStyle::Regular,
+                System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
+            this->exportData_vaccination->Location = System::Drawing::Point(0, 51);
+            this->exportData_vaccination->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
+            this->exportData_vaccination->Name = L"exportData_vaccination";
+            this->exportData_vaccination->Padding = System::Windows::Forms::Padding(3, 2, 3, 2);
+            this->exportData_vaccination->Size = System::Drawing::Size(654, 417);
+            this->exportData_vaccination->TabIndex = 8;
+            this->exportData_vaccination->TabStop = false;
+            this->exportData_vaccination->Text = L"Dữ liệu tiêm chủng";
+            this->exportData_vaccination->Visible = false;
+            // 
+            // bt_saveData_vaccination
+            // 
+            this->bt_saveData_vaccination->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((System::Windows::Forms::AnchorStyles::Bottom | System::Windows::Forms::AnchorStyles::Right));
+            this->bt_saveData_vaccination->Location = System::Drawing::Point(551, 377);
+            this->bt_saveData_vaccination->Name = L"bt_saveData_vaccination";
+            this->bt_saveData_vaccination->Size = System::Drawing::Size(91, 30);
+            this->bt_saveData_vaccination->TabIndex = 4;
+            this->bt_saveData_vaccination->Text = L"Lưu";
+            this->bt_saveData_vaccination->UseVisualStyleBackColor = true;
+            // 
+            // bt_loadData_vaccination
+            // 
+            this->bt_loadData_vaccination->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((System::Windows::Forms::AnchorStyles::Bottom | System::Windows::Forms::AnchorStyles::Right));
+            this->bt_loadData_vaccination->Location = System::Drawing::Point(279, 377);
+            this->bt_loadData_vaccination->Name = L"bt_loadData_vaccination";
+            this->bt_loadData_vaccination->Size = System::Drawing::Size(130, 30);
+            this->bt_loadData_vaccination->TabIndex = 3;
+            this->bt_loadData_vaccination->Text = L"Tải dữ liệu";
+            this->bt_loadData_vaccination->UseVisualStyleBackColor = true;
+            this->bt_loadData_vaccination->Click += gcnew System::EventHandler(this, &Form1::bt_loadData_vaccination_Click);
+            // 
+            // bt_modData_vaccination
+            // 
+            this->bt_modData_vaccination->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((System::Windows::Forms::AnchorStyles::Bottom | System::Windows::Forms::AnchorStyles::Right));
+            this->bt_modData_vaccination->Location = System::Drawing::Point(415, 377);
+            this->bt_modData_vaccination->Name = L"bt_modData_vaccination";
+            this->bt_modData_vaccination->Size = System::Drawing::Size(130, 30);
+            this->bt_modData_vaccination->TabIndex = 2;
+            this->bt_modData_vaccination->Text = L"Chỉnh sửa";
+            this->bt_modData_vaccination->UseVisualStyleBackColor = true;
+            // 
+            // button6
+            // 
+            this->button6->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((System::Windows::Forms::AnchorStyles::Bottom | System::Windows::Forms::AnchorStyles::Right));
+            this->button6->Location = System::Drawing::Point(551, 388);
+            this->button6->Name = L"button6";
+            this->button6->Size = System::Drawing::Size(0, 0);
+            this->button6->TabIndex = 1;
+            this->button6->Text = L"button6";
+            this->button6->UseVisualStyleBackColor = true;
+            // 
+            // view_exportData_vaccination
+            // 
+            this->view_exportData_vaccination->AllowUserToAddRows = false;
+            this->view_exportData_vaccination->AllowUserToDeleteRows = false;
+            this->view_exportData_vaccination->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Bottom)
+                | System::Windows::Forms::AnchorStyles::Left)
+                | System::Windows::Forms::AnchorStyles::Right));
+            this->view_exportData_vaccination->ColumnHeadersHeightSizeMode = System::Windows::Forms::DataGridViewColumnHeadersHeightSizeMode::AutoSize;
+            this->view_exportData_vaccination->Columns->AddRange(gcnew cli::array< System::Windows::Forms::DataGridViewColumn^  >(5) {
+                this->fullName3,
+                    this->mui1, this->ngay_M1, this->mui2, this->ngay_M2
+            });
+            this->view_exportData_vaccination->Location = System::Drawing::Point(10, 24);
+            this->view_exportData_vaccination->Name = L"view_exportData_vaccination";
+            this->view_exportData_vaccination->ReadOnly = true;
+            this->view_exportData_vaccination->RowHeadersWidth = 51;
+            this->view_exportData_vaccination->RowTemplate->Height = 24;
+            this->view_exportData_vaccination->Size = System::Drawing::Size(644, 342);
+            this->view_exportData_vaccination->TabIndex = 0;
+            // 
+            // fullName3
+            // 
+            this->fullName3->HeaderText = L"Họ và tên";
+            this->fullName3->MinimumWidth = 6;
+            this->fullName3->Name = L"fullName3";
+            this->fullName3->ReadOnly = true;
+            this->fullName3->Width = 125;
+            // 
+            // mui1
+            // 
+            this->mui1->HeaderText = L"Mũi số 1";
+            this->mui1->MinimumWidth = 6;
+            this->mui1->Name = L"mui1";
+            this->mui1->ReadOnly = true;
+            this->mui1->Width = 125;
+            // 
+            // ngay_M1
+            // 
+            this->ngay_M1->HeaderText = L"Ngày tiêm mũi 1";
+            this->ngay_M1->MinimumWidth = 6;
+            this->ngay_M1->Name = L"ngay_M1";
+            this->ngay_M1->ReadOnly = true;
+            this->ngay_M1->Width = 125;
+            // 
+            // mui2
+            // 
+            this->mui2->HeaderText = L"Mũi số 2";
+            this->mui2->MinimumWidth = 6;
+            this->mui2->Name = L"mui2";
+            this->mui2->ReadOnly = true;
+            this->mui2->Width = 125;
+            // 
+            // ngay_M2
+            // 
+            this->ngay_M2->HeaderText = L"Ngày tiêm mũi 2";
+            this->ngay_M2->MinimumWidth = 6;
+            this->ngay_M2->Name = L"ngay_M2";
+            this->ngay_M2->ReadOnly = true;
+            this->ngay_M2->Width = 125;
+            // 
+            // exportData_registry
+            // 
+            this->exportData_registry->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Bottom)
+                | System::Windows::Forms::AnchorStyles::Left)
+                | System::Windows::Forms::AnchorStyles::Right));
+            this->exportData_registry->Controls->Add(this->bt_saveData_registry);
+            this->exportData_registry->Controls->Add(this->bt_loadData_registry);
+            this->exportData_registry->Controls->Add(this->bt_modData_registry);
+            this->exportData_registry->Controls->Add(this->button5);
+            this->exportData_registry->Controls->Add(this->view_exportData_registry);
+            this->exportData_registry->Font = (gcnew System::Drawing::Font(L"MS Reference Sans Serif", 9, System::Drawing::FontStyle::Regular,
+                System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
+            this->exportData_registry->Location = System::Drawing::Point(0, 51);
+            this->exportData_registry->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
+            this->exportData_registry->Name = L"exportData_registry";
+            this->exportData_registry->Padding = System::Windows::Forms::Padding(3, 2, 3, 2);
+            this->exportData_registry->Size = System::Drawing::Size(654, 417);
+            this->exportData_registry->TabIndex = 7;
+            this->exportData_registry->TabStop = false;
+            this->exportData_registry->Text = L"Dữ liệu đăng ký";
+            this->exportData_registry->Visible = false;
+            // 
+            // bt_saveData_registry
+            // 
+            this->bt_saveData_registry->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((System::Windows::Forms::AnchorStyles::Bottom | System::Windows::Forms::AnchorStyles::Right));
+            this->bt_saveData_registry->Location = System::Drawing::Point(551, 377);
+            this->bt_saveData_registry->Name = L"bt_saveData_registry";
+            this->bt_saveData_registry->Size = System::Drawing::Size(91, 30);
+            this->bt_saveData_registry->TabIndex = 4;
+            this->bt_saveData_registry->Text = L"Lưu";
+            this->bt_saveData_registry->UseVisualStyleBackColor = true;
+            // 
+            // bt_loadData_registry
+            // 
+            this->bt_loadData_registry->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((System::Windows::Forms::AnchorStyles::Bottom | System::Windows::Forms::AnchorStyles::Right));
+            this->bt_loadData_registry->Location = System::Drawing::Point(279, 377);
+            this->bt_loadData_registry->Name = L"bt_loadData_registry";
+            this->bt_loadData_registry->Size = System::Drawing::Size(130, 30);
+            this->bt_loadData_registry->TabIndex = 3;
+            this->bt_loadData_registry->Text = L"Tải dữ liệu";
+            this->bt_loadData_registry->UseVisualStyleBackColor = true;
+            this->bt_loadData_registry->Click += gcnew System::EventHandler(this, &Form1::button3_Click_1);
+            // 
+            // bt_modData_registry
+            // 
+            this->bt_modData_registry->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((System::Windows::Forms::AnchorStyles::Bottom | System::Windows::Forms::AnchorStyles::Right));
+            this->bt_modData_registry->Location = System::Drawing::Point(415, 377);
+            this->bt_modData_registry->Name = L"bt_modData_registry";
+            this->bt_modData_registry->Size = System::Drawing::Size(130, 30);
+            this->bt_modData_registry->TabIndex = 2;
+            this->bt_modData_registry->Text = L"Chỉnh sửa";
+            this->bt_modData_registry->UseVisualStyleBackColor = true;
+            // 
+            // button5
+            // 
+            this->button5->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((System::Windows::Forms::AnchorStyles::Bottom | System::Windows::Forms::AnchorStyles::Right));
+            this->button5->Location = System::Drawing::Point(551, 388);
+            this->button5->Name = L"button5";
+            this->button5->Size = System::Drawing::Size(0, 0);
+            this->button5->TabIndex = 1;
+            this->button5->Text = L"button5";
+            this->button5->UseVisualStyleBackColor = true;
+            // 
+            // view_exportData_registry
+            // 
+            this->view_exportData_registry->AllowUserToAddRows = false;
+            this->view_exportData_registry->AllowUserToDeleteRows = false;
+            this->view_exportData_registry->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Bottom)
+                | System::Windows::Forms::AnchorStyles::Left)
+                | System::Windows::Forms::AnchorStyles::Right));
+            this->view_exportData_registry->ColumnHeadersHeightSizeMode = System::Windows::Forms::DataGridViewColumnHeadersHeightSizeMode::AutoSize;
+            this->view_exportData_registry->Columns->AddRange(gcnew cli::array< System::Windows::Forms::DataGridViewColumn^  >(4) {
+                this->fullName2,
+                    this->ma_DK, this->ngay_DK, this->noi_DK
+            });
+            this->view_exportData_registry->Location = System::Drawing::Point(10, 24);
+            this->view_exportData_registry->Name = L"view_exportData_registry";
+            this->view_exportData_registry->ReadOnly = true;
+            this->view_exportData_registry->RowHeadersWidth = 51;
+            this->view_exportData_registry->RowTemplate->Height = 24;
+            this->view_exportData_registry->Size = System::Drawing::Size(644, 342);
+            this->view_exportData_registry->TabIndex = 0;
+            // 
+            // fullName2
+            // 
+            this->fullName2->HeaderText = L"Họ và tên";
+            this->fullName2->MinimumWidth = 6;
+            this->fullName2->Name = L"fullName2";
+            this->fullName2->ReadOnly = true;
+            this->fullName2->Width = 125;
+            // 
+            // ma_DK
+            // 
+            this->ma_DK->HeaderText = L"Mã đăng ký";
+            this->ma_DK->MinimumWidth = 6;
+            this->ma_DK->Name = L"ma_DK";
+            this->ma_DK->ReadOnly = true;
+            this->ma_DK->Width = 125;
+            // 
+            // ngay_DK
+            // 
+            this->ngay_DK->HeaderText = L"Ngày đăng ký";
+            this->ngay_DK->MinimumWidth = 6;
+            this->ngay_DK->Name = L"ngay_DK";
+            this->ngay_DK->ReadOnly = true;
+            this->ngay_DK->Width = 125;
+            // 
+            // noi_DK
+            // 
+            this->noi_DK->HeaderText = L"Nơi đăng ký";
+            this->noi_DK->MinimumWidth = 6;
+            this->noi_DK->Name = L"noi_DK";
+            this->noi_DK->ReadOnly = true;
+            this->noi_DK->Width = 125;
             // 
             // exportData_people
             // 
@@ -783,6 +1076,7 @@ namespace CppCLRWinformsProjekt {
             this->toolStripMenuItem9->Name = L"toolStripMenuItem9";
             this->toolStripMenuItem9->Size = System::Drawing::Size(242, 26);
             this->toolStripMenuItem9->Text = L"Dữ liệu đăng ký";
+            this->toolStripMenuItem9->Click += gcnew System::EventHandler(this, &Form1::toolStripMenuItem9_Click);
             // 
             // toolStripMenuItem10
             // 
@@ -791,6 +1085,7 @@ namespace CppCLRWinformsProjekt {
             this->toolStripMenuItem10->Name = L"toolStripMenuItem10";
             this->toolStripMenuItem10->Size = System::Drawing::Size(242, 26);
             this->toolStripMenuItem10->Text = L"Dữ liệu tiêm chủng";
+            this->toolStripMenuItem10->Click += gcnew System::EventHandler(this, &Form1::toolStripMenuItem10_Click);
             // 
             // xuấtToànBộDữLiệuToolStripMenuItem
             // 
@@ -1436,6 +1731,10 @@ namespace CppCLRWinformsProjekt {
             this->dataManagerTab->ResumeLayout(false);
             this->boxDataManager->ResumeLayout(false);
             this->boxDataManager->PerformLayout();
+            this->exportData_vaccination->ResumeLayout(false);
+            (cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->view_exportData_vaccination))->EndInit();
+            this->exportData_registry->ResumeLayout(false);
+            (cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->view_exportData_registry))->EndInit();
             this->exportData_people->ResumeLayout(false);
             (cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->view_exportData_people))->EndInit();
             this->dataManager_menu->ResumeLayout(false);
@@ -1465,265 +1764,327 @@ namespace CppCLRWinformsProjekt {
 #pragma endregion
     private: System::Void bt_showPassword_Click(System::Object^ sender, System::EventArgs^ e) {
     }
-private: System::Void bt_login_Click(System::Object^ sender, System::EventArgs^ e) {
-    loginStatus = false;
-    if ((loginBox_username->Text == ADMIN0) && (loginBox_password->Text == PASS0))
-    {
-        this->loginStatus = true;
-        this->currentUser_ID = 0;
-    }
-    else if ((loginBox_username->Text == ADMIN1) && (loginBox_password->Text == PASS1))
-    {
-        this->loginStatus = true;
-        this->currentUser_ID = 1;
-    }
-    else if ((loginBox_username->Text == ADMIN2) && (loginBox_password->Text == PASS2))
-    {
-        this->loginStatus = true;
-        this->currentUser_ID = 2;
-    }
-    else 
-    {
-        this->loginStatus = false;
-        this->currentUser_ID = NULL;
-    }
-    checkLoginStatus();
-}
-
-private: System::Void bt_showPassword_MouseDown(System::Object^ sender, System::Windows::Forms::MouseEventArgs^ e) {
-    this->loginBox_password->PasswordChar = char::MinValue;
-}
-private: System::Void bt_showPassword_MouseUp(System::Object^ sender, System::Windows::Forms::MouseEventArgs^ e) {
-    this->loginBox_password->PasswordChar = char::MaxValue;
-    this->loginBox_password->PasswordChar = '*';
-}
-private: System::Void bt_saveUsername_Click(System::Object^ sender, System::EventArgs^ e) {
-    if (accountManager_newUsername->Text != "")
-    {
-        switch (currentUser_ID)
+    private: System::Void bt_login_Click(System::Object^ sender, System::EventArgs^ e) {
+        loginStatus = false;
+        if ((loginBox_username->Text == ADMIN0) && (loginBox_password->Text == PASS0))
         {
-        case 0:
-            ADMIN0 = accountManager_newUsername->Text;
-            break;
-        case 1:
-            ADMIN1 = accountManager_newUsername->Text;
-            break;
-        case 2:
-            ADMIN2 = accountManager_newUsername->Text;
-            break;
-        default:
-
-            break;
+            this->loginStatus = true;
+            this->currentUser_ID = 0;
         }
+        else if ((loginBox_username->Text == ADMIN1) && (loginBox_password->Text == PASS1))
+        {
+            this->loginStatus = true;
+            this->currentUser_ID = 1;
+        }
+        else if ((loginBox_username->Text == ADMIN2) && (loginBox_password->Text == PASS2))
+        {
+            this->loginStatus = true;
+            this->currentUser_ID = 2;
+        }
+        else
+        {
+            this->loginStatus = false;
+            this->currentUser_ID = NULL;
+        }
+        checkLoginStatus();
     }
-    else MessageBox::Show(L"Tên đăng nhập không thể để trống.\nHãy nhập lại.", L"THÔNG BÁO");
-    checkUser();
-}
-private: System::Void bt_savePassword_Click(System::Object^ sender, System::EventArgs^ e) {
-    String ^newPassword = accountManager_newPassword->Text, ^newPasswordCheck = accountManager_newPasswordCheck->Text;
-    if (newPassword != "")
-    {
-        if (newPassword == newPasswordCheck)
+
+    private: System::Void bt_showPassword_MouseDown(System::Object^ sender, System::Windows::Forms::MouseEventArgs^ e) {
+        this->loginBox_password->PasswordChar = char::MinValue;
+    }
+    private: System::Void bt_showPassword_MouseUp(System::Object^ sender, System::Windows::Forms::MouseEventArgs^ e) {
+        this->loginBox_password->PasswordChar = char::MaxValue;
+        this->loginBox_password->PasswordChar = '*';
+    }
+    private: System::Void bt_saveUsername_Click(System::Object^ sender, System::EventArgs^ e) {
+        if (accountManager_newUsername->Text != "")
         {
             switch (currentUser_ID)
             {
             case 0:
-                PASS0 = accountManager_newPassword->Text;
+                ADMIN0 = accountManager_newUsername->Text;
                 break;
             case 1:
-                PASS1 = accountManager_newPassword->Text;
+                ADMIN1 = accountManager_newUsername->Text;
                 break;
             case 2:
-                PASS2 = accountManager_newPassword->Text;
+                ADMIN2 = accountManager_newUsername->Text;
                 break;
             default:
 
                 break;
             }
         }
-        else MessageBox::Show(L"Mật khẩu không trùng khớp.\nHãy nhập lại.", L"THÔNG BÁO");
+        else MessageBox::Show(L"Tên đăng nhập không thể để trống.\nHãy nhập lại.", L"THÔNG BÁO");
+        checkUser();
     }
-    else MessageBox::Show(L"Mật khẩu không thể để trống.\nHãy nhập lại.", L"THÔNG BÁO");
-    checkUser();
-}
-private: System::Void bt_saveFullname_Click(System::Object^ sender, System::EventArgs^ e) {
-    if (accountManager_newFullname->Text != "")
-    {
-        switch (currentUser_ID)
+    private: System::Void bt_savePassword_Click(System::Object^ sender, System::EventArgs^ e) {
+        String^ newPassword = accountManager_newPassword->Text, ^ newPasswordCheck = accountManager_newPasswordCheck->Text;
+        if (newPassword != "")
         {
-        case 0:
-            NAME0 = accountManager_newFullname->Text;
-            break;
-        case 1:
-            NAME1 = accountManager_newFullname->Text;
-            break;
-        case 2:
-            NAME2 = accountManager_newFullname->Text;
-            break;
-        default:
+            if (newPassword == newPasswordCheck)
+            {
+                switch (currentUser_ID)
+                {
+                case 0:
+                    PASS0 = accountManager_newPassword->Text;
+                    break;
+                case 1:
+                    PASS1 = accountManager_newPassword->Text;
+                    break;
+                case 2:
+                    PASS2 = accountManager_newPassword->Text;
+                    break;
+                default:
 
-            break;
+                    break;
+                }
+            }
+            else MessageBox::Show(L"Mật khẩu không trùng khớp.\nHãy nhập lại.", L"THÔNG BÁO");
+        }
+        else MessageBox::Show(L"Mật khẩu không thể để trống.\nHãy nhập lại.", L"THÔNG BÁO");
+        checkUser();
+    }
+    private: System::Void bt_saveFullname_Click(System::Object^ sender, System::EventArgs^ e) {
+        if (accountManager_newFullname->Text != "")
+        {
+            switch (currentUser_ID)
+            {
+            case 0:
+                NAME0 = accountManager_newFullname->Text;
+                break;
+            case 1:
+                NAME1 = accountManager_newFullname->Text;
+                break;
+            case 2:
+                NAME2 = accountManager_newFullname->Text;
+                break;
+            default:
+
+                break;
+            }
+        }
+        else MessageBox::Show(L"Tên chủ tài khoản không thể để trống.\nHãy nhập lại.", L"THÔNG BÁO");
+
+        checkUser();
+    }
+    private: System::Void bt_logout_Click(System::Object^ sender, System::EventArgs^ e) {
+        loginStatus = false;
+        checkStatus();
+    }
+    private: System::Void bt_refresh_Click(System::Object^ sender, System::EventArgs^ e) {
+        checkUser();
+    }
+    private: System::Void dataManager_menu_ItemClicked(System::Object^ sender, System::Windows::Forms::ToolStripItemClickedEventArgs^ e) {
+    }
+    private: System::Void dataManagerTab_Click(System::Object^ sender, System::EventArgs^ e) {
+    }
+
+    private: System::Void sortData_Click_1(System::Object^ sender, System::EventArgs^ e) {
+        if (loginStatus == true)
+        {
+            this->box_inputHand->Visible = false;
+            this->box_inputFile->Visible = false;
+            this->box_sortData->Visible = true;
+            this->box_deleteData->Visible = false;
+            this->box_searchData->Visible = false;
+            this->exportData_people->Visible = false;
+            this->exportData_registry->Visible = false;
+            this->exportData_vaccination->Visible = false;
         }
     }
-    else MessageBox::Show(L"Tên chủ tài khoản không thể để trống.\nHãy nhập lại.", L"THÔNG BÁO");
+    private: System::Void deleteData_Click_1(System::Object^ sender, System::EventArgs^ e) {
+        if (loginStatus == true)
+        {
+            this->box_inputHand->Visible = false;
+            this->box_inputFile->Visible = false;
+            this->box_sortData->Visible = false;
+            this->box_deleteData->Visible = true;
+            this->box_searchData->Visible = false;
+            this->exportData_people->Visible = false;
+            this->exportData_registry->Visible = false;
+            this->exportData_vaccination->Visible = false;
 
-    checkUser();
-}
-private: System::Void bt_logout_Click(System::Object^ sender, System::EventArgs^ e) {
-    loginStatus = false;
-    checkStatus();
-}
-private: System::Void bt_refresh_Click(System::Object^ sender, System::EventArgs^ e) {
-    checkUser();
-}
-private: System::Void dataManager_menu_ItemClicked(System::Object^ sender, System::Windows::Forms::ToolStripItemClickedEventArgs^ e) {
-}
-private: System::Void dataManagerTab_Click(System::Object^ sender, System::EventArgs^ e) {
-}
-
-private: System::Void sortData_Click_1(System::Object^ sender, System::EventArgs^ e) {
-    if (loginStatus == true)
-    {
-        this->box_inputHand->Visible = false;
-        this->box_inputFile->Visible = false;
-        this->box_sortData->Visible = true;
-        this->box_deleteData->Visible = false;
-        this->box_searchData->Visible = false;
-        this->exportData_people->Visible = false;
+        }
     }
-}
-private: System::Void deleteData_Click_1(System::Object^ sender, System::EventArgs^ e) {
-    if (loginStatus == true)
-    {
-        this->box_inputHand->Visible = false;
-        this->box_inputFile->Visible = false;
-        this->box_sortData->Visible = false;
-        this->box_deleteData->Visible = true;
-        this->box_searchData->Visible = false;
-        this->exportData_people->Visible = false;
-    
-    }
-}
-private: System::Void searchData_Click(System::Object^ sender, System::EventArgs^ e) {
+    private: System::Void searchData_Click(System::Object^ sender, System::EventArgs^ e) {
         this->box_searchData->Visible = true;
         this->box_inputHand->Visible = false;
         this->box_inputFile->Visible = false;
         this->box_sortData->Visible = false;
         this->box_deleteData->Visible = false;
         this->exportData_people->Visible = false;
-}
-private: System::Void inputHand_Click(System::Object^ sender, System::EventArgs^ e) {
-    if (loginStatus == true)
-    {
-        this->box_inputHand->Visible = true;
-        this->box_inputFile->Visible = false;
-        this->box_sortData->Visible = false;
-        this->box_deleteData->Visible = false;
-        this->box_searchData->Visible = false;
-        this->exportData_people->Visible = false;
+        this->exportData_registry->Visible = false;
+        this->exportData_vaccination->Visible = false;
     }
-}
-private: System::Void inputFile_Click(System::Object^ sender, System::EventArgs^ e) {
-    if (loginStatus == true)
-    {
-        this->box_inputHand->Visible = false;
-        this->box_inputFile->Visible = true;
-        this->box_sortData->Visible = false;
-        this->box_deleteData->Visible = false;
-        this->box_searchData->Visible = false;
-        this->exportData_people->Visible = false;
+    private: System::Void inputHand_Click(System::Object^ sender, System::EventArgs^ e) {
+        if (loginStatus == true)
+        {
+            this->box_inputHand->Visible = true;
+            this->box_inputFile->Visible = false;
+            this->box_sortData->Visible = false;
+            this->box_deleteData->Visible = false;
+            this->box_searchData->Visible = false;
+            this->exportData_people->Visible = false;
+            this->exportData_registry->Visible = false;
+            this->exportData_vaccination->Visible = false;
+        }
     }
-}
-
-private: System::Void bt_selectFile1_Click(System::Object^ sender, System::EventArgs^ e) {
-    
-    OpenFileDialog^ f1 = gcnew OpenFileDialog;
-    f1->InitialDirectory = "c:\\";
-    f1->Filter = "txt files (*.txt)|*.txt|All files (*.*)|*.*";
-    f1->FilterIndex = 2;
-    f1->RestoreDirectory = true;
-
-    if (f1->ShowDialog() == System::Windows::Forms::DialogResult::OK)
-    {
-        this->fileName1->Text = f1->FileName;
+    private: System::Void inputFile_Click(System::Object^ sender, System::EventArgs^ e) {
+        if (loginStatus == true)
+        {
+            this->box_inputHand->Visible = false;
+            this->box_inputFile->Visible = true;
+            this->box_sortData->Visible = false;
+            this->box_deleteData->Visible = false;
+            this->box_searchData->Visible = false;
+            this->exportData_people->Visible = false;
+            this->exportData_registry->Visible = false;
+            this->exportData_vaccination->Visible = false;
+        }
     }
 
-}
-private: System::Void bt_selectFile2_Click(System::Object^ sender, System::EventArgs^ e) {
-    OpenFileDialog^ f2 = gcnew OpenFileDialog;
-    f2->InitialDirectory = "c:\\";
-    f2->Filter = "txt files (*.txt)|*.txt|All files (*.*)|*.*";
-    f2->FilterIndex = 2;
-    f2->RestoreDirectory = true;
+    private: System::Void bt_selectFile1_Click(System::Object^ sender, System::EventArgs^ e) {
 
-    if (f2->ShowDialog() == System::Windows::Forms::DialogResult::OK)
-    {
-        this->fileName2->Text = f2->FileName;
-    }
-}
-private: System::Void bt_selectFile3_Click(System::Object^ sender, System::EventArgs^ e) {
-    OpenFileDialog^ f3 = gcnew OpenFileDialog;
-    f3->InitialDirectory = "c:\\";
-    f3->Filter = "txt files (*.txt)|*.txt|All files (*.*)|*.*";
-    f3->FilterIndex = 2;
-    f3->RestoreDirectory = true;
+        OpenFileDialog^ f1 = gcnew OpenFileDialog;
+        f1->InitialDirectory = "c:\\";
+        f1->Filter = "txt files (*.txt)|*.txt|All files (*.*)|*.*";
+        f1->FilterIndex = 2;
+        f1->RestoreDirectory = true;
 
-    if (f3->ShowDialog() == System::Windows::Forms::DialogResult::OK)
-    {
-        this->fileName3->Text = f3->FileName;
-    }
-}
-private: System::Void bt_inputFile_Click(System::Object^ sender, System::EventArgs^ e) {
-    String ^f1 = fileName1->Text;
-    String ^f2 = fileName2->Text;
-    String ^f3 = fileName3->Text;
-    string path1, path2, path3;
-    if ((f1 != "") && (f2 != "") && (f3 != "")) {
-        //gọi hàm đọc file
-        convertString(f1, path1);
-        convertString(f2, path2);
-        convertString(f3, path3);
-        DN.nhapFile(path1, path2, path3);
-        MessageBox::Show(L"Đã nhập dữ liệu", L"THÔNG BÁO");
-    }
-    else {
-    MessageBox::Show(L"Thiếu file.\nBạn phải nhập đủ 3 file dữ liệu đầu vào.", L"THÔNG BÁO");
-    }
-    
-}
-private: System::Void table_exportData_full_Paint(System::Object^ sender, System::Windows::Forms::PaintEventArgs^ e) {
-}
+        if (f1->ShowDialog() == System::Windows::Forms::DialogResult::OK)
+        {
+            this->fileName1->Text = f1->FileName;
+        }
 
-private: System::Void button2_Click(System::Object^ sender, System::EventArgs^ e) {
-}
-private: System::Void button3_Click(System::Object^ sender, System::EventArgs^ e) {
-    this->view_exportData_people->RowCount = DN.getRows();
-    int n = DN.getRows();
-    string x = DN.get(DN, "ma_CD", 5);
-        for (int i = 1; i <= n; i++) {
+    }
+    private: System::Void bt_selectFile2_Click(System::Object^ sender, System::EventArgs^ e) {
+        OpenFileDialog^ f2 = gcnew OpenFileDialog;
+        f2->InitialDirectory = "c:\\";
+        f2->Filter = "txt files (*.txt)|*.txt|All files (*.*)|*.*";
+        f2->FilterIndex = 2;
+        f2->RestoreDirectory = true;
+
+        if (f2->ShowDialog() == System::Windows::Forms::DialogResult::OK)
+        {
+            this->fileName2->Text = f2->FileName;
+        }
+    }
+    private: System::Void bt_selectFile3_Click(System::Object^ sender, System::EventArgs^ e) {
+        OpenFileDialog^ f3 = gcnew OpenFileDialog;
+        f3->InitialDirectory = "c:\\";
+        f3->Filter = "txt files (*.txt)|*.txt|All files (*.*)|*.*";
+        f3->FilterIndex = 2;
+        f3->RestoreDirectory = true;
+
+        if (f3->ShowDialog() == System::Windows::Forms::DialogResult::OK)
+        {
+            this->fileName3->Text = f3->FileName;
+        }
+    }
+    private: System::Void bt_inputFile_Click(System::Object^ sender, System::EventArgs^ e) {
+        String^ f1 = fileName1->Text;
+        String^ f2 = fileName2->Text;
+        String^ f3 = fileName3->Text;
+        string path1, path2, path3;
+        if ((f1 != "") && (f2 != "") && (f3 != "")) {
+            //gọi hàm đọc file
+            convertString(f1, path1);
+            convertString(f2, path2);
+            convertString(f3, path3);
+            DN.nhapFile(path1, path2, path3);
+            MessageBox::Show(L"Đã nhập dữ liệu", L"THÔNG BÁO");
+        }
+        else {
+            MessageBox::Show(L"Thiếu file.\nBạn phải nhập đủ 3 file dữ liệu đầu vào.", L"THÔNG BÁO");
+        }
+
+    }
+    private: System::Void table_exportData_full_Paint(System::Object^ sender, System::Windows::Forms::PaintEventArgs^ e) {
+    }
+
+    private: System::Void button2_Click(System::Object^ sender, System::EventArgs^ e) {
+    }
+    private: System::Void button3_Click(System::Object^ sender, System::EventArgs^ e) {
+        int n = DN.getRows();
+        this->view_exportData_people->RowCount = n;
+        
+        for (int i = 0 ; i < n; i++) {
             //phải convert từ dạng standard string về system string
-            //this->view_exportData_people->Rows[i]->Cells[1]->Value = "null";//gcnew String(DN.get(DN, "ma_CD", i).c_str());
-            //this->view_exportData_people->Rows[i]->Cells[2]->Value = "null";//gcnew String(DN.get(DN, "fullName", i).c_str());
-            //this->view_exportData_people->Rows[i]->Cells[3]->Value = "null";//gcnew String(DN.get(DN, "sex", i).c_str());
-            //this->view_exportData_people->Rows[i]->Cells[4]->Value = "null";//gcnew String(DN.get(DN, "birth", i).c_str());
-            //this->view_exportData_people->Rows[i]->Cells[5]->Value = "null";//gcnew String(DN.get(DN, "phone", i).c_str());
-            //this->view_exportData_people->Rows[i]->Cells[6]->Value = "null";//gcnew String(DN.get(DN, "so_BHXH", i).c_str());
-            //this->view_exportData_people->Rows[i]->Cells[7]->Value = "null";//gcnew String(DN.get(DN, "so_CMND", i).c_str());
-            //this->view_exportData_people->Rows[i]->Cells[8]->Value = "null";//gcnew String(DN.get(DN, "address", i).c_str());
+            this->view_exportData_people->Rows[i]->Cells[0]->Value = gcnew String(DN.get("ma_CD", i).c_str());
+            this->view_exportData_people->Rows[i]->Cells[1]->Value = gcnew String(DN.get("fullName", i).c_str());
+            this->view_exportData_people->Rows[i]->Cells[2]->Value = gcnew String(DN.get("sex", i).c_str());
+            this->view_exportData_people->Rows[i]->Cells[3]->Value = gcnew String(DN.get("birth", i).c_str());
+            this->view_exportData_people->Rows[i]->Cells[4]->Value = gcnew String(DN.get("phone", i).c_str());
+            this->view_exportData_people->Rows[i]->Cells[5]->Value = gcnew String(DN.get("so_BHXH", i).c_str());
+            this->view_exportData_people->Rows[i]->Cells[6]->Value = gcnew String(DN.get("so_CMND", i).c_str());
+            this->view_exportData_people->Rows[i]->Cells[7]->Value = gcnew String(DN.get("address", i).c_str());
         };
-}
-private: System::Void toolStripMenuItem8_Click(System::Object^ sender, System::EventArgs^ e) {
+    }
+    private: System::Void toolStripMenuItem8_Click(System::Object^ sender, System::EventArgs^ e) {
+        if (loginStatus == true)
+        {
+            this->exportData_people->Visible = true;
+            this->box_inputHand->Visible = false;
+            this->box_inputFile->Visible = false;
+            this->box_sortData->Visible = false;
+            this->box_deleteData->Visible = false;
+            this->box_searchData->Visible = false;
+            this->exportData_registry->Visible = false;
+            this->exportData_vaccination->Visible = false;
+        }
+
+    }
+
+    private: System::Void button3_Click_1(System::Object^ sender, System::EventArgs^ e) {
+        int n = DN.getRows();
+        this->view_exportData_registry->RowCount = n;
+        for (int i = 0; i < n; i++) {
+            this->view_exportData_registry->Rows[i]->Cells[0]->Value = gcnew String(DN.get("fullName", i).c_str());
+            this->view_exportData_registry->Rows[i]->Cells[1]->Value = gcnew String(DN.get("ma_DK", i).c_str());
+            this->view_exportData_registry->Rows[i]->Cells[2]->Value = gcnew String(DN.get("ngay_DK", i).c_str());
+            this->view_exportData_registry->Rows[i]->Cells[3]->Value = gcnew String(DN.get("noi_DK", i).c_str());
+        }
+    }
+private: System::Void toolStripMenuItem9_Click(System::Object^ sender, System::EventArgs^ e) {
     if (loginStatus == true)
-    {   
-        this->exportData_people->Visible = true;
+    {
+        this->exportData_registry->Visible = true;
+        this->exportData_people->Visible = false;
+        this->box_inputHand->Visible = false;
+        this->box_inputFile->Visible = false;
+        this->box_sortData->Visible = false;
+        this->box_deleteData->Visible = false;
+        this->box_searchData->Visible = false;
+        this->exportData_vaccination->Visible = false;
+
+    }
+
+}
+private: System::Void toolStripMenuItem10_Click(System::Object^ sender, System::EventArgs^ e) {
+    if (loginStatus == true)
+    {
+        this->exportData_vaccination->Visible = true;
+        this->exportData_registry->Visible = false;
+        this->exportData_people->Visible = false;
         this->box_inputHand->Visible = false;
         this->box_inputFile->Visible = false;
         this->box_sortData->Visible = false;
         this->box_deleteData->Visible = false;
         this->box_searchData->Visible = false;
     }
-
 }
+private: System::Void bt_loadData_vaccination_Click(System::Object^ sender, System::EventArgs^ e) {
+    int n = DN.getRows();
+    this->view_exportData_vaccination->RowCount = n;
+    for (int i = 0; i < n; i++) {
+        this->view_exportData_vaccination->Rows[i]->Cells[0]->Value = gcnew String(DN.get("fullName", i).c_str());
+        this->view_exportData_vaccination->Rows[i]->Cells[1]->Value = gcnew String(DN.get("mui1", i).c_str());
+        this->view_exportData_vaccination->Rows[i]->Cells[2]->Value = gcnew String(DN.get("ngay_M1", i).c_str());
+        this->view_exportData_vaccination->Rows[i]->Cells[3]->Value = gcnew String(DN.get("mui2", i).c_str());
+        this->view_exportData_vaccination->Rows[i]->Cells[4]->Value = gcnew String(DN.get("ngay_M2", i).c_str());
 
+    }
+}
 };
 }

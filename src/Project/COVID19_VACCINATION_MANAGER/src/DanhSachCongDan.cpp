@@ -7,7 +7,7 @@ using namespace std;
 
 int count(string file){
     ifstream f1;
-    int k;
+    int k = 0;
     f1.open(file.c_str(), ios::in);
     if (f1){
         string count;
@@ -61,27 +61,27 @@ void DSCD::nhapFile(string f1, string f2, string f3){
 
         while(!file1.eof() && !file2.eof() && !file3.eof())
         { 
-            getline (file1, ma_CD, ',');    this->data[k].ma_CD = ma_CD;
-            getline (file1, fullName, ','); this->data[k].fullName = fullName;
-            getline (file1, sex, ',');      if(sex == "1")this->data[k].sex = true; else if(sex == "0") this->data[k].sex = false; //bool to string
-            getline (file1, birth, ',');    this->data[k].birth = birth;
-            getline (file1, phone, ',');    this->data[k].phone = phone;
-            getline (file1, so_BHXH, ',');  this->data[k].so_BHXH = so_BHXH;
-            getline (file1, so_CMND, ',');  this->data[k].so_CMND = so_CMND;
+            getline (file1, ma_CD, ';');    this->data[k].ma_CD = ma_CD;
+            getline (file1, fullName, ';'); this->data[k].fullName = fullName;
+            getline (file1, sex, ';');      if(sex == "1")this->data[k].sex = true; else if(sex == "0") this->data[k].sex = false; //bool to string
+            getline (file1, birth, ';');    this->data[k].birth = birth;
+            getline (file1, phone, ';');    this->data[k].phone = phone;
+            getline (file1, so_BHXH, ';');  this->data[k].so_BHXH = so_BHXH;
+            getline (file1, so_CMND, ';');  this->data[k].so_CMND = so_CMND;
             getline (file1, address,'\n');  this->data[k].address = address;
 
-            getline (file2, ma_DK, ',');    this->data[k].ma_DK = ma_DK;
-            getline (file2, ID2, ',');      
-            getline (file2, ngay_DK, ',');  this->data[k].ngay_DK = ngay_DK;
+            getline (file2, ma_DK, ';');    this->data[k].ma_DK = ma_DK;
+            getline (file2, ID2, ';');      
+            getline (file2, ngay_DK, ';');  this->data[k].ngay_DK = ngay_DK;
             getline (file2, noi_DK, '\n');  this->data[k].noi_DK = noi_DK;
 
-            getline (file3, ID3, ',');
-            getline (file3, mui1, ',');
+            getline (file3, ID3, ';');
+            getline (file3, mui1, ';');
                 for(int i = 0; i<mui1.length();i++)mui1[i] = toupper(mui1[i]);
                 if(mui1 == "TRUE")this->data[k].mui1 = true; 
                     else if(mui1 == "FALSE") this->data[k].mui1 = false; // bool to string
-            getline (file3, ngay_M1, ',');  this->data[k].ngay_M1 = ngay_M1;
-            getline (file3, mui2, ',');   
+            getline (file3, ngay_M1, ';');  this->data[k].ngay_M1 = ngay_M1;
+            getline (file3, mui2, ';');   
                 for(int i = 0; i<mui2.length();i++)mui2[i] = toupper(mui2[i]);
                 if(mui2 == "TRUE")this->data[k].mui2 = true; 
                     else if(mui2 == "FALSE")this->data[k].mui2 = false; // bool to string
@@ -112,59 +112,58 @@ void DSCD::xuatDuLieu(DSCD a){
     }
 }
 
-string DSCD::get(DSCD x, string type, int i){
+string DSCD::get(string type, int i){
     if (type == "ma_CD"){
-        return x.data[i].ma_CD;
+        return DSCD::data[i].ma_CD;
     }
     else if (type == "fullName"){
-        return x.data[i].fullName;
+        return DSCD::data[i].fullName;
     }
     else if (type == "sex"){
-        if (x.data[i].sex == true) return "1";
-            else return "0";
+        if (DSCD::data[i].sex == true) return "Nam";
+            else return "Nu";
     }
     else if (type == "birth"){
-        return x.data[i].birth;
+        return DSCD::data[i].birth;
     }
     else if (type == "phone"){
-        return x.data[i].phone;
+        return DSCD::data[i].phone;
     }
     else if (type == "so_BHXH"){
-        return x.data[i].so_BHXH;
+        return DSCD::data[i].so_BHXH;
     }
     else if (type == "so_CMND"){
-        return x.data[i].so_CMND;
+        return DSCD::data[i].so_CMND;
     }
     else if (type == "address"){
-        return x.data[i].address;
+        return DSCD::data[i].address;
     }
     else if (type == "ma_DK"){
-        return x.data[i].ma_DK;
+        return DSCD::data[i].ma_DK;
     }
     else if (type == "ngay_DK"){
-        return x.data[i].ngay_DK;
+        return DSCD::data[i].ngay_DK;
     }
     else if (type == "noi_DK"){
-        return x.data[i].noi_DK;
+        return DSCD::data[i].noi_DK;
     }
     else if (type == "mui1"){
-        if (x.data[i].mui1) return "TRUE";
-            else return "FALSE";
+        if (DSCD::data[i].mui1) return "Co";
+            else return "Khong";
     }
     else if (type == "mui2"){
-        if (x.data[i].mui2) return "TRUE";
-            else return "FALSE";
+        if (DSCD::data[i].mui2) return "Co";
+            else return "Khong";
     }
     else if (type == "ngay_M1"){
-        return x.data[i].ngay_M1;
+        return DSCD::data[i].ngay_M1;
     }
     else if (type == "ngay_M2"){
-        return x.data[i].ngay_M2;
+        return DSCD::data[i].ngay_M2;
     }
     else return "null";
  
 }
-
 
 
 

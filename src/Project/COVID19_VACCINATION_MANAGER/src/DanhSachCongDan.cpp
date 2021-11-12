@@ -77,14 +77,12 @@ void DSCD::nhapFile(string f1, string f2, string f3){
 
             getline (file3, ID3, ';');
             getline (file3, mui1, ';');
-                for(int i = 0; i<mui1.length();i++)mui1[i] = toupper(mui1[i]);
-                if(mui1 == "TRUE")this->data[k].mui1 = true; 
-                    else if(mui1 == "FALSE") this->data[k].mui1 = false; // bool to string
+                if(mui1 == "1")this->data[k].mui1 = true; 
+                    else if(mui1 == "0") this->data[k].mui1 = false; // bool to string
             getline (file3, ngay_M1, ';');  this->data[k].ngay_M1 = ngay_M1;
             getline (file3, mui2, ';');   
-                for(int i = 0; i<mui2.length();i++)mui2[i] = toupper(mui2[i]);
-                if(mui2 == "TRUE")this->data[k].mui2 = true; 
-                    else if(mui2 == "FALSE")this->data[k].mui2 = false; // bool to string
+                if(mui2 == "1")this->data[k].mui2 = true; 
+                    else if(mui2 == "0")this->data[k].mui2 = false; // bool to string
             getline (file3, ngay_M2, '\n'); this->data[k].ngay_M2 = ngay_M2;
 
             k++;
@@ -108,7 +106,7 @@ DSCD::~DSCD(){
 
 void DSCD::xuatDuLieu(DSCD a){
     for(int i = 0; i < a.n; i++){
-            cout << a.data[i].fullName << endl;
+            cout << a.data[i].sex << endl;
     }
 }
 
@@ -148,10 +146,10 @@ string DSCD::get(string type, int i){
         return DSCD::data[i].noi_DK;
     }
     else if (type == "mui1"){
-        if (DSCD::data[i].mui1) return "Co";
+        if (DSCD::data[i].mui1 == true) return "Co";
             else return "Khong";
     }
-    else if (type == "mui2"){
+    else if (type == "mui2" == true){
         if (DSCD::data[i].mui2) return "Co";
             else return "Khong";
     }

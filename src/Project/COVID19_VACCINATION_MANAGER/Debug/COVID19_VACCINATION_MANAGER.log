@@ -1,5 +1,5 @@
-﻿  Form1.cpp
-D:\workzone\Learning\PBL2\C++ 2\PBL2\src\Project\COVID19_VACCINATION_MANAGER\src\DanhSachCongDan.cpp(80,33): warning C4018: '<': signed/unsigned mismatch
-D:\workzone\Learning\PBL2\C++ 2\PBL2\src\Project\COVID19_VACCINATION_MANAGER\src\DanhSachCongDan.cpp(85,33): warning C4018: '<': signed/unsigned mismatch
+﻿  CppCLR_WinformsProjekt.cpp
+  Form1.cpp
+  Generating Code...
   AssemblyInfo.obj : MSIL module encountered; incremental linking is disabled for MSIL; performing full link
   COVID19_VACCINATION_MANAGER.vcxproj -> D:\workzone\Learning\PBL2\C++ 2\PBL2\src\Project\COVID19_VACCINATION_MANAGER\Debug\COVID19_VACCINATION_MANAGER.exe

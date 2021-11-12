@@ -117,6 +117,42 @@ namespace CppCLRWinformsProjekt {
     private: System::Windows::Forms::DataGridViewTextBoxColumn^ ngay_M1;
     private: System::Windows::Forms::DataGridViewTextBoxColumn^ mui2;
     private: System::Windows::Forms::DataGridViewTextBoxColumn^ ngay_M2;
+    private: System::Windows::Forms::ComboBox^ box_sortType;
+
+    private: System::Windows::Forms::ComboBox^ box_sortSelect;
+
+    private: System::Windows::Forms::Label^ label6;
+    private: System::Windows::Forms::Label^ label5;
+private: System::Windows::Forms::Button^ bt_view_sortData;
+
+private: System::Windows::Forms::Button^ bt_sortData;
+private: System::Windows::Forms::GroupBox^ export_allData_people;
+
+private: System::Windows::Forms::Button^ bt_saveAllData;
+
+private: System::Windows::Forms::Button^ bt_loadAllData;
+private: System::Windows::Forms::Button^ bt_modAllData;
+
+
+private: System::Windows::Forms::Button^ button7;
+private: System::Windows::Forms::DataGridView^ view_exportAllData_people;
+
+private: System::Windows::Forms::DataGridViewTextBoxColumn^ maCD;
+private: System::Windows::Forms::DataGridViewTextBoxColumn^ fullName_allData;
+private: System::Windows::Forms::DataGridViewTextBoxColumn^ sex_allData;
+private: System::Windows::Forms::DataGridViewTextBoxColumn^ birth_allData;
+private: System::Windows::Forms::DataGridViewTextBoxColumn^ phone_allData;
+private: System::Windows::Forms::DataGridViewTextBoxColumn^ so_BHXH_allData;
+private: System::Windows::Forms::DataGridViewTextBoxColumn^ so_CMND_allData;
+private: System::Windows::Forms::DataGridViewTextBoxColumn^ address_allData;
+private: System::Windows::Forms::DataGridViewTextBoxColumn^ ma_DK_allData;
+private: System::Windows::Forms::DataGridViewTextBoxColumn^ ngay_DK_allData;
+private: System::Windows::Forms::DataGridViewTextBoxColumn^ noi_DK_allData;
+private: System::Windows::Forms::DataGridViewTextBoxColumn^ mui1_allData;
+private: System::Windows::Forms::DataGridViewTextBoxColumn^ ngayM1_allData;
+private: System::Windows::Forms::DataGridViewTextBoxColumn^ mui2_allData;
+private: System::Windows::Forms::DataGridViewTextBoxColumn^ ngay_M2_allData;
+
 
 
 
@@ -308,6 +344,27 @@ namespace CppCLRWinformsProjekt {
             this->accoutManager_text1 = (gcnew System::Windows::Forms::Label());
             this->dataManagerTab = (gcnew System::Windows::Forms::TabPage());
             this->boxDataManager = (gcnew System::Windows::Forms::GroupBox());
+            this->export_allData_people = (gcnew System::Windows::Forms::GroupBox());
+            this->bt_saveAllData = (gcnew System::Windows::Forms::Button());
+            this->bt_loadAllData = (gcnew System::Windows::Forms::Button());
+            this->bt_modAllData = (gcnew System::Windows::Forms::Button());
+            this->button7 = (gcnew System::Windows::Forms::Button());
+            this->view_exportAllData_people = (gcnew System::Windows::Forms::DataGridView());
+            this->maCD = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
+            this->fullName_allData = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
+            this->sex_allData = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
+            this->birth_allData = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
+            this->phone_allData = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
+            this->so_BHXH_allData = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
+            this->so_CMND_allData = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
+            this->address_allData = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
+            this->ma_DK_allData = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
+            this->ngay_DK_allData = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
+            this->noi_DK_allData = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
+            this->mui1_allData = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
+            this->ngayM1_allData = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
+            this->mui2_allData = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
+            this->ngay_M2_allData = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
             this->exportData_vaccination = (gcnew System::Windows::Forms::GroupBox());
             this->bt_saveData_vaccination = (gcnew System::Windows::Forms::Button());
             this->bt_loadData_vaccination = (gcnew System::Windows::Forms::Button());
@@ -359,6 +416,12 @@ namespace CppCLRWinformsProjekt {
             this->xuấtToànBộDữLiệuToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
             this->box_deleteData = (gcnew System::Windows::Forms::GroupBox());
             this->box_sortData = (gcnew System::Windows::Forms::GroupBox());
+            this->bt_view_sortData = (gcnew System::Windows::Forms::Button());
+            this->bt_sortData = (gcnew System::Windows::Forms::Button());
+            this->box_sortType = (gcnew System::Windows::Forms::ComboBox());
+            this->box_sortSelect = (gcnew System::Windows::Forms::ComboBox());
+            this->label6 = (gcnew System::Windows::Forms::Label());
+            this->label5 = (gcnew System::Windows::Forms::Label());
             this->box_inputHand = (gcnew System::Windows::Forms::GroupBox());
             this->box_inputFile = (gcnew System::Windows::Forms::GroupBox());
             this->bt_selectFile3 = (gcnew System::Windows::Forms::Button());
@@ -406,6 +469,8 @@ namespace CppCLRWinformsProjekt {
             this->dataManager_loginAlert = (gcnew System::Windows::Forms::Label());
             this->dataManagerTab->SuspendLayout();
             this->boxDataManager->SuspendLayout();
+            this->export_allData_people->SuspendLayout();
+            (cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->view_exportAllData_people))->BeginInit();
             this->exportData_vaccination->SuspendLayout();
             (cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->view_exportData_vaccination))->BeginInit();
             this->exportData_registry->SuspendLayout();
@@ -413,6 +478,7 @@ namespace CppCLRWinformsProjekt {
             this->exportData_people->SuspendLayout();
             (cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->view_exportData_people))->BeginInit();
             this->dataManager_menu->SuspendLayout();
+            this->box_sortData->SuspendLayout();
             this->box_inputFile->SuspendLayout();
             this->Manager->SuspendLayout();
             this->loginTab->SuspendLayout();
@@ -547,6 +613,7 @@ namespace CppCLRWinformsProjekt {
             this->boxDataManager->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Bottom)
                 | System::Windows::Forms::AnchorStyles::Left)
                 | System::Windows::Forms::AnchorStyles::Right));
+            this->boxDataManager->Controls->Add(this->export_allData_people);
             this->boxDataManager->Controls->Add(this->exportData_vaccination);
             this->boxDataManager->Controls->Add(this->exportData_registry);
             this->boxDataManager->Controls->Add(this->exportData_people);
@@ -561,6 +628,211 @@ namespace CppCLRWinformsProjekt {
             this->boxDataManager->Size = System::Drawing::Size(654, 468);
             this->boxDataManager->TabIndex = 3;
             this->boxDataManager->TabStop = false;
+            // 
+            // export_allData_people
+            // 
+            this->export_allData_people->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Bottom)
+                | System::Windows::Forms::AnchorStyles::Left)
+                | System::Windows::Forms::AnchorStyles::Right));
+            this->export_allData_people->Controls->Add(this->bt_saveAllData);
+            this->export_allData_people->Controls->Add(this->bt_loadAllData);
+            this->export_allData_people->Controls->Add(this->bt_modAllData);
+            this->export_allData_people->Controls->Add(this->button7);
+            this->export_allData_people->Controls->Add(this->view_exportAllData_people);
+            this->export_allData_people->Font = (gcnew System::Drawing::Font(L"MS Reference Sans Serif", 9, System::Drawing::FontStyle::Regular,
+                System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
+            this->export_allData_people->Location = System::Drawing::Point(0, 51);
+            this->export_allData_people->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
+            this->export_allData_people->Name = L"export_allData_people";
+            this->export_allData_people->Padding = System::Windows::Forms::Padding(3, 2, 3, 2);
+            this->export_allData_people->Size = System::Drawing::Size(658, 417);
+            this->export_allData_people->TabIndex = 9;
+            this->export_allData_people->TabStop = false;
+            this->export_allData_people->Text = L"Toàn bộ dữ liệu";
+            this->export_allData_people->Visible = false;
+            // 
+            // bt_saveAllData
+            // 
+            this->bt_saveAllData->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((System::Windows::Forms::AnchorStyles::Bottom | System::Windows::Forms::AnchorStyles::Right));
+            this->bt_saveAllData->Location = System::Drawing::Point(555, 377);
+            this->bt_saveAllData->Name = L"bt_saveAllData";
+            this->bt_saveAllData->Size = System::Drawing::Size(91, 30);
+            this->bt_saveAllData->TabIndex = 4;
+            this->bt_saveAllData->Text = L"Lưu";
+            this->bt_saveAllData->UseVisualStyleBackColor = true;
+            // 
+            // bt_loadAllData
+            // 
+            this->bt_loadAllData->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((System::Windows::Forms::AnchorStyles::Bottom | System::Windows::Forms::AnchorStyles::Right));
+            this->bt_loadAllData->Location = System::Drawing::Point(283, 377);
+            this->bt_loadAllData->Name = L"bt_loadAllData";
+            this->bt_loadAllData->Size = System::Drawing::Size(130, 30);
+            this->bt_loadAllData->TabIndex = 3;
+            this->bt_loadAllData->Text = L"Tải dữ liệu";
+            this->bt_loadAllData->UseVisualStyleBackColor = true;
+            this->bt_loadAllData->Click += gcnew System::EventHandler(this, &Form1::bt_loadAllData_Click);
+            // 
+            // bt_modAllData
+            // 
+            this->bt_modAllData->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((System::Windows::Forms::AnchorStyles::Bottom | System::Windows::Forms::AnchorStyles::Right));
+            this->bt_modAllData->Location = System::Drawing::Point(419, 377);
+            this->bt_modAllData->Name = L"bt_modAllData";
+            this->bt_modAllData->Size = System::Drawing::Size(130, 30);
+            this->bt_modAllData->TabIndex = 2;
+            this->bt_modAllData->Text = L"Chỉnh sửa";
+            this->bt_modAllData->UseVisualStyleBackColor = true;
+            // 
+            // button7
+            // 
+            this->button7->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((System::Windows::Forms::AnchorStyles::Bottom | System::Windows::Forms::AnchorStyles::Right));
+            this->button7->Location = System::Drawing::Point(555, 388);
+            this->button7->Name = L"button7";
+            this->button7->Size = System::Drawing::Size(0, 0);
+            this->button7->TabIndex = 1;
+            this->button7->Text = L"button7";
+            this->button7->UseVisualStyleBackColor = true;
+            // 
+            // view_exportAllData_people
+            // 
+            this->view_exportAllData_people->AllowUserToAddRows = false;
+            this->view_exportAllData_people->AllowUserToDeleteRows = false;
+            this->view_exportAllData_people->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Bottom)
+                | System::Windows::Forms::AnchorStyles::Left)
+                | System::Windows::Forms::AnchorStyles::Right));
+            this->view_exportAllData_people->ColumnHeadersHeightSizeMode = System::Windows::Forms::DataGridViewColumnHeadersHeightSizeMode::AutoSize;
+            this->view_exportAllData_people->Columns->AddRange(gcnew cli::array< System::Windows::Forms::DataGridViewColumn^  >(15) {
+                this->maCD,
+                    this->fullName_allData, this->sex_allData, this->birth_allData, this->phone_allData, this->so_BHXH_allData, this->so_CMND_allData,
+                    this->address_allData, this->ma_DK_allData, this->ngay_DK_allData, this->noi_DK_allData, this->mui1_allData, this->ngayM1_allData,
+                    this->mui2_allData, this->ngay_M2_allData
+            });
+            this->view_exportAllData_people->Location = System::Drawing::Point(10, 24);
+            this->view_exportAllData_people->Name = L"view_exportAllData_people";
+            this->view_exportAllData_people->ReadOnly = true;
+            this->view_exportAllData_people->RowHeadersWidth = 51;
+            this->view_exportAllData_people->RowTemplate->Height = 24;
+            this->view_exportAllData_people->Size = System::Drawing::Size(648, 342);
+            this->view_exportAllData_people->TabIndex = 0;
+            // 
+            // maCD
+            // 
+            this->maCD->HeaderText = L"Mã công dân";
+            this->maCD->MinimumWidth = 6;
+            this->maCD->Name = L"maCD";
+            this->maCD->ReadOnly = true;
+            this->maCD->Width = 125;
+            // 
+            // fullName_allData
+            // 
+            this->fullName_allData->HeaderText = L"Họ và tên";
+            this->fullName_allData->MinimumWidth = 6;
+            this->fullName_allData->Name = L"fullName_allData";
+            this->fullName_allData->ReadOnly = true;
+            this->fullName_allData->Width = 125;
+            // 
+            // sex_allData
+            // 
+            this->sex_allData->HeaderText = L"Giới tính";
+            this->sex_allData->MinimumWidth = 6;
+            this->sex_allData->Name = L"sex_allData";
+            this->sex_allData->ReadOnly = true;
+            this->sex_allData->Width = 125;
+            // 
+            // birth_allData
+            // 
+            this->birth_allData->HeaderText = L"Ngày sinh";
+            this->birth_allData->MinimumWidth = 6;
+            this->birth_allData->Name = L"birth_allData";
+            this->birth_allData->ReadOnly = true;
+            this->birth_allData->Width = 125;
+            // 
+            // phone_allData
+            // 
+            this->phone_allData->HeaderText = L"SĐT";
+            this->phone_allData->MinimumWidth = 6;
+            this->phone_allData->Name = L"phone_allData";
+            this->phone_allData->ReadOnly = true;
+            this->phone_allData->Width = 125;
+            // 
+            // so_BHXH_allData
+            // 
+            this->so_BHXH_allData->HeaderText = L"Số BHXH";
+            this->so_BHXH_allData->MinimumWidth = 6;
+            this->so_BHXH_allData->Name = L"so_BHXH_allData";
+            this->so_BHXH_allData->ReadOnly = true;
+            this->so_BHXH_allData->Width = 125;
+            // 
+            // so_CMND_allData
+            // 
+            this->so_CMND_allData->HeaderText = L"Số CMND/CCCD";
+            this->so_CMND_allData->MinimumWidth = 6;
+            this->so_CMND_allData->Name = L"so_CMND_allData";
+            this->so_CMND_allData->ReadOnly = true;
+            this->so_CMND_allData->Width = 125;
+            // 
+            // address_allData
+            // 
+            this->address_allData->HeaderText = L"Địa chỉ";
+            this->address_allData->MinimumWidth = 6;
+            this->address_allData->Name = L"address_allData";
+            this->address_allData->ReadOnly = true;
+            this->address_allData->Width = 125;
+            // 
+            // ma_DK_allData
+            // 
+            this->ma_DK_allData->HeaderText = L"Mã đăng ký";
+            this->ma_DK_allData->MinimumWidth = 6;
+            this->ma_DK_allData->Name = L"ma_DK_allData";
+            this->ma_DK_allData->ReadOnly = true;
+            this->ma_DK_allData->Width = 125;
+            // 
+            // ngay_DK_allData
+            // 
+            this->ngay_DK_allData->HeaderText = L"Ngày đăng ký";
+            this->ngay_DK_allData->MinimumWidth = 6;
+            this->ngay_DK_allData->Name = L"ngay_DK_allData";
+            this->ngay_DK_allData->ReadOnly = true;
+            this->ngay_DK_allData->Width = 125;
+            // 
+            // noi_DK_allData
+            // 
+            this->noi_DK_allData->HeaderText = L"Nơi đăng ký";
+            this->noi_DK_allData->MinimumWidth = 6;
+            this->noi_DK_allData->Name = L"noi_DK_allData";
+            this->noi_DK_allData->ReadOnly = true;
+            this->noi_DK_allData->Width = 125;
+            // 
+            // mui1_allData
+            // 
+            this->mui1_allData->HeaderText = L"Tiêm mũi 1";
+            this->mui1_allData->MinimumWidth = 6;
+            this->mui1_allData->Name = L"mui1_allData";
+            this->mui1_allData->ReadOnly = true;
+            this->mui1_allData->Width = 125;
+            // 
+            // ngayM1_allData
+            // 
+            this->ngayM1_allData->HeaderText = L"Ngày tiêm mũi 1";
+            this->ngayM1_allData->MinimumWidth = 6;
+            this->ngayM1_allData->Name = L"ngayM1_allData";
+            this->ngayM1_allData->ReadOnly = true;
+            this->ngayM1_allData->Width = 125;
+            // 
+            // mui2_allData
+            // 
+            this->mui2_allData->HeaderText = L"Tiêm mũi 2";
+            this->mui2_allData->MinimumWidth = 6;
+            this->mui2_allData->Name = L"mui2_allData";
+            this->mui2_allData->ReadOnly = true;
+            this->mui2_allData->Width = 125;
+            // 
+            // ngay_M2_allData
+            // 
+            this->ngay_M2_allData->HeaderText = L"Ngày tiêm mũi 2";
+            this->ngay_M2_allData->MinimumWidth = 6;
+            this->ngay_M2_allData->Name = L"ngay_M2_allData";
+            this->ngay_M2_allData->ReadOnly = true;
+            this->ngay_M2_allData->Width = 125;
             // 
             // exportData_vaccination
             // 
@@ -977,7 +1249,7 @@ namespace CppCLRWinformsProjekt {
             this->dataManager_menu->Location = System::Drawing::Point(3, 22);
             this->dataManager_menu->Name = L"dataManager_menu";
             this->dataManager_menu->Padding = System::Windows::Forms::Padding(5, 2, 0, 2);
-            this->dataManager_menu->Size = System::Drawing::Size(648, 27);
+            this->dataManager_menu->Size = System::Drawing::Size(648, 28);
             this->dataManager_menu->TabIndex = 7;
             this->dataManager_menu->Text = L"menuStrip1";
             // 
@@ -990,7 +1262,7 @@ namespace CppCLRWinformsProjekt {
             this->dataManager_input->Font = (gcnew System::Drawing::Font(L"MS Reference Sans Serif", 9, System::Drawing::FontStyle::Regular,
                 System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
             this->dataManager_input->Name = L"dataManager_input";
-            this->dataManager_input->Size = System::Drawing::Size(149, 23);
+            this->dataManager_input->Size = System::Drawing::Size(149, 24);
             this->dataManager_input->Text = L"Chỉnh sửa dữ liệu";
             // 
             // toolStripMenuItem2
@@ -1057,15 +1329,15 @@ namespace CppCLRWinformsProjekt {
             this->dataManager_output->Font = (gcnew System::Drawing::Font(L"MS Reference Sans Serif", 9, System::Drawing::FontStyle::Regular,
                 System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
             this->dataManager_output->Name = L"dataManager_output";
-            this->dataManager_output->Size = System::Drawing::Size(110, 23);
-            this->dataManager_output->Text = L"Xuất dữ liệu";
+            this->dataManager_output->Size = System::Drawing::Size(174, 24);
+            this->dataManager_output->Text = L"Xem dữ liệu đã nhập";
             // 
             // toolStripMenuItem8
             // 
             this->toolStripMenuItem8->Font = (gcnew System::Drawing::Font(L"MS Reference Sans Serif", 9, System::Drawing::FontStyle::Regular,
                 System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
             this->toolStripMenuItem8->Name = L"toolStripMenuItem8";
-            this->toolStripMenuItem8->Size = System::Drawing::Size(242, 26);
+            this->toolStripMenuItem8->Size = System::Drawing::Size(229, 26);
             this->toolStripMenuItem8->Text = L"Dữ liệu công dân";
             this->toolStripMenuItem8->Click += gcnew System::EventHandler(this, &Form1::toolStripMenuItem8_Click);
             // 
@@ -1074,7 +1346,7 @@ namespace CppCLRWinformsProjekt {
             this->toolStripMenuItem9->Font = (gcnew System::Drawing::Font(L"MS Reference Sans Serif", 9, System::Drawing::FontStyle::Regular,
                 System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
             this->toolStripMenuItem9->Name = L"toolStripMenuItem9";
-            this->toolStripMenuItem9->Size = System::Drawing::Size(242, 26);
+            this->toolStripMenuItem9->Size = System::Drawing::Size(229, 26);
             this->toolStripMenuItem9->Text = L"Dữ liệu đăng ký";
             this->toolStripMenuItem9->Click += gcnew System::EventHandler(this, &Form1::toolStripMenuItem9_Click);
             // 
@@ -1083,15 +1355,16 @@ namespace CppCLRWinformsProjekt {
             this->toolStripMenuItem10->Font = (gcnew System::Drawing::Font(L"MS Reference Sans Serif", 9, System::Drawing::FontStyle::Regular,
                 System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
             this->toolStripMenuItem10->Name = L"toolStripMenuItem10";
-            this->toolStripMenuItem10->Size = System::Drawing::Size(242, 26);
+            this->toolStripMenuItem10->Size = System::Drawing::Size(229, 26);
             this->toolStripMenuItem10->Text = L"Dữ liệu tiêm chủng";
             this->toolStripMenuItem10->Click += gcnew System::EventHandler(this, &Form1::toolStripMenuItem10_Click);
             // 
             // xuấtToànBộDữLiệuToolStripMenuItem
             // 
             this->xuấtToànBộDữLiệuToolStripMenuItem->Name = L"xuấtToànBộDữLiệuToolStripMenuItem";
-            this->xuấtToànBộDữLiệuToolStripMenuItem->Size = System::Drawing::Size(242, 26);
-            this->xuấtToànBộDữLiệuToolStripMenuItem->Text = L"Xuất toàn bộ dữ liệu";
+            this->xuấtToànBộDữLiệuToolStripMenuItem->Size = System::Drawing::Size(229, 26);
+            this->xuấtToànBộDữLiệuToolStripMenuItem->Text = L"Toàn bộ dữ liệu";
+            this->xuấtToànBộDữLiệuToolStripMenuItem->Click += gcnew System::EventHandler(this, &Form1::xuấtToànBộDữLiệuToolStripMenuItem_Click);
             // 
             // box_deleteData
             // 
@@ -1115,6 +1388,12 @@ namespace CppCLRWinformsProjekt {
             this->box_sortData->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Bottom)
                 | System::Windows::Forms::AnchorStyles::Left)
                 | System::Windows::Forms::AnchorStyles::Right));
+            this->box_sortData->Controls->Add(this->bt_view_sortData);
+            this->box_sortData->Controls->Add(this->bt_sortData);
+            this->box_sortData->Controls->Add(this->box_sortType);
+            this->box_sortData->Controls->Add(this->box_sortSelect);
+            this->box_sortData->Controls->Add(this->label6);
+            this->box_sortData->Controls->Add(this->label5);
             this->box_sortData->Font = (gcnew System::Drawing::Font(L"MS Reference Sans Serif", 9, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
                 static_cast<System::Byte>(0)));
             this->box_sortData->Location = System::Drawing::Point(0, 51);
@@ -1126,6 +1405,65 @@ namespace CppCLRWinformsProjekt {
             this->box_sortData->TabStop = false;
             this->box_sortData->Text = L"Sắp xếp dữ liệu";
             this->box_sortData->Visible = false;
+            // 
+            // bt_view_sortData
+            // 
+            this->bt_view_sortData->Location = System::Drawing::Point(407, 208);
+            this->bt_view_sortData->Name = L"bt_view_sortData";
+            this->bt_view_sortData->Size = System::Drawing::Size(75, 30);
+            this->bt_view_sortData->TabIndex = 5;
+            this->bt_view_sortData->Text = L"Xem";
+            this->bt_view_sortData->UseVisualStyleBackColor = true;
+            this->bt_view_sortData->Click += gcnew System::EventHandler(this, &Form1::button3_Click_2);
+            // 
+            // bt_sortData
+            // 
+            this->bt_sortData->Location = System::Drawing::Point(279, 208);
+            this->bt_sortData->Name = L"bt_sortData";
+            this->bt_sortData->Size = System::Drawing::Size(90, 30);
+            this->bt_sortData->TabIndex = 4;
+            this->bt_sortData->Text = L"Sắp xếp";
+            this->bt_sortData->UseVisualStyleBackColor = true;
+            this->bt_sortData->Click += gcnew System::EventHandler(this, &Form1::bt_sortData_Click);
+            // 
+            // box_sortType
+            // 
+            this->box_sortType->FormattingEnabled = true;
+            this->box_sortType->Items->AddRange(gcnew cli::array< System::Object^  >(2) { L"Tăng dần", L"Giảm dần" });
+            this->box_sortType->Location = System::Drawing::Point(279, 150);
+            this->box_sortType->Name = L"box_sortType";
+            this->box_sortType->Size = System::Drawing::Size(203, 27);
+            this->box_sortType->TabIndex = 3;
+            // 
+            // box_sortSelect
+            // 
+            this->box_sortSelect->FormattingEnabled = true;
+            this->box_sortSelect->Items->AddRange(gcnew cli::array< System::Object^  >(5) {
+                L"Mã công dân", L"Mã đăng ký", L"Ngày đăng ký",
+                    L"Ngày tiêm mũi 1", L"Ngày tiêm mũi 2"
+            });
+            this->box_sortSelect->Location = System::Drawing::Point(279, 105);
+            this->box_sortSelect->Name = L"box_sortSelect";
+            this->box_sortSelect->Size = System::Drawing::Size(203, 27);
+            this->box_sortSelect->TabIndex = 2;
+            // 
+            // label6
+            // 
+            this->label6->AutoSize = true;
+            this->label6->Location = System::Drawing::Point(129, 153);
+            this->label6->Name = L"label6";
+            this->label6->Size = System::Drawing::Size(121, 19);
+            this->label6->TabIndex = 1;
+            this->label6->Text = L"Thứ tự sắp xếp";
+            // 
+            // label5
+            // 
+            this->label5->AutoSize = true;
+            this->label5->Location = System::Drawing::Point(142, 108);
+            this->label5->Name = L"label5";
+            this->label5->Size = System::Drawing::Size(108, 19);
+            this->label5->TabIndex = 0;
+            this->label5->Text = L"Sắp xếp theo";
             // 
             // box_inputHand
             // 
@@ -1731,6 +2069,8 @@ namespace CppCLRWinformsProjekt {
             this->dataManagerTab->ResumeLayout(false);
             this->boxDataManager->ResumeLayout(false);
             this->boxDataManager->PerformLayout();
+            this->export_allData_people->ResumeLayout(false);
+            (cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->view_exportAllData_people))->EndInit();
             this->exportData_vaccination->ResumeLayout(false);
             (cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->view_exportData_vaccination))->EndInit();
             this->exportData_registry->ResumeLayout(false);
@@ -1739,6 +2079,8 @@ namespace CppCLRWinformsProjekt {
             (cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->view_exportData_people))->EndInit();
             this->dataManager_menu->ResumeLayout(false);
             this->dataManager_menu->PerformLayout();
+            this->box_sortData->ResumeLayout(false);
+            this->box_sortData->PerformLayout();
             this->box_inputFile->ResumeLayout(false);
             this->box_inputFile->PerformLayout();
             this->Manager->ResumeLayout(false);
@@ -1891,6 +2233,7 @@ namespace CppCLRWinformsProjekt {
             this->exportData_people->Visible = false;
             this->exportData_registry->Visible = false;
             this->exportData_vaccination->Visible = false;
+            this->export_allData_people->Visible = false;
         }
     }
     private: System::Void deleteData_Click_1(System::Object^ sender, System::EventArgs^ e) {
@@ -1904,7 +2247,7 @@ namespace CppCLRWinformsProjekt {
             this->exportData_people->Visible = false;
             this->exportData_registry->Visible = false;
             this->exportData_vaccination->Visible = false;
-
+            this->export_allData_people->Visible = false;
         }
     }
     private: System::Void searchData_Click(System::Object^ sender, System::EventArgs^ e) {
@@ -1916,6 +2259,7 @@ namespace CppCLRWinformsProjekt {
         this->exportData_people->Visible = false;
         this->exportData_registry->Visible = false;
         this->exportData_vaccination->Visible = false;
+        this->export_allData_people->Visible = false;
     }
     private: System::Void inputHand_Click(System::Object^ sender, System::EventArgs^ e) {
         if (loginStatus == true)
@@ -1928,6 +2272,7 @@ namespace CppCLRWinformsProjekt {
             this->exportData_people->Visible = false;
             this->exportData_registry->Visible = false;
             this->exportData_vaccination->Visible = false;
+            this->export_allData_people->Visible = false;
         }
     }
     private: System::Void inputFile_Click(System::Object^ sender, System::EventArgs^ e) {
@@ -1941,6 +2286,7 @@ namespace CppCLRWinformsProjekt {
             this->exportData_people->Visible = false;
             this->exportData_registry->Visible = false;
             this->exportData_vaccination->Visible = false;
+            this->export_allData_people->Visible = false;
         }
     }
 
@@ -2032,6 +2378,7 @@ namespace CppCLRWinformsProjekt {
             this->box_searchData->Visible = false;
             this->exportData_registry->Visible = false;
             this->exportData_vaccination->Visible = false;
+            this->export_allData_people->Visible = false;
         }
 
     }
@@ -2057,6 +2404,7 @@ private: System::Void toolStripMenuItem9_Click(System::Object^ sender, System::E
         this->box_deleteData->Visible = false;
         this->box_searchData->Visible = false;
         this->exportData_vaccination->Visible = false;
+        this->export_allData_people->Visible = false;
 
     }
 
@@ -2072,6 +2420,7 @@ private: System::Void toolStripMenuItem10_Click(System::Object^ sender, System::
         this->box_sortData->Visible = false;
         this->box_deleteData->Visible = false;
         this->box_searchData->Visible = false;
+        this->export_allData_people->Visible = false;
     }
 }
 private: System::Void bt_loadData_vaccination_Click(System::Object^ sender, System::EventArgs^ e) {
@@ -2085,6 +2434,99 @@ private: System::Void bt_loadData_vaccination_Click(System::Object^ sender, Syst
         this->view_exportData_vaccination->Rows[i]->Cells[4]->Value = gcnew String(DN.get("ngay_M2", i).c_str());
 
     }
+}
+private: System::Void button3_Click_2(System::Object^ sender, System::EventArgs^ e) {
+    if (loginStatus == true)
+    {
+        this->exportData_people->Visible = true;
+        this->box_inputHand->Visible = false;
+        this->box_inputFile->Visible = false;
+        this->box_sortData->Visible = false;
+        this->box_deleteData->Visible = false;
+        this->box_searchData->Visible = false;
+        this->exportData_registry->Visible = false;
+        this->exportData_vaccination->Visible = false;
+        this->export_allData_people->Visible = false;
+    }
+}
+private: System::Void bt_sortData_Click(System::Object^ sender, System::EventArgs^ e) {
+
+    String ^s1 = this->box_sortSelect->Text;
+    String ^s2 = this->box_sortType->Text;
+    if (s2 == L"Tăng dần") {
+        if (s1 == L"Mã công dân") {
+
+        }
+        else if (s1 == L"Mã đăng ký") {
+
+        }
+        else if (s1 == L"Ngày đăng ký") {
+
+        }
+        else if (s1 == L"Ngày tiêm mũi 1") {
+
+        }
+        else if (s1 == L"Ngày tiêm mũi 2") {
+
+        }
+        else MessageBox::Show(L"Lỗi nhập dữ liệu", L"THÔNG BÁO");
+    }
+    else if (s2 == L"Giảm dần") {
+        if (s1 == L"Mã công dân") {
+
+        }
+        else if (s1 == L"Mã đăng ký") {
+
+        }
+        else if (s1 == L"Ngày đăng ký") {
+
+        }
+        else if (s1 == L"Ngày tiêm mũi 1") {
+
+        }
+        else if (s1 == L"Ngày tiêm mũi 2") {
+
+        }
+        else MessageBox::Show(L"Lỗi nhập dữ liệu", L"THÔNG BÁO");
+
+    }
+    else {
+        MessageBox::Show(L"Lỗi nhập dữ liệu", L"THÔNG BÁO");
+    }
+    //MessageBox::Show("Đã sắp xếp.\nNhấn 'Xem' để chuyển sang trang xem dữ liệu. ", "THÔNG BÁO");
+}
+
+private: System::Void bt_loadAllData_Click(System::Object^ sender, System::EventArgs^ e) {
+    int n = DN.getRows();
+    this->view_exportAllData_people->RowCount = n;
+    for (int i = 0; i < n; i++) {
+        this->view_exportAllData_people->Rows[i]->Cells[0]->Value = gcnew String(DN.get("ma_CD", i).c_str());
+        this->view_exportAllData_people->Rows[i]->Cells[1]->Value = gcnew String(DN.get("fullName", i).c_str());
+        this->view_exportAllData_people->Rows[i]->Cells[2]->Value = gcnew String(DN.get("sex", i).c_str());
+        this->view_exportAllData_people->Rows[i]->Cells[3]->Value = gcnew String(DN.get("birth", i).c_str());
+        this->view_exportAllData_people->Rows[i]->Cells[4]->Value = gcnew String(DN.get("phone", i).c_str());
+        this->view_exportAllData_people->Rows[i]->Cells[5]->Value = gcnew String(DN.get("so_BHXH", i).c_str());
+        this->view_exportAllData_people->Rows[i]->Cells[6]->Value = gcnew String(DN.get("so_CMND", i).c_str());
+        this->view_exportAllData_people->Rows[i]->Cells[7]->Value = gcnew String(DN.get("address", i).c_str());
+        this->view_exportAllData_people->Rows[i]->Cells[8]->Value = gcnew String(DN.get("ma_DK", i).c_str());
+        this->view_exportAllData_people->Rows[i]->Cells[9]->Value = gcnew String(DN.get("ngay_DK", i).c_str());
+        this->view_exportAllData_people->Rows[i]->Cells[10]->Value = gcnew String(DN.get("noi_DK", i).c_str());
+        this->view_exportAllData_people->Rows[i]->Cells[11]->Value = gcnew String(DN.get("mui1", i).c_str());
+        this->view_exportAllData_people->Rows[i]->Cells[12]->Value = gcnew String(DN.get("ngay_M1", i).c_str());
+        this->view_exportAllData_people->Rows[i]->Cells[13]->Value = gcnew String(DN.get("mui2", i).c_str());
+        this->view_exportAllData_people->Rows[i]->Cells[14]->Value = gcnew String(DN.get("ngay_M2", i).c_str());
+    }
+}
+private: System::Void xuấtToànBộDữLiệuToolStripMenuItem_Click(System::Object^ sender, System::EventArgs^ e) {
+    this->export_allData_people->Visible = true;
+    this->exportData_vaccination->Visible = false;
+    this->exportData_registry->Visible = false;
+    this->exportData_people->Visible = false;
+    this->box_inputHand->Visible = false;
+    this->box_inputFile->Visible = false;
+    this->box_sortData->Visible = false;
+    this->box_deleteData->Visible = false;
+    this->box_searchData->Visible = false;
 }
 };
 }

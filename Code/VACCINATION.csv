@@ -1,12 +1,12 @@
 Ma CD,	Mũi 1,		Ngày tiêm mũi 1,		Mũi2		Ngày tiêm mũi 2
-001,	True,		20/09/2021,		    True,		10/10/2021
-002,	True,		30/09/2021,		    True,		10/10/2021
-002,	True,		30/09/2021,		    True,		15/10/2021
-003,	True,		10/10/2021,		    False,		NULL
-004,	True,		10/10/2021,		    False,		NULL
-005,	True,		15/10/2021,		    False,		NULL
-006,	True,		15/10/2021,		    False,		NULL
-007,    True,		15/10/2021,		    False,		NULL
-008,	False,		NULL,       	    False,		NULL
-009,	False,		NULL,			    False,		NULL
-010,	False,		NULL,			    False,		NULL
+001,	1,		20/09/2021,1,		10/10/2021
+002,	1,		30/09/2021,1,		10/10/2021
+002,	1,		30/09/2021,1,		15/10/2021
+003,	1,		10/10/2021,0,		NULL
+004,	1,		10/10/2021,0,		NULL
+005,	1,		15/10/2021,0,		NULL
+006,	1,		15/10/2021,0,		NULL
+007,    1,		15/10/2021,0,		NULL
+008,	0,		NULL,0,		NULL
+009,	0,		NULL,0,		NULL
+010,	0,		NULL,0,		NULL

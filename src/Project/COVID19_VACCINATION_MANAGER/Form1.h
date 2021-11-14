@@ -1,5 +1,6 @@
 ﻿#pragma once
 #include<string.h>
+#include<string>
 #include"src/CongDan.h"
 #include"src/DanhSachCongDan.h"
 //#include"src/CongDan.cpp"
@@ -19,6 +20,7 @@ namespace CppCLRWinformsProjekt {
     /// Zusammenfassung für Form1
     /// </summary>
     static DSCD DN;
+    static CongDan CD;
     public ref class Form1 : public System::Windows::Forms::Form
     {
 
@@ -152,6 +154,66 @@ private: System::Windows::Forms::DataGridViewTextBoxColumn^ mui1_allData;
 private: System::Windows::Forms::DataGridViewTextBoxColumn^ ngayM1_allData;
 private: System::Windows::Forms::DataGridViewTextBoxColumn^ mui2_allData;
 private: System::Windows::Forms::DataGridViewTextBoxColumn^ ngay_M2_allData;
+private: System::Windows::Forms::Button^ bt_deleteData;
+private: System::Windows::Forms::TextBox^ textbox_deleteData;
+private: System::Windows::Forms::Label^ label7;
+private: System::Windows::Forms::Label^ label9;
+private: System::Windows::Forms::Label^ label8;
+private: System::Windows::Forms::Label^ label10;
+private: System::Windows::Forms::DateTimePicker^ input_ngay_DK;
+
+private: System::Windows::Forms::Label^ label17;
+private: System::Windows::Forms::Label^ label16;
+private: System::Windows::Forms::Label^ label15;
+private: System::Windows::Forms::ComboBox^ input_sex;
+private: System::Windows::Forms::TextBox^ input_soCMND;
+
+
+private: System::Windows::Forms::TextBox^ input_soBHXH;
+
+private: System::Windows::Forms::TextBox^ input_phone;
+
+private: System::Windows::Forms::TextBox^ input_fullName;
+
+
+private: System::Windows::Forms::TextBox^ input_ma_CD;
+
+private: System::Windows::Forms::Label^ label14;
+private: System::Windows::Forms::Label^ label13;
+private: System::Windows::Forms::Label^ label12;
+private: System::Windows::Forms::Label^ label11;
+private: System::Windows::Forms::TextBox^ input_address;
+private: System::Windows::Forms::DateTimePicker^ input_ngayM2;
+
+
+private: System::Windows::Forms::DateTimePicker^ input_ngayM1;
+
+
+
+
+
+private: System::Windows::Forms::TextBox^ input_noi_DK;
+
+private: System::Windows::Forms::DateTimePicker^ input_birth;
+
+private: System::Windows::Forms::Button^ button2;
+
+
+
+private: System::Windows::Forms::Label^ label19;
+private: System::Windows::Forms::TextBox^ insertTypeA;
+
+private: System::Windows::Forms::Label^ label18;
+private: System::Windows::Forms::Button^ button3;
+private: System::Windows::Forms::Button^ bt_saveInputCD;
+private: System::Windows::Forms::Label^ label21;
+private: System::Windows::Forms::TextBox^ input_ma_DK;
+private: System::Windows::Forms::CheckBox^ input_mui_2;
+private: System::Windows::Forms::CheckBox^ input_mui_1;
+private: System::Windows::Forms::Panel^ panel_insertType;
+private: System::Windows::Forms::ToolStripMenuItem^ thốngKêToolStripMenuItem;
+
+
 
 
 
@@ -344,6 +406,54 @@ private: System::Windows::Forms::DataGridViewTextBoxColumn^ ngay_M2_allData;
             this->accoutManager_text1 = (gcnew System::Windows::Forms::Label());
             this->dataManagerTab = (gcnew System::Windows::Forms::TabPage());
             this->boxDataManager = (gcnew System::Windows::Forms::GroupBox());
+            this->dataManager_menu = (gcnew System::Windows::Forms::MenuStrip());
+            this->dataManager_input = (gcnew System::Windows::Forms::ToolStripMenuItem());
+            this->toolStripMenuItem2 = (gcnew System::Windows::Forms::ToolStripMenuItem());
+            this->inputFile = (gcnew System::Windows::Forms::ToolStripMenuItem());
+            this->inputHand = (gcnew System::Windows::Forms::ToolStripMenuItem());
+            this->sortData = (gcnew System::Windows::Forms::ToolStripMenuItem());
+            this->deleteData = (gcnew System::Windows::Forms::ToolStripMenuItem());
+            this->searchData = (gcnew System::Windows::Forms::ToolStripMenuItem());
+            this->thốngKêToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
+            this->dataManager_output = (gcnew System::Windows::Forms::ToolStripMenuItem());
+            this->toolStripMenuItem8 = (gcnew System::Windows::Forms::ToolStripMenuItem());
+            this->toolStripMenuItem9 = (gcnew System::Windows::Forms::ToolStripMenuItem());
+            this->toolStripMenuItem10 = (gcnew System::Windows::Forms::ToolStripMenuItem());
+            this->xuấtToànBộDữLiệuToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
+            this->box_inputHand = (gcnew System::Windows::Forms::GroupBox());
+            this->panel_insertType = (gcnew System::Windows::Forms::Panel());
+            this->label18 = (gcnew System::Windows::Forms::Label());
+            this->insertTypeA = (gcnew System::Windows::Forms::TextBox());
+            this->label19 = (gcnew System::Windows::Forms::Label());
+            this->button2 = (gcnew System::Windows::Forms::Button());
+            this->button3 = (gcnew System::Windows::Forms::Button());
+            this->input_mui_2 = (gcnew System::Windows::Forms::CheckBox());
+            this->input_mui_1 = (gcnew System::Windows::Forms::CheckBox());
+            this->label21 = (gcnew System::Windows::Forms::Label());
+            this->input_ma_DK = (gcnew System::Windows::Forms::TextBox());
+            this->bt_saveInputCD = (gcnew System::Windows::Forms::Button());
+            this->input_address = (gcnew System::Windows::Forms::TextBox());
+            this->input_ngayM2 = (gcnew System::Windows::Forms::DateTimePicker());
+            this->input_ngayM1 = (gcnew System::Windows::Forms::DateTimePicker());
+            this->input_noi_DK = (gcnew System::Windows::Forms::TextBox());
+            this->input_birth = (gcnew System::Windows::Forms::DateTimePicker());
+            this->input_ngay_DK = (gcnew System::Windows::Forms::DateTimePicker());
+            this->label17 = (gcnew System::Windows::Forms::Label());
+            this->label16 = (gcnew System::Windows::Forms::Label());
+            this->label15 = (gcnew System::Windows::Forms::Label());
+            this->input_sex = (gcnew System::Windows::Forms::ComboBox());
+            this->input_soCMND = (gcnew System::Windows::Forms::TextBox());
+            this->input_soBHXH = (gcnew System::Windows::Forms::TextBox());
+            this->input_phone = (gcnew System::Windows::Forms::TextBox());
+            this->input_fullName = (gcnew System::Windows::Forms::TextBox());
+            this->input_ma_CD = (gcnew System::Windows::Forms::TextBox());
+            this->label14 = (gcnew System::Windows::Forms::Label());
+            this->label13 = (gcnew System::Windows::Forms::Label());
+            this->label12 = (gcnew System::Windows::Forms::Label());
+            this->label11 = (gcnew System::Windows::Forms::Label());
+            this->label10 = (gcnew System::Windows::Forms::Label());
+            this->label9 = (gcnew System::Windows::Forms::Label());
+            this->label8 = (gcnew System::Windows::Forms::Label());
             this->export_allData_people = (gcnew System::Windows::Forms::GroupBox());
             this->bt_saveAllData = (gcnew System::Windows::Forms::Button());
             this->bt_loadAllData = (gcnew System::Windows::Forms::Button());
@@ -401,20 +511,10 @@ private: System::Windows::Forms::DataGridViewTextBoxColumn^ ngay_M2_allData;
             this->so_CMND = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
             this->address = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
             this->box_searchData = (gcnew System::Windows::Forms::GroupBox());
-            this->dataManager_menu = (gcnew System::Windows::Forms::MenuStrip());
-            this->dataManager_input = (gcnew System::Windows::Forms::ToolStripMenuItem());
-            this->toolStripMenuItem2 = (gcnew System::Windows::Forms::ToolStripMenuItem());
-            this->inputFile = (gcnew System::Windows::Forms::ToolStripMenuItem());
-            this->inputHand = (gcnew System::Windows::Forms::ToolStripMenuItem());
-            this->sortData = (gcnew System::Windows::Forms::ToolStripMenuItem());
-            this->deleteData = (gcnew System::Windows::Forms::ToolStripMenuItem());
-            this->searchData = (gcnew System::Windows::Forms::ToolStripMenuItem());
-            this->dataManager_output = (gcnew System::Windows::Forms::ToolStripMenuItem());
-            this->toolStripMenuItem8 = (gcnew System::Windows::Forms::ToolStripMenuItem());
-            this->toolStripMenuItem9 = (gcnew System::Windows::Forms::ToolStripMenuItem());
-            this->toolStripMenuItem10 = (gcnew System::Windows::Forms::ToolStripMenuItem());
-            this->xuấtToànBộDữLiệuToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
             this->box_deleteData = (gcnew System::Windows::Forms::GroupBox());
+            this->bt_deleteData = (gcnew System::Windows::Forms::Button());
+            this->textbox_deleteData = (gcnew System::Windows::Forms::TextBox());
+            this->label7 = (gcnew System::Windows::Forms::Label());
             this->box_sortData = (gcnew System::Windows::Forms::GroupBox());
             this->bt_view_sortData = (gcnew System::Windows::Forms::Button());
             this->bt_sortData = (gcnew System::Windows::Forms::Button());
@@ -422,7 +522,6 @@ private: System::Windows::Forms::DataGridViewTextBoxColumn^ ngay_M2_allData;
             this->box_sortSelect = (gcnew System::Windows::Forms::ComboBox());
             this->label6 = (gcnew System::Windows::Forms::Label());
             this->label5 = (gcnew System::Windows::Forms::Label());
-            this->box_inputHand = (gcnew System::Windows::Forms::GroupBox());
             this->box_inputFile = (gcnew System::Windows::Forms::GroupBox());
             this->bt_selectFile3 = (gcnew System::Windows::Forms::Button());
             this->bt_selectFile2 = (gcnew System::Windows::Forms::Button());
@@ -469,6 +568,9 @@ private: System::Windows::Forms::DataGridViewTextBoxColumn^ ngay_M2_allData;
             this->dataManager_loginAlert = (gcnew System::Windows::Forms::Label());
             this->dataManagerTab->SuspendLayout();
             this->boxDataManager->SuspendLayout();
+            this->dataManager_menu->SuspendLayout();
+            this->box_inputHand->SuspendLayout();
+            this->panel_insertType->SuspendLayout();
             this->export_allData_people->SuspendLayout();
             (cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->view_exportAllData_people))->BeginInit();
             this->exportData_vaccination->SuspendLayout();
@@ -477,7 +579,7 @@ private: System::Windows::Forms::DataGridViewTextBoxColumn^ ngay_M2_allData;
             (cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->view_exportData_registry))->BeginInit();
             this->exportData_people->SuspendLayout();
             (cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->view_exportData_people))->BeginInit();
-            this->dataManager_menu->SuspendLayout();
+            this->box_deleteData->SuspendLayout();
             this->box_sortData->SuspendLayout();
             this->box_inputFile->SuspendLayout();
             this->Manager->SuspendLayout();
@@ -613,21 +715,489 @@ private: System::Windows::Forms::DataGridViewTextBoxColumn^ ngay_M2_allData;
             this->boxDataManager->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Bottom)
                 | System::Windows::Forms::AnchorStyles::Left)
                 | System::Windows::Forms::AnchorStyles::Right));
+            this->boxDataManager->Controls->Add(this->dataManager_menu);
+            this->boxDataManager->Controls->Add(this->box_inputHand);
             this->boxDataManager->Controls->Add(this->export_allData_people);
             this->boxDataManager->Controls->Add(this->exportData_vaccination);
             this->boxDataManager->Controls->Add(this->exportData_registry);
             this->boxDataManager->Controls->Add(this->exportData_people);
             this->boxDataManager->Controls->Add(this->box_searchData);
-            this->boxDataManager->Controls->Add(this->dataManager_menu);
             this->boxDataManager->Controls->Add(this->box_deleteData);
             this->boxDataManager->Controls->Add(this->box_sortData);
-            this->boxDataManager->Controls->Add(this->box_inputHand);
             this->boxDataManager->Controls->Add(this->box_inputFile);
             this->boxDataManager->Location = System::Drawing::Point(-4, 0);
             this->boxDataManager->Name = L"boxDataManager";
             this->boxDataManager->Size = System::Drawing::Size(654, 468);
             this->boxDataManager->TabIndex = 3;
             this->boxDataManager->TabStop = false;
+            this->boxDataManager->Visible = false;
+            // 
+            // dataManager_menu
+            // 
+            this->dataManager_menu->Font = (gcnew System::Drawing::Font(L"MS Reference Sans Serif", 9, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+                static_cast<System::Byte>(0)));
+            this->dataManager_menu->ImageScalingSize = System::Drawing::Size(20, 20);
+            this->dataManager_menu->Items->AddRange(gcnew cli::array< System::Windows::Forms::ToolStripItem^  >(2) {
+                this->dataManager_input,
+                    this->dataManager_output
+            });
+            this->dataManager_menu->Location = System::Drawing::Point(3, 22);
+            this->dataManager_menu->Name = L"dataManager_menu";
+            this->dataManager_menu->Padding = System::Windows::Forms::Padding(5, 2, 0, 2);
+            this->dataManager_menu->Size = System::Drawing::Size(648, 27);
+            this->dataManager_menu->TabIndex = 7;
+            this->dataManager_menu->Text = L"menuStrip1";
+            // 
+            // dataManager_input
+            // 
+            this->dataManager_input->DropDownItems->AddRange(gcnew cli::array< System::Windows::Forms::ToolStripItem^  >(5) {
+                this->toolStripMenuItem2,
+                    this->sortData, this->deleteData, this->searchData, this->thốngKêToolStripMenuItem
+            });
+            this->dataManager_input->Font = (gcnew System::Drawing::Font(L"MS Reference Sans Serif", 9, System::Drawing::FontStyle::Regular,
+                System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
+            this->dataManager_input->Name = L"dataManager_input";
+            this->dataManager_input->Size = System::Drawing::Size(149, 23);
+            this->dataManager_input->Text = L"Chỉnh sửa dữ liệu";
+            // 
+            // toolStripMenuItem2
+            // 
+            this->toolStripMenuItem2->DropDownItems->AddRange(gcnew cli::array< System::Windows::Forms::ToolStripItem^  >(2) {
+                this->inputFile,
+                    this->inputHand
+            });
+            this->toolStripMenuItem2->Font = (gcnew System::Drawing::Font(L"MS Reference Sans Serif", 9, System::Drawing::FontStyle::Regular,
+                System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
+            this->toolStripMenuItem2->Name = L"toolStripMenuItem2";
+            this->toolStripMenuItem2->Size = System::Drawing::Size(205, 26);
+            this->toolStripMenuItem2->Text = L"Nhập dữ liệu";
+            // 
+            // inputFile
+            // 
+            this->inputFile->Font = (gcnew System::Drawing::Font(L"MS Reference Sans Serif", 9, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+                static_cast<System::Byte>(0)));
+            this->inputFile->Name = L"inputFile";
+            this->inputFile->Size = System::Drawing::Size(216, 26);
+            this->inputFile->Text = L"Từ tập tin dữ liệu";
+            this->inputFile->Click += gcnew System::EventHandler(this, &Form1::inputFile_Click);
+            // 
+            // inputHand
+            // 
+            this->inputHand->Font = (gcnew System::Drawing::Font(L"MS Reference Sans Serif", 9, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+                static_cast<System::Byte>(0)));
+            this->inputHand->Name = L"inputHand";
+            this->inputHand->Size = System::Drawing::Size(216, 26);
+            this->inputHand->Text = L"Thủ công";
+            this->inputHand->Click += gcnew System::EventHandler(this, &Form1::inputHand_Click);
+            // 
+            // sortData
+            // 
+            this->sortData->Font = (gcnew System::Drawing::Font(L"MS Reference Sans Serif", 9, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+                static_cast<System::Byte>(0)));
+            this->sortData->Name = L"sortData";
+            this->sortData->Size = System::Drawing::Size(205, 26);
+            this->sortData->Text = L"Sắp xếp dữ liệu";
+            this->sortData->Click += gcnew System::EventHandler(this, &Form1::sortData_Click_1);
+            // 
+            // deleteData
+            // 
+            this->deleteData->Font = (gcnew System::Drawing::Font(L"MS Reference Sans Serif", 9, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+                static_cast<System::Byte>(0)));
+            this->deleteData->Name = L"deleteData";
+            this->deleteData->Size = System::Drawing::Size(205, 26);
+            this->deleteData->Text = L"Xoá dữ liệu";
+            this->deleteData->Click += gcnew System::EventHandler(this, &Form1::deleteData_Click_1);
+            // 
+            // searchData
+            // 
+            this->searchData->Name = L"searchData";
+            this->searchData->Size = System::Drawing::Size(205, 26);
+            this->searchData->Text = L"Tìm kiếm";
+            this->searchData->Click += gcnew System::EventHandler(this, &Form1::searchData_Click);
+            // 
+            // thốngKêToolStripMenuItem
+            // 
+            this->thốngKêToolStripMenuItem->Name = L"thốngKêToolStripMenuItem";
+            this->thốngKêToolStripMenuItem->Size = System::Drawing::Size(205, 26);
+            this->thốngKêToolStripMenuItem->Text = L"Thống kê";
+            // 
+            // dataManager_output
+            // 
+            this->dataManager_output->DropDownItems->AddRange(gcnew cli::array< System::Windows::Forms::ToolStripItem^  >(4) {
+                this->toolStripMenuItem8,
+                    this->toolStripMenuItem9, this->toolStripMenuItem10, this->xuấtToànBộDữLiệuToolStripMenuItem
+            });
+            this->dataManager_output->Font = (gcnew System::Drawing::Font(L"MS Reference Sans Serif", 9, System::Drawing::FontStyle::Regular,
+                System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
+            this->dataManager_output->Name = L"dataManager_output";
+            this->dataManager_output->Size = System::Drawing::Size(174, 23);
+            this->dataManager_output->Text = L"Xem dữ liệu đã nhập";
+            // 
+            // toolStripMenuItem8
+            // 
+            this->toolStripMenuItem8->Font = (gcnew System::Drawing::Font(L"MS Reference Sans Serif", 9, System::Drawing::FontStyle::Regular,
+                System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
+            this->toolStripMenuItem8->Name = L"toolStripMenuItem8";
+            this->toolStripMenuItem8->Size = System::Drawing::Size(229, 26);
+            this->toolStripMenuItem8->Text = L"Dữ liệu công dân";
+            this->toolStripMenuItem8->Click += gcnew System::EventHandler(this, &Form1::toolStripMenuItem8_Click);
+            // 
+            // toolStripMenuItem9
+            // 
+            this->toolStripMenuItem9->Font = (gcnew System::Drawing::Font(L"MS Reference Sans Serif", 9, System::Drawing::FontStyle::Regular,
+                System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
+            this->toolStripMenuItem9->Name = L"toolStripMenuItem9";
+            this->toolStripMenuItem9->Size = System::Drawing::Size(229, 26);
+            this->toolStripMenuItem9->Text = L"Dữ liệu đăng ký";
+            this->toolStripMenuItem9->Click += gcnew System::EventHandler(this, &Form1::toolStripMenuItem9_Click);
+            // 
+            // toolStripMenuItem10
+            // 
+            this->toolStripMenuItem10->Font = (gcnew System::Drawing::Font(L"MS Reference Sans Serif", 9, System::Drawing::FontStyle::Regular,
+                System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
+            this->toolStripMenuItem10->Name = L"toolStripMenuItem10";
+            this->toolStripMenuItem10->Size = System::Drawing::Size(229, 26);
+            this->toolStripMenuItem10->Text = L"Dữ liệu tiêm chủng";
+            this->toolStripMenuItem10->Click += gcnew System::EventHandler(this, &Form1::toolStripMenuItem10_Click);
+            // 
+            // xuấtToànBộDữLiệuToolStripMenuItem
+            // 
+            this->xuấtToànBộDữLiệuToolStripMenuItem->Name = L"xuấtToànBộDữLiệuToolStripMenuItem";
+            this->xuấtToànBộDữLiệuToolStripMenuItem->Size = System::Drawing::Size(229, 26);
+            this->xuấtToànBộDữLiệuToolStripMenuItem->Text = L"Toàn bộ dữ liệu";
+            this->xuấtToànBộDữLiệuToolStripMenuItem->Click += gcnew System::EventHandler(this, &Form1::xuấtToànBộDữLiệuToolStripMenuItem_Click);
+            // 
+            // box_inputHand
+            // 
+            this->box_inputHand->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Bottom)
+                | System::Windows::Forms::AnchorStyles::Left)
+                | System::Windows::Forms::AnchorStyles::Right));
+            this->box_inputHand->Controls->Add(this->panel_insertType);
+            this->box_inputHand->Controls->Add(this->input_mui_2);
+            this->box_inputHand->Controls->Add(this->input_mui_1);
+            this->box_inputHand->Controls->Add(this->label21);
+            this->box_inputHand->Controls->Add(this->input_ma_DK);
+            this->box_inputHand->Controls->Add(this->bt_saveInputCD);
+            this->box_inputHand->Controls->Add(this->input_address);
+            this->box_inputHand->Controls->Add(this->input_ngayM2);
+            this->box_inputHand->Controls->Add(this->input_ngayM1);
+            this->box_inputHand->Controls->Add(this->input_noi_DK);
+            this->box_inputHand->Controls->Add(this->input_birth);
+            this->box_inputHand->Controls->Add(this->input_ngay_DK);
+            this->box_inputHand->Controls->Add(this->label17);
+            this->box_inputHand->Controls->Add(this->label16);
+            this->box_inputHand->Controls->Add(this->label15);
+            this->box_inputHand->Controls->Add(this->input_sex);
+            this->box_inputHand->Controls->Add(this->input_soCMND);
+            this->box_inputHand->Controls->Add(this->input_soBHXH);
+            this->box_inputHand->Controls->Add(this->input_phone);
+            this->box_inputHand->Controls->Add(this->input_fullName);
+            this->box_inputHand->Controls->Add(this->input_ma_CD);
+            this->box_inputHand->Controls->Add(this->label14);
+            this->box_inputHand->Controls->Add(this->label13);
+            this->box_inputHand->Controls->Add(this->label12);
+            this->box_inputHand->Controls->Add(this->label11);
+            this->box_inputHand->Controls->Add(this->label10);
+            this->box_inputHand->Controls->Add(this->label9);
+            this->box_inputHand->Controls->Add(this->label8);
+            this->box_inputHand->Font = (gcnew System::Drawing::Font(L"MS Reference Sans Serif", 9, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+                static_cast<System::Byte>(0)));
+            this->box_inputHand->Location = System::Drawing::Point(0, 51);
+            this->box_inputHand->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
+            this->box_inputHand->Name = L"box_inputHand";
+            this->box_inputHand->Padding = System::Windows::Forms::Padding(3, 2, 3, 2);
+            this->box_inputHand->Size = System::Drawing::Size(654, 417);
+            this->box_inputHand->TabIndex = 6;
+            this->box_inputHand->TabStop = false;
+            this->box_inputHand->Text = L"Nhập dữ liệu thủ công";
+            this->box_inputHand->Visible = false;
+            // 
+            // panel_insertType
+            // 
+            this->panel_insertType->BackColor = System::Drawing::Color::Silver;
+            this->panel_insertType->Controls->Add(this->label18);
+            this->panel_insertType->Controls->Add(this->insertTypeA);
+            this->panel_insertType->Controls->Add(this->label19);
+            this->panel_insertType->Controls->Add(this->button2);
+            this->panel_insertType->Controls->Add(this->button3);
+            this->panel_insertType->Location = System::Drawing::Point(10, 292);
+            this->panel_insertType->Name = L"panel_insertType";
+            this->panel_insertType->Size = System::Drawing::Size(638, 100);
+            this->panel_insertType->TabIndex = 39;
+            this->panel_insertType->Visible = false;
+            // 
+            // label18
+            // 
+            this->label18->AutoSize = true;
+            this->label18->Location = System::Drawing::Point(20, 20);
+            this->label18->Name = L"label18";
+            this->label18->Size = System::Drawing::Size(121, 19);
+            this->label18->TabIndex = 27;
+            this->label18->Text = L"Thêm vào vị trí";
+            // 
+            // insertTypeA
+            // 
+            this->insertTypeA->Location = System::Drawing::Point(154, 17);
+            this->insertTypeA->Name = L"insertTypeA";
+            this->insertTypeA->Size = System::Drawing::Size(137, 26);
+            this->insertTypeA->TabIndex = 28;
+            // 
+            // label19
+            // 
+            this->label19->AutoSize = true;
+            this->label19->Location = System::Drawing::Point(20, 65);
+            this->label19->Name = L"label19";
+            this->label19->Size = System::Drawing::Size(460, 19);
+            this->label19->TabIndex = 29;
+            this->label19->Text = L"Chèn vào danh sách mà không làm thay đổi vị trí đã sắp xếp";
+            // 
+            // button2
+            // 
+            this->button2->Location = System::Drawing::Point(297, 15);
+            this->button2->Name = L"button2";
+            this->button2->Size = System::Drawing::Size(75, 30);
+            this->button2->TabIndex = 32;
+            this->button2->Text = L"Lưu";
+            this->button2->UseVisualStyleBackColor = true;
+            this->button2->Click += gcnew System::EventHandler(this, &Form1::button2_Click_1);
+            // 
+            // button3
+            // 
+            this->button3->Location = System::Drawing::Point(518, 60);
+            this->button3->Name = L"button3";
+            this->button3->Size = System::Drawing::Size(75, 30);
+            this->button3->TabIndex = 33;
+            this->button3->Text = L"Lưu";
+            this->button3->UseVisualStyleBackColor = true;
+            this->button3->Click += gcnew System::EventHandler(this, &Form1::button3_Click_3);
+            // 
+            // input_mui_2
+            // 
+            this->input_mui_2->AutoSize = true;
+            this->input_mui_2->Location = System::Drawing::Point(360, 220);
+            this->input_mui_2->Name = L"input_mui_2";
+            this->input_mui_2->Size = System::Drawing::Size(71, 23);
+            this->input_mui_2->TabIndex = 38;
+            this->input_mui_2->Text = L"Mũi 2";
+            this->input_mui_2->UseVisualStyleBackColor = true;
+            // 
+            // input_mui_1
+            // 
+            this->input_mui_1->AutoSize = true;
+            this->input_mui_1->Location = System::Drawing::Point(360, 185);
+            this->input_mui_1->Name = L"input_mui_1";
+            this->input_mui_1->Size = System::Drawing::Size(71, 23);
+            this->input_mui_1->TabIndex = 37;
+            this->input_mui_1->Text = L"Mũi 1";
+            this->input_mui_1->UseVisualStyleBackColor = true;
+            // 
+            // label21
+            // 
+            this->label21->AutoSize = true;
+            this->label21->Location = System::Drawing::Point(356, 110);
+            this->label21->Name = L"label21";
+            this->label21->Size = System::Drawing::Size(129, 19);
+            this->label21->TabIndex = 36;
+            this->label21->Text = L"Mã đăng ký(**)";
+            // 
+            // input_ma_DK
+            // 
+            this->input_ma_DK->Location = System::Drawing::Point(502, 110);
+            this->input_ma_DK->Name = L"input_ma_DK";
+            this->input_ma_DK->Size = System::Drawing::Size(122, 26);
+            this->input_ma_DK->TabIndex = 35;
+            // 
+            // bt_saveInputCD
+            // 
+            this->bt_saveInputCD->Location = System::Drawing::Point(399, 247);
+            this->bt_saveInputCD->Name = L"bt_saveInputCD";
+            this->bt_saveInputCD->Size = System::Drawing::Size(201, 30);
+            this->bt_saveInputCD->TabIndex = 34;
+            this->bt_saveInputCD->Text = L"Xác nhận thông tin";
+            this->bt_saveInputCD->UseVisualStyleBackColor = true;
+            this->bt_saveInputCD->Click += gcnew System::EventHandler(this, &Form1::bt_saveInputCD_Click);
+            // 
+            // input_address
+            // 
+            this->input_address->Location = System::Drawing::Point(502, 40);
+            this->input_address->Name = L"input_address";
+            this->input_address->Size = System::Drawing::Size(122, 26);
+            this->input_address->TabIndex = 25;
+            // 
+            // input_ngayM2
+            // 
+            this->input_ngayM2->Location = System::Drawing::Point(502, 215);
+            this->input_ngayM2->Name = L"input_ngayM2";
+            this->input_ngayM2->Size = System::Drawing::Size(122, 26);
+            this->input_ngayM2->TabIndex = 24;
+            this->input_ngayM2->Value = System::DateTime(2021, 11, 4, 0, 0, 0, 0);
+            // 
+            // input_ngayM1
+            // 
+            this->input_ngayM1->Location = System::Drawing::Point(502, 180);
+            this->input_ngayM1->Name = L"input_ngayM1";
+            this->input_ngayM1->Size = System::Drawing::Size(122, 26);
+            this->input_ngayM1->TabIndex = 23;
+            this->input_ngayM1->Value = System::DateTime(2021, 11, 3, 0, 0, 0, 0);
+            this->input_ngayM1->ValueChanged += gcnew System::EventHandler(this, &Form1::dateTimePicker3_ValueChanged);
+            // 
+            // input_noi_DK
+            // 
+            this->input_noi_DK->Location = System::Drawing::Point(502, 145);
+            this->input_noi_DK->Name = L"input_noi_DK";
+            this->input_noi_DK->Size = System::Drawing::Size(122, 26);
+            this->input_noi_DK->TabIndex = 20;
+            // 
+            // input_birth
+            // 
+            this->input_birth->Location = System::Drawing::Point(204, 145);
+            this->input_birth->Name = L"input_birth";
+            this->input_birth->Size = System::Drawing::Size(122, 26);
+            this->input_birth->TabIndex = 19;
+            this->input_birth->Value = System::DateTime(2021, 11, 1, 0, 0, 0, 0);
+            // 
+            // input_ngay_DK
+            // 
+            this->input_ngay_DK->Location = System::Drawing::Point(502, 73);
+            this->input_ngay_DK->Name = L"input_ngay_DK";
+            this->input_ngay_DK->Size = System::Drawing::Size(122, 26);
+            this->input_ngay_DK->TabIndex = 18;
+            this->input_ngay_DK->Value = System::DateTime(2021, 11, 2, 0, 0, 0, 0);
+            this->input_ngay_DK->ValueChanged += gcnew System::EventHandler(this, &Form1::dateTimePicker1_ValueChanged);
+            // 
+            // label17
+            // 
+            this->label17->AutoSize = true;
+            this->label17->Location = System::Drawing::Point(356, 145);
+            this->label17->Name = L"label17";
+            this->label17->Size = System::Drawing::Size(97, 19);
+            this->label17->TabIndex = 17;
+            this->label17->Text = L"Nơi đăng ký";
+            // 
+            // label16
+            // 
+            this->label16->AutoSize = true;
+            this->label16->Location = System::Drawing::Point(356, 75);
+            this->label16->Name = L"label16";
+            this->label16->Size = System::Drawing::Size(135, 19);
+            this->label16->TabIndex = 16;
+            this->label16->Text = L"Ngày đăng ký(*)";
+            // 
+            // label15
+            // 
+            this->label15->AutoSize = true;
+            this->label15->Location = System::Drawing::Point(356, 40);
+            this->label15->Name = L"label15";
+            this->label15->Size = System::Drawing::Size(81, 19);
+            this->label15->TabIndex = 15;
+            this->label15->Text = L"Địa chỉ(*)";
+            // 
+            // input_sex
+            // 
+            this->input_sex->FormattingEnabled = true;
+            this->input_sex->Items->AddRange(gcnew cli::array< System::Object^  >(2) { L"Nam", L"Nữ" });
+            this->input_sex->Location = System::Drawing::Point(204, 109);
+            this->input_sex->Name = L"input_sex";
+            this->input_sex->Size = System::Drawing::Size(121, 27);
+            this->input_sex->TabIndex = 14;
+            // 
+            // input_soCMND
+            // 
+            this->input_soCMND->Location = System::Drawing::Point(203, 247);
+            this->input_soCMND->Name = L"input_soCMND";
+            this->input_soCMND->Size = System::Drawing::Size(122, 26);
+            this->input_soCMND->TabIndex = 13;
+            // 
+            // input_soBHXH
+            // 
+            this->input_soBHXH->Location = System::Drawing::Point(203, 212);
+            this->input_soBHXH->Name = L"input_soBHXH";
+            this->input_soBHXH->Size = System::Drawing::Size(122, 26);
+            this->input_soBHXH->TabIndex = 12;
+            // 
+            // input_phone
+            // 
+            this->input_phone->Location = System::Drawing::Point(203, 177);
+            this->input_phone->Name = L"input_phone";
+            this->input_phone->Size = System::Drawing::Size(122, 26);
+            this->input_phone->TabIndex = 11;
+            // 
+            // input_fullName
+            // 
+            this->input_fullName->Location = System::Drawing::Point(203, 72);
+            this->input_fullName->Name = L"input_fullName";
+            this->input_fullName->Size = System::Drawing::Size(122, 26);
+            this->input_fullName->TabIndex = 8;
+            // 
+            // input_ma_CD
+            // 
+            this->input_ma_CD->Location = System::Drawing::Point(203, 37);
+            this->input_ma_CD->Name = L"input_ma_CD";
+            this->input_ma_CD->Size = System::Drawing::Size(122, 26);
+            this->input_ma_CD->TabIndex = 7;
+            // 
+            // label14
+            // 
+            this->label14->AutoSize = true;
+            this->label14->Location = System::Drawing::Point(30, 250);
+            this->label14->Name = L"label14";
+            this->label14->Size = System::Drawing::Size(165, 19);
+            this->label14->TabIndex = 6;
+            this->label14->Text = L"Số CMND/CCCD(**)";
+            // 
+            // label13
+            // 
+            this->label13->AutoSize = true;
+            this->label13->Location = System::Drawing::Point(30, 215);
+            this->label13->Name = L"label13";
+            this->label13->Size = System::Drawing::Size(110, 19);
+            this->label13->TabIndex = 5;
+            this->label13->Text = L"Số BHXH(**)";
+            // 
+            // label12
+            // 
+            this->label12->AutoSize = true;
+            this->label12->Location = System::Drawing::Point(30, 180);
+            this->label12->Name = L"label12";
+            this->label12->Size = System::Drawing::Size(106, 19);
+            this->label12->TabIndex = 4;
+            this->label12->Text = L"Số điện thoại";
+            // 
+            // label11
+            // 
+            this->label11->AutoSize = true;
+            this->label11->Location = System::Drawing::Point(30, 145);
+            this->label11->Name = L"label11";
+            this->label11->Size = System::Drawing::Size(81, 19);
+            this->label11->TabIndex = 3;
+            this->label11->Text = L"Ngày sinh";
+            // 
+            // label10
+            // 
+            this->label10->AutoSize = true;
+            this->label10->Location = System::Drawing::Point(30, 110);
+            this->label10->Name = L"label10";
+            this->label10->Size = System::Drawing::Size(93, 19);
+            this->label10->TabIndex = 2;
+            this->label10->Text = L"Giới tính(*)";
+            // 
+            // label9
+            // 
+            this->label9->AutoSize = true;
+            this->label9->Location = System::Drawing::Point(30, 40);
+            this->label9->Name = L"label9";
+            this->label9->Size = System::Drawing::Size(138, 19);
+            this->label9->TabIndex = 1;
+            this->label9->Text = L"Mã công dân(**)";
+            // 
+            // label8
+            // 
+            this->label8->AutoSize = true;
+            this->label8->Location = System::Drawing::Point(30, 75);
+            this->label8->Name = L"label8";
+            this->label8->Size = System::Drawing::Size(106, 19);
+            this->label8->TabIndex = 0;
+            this->label8->Text = L"Họ và tên(*)";
             // 
             // export_allData_people
             // 
@@ -711,7 +1281,7 @@ private: System::Windows::Forms::DataGridViewTextBoxColumn^ ngay_M2_allData;
             this->view_exportAllData_people->ReadOnly = true;
             this->view_exportAllData_people->RowHeadersWidth = 51;
             this->view_exportAllData_people->RowTemplate->Height = 24;
-            this->view_exportAllData_people->Size = System::Drawing::Size(648, 342);
+            this->view_exportAllData_people->Size = System::Drawing::Size(648, 344);
             this->view_exportAllData_people->TabIndex = 0;
             // 
             // maCD
@@ -1237,140 +1807,14 @@ private: System::Windows::Forms::DataGridViewTextBoxColumn^ ngay_M2_allData;
             this->box_searchData->Text = L"Tìm kiếm";
             this->box_searchData->Visible = false;
             // 
-            // dataManager_menu
-            // 
-            this->dataManager_menu->Font = (gcnew System::Drawing::Font(L"MS Reference Sans Serif", 9, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
-                static_cast<System::Byte>(0)));
-            this->dataManager_menu->ImageScalingSize = System::Drawing::Size(20, 20);
-            this->dataManager_menu->Items->AddRange(gcnew cli::array< System::Windows::Forms::ToolStripItem^  >(2) {
-                this->dataManager_input,
-                    this->dataManager_output
-            });
-            this->dataManager_menu->Location = System::Drawing::Point(3, 22);
-            this->dataManager_menu->Name = L"dataManager_menu";
-            this->dataManager_menu->Padding = System::Windows::Forms::Padding(5, 2, 0, 2);
-            this->dataManager_menu->Size = System::Drawing::Size(648, 28);
-            this->dataManager_menu->TabIndex = 7;
-            this->dataManager_menu->Text = L"menuStrip1";
-            // 
-            // dataManager_input
-            // 
-            this->dataManager_input->DropDownItems->AddRange(gcnew cli::array< System::Windows::Forms::ToolStripItem^  >(4) {
-                this->toolStripMenuItem2,
-                    this->sortData, this->deleteData, this->searchData
-            });
-            this->dataManager_input->Font = (gcnew System::Drawing::Font(L"MS Reference Sans Serif", 9, System::Drawing::FontStyle::Regular,
-                System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
-            this->dataManager_input->Name = L"dataManager_input";
-            this->dataManager_input->Size = System::Drawing::Size(149, 24);
-            this->dataManager_input->Text = L"Chỉnh sửa dữ liệu";
-            // 
-            // toolStripMenuItem2
-            // 
-            this->toolStripMenuItem2->DropDownItems->AddRange(gcnew cli::array< System::Windows::Forms::ToolStripItem^  >(2) {
-                this->inputFile,
-                    this->inputHand
-            });
-            this->toolStripMenuItem2->Font = (gcnew System::Drawing::Font(L"MS Reference Sans Serif", 9, System::Drawing::FontStyle::Regular,
-                System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
-            this->toolStripMenuItem2->Name = L"toolStripMenuItem2";
-            this->toolStripMenuItem2->Size = System::Drawing::Size(205, 26);
-            this->toolStripMenuItem2->Text = L"Nhập dữ liệu";
-            // 
-            // inputFile
-            // 
-            this->inputFile->Font = (gcnew System::Drawing::Font(L"MS Reference Sans Serif", 9, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
-                static_cast<System::Byte>(0)));
-            this->inputFile->Name = L"inputFile";
-            this->inputFile->Size = System::Drawing::Size(216, 26);
-            this->inputFile->Text = L"Từ tập tin dữ liệu";
-            this->inputFile->Click += gcnew System::EventHandler(this, &Form1::inputFile_Click);
-            // 
-            // inputHand
-            // 
-            this->inputHand->Font = (gcnew System::Drawing::Font(L"MS Reference Sans Serif", 9, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
-                static_cast<System::Byte>(0)));
-            this->inputHand->Name = L"inputHand";
-            this->inputHand->Size = System::Drawing::Size(216, 26);
-            this->inputHand->Text = L"Thủ công";
-            this->inputHand->Click += gcnew System::EventHandler(this, &Form1::inputHand_Click);
-            // 
-            // sortData
-            // 
-            this->sortData->Font = (gcnew System::Drawing::Font(L"MS Reference Sans Serif", 9, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
-                static_cast<System::Byte>(0)));
-            this->sortData->Name = L"sortData";
-            this->sortData->Size = System::Drawing::Size(205, 26);
-            this->sortData->Text = L"Sắp xếp dữ liệu";
-            this->sortData->Click += gcnew System::EventHandler(this, &Form1::sortData_Click_1);
-            // 
-            // deleteData
-            // 
-            this->deleteData->Font = (gcnew System::Drawing::Font(L"MS Reference Sans Serif", 9, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
-                static_cast<System::Byte>(0)));
-            this->deleteData->Name = L"deleteData";
-            this->deleteData->Size = System::Drawing::Size(205, 26);
-            this->deleteData->Text = L"Xoá dữ liệu";
-            this->deleteData->Click += gcnew System::EventHandler(this, &Form1::deleteData_Click_1);
-            // 
-            // searchData
-            // 
-            this->searchData->Name = L"searchData";
-            this->searchData->Size = System::Drawing::Size(205, 26);
-            this->searchData->Text = L"Tìm kiếm";
-            this->searchData->Click += gcnew System::EventHandler(this, &Form1::searchData_Click);
-            // 
-            // dataManager_output
-            // 
-            this->dataManager_output->DropDownItems->AddRange(gcnew cli::array< System::Windows::Forms::ToolStripItem^  >(4) {
-                this->toolStripMenuItem8,
-                    this->toolStripMenuItem9, this->toolStripMenuItem10, this->xuấtToànBộDữLiệuToolStripMenuItem
-            });
-            this->dataManager_output->Font = (gcnew System::Drawing::Font(L"MS Reference Sans Serif", 9, System::Drawing::FontStyle::Regular,
-                System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
-            this->dataManager_output->Name = L"dataManager_output";
-            this->dataManager_output->Size = System::Drawing::Size(174, 24);
-            this->dataManager_output->Text = L"Xem dữ liệu đã nhập";
-            // 
-            // toolStripMenuItem8
-            // 
-            this->toolStripMenuItem8->Font = (gcnew System::Drawing::Font(L"MS Reference Sans Serif", 9, System::Drawing::FontStyle::Regular,
-                System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
-            this->toolStripMenuItem8->Name = L"toolStripMenuItem8";
-            this->toolStripMenuItem8->Size = System::Drawing::Size(229, 26);
-            this->toolStripMenuItem8->Text = L"Dữ liệu công dân";
-            this->toolStripMenuItem8->Click += gcnew System::EventHandler(this, &Form1::toolStripMenuItem8_Click);
-            // 
-            // toolStripMenuItem9
-            // 
-            this->toolStripMenuItem9->Font = (gcnew System::Drawing::Font(L"MS Reference Sans Serif", 9, System::Drawing::FontStyle::Regular,
-                System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
-            this->toolStripMenuItem9->Name = L"toolStripMenuItem9";
-            this->toolStripMenuItem9->Size = System::Drawing::Size(229, 26);
-            this->toolStripMenuItem9->Text = L"Dữ liệu đăng ký";
-            this->toolStripMenuItem9->Click += gcnew System::EventHandler(this, &Form1::toolStripMenuItem9_Click);
-            // 
-            // toolStripMenuItem10
-            // 
-            this->toolStripMenuItem10->Font = (gcnew System::Drawing::Font(L"MS Reference Sans Serif", 9, System::Drawing::FontStyle::Regular,
-                System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
-            this->toolStripMenuItem10->Name = L"toolStripMenuItem10";
-            this->toolStripMenuItem10->Size = System::Drawing::Size(229, 26);
-            this->toolStripMenuItem10->Text = L"Dữ liệu tiêm chủng";
-            this->toolStripMenuItem10->Click += gcnew System::EventHandler(this, &Form1::toolStripMenuItem10_Click);
-            // 
-            // xuấtToànBộDữLiệuToolStripMenuItem
-            // 
-            this->xuấtToànBộDữLiệuToolStripMenuItem->Name = L"xuấtToànBộDữLiệuToolStripMenuItem";
-            this->xuấtToànBộDữLiệuToolStripMenuItem->Size = System::Drawing::Size(229, 26);
-            this->xuấtToànBộDữLiệuToolStripMenuItem->Text = L"Toàn bộ dữ liệu";
-            this->xuấtToànBộDữLiệuToolStripMenuItem->Click += gcnew System::EventHandler(this, &Form1::xuấtToànBộDữLiệuToolStripMenuItem_Click);
-            // 
             // box_deleteData
             // 
             this->box_deleteData->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Bottom)
                 | System::Windows::Forms::AnchorStyles::Left)
                 | System::Windows::Forms::AnchorStyles::Right));
+            this->box_deleteData->Controls->Add(this->bt_deleteData);
+            this->box_deleteData->Controls->Add(this->textbox_deleteData);
+            this->box_deleteData->Controls->Add(this->label7);
             this->box_deleteData->Font = (gcnew System::Drawing::Font(L"MS Reference Sans Serif", 9, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
                 static_cast<System::Byte>(0)));
             this->box_deleteData->Location = System::Drawing::Point(0, 51);
@@ -1382,6 +1826,32 @@ private: System::Windows::Forms::DataGridViewTextBoxColumn^ ngay_M2_allData;
             this->box_deleteData->TabStop = false;
             this->box_deleteData->Text = L"Xoá dữ liệu";
             this->box_deleteData->Visible = false;
+            // 
+            // bt_deleteData
+            // 
+            this->bt_deleteData->Location = System::Drawing::Point(283, 153);
+            this->bt_deleteData->Name = L"bt_deleteData";
+            this->bt_deleteData->Size = System::Drawing::Size(75, 30);
+            this->bt_deleteData->TabIndex = 2;
+            this->bt_deleteData->Text = L"Xoá";
+            this->bt_deleteData->UseVisualStyleBackColor = true;
+            this->bt_deleteData->Click += gcnew System::EventHandler(this, &Form1::bt_deleteData_Click);
+            // 
+            // textbox_deleteData
+            // 
+            this->textbox_deleteData->Location = System::Drawing::Point(445, 110);
+            this->textbox_deleteData->Name = L"textbox_deleteData";
+            this->textbox_deleteData->Size = System::Drawing::Size(100, 26);
+            this->textbox_deleteData->TabIndex = 1;
+            // 
+            // label7
+            // 
+            this->label7->AutoSize = true;
+            this->label7->Location = System::Drawing::Point(49, 113);
+            this->label7->Name = L"label7";
+            this->label7->Size = System::Drawing::Size(320, 19);
+            this->label7->TabIndex = 0;
+            this->label7->Text = L"Nhập mã công dân của đối tượng cần xoá";
             // 
             // box_sortData
             // 
@@ -1438,9 +1908,9 @@ private: System::Windows::Forms::DataGridViewTextBoxColumn^ ngay_M2_allData;
             // box_sortSelect
             // 
             this->box_sortSelect->FormattingEnabled = true;
-            this->box_sortSelect->Items->AddRange(gcnew cli::array< System::Object^  >(5) {
-                L"Mã công dân", L"Mã đăng ký", L"Ngày đăng ký",
-                    L"Ngày tiêm mũi 1", L"Ngày tiêm mũi 2"
+            this->box_sortSelect->Items->AddRange(gcnew cli::array< System::Object^  >(4) {
+                L"Mã công dân", L"Ngày đăng ký", L"Ngày tiêm mũi 1",
+                    L"Ngày tiêm mũi 2"
             });
             this->box_sortSelect->Location = System::Drawing::Point(279, 105);
             this->box_sortSelect->Name = L"box_sortSelect";
@@ -1464,23 +1934,6 @@ private: System::Windows::Forms::DataGridViewTextBoxColumn^ ngay_M2_allData;
             this->label5->Size = System::Drawing::Size(108, 19);
             this->label5->TabIndex = 0;
             this->label5->Text = L"Sắp xếp theo";
-            // 
-            // box_inputHand
-            // 
-            this->box_inputHand->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Bottom)
-                | System::Windows::Forms::AnchorStyles::Left)
-                | System::Windows::Forms::AnchorStyles::Right));
-            this->box_inputHand->Font = (gcnew System::Drawing::Font(L"MS Reference Sans Serif", 9, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
-                static_cast<System::Byte>(0)));
-            this->box_inputHand->Location = System::Drawing::Point(0, 51);
-            this->box_inputHand->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
-            this->box_inputHand->Name = L"box_inputHand";
-            this->box_inputHand->Padding = System::Windows::Forms::Padding(3, 2, 3, 2);
-            this->box_inputHand->Size = System::Drawing::Size(654, 417);
-            this->box_inputHand->TabIndex = 6;
-            this->box_inputHand->TabStop = false;
-            this->box_inputHand->Text = L"Nhập dữ liệu thủ công";
-            this->box_inputHand->Visible = false;
             // 
             // box_inputFile
             // 
@@ -2069,6 +2522,12 @@ private: System::Windows::Forms::DataGridViewTextBoxColumn^ ngay_M2_allData;
             this->dataManagerTab->ResumeLayout(false);
             this->boxDataManager->ResumeLayout(false);
             this->boxDataManager->PerformLayout();
+            this->dataManager_menu->ResumeLayout(false);
+            this->dataManager_menu->PerformLayout();
+            this->box_inputHand->ResumeLayout(false);
+            this->box_inputHand->PerformLayout();
+            this->panel_insertType->ResumeLayout(false);
+            this->panel_insertType->PerformLayout();
             this->export_allData_people->ResumeLayout(false);
             (cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->view_exportAllData_people))->EndInit();
             this->exportData_vaccination->ResumeLayout(false);
@@ -2077,8 +2536,8 @@ private: System::Windows::Forms::DataGridViewTextBoxColumn^ ngay_M2_allData;
             (cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->view_exportData_registry))->EndInit();
             this->exportData_people->ResumeLayout(false);
             (cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->view_exportData_people))->EndInit();
-            this->dataManager_menu->ResumeLayout(false);
-            this->dataManager_menu->PerformLayout();
+            this->box_deleteData->ResumeLayout(false);
+            this->box_deleteData->PerformLayout();
             this->box_sortData->ResumeLayout(false);
             this->box_sortData->PerformLayout();
             this->box_inputFile->ResumeLayout(false);
@@ -2273,6 +2732,7 @@ private: System::Windows::Forms::DataGridViewTextBoxColumn^ ngay_M2_allData;
             this->exportData_registry->Visible = false;
             this->exportData_vaccination->Visible = false;
             this->export_allData_people->Visible = false;
+            this->panel_insertType->Visible = false;
         }
     }
     private: System::Void inputFile_Click(System::Object^ sender, System::EventArgs^ e) {
@@ -2455,37 +2915,45 @@ private: System::Void bt_sortData_Click(System::Object^ sender, System::EventArg
     String ^s2 = this->box_sortType->Text;
     if (s2 == L"Tăng dần") {
         if (s1 == L"Mã công dân") {
-
+            DN.Sort_ma_CD(ascending);
+            MessageBox::Show(L"Đã sắp xếp.\nNhấn 'Xem' để chuyển sang trang xem dữ liệu. ", L"THÔNG BÁO");
         }
         else if (s1 == L"Mã đăng ký") {
-
+          
         }
         else if (s1 == L"Ngày đăng ký") {
-
+            DN.Sort_ngay_DK(ascending);
+            MessageBox::Show(L"Đã sắp xếp.\nNhấn 'Xem' để chuyển sang trang xem dữ liệu. ", L"THÔNG BÁO");
         }
         else if (s1 == L"Ngày tiêm mũi 1") {
-
+            DN.Sort_ngay_M1(ascending);
+            MessageBox::Show(L"Đã sắp xếp.\nNhấn 'Xem' để chuyển sang trang xem dữ liệu. ", L"THÔNG BÁO");
         }
         else if (s1 == L"Ngày tiêm mũi 2") {
-
+            DN.Sort_ngay_M2(ascending);
+            MessageBox::Show(L"Đã sắp xếp.\nNhấn 'Xem' để chuyển sang trang xem dữ liệu. ", L"THÔNG BÁO");
         }
         else MessageBox::Show(L"Lỗi nhập dữ liệu", L"THÔNG BÁO");
     }
     else if (s2 == L"Giảm dần") {
         if (s1 == L"Mã công dân") {
-
+            DN.Sort_ma_CD(descending);
+            MessageBox::Show(L"Đã sắp xếp.\nNhấn 'Xem' để chuyển sang trang xem dữ liệu. ", L"THÔNG BÁO");
         }
         else if (s1 == L"Mã đăng ký") {
 
         }
         else if (s1 == L"Ngày đăng ký") {
-
+            DN.Sort_ngay_DK(descending);
+            MessageBox::Show(L"Đã sắp xếp.\nNhấn 'Xem' để chuyển sang trang xem dữ liệu. ", L"THÔNG BÁO");
         }
         else if (s1 == L"Ngày tiêm mũi 1") {
-
+            DN.Sort_ngay_M1(descending);
+            MessageBox::Show(L"Đã sắp xếp.\nNhấn 'Xem' để chuyển sang trang xem dữ liệu. ", L"THÔNG BÁO");
         }
         else if (s1 == L"Ngày tiêm mũi 2") {
-
+            DN.Sort_ngay_M2(descending);
+            MessageBox::Show(L"Đã sắp xếp.\nNhấn 'Xem' để chuyển sang trang xem dữ liệu. ", L"THÔNG BÁO");
         }
         else MessageBox::Show(L"Lỗi nhập dữ liệu", L"THÔNG BÁO");
 
@@ -2527,6 +2995,136 @@ private: System::Void xuấtToànBộDữLiệuToolStripMenuItem_Click(System::O
     this->box_sortData->Visible = false;
     this->box_deleteData->Visible = false;
     this->box_searchData->Visible = false;
+}
+private: System::Void bt_deleteData_Click(System::Object^ sender, System::EventArgs^ e) {
+    String ^obj = this->textbox_deleteData->Text;
+    string s;
+    convertString(obj, s);
+
+    String ^msg = gcnew String(DN.Delete(s).c_str());
+    MessageBox::Show(msg, L"THÔNG BÁO");
+}
+
+
+private: System::Void dateTimePicker1_ValueChanged(System::Object^ sender, System::EventArgs^ e) {
+}
+private: System::Void dateTimePicker3_ValueChanged(System::Object^ sender, System::EventArgs^ e) {
+}
+private: System::Void button2_Click_1(System::Object^ sender, System::EventArgs^ e) {
+    String ^s = insertTypeA->Text;
+    string pos; convertString(s, pos);
+    int x = stoi(pos);
+    bool status = DN.Them(CD, x);
+    if (status) MessageBox::Show(L"Đã thêm đối tượng.", L"THÔNG BÁO");
+    else MessageBox::Show(L"Vị trí thêm không chính xác, hãy nhập lại.", "THÔNG BÁO");
+
+}
+private: System::Void bt_saveInputCD_Click(System::Object^ sender, System::EventArgs^ e) {
+    String^ s1 = this->input_ma_CD->Text;
+    String^ s2 = this->input_fullName->Text;
+    String^ s3 = this->input_birth->Text;
+    String^ s4 = this->input_phone->Text;
+    String^ s5 = this->input_soBHXH->Text;
+    String^ s6 = this->input_soCMND->Text;
+    String^ s7 = this->input_address->Text;
+    String^ s8 = this->input_ngay_DK->Text;
+    String^ s9 = this->input_noi_DK->Text;
+    String^ s10 = this->input_ma_DK->Text;
+    String^ s11 = this->input_ngayM1->Text;
+    String^ s12 = this->input_ngayM2->Text;
+
+    string ma_CD; convertString(s1, ma_CD);
+    string fullName; convertString(s1, fullName);
+    string birth; convertString(s3, birth);
+    string phone; convertString(s4, phone);
+    string address; convertString(s7, address);
+    string so_BHXH; convertString(s5, so_BHXH);
+    string so_CMND; convertString(s6, so_CMND);
+    string ngay_DK; convertString(s8, ngay_DK);
+    string ma_DK; convertString(s10, ma_DK);
+    string noi_DK; convertString(s9, noi_DK);
+    string ngay_M1; convertString(s11, ngay_M1);
+    string ngay_M2; convertString(s12, ngay_M2);
+    bool sex, mui1, mui2;
+    if (input_sex->Text == "Nam") sex = true;
+    else sex = false;
+    mui1 = input_mui_1->Checked;
+    mui2 = input_mui_2->Checked;
+    if((ma_CD != "") && (fullName != "") && (so_BHXH != "") && (so_CMND != "") && (address != "") && (ngay_DK != "") && (ma_DK != "")) {
+        //Kiểm tra dữ liệu có bị trùng lặp
+        string ck;
+        int i = 0;
+        for (int i = 0; i < DN.getRows(); i++) {
+            if (DN.get("ma_CD", i) == ma_CD) {
+                ck = "ma_CD";
+                break;
+            }
+            else if (DN.get("so_BHXH", i) == so_BHXH) {
+                ck = "so_BHXH";
+                break;
+            }
+            else if (DN.get("so_CMND", i) == so_CMND) {
+                ck = "so_CMND";
+                break;
+            }
+            else if (DN.get("ma_DK", i) == ma_DK) {
+                ck = "ma_DK";
+                break;
+            }
+            else {
+                ck = "safe";
+            }
+        }
+
+        if (ck == "ma_CD") {
+            MessageBox::Show(L"Mã công dân đã tồn tại.\nHãy kiểm tra lại.", L"THÔNG BÁO");
+            this->panel_insertType->Visible = false;
+        }
+        else if (ck == "so_BHXH") {
+            MessageBox::Show(L"Số BHXH trùng khớp.\nHãy kiểm tra lại.", L"THÔNG BÁO");
+            this->panel_insertType->Visible = false;
+        }
+        else if (ck == "so_CMND") {
+            MessageBox::Show(L"Số CMND/CCCD trùng khớp.\nHãy kiểm tra lại.", L"THÔNG BÁO");
+            this->panel_insertType->Visible = false;
+        }
+        else if (ck == "ma_DK") {
+            MessageBox::Show(L"Mã đăng ký đã tồn tại.\nHãy kiểm tra lại.", L"THÔNG BÁO");
+            this->panel_insertType->Visible = false;
+        }
+        else if (ck == "safe") {
+            //Lưu vào biến
+            CD.set("ma_CD", ma_CD);
+            CD.set("fullName", fullName);
+            CD.set("birth", birth);
+            CD.set("phone", phone);
+            CD.set("so_BHXH", so_BHXH);
+            CD.set("so_CMND", so_CMND);
+            CD.set("address", address);
+            CD.set("ngay_DK", ngay_DK);
+            CD.set("ma_DK", ma_DK);
+            CD.set("noi_DK", noi_DK);
+            CD.set("ngay_M1", ngay_M1);
+            CD.set("ngay_M2", ngay_M2);
+
+            CD.set("sex", sex);
+            CD.set("mui1", mui1);
+            CD.set("mui2", mui2);
+            MessageBox::Show(L"Đã xác nhận thông tin.\nChọn 1 trong 2 lựa chọn phía dưới để thêm", L"THÔNG BÁO");
+            this->panel_insertType->Visible = true;
+        }
+        else {
+            MessageBox::Show(L"Lỗi không xác định. Không thể xác thực thông tin.", L"THÔNG BÁO.");
+        }
+    }
+    else {
+        MessageBox::Show(L"Hãy nhập đủ thông tin cần thiết.\n(*)Thông tin phải nhập.\n(**)Thông tin không được trùng khớp.", L"THÔNG BÁO");
+    }
+}
+private: System::Void button3_Click_3(System::Object^ sender, System::EventArgs^ e) {
+    bool status = DN.Insert_ma_CD(CD, ascending);
+    if (status) MessageBox::Show(L"Đã thêm đối tượng.", L"THÔNG BÁO");
+    else MessageBox::Show(L"Vị trí thêm không chính xác, hãy nhập lại.", "THÔNG BÁO");
 }
 };
 }

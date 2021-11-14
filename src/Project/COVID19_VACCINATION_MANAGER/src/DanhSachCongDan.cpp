@@ -101,12 +101,12 @@ DSCD::DSCD(){
 }
 
 DSCD::~DSCD(){
-    
+    delete []data;
 }
 
-void DSCD::xuatDuLieu(DSCD a){
-    for(int i = 0; i < a.n; i++){
-            cout << a.data[i].sex << endl;
+void DSCD::xuatDuLieu(){
+    for(int i = 0; i < DSCD::n; i++){
+            cout << DSCD::data[i].ngay_DK << endl;
     }
 }
 
@@ -163,5 +163,191 @@ string DSCD::get(string type, int i){
  
 }
 
+
+// kiểm tra tăng dần
+bool ascending(int left, int right)
+{
+    return left > right;
+}
+
+// kiểm tra giảm dần
+bool descending(int left, int right)
+{
+    return left < right;
+}
+
+// Hàm hoán vị
+void swap(CongDan &x, CongDan &y)
+{
+    CongDan temp = x;
+    x = y;
+    y = temp;
+}
+
+void DSCD::nhapTay(int n)
+{
+    data = new CongDan[n];
+    for (int i = 0; i < n; i++)
+    {
+        cout<<"Nhap vao cong dan thu "<<i+1<<": "<<endl;
+        cin>>data[i];
+        cout<<"--------------------------------------------------"<<endl;
+    }
+}
+
+// Hàm thêm công dân vào danh sách tại 1 vị trí bất kì ( thứ tự cd từ 1 -> n)
+bool DSCD::Them(CongDan cd, int position)
+{
+    if (position < 0 || position > this->n + 1)
+    {
+        //cout<<"Vi tri them khong hop le"<<endl;
+        return false;
+    }else 
+    {
+        for (int i = 0; i < n; i++)
+        {
+                if (data[i].ma_CD == cd.ma_CD)
+                {
+                    //cout<<"Ma cong dan da ton tai "<<endl;
+                    return false;
+                }else
+                {
+                    this->n++;
+                    for (int i = n - 2; i >= position - 1; i--)
+                    {
+                        data[i + 1] = data[i];
+                    }
+                    data[position - 1] = cd;
+                }
+        }
+    }
+}
+
+// Hàm sắp xếp công dân theo tiêu chí bất kì bằng phương pháp sap xep chon
+void DSCD::Sort_ma_CD(bool (*func_ptr)(int, int))
+{
+    int i, j, min_idx;
+    for (i = 0; i < n - 1; i++)
+    {
+        min_idx = i;
+        for (j = i+1; j < n; j++){
+            if((*func_ptr)((data[min_idx].maCDToInt(data[min_idx].ma_CD)), data[j].maCDToInt(data[j].ma_CD)))
+            {
+                min_idx = j;
+            }
+        }
+        swap(data[min_idx], data[i]);
+    }
+}
+
+// Sắp xếp công dân theo ngay DK
+void DSCD::Sort_ngay_DK(bool (*func_ptr)(int, int))
+{
+    int i, j, min_idx;
+    for (i = 0; i < n - 1; i++)
+    {
+        min_idx = i;
+        for (j = i+1; j < n; j++){
+            if((*func_ptr)(data[min_idx].dayToInt(data[min_idx].ngay_DK), data[j].dayToInt(data[j].ngay_DK)))
+            {
+                min_idx = j;
+            }
+        }
+        swap(data[min_idx], data[i]);
+    }
+}
+
+// Sắp xếp công dân theo ngay tiem mui 1
+void DSCD::Sort_ngay_M1(bool (*func_ptr)(int, int))
+{
+    int i, j, min_idx;
+    for (i = 0; i < n - 1; i++)
+    {
+        min_idx = i;
+        for (j = i+1; j < n; j++){
+            if((*func_ptr)(data[min_idx].dayToInt(data[min_idx].ngay_M1), data[j].dayToInt(data[j].ngay_M1)))
+            {
+                min_idx = j;
+            }
+        }
+        swap(data[min_idx], data[i]);
+    }
+}
+
+// Sắp xếp công dân theo ngay tiem mui 2
+void DSCD::Sort_ngay_M2(bool (*func_ptr)(int, int))
+{
+    int i, j, min_idx;
+    for (i = 0; i < n - 1; i++)
+    {
+        min_idx = i;
+        for (j = i+1; j < n; j++){
+            if((*func_ptr)(data[min_idx].dayToInt(data[min_idx].ngay_M2), data[j].dayToInt(data[j].ngay_M2)))
+            {
+                min_idx = j;
+            }
+        }
+        swap(data[min_idx], data[i]);
+    }
+}
+
+// Chèn công dân vào vị trí bất kì mà vẫn giữ nguyên thứ tự của mã CD
+bool DSCD::Insert_ma_CD(CongDan cd, bool (*func_ptr)(int, int))
+{
+    if (func_ptr(data[0].maCDToInt(data[0].ma_CD), cd.maCDToInt(cd.ma_CD)))
+    {
+        Them(cd, 1);
+    }
+    else if(!func_ptr(data[n].maCDToInt(data[n].ma_CD), cd.maCDToInt(cd.ma_CD)))
+    {
+        Them(cd, n + 1);
+    }
+    else
+    {
+        int index;
+        for (int i = 0; i < n ; i++)
+        {
+            if (func_ptr(data[i].maCDToInt(data[i].ma_CD), cd.maCDToInt(cd.ma_CD)))
+            {
+                index = i;
+                break;
+            }
+        }
+        Them(cd, index + 2);
+    }
+    return true;
+}
+
+string DSCD::Delete(string maCD)
+{
+    bool flag;
+    int index;
+    for(int i = 0; i < n; i++)
+    {
+        if(data[i].ma_CD == maCD)
+        {
+            index = i;
+            flag = true;
+            break;
+        }
+    }
+    if(flag)
+    {
+        for(int i = index; i < n- 1; i++)
+        {
+            data[i] = data[i + 1];
+        }
+        n--;
+        string msg = "Da xoa xong";
+        return msg;
+        //cout<<"Da xoa xong"<<endl;
+    }
+    else 
+    {   
+        string msg = "Loi: khong ton tai doi tuong can xoa.";
+        return msg;
+        //cout<<"Khong ton tai cong dan can xoa"<<endl;
+    }
+}
 
 

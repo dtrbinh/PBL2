@@ -7,6 +7,14 @@
 #include<iostream>
 using namespace std;
 
+bool ascending(int left, int right);
+
+// kiểm tra giảm dần
+bool descending(int left, int right);
+
+// Hàm hoán vị
+void swap(CongDan &x, CongDan &y);
+
 class DSCD
 {   
     private:
@@ -20,48 +28,38 @@ class DSCD
         void nhapFile(string f1, string f2,string f3);
         string get(string type, int i);
         // Hàm nhập dữ liệu bằng tay
-        void nhapTay(int n, CongDan CD[]);
+        void nhapTay(int n);
 
-        void xuatDuLieu(DSCD a);
+        void xuatDuLieu();
 
         // Thêm 1 công dân vào danh sách tại vị trí bất kì
-        void Them(CongDan CD[], CongDan cd, int index);
+        bool Them(CongDan, int);
         
-        // kiểm tra tăng dần
-        template <typename T>
-        bool ascending(T left, T right)
-        {
-            return left > right;
-        }
-
-        // kiểm tra giảm dần
-        template <typename T>
-        bool descending(T left, T right)
-        {
-            return left < right;
-        }
-        // template <typename T>
-        // // Chèn công dân vào vị trí bất kì mà vẫn giữ nguyên thứ tự
-        // void Insert(CongDan CD[], CongDan cd, T tieuchi,  bool (*func_ptr)(T, T) = ascending);
+        // Chèn công dân vào vị trí bất kì mà vẫn giữ nguyên thứ tự của mã công dân
+        bool Insert_ma_CD(CongDan, bool (*func_ptr)(int, int) = ascending);
 
         // Hàm tìm kiếm công dân
-        template <typename T>
-        CongDan Search(CongDan CD[], T tieuchi);
+        CongDan Search(string tieuchi);
         
-        // Sắp xếp
-        // template <typename T>
-        // void Sort(CongDan CD[], int n, T tieuchi, bool (*func_ptr)(T, T) = ascending);
-        // 
-        void Delete();
+        // Sắp xếp công dân theo mã CD
+        void Sort_ma_CD(bool (*func_ptr)(int, int) = ascending);
+        
+        // Sắp xếp công dân theo ngay DK
+        void Sort_ngay_DK(bool (*func_ptr)(int, int) = ascending);
+        
+        // Sắp xếp công dân theo ngay tiem mui 1
+        void Sort_ngay_M1(bool (*func_ptr)(int, int) = ascending);
+
+        // Sắp xếp công dân theo ngay tiem mui 2
+        void Sort_ngay_M2(bool (*func_ptr)(int, int) = ascending);
+
+        // Hàm xóa công dân theo mã CD
+        string Delete(string maCD);
 
         int getRows(){
             return DSCD::n;
         }
 
 };
-template <typename T>
-void swap(int &num1, int &num2);
-
-
 
 #endif

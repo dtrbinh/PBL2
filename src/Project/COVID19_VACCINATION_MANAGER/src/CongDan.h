@@ -22,10 +22,15 @@ class CongDan
         bool mui1, mui2;
         string ngay_M1, ngay_M2;
     public:
+        void set(string key, string value);
+        void set(string key, bool value);
+        friend istream &operator >> (istream&, CongDan&);
+        friend ostream &operator << (ostream&, const CongDan&);
         CongDan();
         ~CongDan();
-        friend istream operator << (istream&, CongDan&);
-        friend ostream operator >> (ostream&, const CongDan&);
+        const CongDan& operator = (const CongDan&);
+        int dayToInt(string);
+        int maCDToInt(string);
         friend class DSCD;
 };
 #endif

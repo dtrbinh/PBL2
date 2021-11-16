@@ -15,18 +15,26 @@ bool descending(int left, int right);
 // Hàm hoán vị
 void swap(CongDan &x, CongDan &y);
 
+// Hàm xác định giới tính nam
+bool nam();
+
+// hàm xác định giới tính nữ
+bool nu();
+
 class DSCD
 {   
     private:
         int n;
-        CongDan *data = new CongDan[100];
+        CongDan *data = new CongDan[50];
     public:
         DSCD();
+        DSCD(const DSCD &obj_clone);
         ~DSCD();
 
-        // Hàm đọc file
+              // Hàm đọc file
         void nhapFile(string f1, string f2,string f3);
         string get(string type, int i);
+
         // Hàm nhập dữ liệu bằng tay
         void nhapTay(int n);
 
@@ -39,7 +47,7 @@ class DSCD
         bool Insert_ma_CD(CongDan, bool (*func_ptr)(int, int) = ascending);
 
         // Hàm tìm kiếm công dân
-        CongDan Search(string tieuchi);
+        CongDan Search_MaCD(string tieuchi);
         
         // Sắp xếp công dân theo mã CD
         void Sort_ma_CD(bool (*func_ptr)(int, int) = ascending);
@@ -59,6 +67,33 @@ class DSCD
         int getRows(){
             return DSCD::n;
         }
+
+         // Hmaf toán tử gán
+        const DSCD& operator = (const DSCD&);
+
+        // Hàm thống kê những người đã tiêm vắc xin mũi 1
+        DSCD thongKe_M1();
+
+        // Hàm thống kê những người đã tiêm đủ 2 mũi
+        DSCD thongKe_2Mui();
+
+        // Hàm thống kê những người chưa tiêm mũi nào
+        DSCD thongKeChuaTiem();
+
+        // Hàm thống kê những người đã tiêm mũi 1 nhưng chưa tiêm mũi 2
+        DSCD thongKe_M1_Not_M2();
+
+        // Hàm thống kê những công dân đã tiêm mũi 1 trong ngày bất kì
+        DSCD thongKeTheoNgayTiemM1(string);
+
+        // Hàm thống kê những công dân đã tiêm mũi 2 trong ngày bất kì
+        DSCD thongKeTheoNgayTiemM2(string);
+
+        // Hàm thống kê công dân theo giới tính ( mặc định là nam), nếu muốn tke theo nữ thì dùng con trỏ hàm nu
+        DSCD thongKeTheoGioiTinh(bool (*func_ptr)() = nam);
+
+        // Hàm thống kê công dân theo ngày đăng kí bất kì
+        DSCD thongKeTheoNgayDangKi(string ngayDK);
 
 };
 

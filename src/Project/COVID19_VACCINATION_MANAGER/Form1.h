@@ -213,6 +213,62 @@ private: System::Windows::Forms::CheckBox^ input_mui_1;
 private: System::Windows::Forms::Panel^ panel_insertType;
 private: System::Windows::Forms::ToolStripMenuItem^ thốngKêToolStripMenuItem;
 
+private: System::Windows::Forms::Label^ label23;
+private: System::Windows::Forms::Label^ label22;
+private: System::Windows::Forms::Label^ label20;
+private: System::Windows::Forms::Label^ intro_label1;
+private: System::Windows::Forms::Label^ label24;
+private: System::Windows::Forms::Label^ label25;
+
+
+private: System::Windows::Forms::Button^ bt_search;
+private: System::Windows::Forms::TextBox^ box_search;
+
+
+private: System::Windows::Forms::Label^ label26;
+private: System::Windows::Forms::DataGridView^ view_searchData;
+private: System::Windows::Forms::DataGridViewTextBoxColumn^ dataGridViewTextBoxColumn1;
+private: System::Windows::Forms::DataGridViewTextBoxColumn^ dataGridViewTextBoxColumn2;
+private: System::Windows::Forms::DataGridViewTextBoxColumn^ dataGridViewTextBoxColumn3;
+private: System::Windows::Forms::DataGridViewTextBoxColumn^ dataGridViewTextBoxColumn4;
+private: System::Windows::Forms::DataGridViewTextBoxColumn^ dataGridViewTextBoxColumn5;
+private: System::Windows::Forms::DataGridViewTextBoxColumn^ dataGridViewTextBoxColumn6;
+private: System::Windows::Forms::DataGridViewTextBoxColumn^ dataGridViewTextBoxColumn7;
+private: System::Windows::Forms::DataGridViewTextBoxColumn^ dataGridViewTextBoxColumn8;
+private: System::Windows::Forms::DataGridViewTextBoxColumn^ dataGridViewTextBoxColumn9;
+private: System::Windows::Forms::DataGridViewTextBoxColumn^ dataGridViewTextBoxColumn10;
+private: System::Windows::Forms::DataGridViewTextBoxColumn^ dataGridViewTextBoxColumn11;
+private: System::Windows::Forms::DataGridViewTextBoxColumn^ dataGridViewTextBoxColumn12;
+private: System::Windows::Forms::DataGridViewTextBoxColumn^ dataGridViewTextBoxColumn13;
+private: System::Windows::Forms::DataGridViewTextBoxColumn^ dataGridViewTextBoxColumn14;
+private: System::Windows::Forms::DataGridViewTextBoxColumn^ dataGridViewTextBoxColumn15;
+private: System::Windows::Forms::GroupBox^ box_fillData;
+private: System::Windows::Forms::ComboBox^ box_selectTypeFilter;
+private: System::Windows::Forms::Button^ bt_typeFilter;
+private: System::Windows::Forms::Label^ label27;
+private: System::Windows::Forms::Button^ bt_exportFile;
+
+private: System::Windows::Forms::DataGridView^ view_filterData;
+
+private: System::Windows::Forms::DataGridViewTextBoxColumn^ dataGridViewTextBoxColumn16;
+private: System::Windows::Forms::DataGridViewTextBoxColumn^ dataGridViewTextBoxColumn17;
+private: System::Windows::Forms::DataGridViewTextBoxColumn^ dataGridViewTextBoxColumn18;
+private: System::Windows::Forms::DataGridViewTextBoxColumn^ dataGridViewTextBoxColumn19;
+private: System::Windows::Forms::DataGridViewTextBoxColumn^ dataGridViewTextBoxColumn20;
+private: System::Windows::Forms::DataGridViewTextBoxColumn^ dataGridViewTextBoxColumn21;
+private: System::Windows::Forms::DataGridViewTextBoxColumn^ dataGridViewTextBoxColumn22;
+private: System::Windows::Forms::DataGridViewTextBoxColumn^ dataGridViewTextBoxColumn23;
+private: System::Windows::Forms::DataGridViewTextBoxColumn^ dataGridViewTextBoxColumn24;
+private: System::Windows::Forms::DataGridViewTextBoxColumn^ dataGridViewTextBoxColumn25;
+private: System::Windows::Forms::DataGridViewTextBoxColumn^ dataGridViewTextBoxColumn26;
+private: System::Windows::Forms::DataGridViewTextBoxColumn^ dataGridViewTextBoxColumn27;
+private: System::Windows::Forms::DataGridViewTextBoxColumn^ dataGridViewTextBoxColumn28;
+private: System::Windows::Forms::DataGridViewTextBoxColumn^ dataGridViewTextBoxColumn29;
+private: System::Windows::Forms::DataGridViewTextBoxColumn^ dataGridViewTextBoxColumn30;
+
+
+
+
 
 
 
@@ -420,6 +476,49 @@ private: System::Windows::Forms::ToolStripMenuItem^ thốngKêToolStripMenuItem;
             this->toolStripMenuItem9 = (gcnew System::Windows::Forms::ToolStripMenuItem());
             this->toolStripMenuItem10 = (gcnew System::Windows::Forms::ToolStripMenuItem());
             this->xuấtToànBộDữLiệuToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
+            this->box_fillData = (gcnew System::Windows::Forms::GroupBox());
+            this->view_filterData = (gcnew System::Windows::Forms::DataGridView());
+            this->dataGridViewTextBoxColumn16 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
+            this->dataGridViewTextBoxColumn17 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
+            this->dataGridViewTextBoxColumn18 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
+            this->dataGridViewTextBoxColumn19 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
+            this->dataGridViewTextBoxColumn20 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
+            this->dataGridViewTextBoxColumn21 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
+            this->dataGridViewTextBoxColumn22 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
+            this->dataGridViewTextBoxColumn23 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
+            this->dataGridViewTextBoxColumn24 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
+            this->dataGridViewTextBoxColumn25 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
+            this->dataGridViewTextBoxColumn26 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
+            this->dataGridViewTextBoxColumn27 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
+            this->dataGridViewTextBoxColumn28 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
+            this->dataGridViewTextBoxColumn29 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
+            this->dataGridViewTextBoxColumn30 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
+            this->bt_exportFile = (gcnew System::Windows::Forms::Button());
+            this->box_selectTypeFilter = (gcnew System::Windows::Forms::ComboBox());
+            this->bt_typeFilter = (gcnew System::Windows::Forms::Button());
+            this->label27 = (gcnew System::Windows::Forms::Label());
+            this->box_deleteData = (gcnew System::Windows::Forms::GroupBox());
+            this->bt_deleteData = (gcnew System::Windows::Forms::Button());
+            this->textbox_deleteData = (gcnew System::Windows::Forms::TextBox());
+            this->label7 = (gcnew System::Windows::Forms::Label());
+            this->box_sortData = (gcnew System::Windows::Forms::GroupBox());
+            this->bt_view_sortData = (gcnew System::Windows::Forms::Button());
+            this->bt_sortData = (gcnew System::Windows::Forms::Button());
+            this->box_sortType = (gcnew System::Windows::Forms::ComboBox());
+            this->box_sortSelect = (gcnew System::Windows::Forms::ComboBox());
+            this->label6 = (gcnew System::Windows::Forms::Label());
+            this->label5 = (gcnew System::Windows::Forms::Label());
+            this->box_inputFile = (gcnew System::Windows::Forms::GroupBox());
+            this->bt_selectFile3 = (gcnew System::Windows::Forms::Button());
+            this->bt_selectFile2 = (gcnew System::Windows::Forms::Button());
+            this->bt_selectFile1 = (gcnew System::Windows::Forms::Button());
+            this->bt_inputFile = (gcnew System::Windows::Forms::Button());
+            this->fileName3 = (gcnew System::Windows::Forms::TextBox());
+            this->fileName2 = (gcnew System::Windows::Forms::TextBox());
+            this->label_fileName3 = (gcnew System::Windows::Forms::Label());
+            this->label_fileName1 = (gcnew System::Windows::Forms::Label());
+            this->label_fileName2 = (gcnew System::Windows::Forms::Label());
+            this->fileName1 = (gcnew System::Windows::Forms::TextBox());
             this->box_inputHand = (gcnew System::Windows::Forms::GroupBox());
             this->panel_insertType = (gcnew System::Windows::Forms::Panel());
             this->label18 = (gcnew System::Windows::Forms::Label());
@@ -511,32 +610,35 @@ private: System::Windows::Forms::ToolStripMenuItem^ thốngKêToolStripMenuItem;
             this->so_CMND = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
             this->address = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
             this->box_searchData = (gcnew System::Windows::Forms::GroupBox());
-            this->box_deleteData = (gcnew System::Windows::Forms::GroupBox());
-            this->bt_deleteData = (gcnew System::Windows::Forms::Button());
-            this->textbox_deleteData = (gcnew System::Windows::Forms::TextBox());
-            this->label7 = (gcnew System::Windows::Forms::Label());
-            this->box_sortData = (gcnew System::Windows::Forms::GroupBox());
-            this->bt_view_sortData = (gcnew System::Windows::Forms::Button());
-            this->bt_sortData = (gcnew System::Windows::Forms::Button());
-            this->box_sortType = (gcnew System::Windows::Forms::ComboBox());
-            this->box_sortSelect = (gcnew System::Windows::Forms::ComboBox());
-            this->label6 = (gcnew System::Windows::Forms::Label());
-            this->label5 = (gcnew System::Windows::Forms::Label());
-            this->box_inputFile = (gcnew System::Windows::Forms::GroupBox());
-            this->bt_selectFile3 = (gcnew System::Windows::Forms::Button());
-            this->bt_selectFile2 = (gcnew System::Windows::Forms::Button());
-            this->bt_selectFile1 = (gcnew System::Windows::Forms::Button());
-            this->bt_inputFile = (gcnew System::Windows::Forms::Button());
-            this->fileName3 = (gcnew System::Windows::Forms::TextBox());
-            this->fileName2 = (gcnew System::Windows::Forms::TextBox());
-            this->label_fileName3 = (gcnew System::Windows::Forms::Label());
-            this->label_fileName1 = (gcnew System::Windows::Forms::Label());
-            this->label_fileName2 = (gcnew System::Windows::Forms::Label());
-            this->fileName1 = (gcnew System::Windows::Forms::TextBox());
+            this->view_searchData = (gcnew System::Windows::Forms::DataGridView());
+            this->dataGridViewTextBoxColumn1 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
+            this->dataGridViewTextBoxColumn2 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
+            this->dataGridViewTextBoxColumn3 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
+            this->dataGridViewTextBoxColumn4 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
+            this->dataGridViewTextBoxColumn5 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
+            this->dataGridViewTextBoxColumn6 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
+            this->dataGridViewTextBoxColumn7 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
+            this->dataGridViewTextBoxColumn8 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
+            this->dataGridViewTextBoxColumn9 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
+            this->dataGridViewTextBoxColumn10 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
+            this->dataGridViewTextBoxColumn11 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
+            this->dataGridViewTextBoxColumn12 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
+            this->dataGridViewTextBoxColumn13 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
+            this->dataGridViewTextBoxColumn14 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
+            this->dataGridViewTextBoxColumn15 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
+            this->bt_search = (gcnew System::Windows::Forms::Button());
+            this->box_search = (gcnew System::Windows::Forms::TextBox());
+            this->label26 = (gcnew System::Windows::Forms::Label());
             this->accountManager_newFullname = (gcnew System::Windows::Forms::TextBox());
             this->label4 = (gcnew System::Windows::Forms::Label());
             this->Manager = (gcnew System::Windows::Forms::TabControl());
             this->loginTab = (gcnew System::Windows::Forms::TabPage());
+            this->label25 = (gcnew System::Windows::Forms::Label());
+            this->label24 = (gcnew System::Windows::Forms::Label());
+            this->label23 = (gcnew System::Windows::Forms::Label());
+            this->label22 = (gcnew System::Windows::Forms::Label());
+            this->label20 = (gcnew System::Windows::Forms::Label());
+            this->intro_label1 = (gcnew System::Windows::Forms::Label());
             this->bt_quit = (gcnew System::Windows::Forms::Button());
             this->loginBox = (gcnew System::Windows::Forms::GroupBox());
             this->text3 = (gcnew System::Windows::Forms::Label());
@@ -569,6 +671,11 @@ private: System::Windows::Forms::ToolStripMenuItem^ thốngKêToolStripMenuItem;
             this->dataManagerTab->SuspendLayout();
             this->boxDataManager->SuspendLayout();
             this->dataManager_menu->SuspendLayout();
+            this->box_fillData->SuspendLayout();
+            (cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->view_filterData))->BeginInit();
+            this->box_deleteData->SuspendLayout();
+            this->box_sortData->SuspendLayout();
+            this->box_inputFile->SuspendLayout();
             this->box_inputHand->SuspendLayout();
             this->panel_insertType->SuspendLayout();
             this->export_allData_people->SuspendLayout();
@@ -579,9 +686,8 @@ private: System::Windows::Forms::ToolStripMenuItem^ thốngKêToolStripMenuItem;
             (cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->view_exportData_registry))->BeginInit();
             this->exportData_people->SuspendLayout();
             (cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->view_exportData_people))->BeginInit();
-            this->box_deleteData->SuspendLayout();
-            this->box_sortData->SuspendLayout();
-            this->box_inputFile->SuspendLayout();
+            this->box_searchData->SuspendLayout();
+            (cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->view_searchData))->BeginInit();
             this->Manager->SuspendLayout();
             this->loginTab->SuspendLayout();
             this->loginBox->SuspendLayout();
@@ -704,7 +810,7 @@ private: System::Windows::Forms::ToolStripMenuItem^ thốngKêToolStripMenuItem;
             this->dataManagerTab->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
             this->dataManagerTab->Name = L"dataManagerTab";
             this->dataManagerTab->Padding = System::Windows::Forms::Padding(3, 2, 3, 2);
-            this->dataManagerTab->Size = System::Drawing::Size(650, 468);
+            this->dataManagerTab->Size = System::Drawing::Size(651, 468);
             this->dataManagerTab->TabIndex = 2;
             this->dataManagerTab->Text = L"Quản lý dữ liệu";
             this->dataManagerTab->UseVisualStyleBackColor = true;
@@ -716,18 +822,21 @@ private: System::Windows::Forms::ToolStripMenuItem^ thốngKêToolStripMenuItem;
                 | System::Windows::Forms::AnchorStyles::Left)
                 | System::Windows::Forms::AnchorStyles::Right));
             this->boxDataManager->Controls->Add(this->dataManager_menu);
+            this->boxDataManager->Controls->Add(this->box_fillData);
+            this->boxDataManager->Controls->Add(this->box_deleteData);
+            this->boxDataManager->Controls->Add(this->box_sortData);
+            this->boxDataManager->Controls->Add(this->box_inputFile);
             this->boxDataManager->Controls->Add(this->box_inputHand);
             this->boxDataManager->Controls->Add(this->export_allData_people);
             this->boxDataManager->Controls->Add(this->exportData_vaccination);
             this->boxDataManager->Controls->Add(this->exportData_registry);
             this->boxDataManager->Controls->Add(this->exportData_people);
             this->boxDataManager->Controls->Add(this->box_searchData);
-            this->boxDataManager->Controls->Add(this->box_deleteData);
-            this->boxDataManager->Controls->Add(this->box_sortData);
-            this->boxDataManager->Controls->Add(this->box_inputFile);
             this->boxDataManager->Location = System::Drawing::Point(-4, 0);
+            this->boxDataManager->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
             this->boxDataManager->Name = L"boxDataManager";
-            this->boxDataManager->Size = System::Drawing::Size(654, 468);
+            this->boxDataManager->Padding = System::Windows::Forms::Padding(3, 2, 3, 2);
+            this->boxDataManager->Size = System::Drawing::Size(653, 468);
             this->boxDataManager->TabIndex = 3;
             this->boxDataManager->TabStop = false;
             this->boxDataManager->Visible = false;
@@ -741,10 +850,10 @@ private: System::Windows::Forms::ToolStripMenuItem^ thốngKêToolStripMenuItem;
                 this->dataManager_input,
                     this->dataManager_output
             });
-            this->dataManager_menu->Location = System::Drawing::Point(3, 22);
+            this->dataManager_menu->Location = System::Drawing::Point(3, 21);
             this->dataManager_menu->Name = L"dataManager_menu";
             this->dataManager_menu->Padding = System::Windows::Forms::Padding(5, 2, 0, 2);
-            this->dataManager_menu->Size = System::Drawing::Size(648, 27);
+            this->dataManager_menu->Size = System::Drawing::Size(647, 27);
             this->dataManager_menu->TabIndex = 7;
             this->dataManager_menu->Text = L"menuStrip1";
             // 
@@ -769,7 +878,7 @@ private: System::Windows::Forms::ToolStripMenuItem^ thốngKêToolStripMenuItem;
             this->toolStripMenuItem2->Font = (gcnew System::Drawing::Font(L"MS Reference Sans Serif", 9, System::Drawing::FontStyle::Regular,
                 System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
             this->toolStripMenuItem2->Name = L"toolStripMenuItem2";
-            this->toolStripMenuItem2->Size = System::Drawing::Size(205, 26);
+            this->toolStripMenuItem2->Size = System::Drawing::Size(224, 26);
             this->toolStripMenuItem2->Text = L"Nhập dữ liệu";
             // 
             // inputFile
@@ -795,7 +904,7 @@ private: System::Windows::Forms::ToolStripMenuItem^ thốngKêToolStripMenuItem;
             this->sortData->Font = (gcnew System::Drawing::Font(L"MS Reference Sans Serif", 9, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
                 static_cast<System::Byte>(0)));
             this->sortData->Name = L"sortData";
-            this->sortData->Size = System::Drawing::Size(205, 26);
+            this->sortData->Size = System::Drawing::Size(224, 26);
             this->sortData->Text = L"Sắp xếp dữ liệu";
             this->sortData->Click += gcnew System::EventHandler(this, &Form1::sortData_Click_1);
             // 
@@ -804,22 +913,23 @@ private: System::Windows::Forms::ToolStripMenuItem^ thốngKêToolStripMenuItem;
             this->deleteData->Font = (gcnew System::Drawing::Font(L"MS Reference Sans Serif", 9, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
                 static_cast<System::Byte>(0)));
             this->deleteData->Name = L"deleteData";
-            this->deleteData->Size = System::Drawing::Size(205, 26);
+            this->deleteData->Size = System::Drawing::Size(224, 26);
             this->deleteData->Text = L"Xoá dữ liệu";
             this->deleteData->Click += gcnew System::EventHandler(this, &Form1::deleteData_Click_1);
             // 
             // searchData
             // 
             this->searchData->Name = L"searchData";
-            this->searchData->Size = System::Drawing::Size(205, 26);
+            this->searchData->Size = System::Drawing::Size(224, 26);
             this->searchData->Text = L"Tìm kiếm";
             this->searchData->Click += gcnew System::EventHandler(this, &Form1::searchData_Click);
             // 
             // thốngKêToolStripMenuItem
             // 
             this->thốngKêToolStripMenuItem->Name = L"thốngKêToolStripMenuItem";
-            this->thốngKêToolStripMenuItem->Size = System::Drawing::Size(205, 26);
+            this->thốngKêToolStripMenuItem->Size = System::Drawing::Size(224, 26);
             this->thốngKêToolStripMenuItem->Text = L"Thống kê";
+            this->thốngKêToolStripMenuItem->Click += gcnew System::EventHandler(this, &Form1::thốngKêToolStripMenuItem_Click);
             // 
             // dataManager_output
             // 
@@ -867,6 +977,476 @@ private: System::Windows::Forms::ToolStripMenuItem^ thốngKêToolStripMenuItem;
             this->xuấtToànBộDữLiệuToolStripMenuItem->Text = L"Toàn bộ dữ liệu";
             this->xuấtToànBộDữLiệuToolStripMenuItem->Click += gcnew System::EventHandler(this, &Form1::xuấtToànBộDữLiệuToolStripMenuItem_Click);
             // 
+            // box_fillData
+            // 
+            this->box_fillData->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Bottom)
+                | System::Windows::Forms::AnchorStyles::Left)
+                | System::Windows::Forms::AnchorStyles::Right));
+            this->box_fillData->Controls->Add(this->view_filterData);
+            this->box_fillData->Controls->Add(this->bt_exportFile);
+            this->box_fillData->Controls->Add(this->box_selectTypeFilter);
+            this->box_fillData->Controls->Add(this->bt_typeFilter);
+            this->box_fillData->Controls->Add(this->label27);
+            this->box_fillData->Font = (gcnew System::Drawing::Font(L"MS Reference Sans Serif", 9, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+                static_cast<System::Byte>(0)));
+            this->box_fillData->Location = System::Drawing::Point(0, 50);
+            this->box_fillData->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
+            this->box_fillData->Name = L"box_fillData";
+            this->box_fillData->Padding = System::Windows::Forms::Padding(3, 2, 3, 2);
+            this->box_fillData->Size = System::Drawing::Size(655, 418);
+            this->box_fillData->TabIndex = 5;
+            this->box_fillData->TabStop = false;
+            this->box_fillData->Text = L"Thống kê dữ liệu";
+            this->box_fillData->Visible = false;
+            // 
+            // view_filterData
+            // 
+            this->view_filterData->AllowUserToAddRows = false;
+            this->view_filterData->AllowUserToDeleteRows = false;
+            this->view_filterData->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Bottom)
+                | System::Windows::Forms::AnchorStyles::Left)
+                | System::Windows::Forms::AnchorStyles::Right));
+            this->view_filterData->ColumnHeadersHeightSizeMode = System::Windows::Forms::DataGridViewColumnHeadersHeightSizeMode::AutoSize;
+            this->view_filterData->Columns->AddRange(gcnew cli::array< System::Windows::Forms::DataGridViewColumn^  >(15) {
+                this->dataGridViewTextBoxColumn16,
+                    this->dataGridViewTextBoxColumn17, this->dataGridViewTextBoxColumn18, this->dataGridViewTextBoxColumn19, this->dataGridViewTextBoxColumn20,
+                    this->dataGridViewTextBoxColumn21, this->dataGridViewTextBoxColumn22, this->dataGridViewTextBoxColumn23, this->dataGridViewTextBoxColumn24,
+                    this->dataGridViewTextBoxColumn25, this->dataGridViewTextBoxColumn26, this->dataGridViewTextBoxColumn27, this->dataGridViewTextBoxColumn28,
+                    this->dataGridViewTextBoxColumn29, this->dataGridViewTextBoxColumn30
+            });
+            this->view_filterData->Location = System::Drawing::Point(14, 117);
+            this->view_filterData->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
+            this->view_filterData->Name = L"view_filterData";
+            this->view_filterData->ReadOnly = true;
+            this->view_filterData->RowHeadersWidth = 51;
+            this->view_filterData->RowTemplate->Height = 24;
+            this->view_filterData->Size = System::Drawing::Size(628, 259);
+            this->view_filterData->TabIndex = 6;
+            // 
+            // dataGridViewTextBoxColumn16
+            // 
+            this->dataGridViewTextBoxColumn16->HeaderText = L"Mã công dân";
+            this->dataGridViewTextBoxColumn16->MinimumWidth = 6;
+            this->dataGridViewTextBoxColumn16->Name = L"dataGridViewTextBoxColumn16";
+            this->dataGridViewTextBoxColumn16->ReadOnly = true;
+            this->dataGridViewTextBoxColumn16->Width = 125;
+            // 
+            // dataGridViewTextBoxColumn17
+            // 
+            this->dataGridViewTextBoxColumn17->HeaderText = L"Họ và tên";
+            this->dataGridViewTextBoxColumn17->MinimumWidth = 6;
+            this->dataGridViewTextBoxColumn17->Name = L"dataGridViewTextBoxColumn17";
+            this->dataGridViewTextBoxColumn17->ReadOnly = true;
+            this->dataGridViewTextBoxColumn17->Width = 125;
+            // 
+            // dataGridViewTextBoxColumn18
+            // 
+            this->dataGridViewTextBoxColumn18->HeaderText = L"Giới tính";
+            this->dataGridViewTextBoxColumn18->MinimumWidth = 6;
+            this->dataGridViewTextBoxColumn18->Name = L"dataGridViewTextBoxColumn18";
+            this->dataGridViewTextBoxColumn18->ReadOnly = true;
+            this->dataGridViewTextBoxColumn18->Width = 125;
+            // 
+            // dataGridViewTextBoxColumn19
+            // 
+            this->dataGridViewTextBoxColumn19->HeaderText = L"Ngày sinh";
+            this->dataGridViewTextBoxColumn19->MinimumWidth = 6;
+            this->dataGridViewTextBoxColumn19->Name = L"dataGridViewTextBoxColumn19";
+            this->dataGridViewTextBoxColumn19->ReadOnly = true;
+            this->dataGridViewTextBoxColumn19->Width = 125;
+            // 
+            // dataGridViewTextBoxColumn20
+            // 
+            this->dataGridViewTextBoxColumn20->HeaderText = L"SĐT";
+            this->dataGridViewTextBoxColumn20->MinimumWidth = 6;
+            this->dataGridViewTextBoxColumn20->Name = L"dataGridViewTextBoxColumn20";
+            this->dataGridViewTextBoxColumn20->ReadOnly = true;
+            this->dataGridViewTextBoxColumn20->Width = 125;
+            // 
+            // dataGridViewTextBoxColumn21
+            // 
+            this->dataGridViewTextBoxColumn21->HeaderText = L"Số BHXH";
+            this->dataGridViewTextBoxColumn21->MinimumWidth = 6;
+            this->dataGridViewTextBoxColumn21->Name = L"dataGridViewTextBoxColumn21";
+            this->dataGridViewTextBoxColumn21->ReadOnly = true;
+            this->dataGridViewTextBoxColumn21->Width = 125;
+            // 
+            // dataGridViewTextBoxColumn22
+            // 
+            this->dataGridViewTextBoxColumn22->HeaderText = L"Số CMND/CCCD";
+            this->dataGridViewTextBoxColumn22->MinimumWidth = 6;
+            this->dataGridViewTextBoxColumn22->Name = L"dataGridViewTextBoxColumn22";
+            this->dataGridViewTextBoxColumn22->ReadOnly = true;
+            this->dataGridViewTextBoxColumn22->Width = 125;
+            // 
+            // dataGridViewTextBoxColumn23
+            // 
+            this->dataGridViewTextBoxColumn23->HeaderText = L"Địa chỉ";
+            this->dataGridViewTextBoxColumn23->MinimumWidth = 6;
+            this->dataGridViewTextBoxColumn23->Name = L"dataGridViewTextBoxColumn23";
+            this->dataGridViewTextBoxColumn23->ReadOnly = true;
+            this->dataGridViewTextBoxColumn23->Width = 125;
+            // 
+            // dataGridViewTextBoxColumn24
+            // 
+            this->dataGridViewTextBoxColumn24->HeaderText = L"Mã đăng ký";
+            this->dataGridViewTextBoxColumn24->MinimumWidth = 6;
+            this->dataGridViewTextBoxColumn24->Name = L"dataGridViewTextBoxColumn24";
+            this->dataGridViewTextBoxColumn24->ReadOnly = true;
+            this->dataGridViewTextBoxColumn24->Width = 125;
+            // 
+            // dataGridViewTextBoxColumn25
+            // 
+            this->dataGridViewTextBoxColumn25->HeaderText = L"Ngày đăng ký";
+            this->dataGridViewTextBoxColumn25->MinimumWidth = 6;
+            this->dataGridViewTextBoxColumn25->Name = L"dataGridViewTextBoxColumn25";
+            this->dataGridViewTextBoxColumn25->ReadOnly = true;
+            this->dataGridViewTextBoxColumn25->Width = 125;
+            // 
+            // dataGridViewTextBoxColumn26
+            // 
+            this->dataGridViewTextBoxColumn26->HeaderText = L"Nơi đăng ký";
+            this->dataGridViewTextBoxColumn26->MinimumWidth = 6;
+            this->dataGridViewTextBoxColumn26->Name = L"dataGridViewTextBoxColumn26";
+            this->dataGridViewTextBoxColumn26->ReadOnly = true;
+            this->dataGridViewTextBoxColumn26->Width = 125;
+            // 
+            // dataGridViewTextBoxColumn27
+            // 
+            this->dataGridViewTextBoxColumn27->HeaderText = L"Tiêm mũi 1";
+            this->dataGridViewTextBoxColumn27->MinimumWidth = 6;
+            this->dataGridViewTextBoxColumn27->Name = L"dataGridViewTextBoxColumn27";
+            this->dataGridViewTextBoxColumn27->ReadOnly = true;
+            this->dataGridViewTextBoxColumn27->Width = 125;
+            // 
+            // dataGridViewTextBoxColumn28
+            // 
+            this->dataGridViewTextBoxColumn28->HeaderText = L"Ngày tiêm mũi 1";
+            this->dataGridViewTextBoxColumn28->MinimumWidth = 6;
+            this->dataGridViewTextBoxColumn28->Name = L"dataGridViewTextBoxColumn28";
+            this->dataGridViewTextBoxColumn28->ReadOnly = true;
+            this->dataGridViewTextBoxColumn28->Width = 125;
+            // 
+            // dataGridViewTextBoxColumn29
+            // 
+            this->dataGridViewTextBoxColumn29->HeaderText = L"Tiêm mũi 2";
+            this->dataGridViewTextBoxColumn29->MinimumWidth = 6;
+            this->dataGridViewTextBoxColumn29->Name = L"dataGridViewTextBoxColumn29";
+            this->dataGridViewTextBoxColumn29->ReadOnly = true;
+            this->dataGridViewTextBoxColumn29->Width = 125;
+            // 
+            // dataGridViewTextBoxColumn30
+            // 
+            this->dataGridViewTextBoxColumn30->HeaderText = L"Ngày tiêm mũi 2";
+            this->dataGridViewTextBoxColumn30->MinimumWidth = 6;
+            this->dataGridViewTextBoxColumn30->Name = L"dataGridViewTextBoxColumn30";
+            this->dataGridViewTextBoxColumn30->ReadOnly = true;
+            this->dataGridViewTextBoxColumn30->Width = 125;
+            // 
+            // bt_exportFile
+            // 
+            this->bt_exportFile->Location = System::Drawing::Point(499, 382);
+            this->bt_exportFile->Name = L"bt_exportFile";
+            this->bt_exportFile->Size = System::Drawing::Size(143, 30);
+            this->bt_exportFile->TabIndex = 5;
+            this->bt_exportFile->Text = L"Xuất file Excel";
+            this->bt_exportFile->UseVisualStyleBackColor = true;
+            // 
+            // box_selectTypeFilter
+            // 
+            this->box_selectTypeFilter->FormattingEnabled = true;
+            this->box_selectTypeFilter->Items->AddRange(gcnew cli::array< System::Object^  >(8) {
+                L"Đã tiêm mũi 1", L"Tiêm đủ 2 mũi",
+                    L"Chưa tiêm mũi nào", L"Tiêm mũi 1 chưa tiêm mũi 2", L"Người đã tiêm mũi 1 trong ngày", L"Người đã tiêm mũi 1 trong ngày", L"Giới tính",
+                    L"Người đã đăng ký trong 1 ngày"
+            });
+            this->box_selectTypeFilter->Location = System::Drawing::Point(180, 31);
+            this->box_selectTypeFilter->Name = L"box_selectTypeFilter";
+            this->box_selectTypeFilter->Size = System::Drawing::Size(314, 27);
+            this->box_selectTypeFilter->TabIndex = 3;
+            // 
+            // bt_typeFilter
+            // 
+            this->bt_typeFilter->Location = System::Drawing::Point(522, 29);
+            this->bt_typeFilter->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
+            this->bt_typeFilter->Name = L"bt_typeFilter";
+            this->bt_typeFilter->Size = System::Drawing::Size(84, 30);
+            this->bt_typeFilter->TabIndex = 2;
+            this->bt_typeFilter->Text = L"Chọn";
+            this->bt_typeFilter->UseVisualStyleBackColor = true;
+            this->bt_typeFilter->Click += gcnew System::EventHandler(this, &Form1::bt_typeFilter_Click);
+            // 
+            // label27
+            // 
+            this->label27->AutoSize = true;
+            this->label27->Location = System::Drawing::Point(49, 37);
+            this->label27->Name = L"label27";
+            this->label27->Size = System::Drawing::Size(110, 19);
+            this->label27->TabIndex = 0;
+            this->label27->Text = L"Loại thống kê";
+            // 
+            // box_deleteData
+            // 
+            this->box_deleteData->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Bottom)
+                | System::Windows::Forms::AnchorStyles::Left)
+                | System::Windows::Forms::AnchorStyles::Right));
+            this->box_deleteData->Controls->Add(this->bt_deleteData);
+            this->box_deleteData->Controls->Add(this->textbox_deleteData);
+            this->box_deleteData->Controls->Add(this->label7);
+            this->box_deleteData->Font = (gcnew System::Drawing::Font(L"MS Reference Sans Serif", 9, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+                static_cast<System::Byte>(0)));
+            this->box_deleteData->Location = System::Drawing::Point(0, 50);
+            this->box_deleteData->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
+            this->box_deleteData->Name = L"box_deleteData";
+            this->box_deleteData->Padding = System::Windows::Forms::Padding(3, 2, 3, 2);
+            this->box_deleteData->Size = System::Drawing::Size(653, 417);
+            this->box_deleteData->TabIndex = 4;
+            this->box_deleteData->TabStop = false;
+            this->box_deleteData->Text = L"Xoá dữ liệu";
+            this->box_deleteData->Visible = false;
+            // 
+            // bt_deleteData
+            // 
+            this->bt_deleteData->Location = System::Drawing::Point(283, 153);
+            this->bt_deleteData->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
+            this->bt_deleteData->Name = L"bt_deleteData";
+            this->bt_deleteData->Size = System::Drawing::Size(75, 30);
+            this->bt_deleteData->TabIndex = 2;
+            this->bt_deleteData->Text = L"Xoá";
+            this->bt_deleteData->UseVisualStyleBackColor = true;
+            this->bt_deleteData->Click += gcnew System::EventHandler(this, &Form1::bt_deleteData_Click);
+            // 
+            // textbox_deleteData
+            // 
+            this->textbox_deleteData->Location = System::Drawing::Point(445, 110);
+            this->textbox_deleteData->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
+            this->textbox_deleteData->Name = L"textbox_deleteData";
+            this->textbox_deleteData->Size = System::Drawing::Size(100, 26);
+            this->textbox_deleteData->TabIndex = 1;
+            // 
+            // label7
+            // 
+            this->label7->AutoSize = true;
+            this->label7->Location = System::Drawing::Point(49, 113);
+            this->label7->Name = L"label7";
+            this->label7->Size = System::Drawing::Size(320, 19);
+            this->label7->TabIndex = 0;
+            this->label7->Text = L"Nhập mã công dân của đối tượng cần xoá";
+            // 
+            // box_sortData
+            // 
+            this->box_sortData->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Bottom)
+                | System::Windows::Forms::AnchorStyles::Left)
+                | System::Windows::Forms::AnchorStyles::Right));
+            this->box_sortData->Controls->Add(this->bt_view_sortData);
+            this->box_sortData->Controls->Add(this->bt_sortData);
+            this->box_sortData->Controls->Add(this->box_sortType);
+            this->box_sortData->Controls->Add(this->box_sortSelect);
+            this->box_sortData->Controls->Add(this->label6);
+            this->box_sortData->Controls->Add(this->label5);
+            this->box_sortData->Font = (gcnew System::Drawing::Font(L"MS Reference Sans Serif", 9, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+                static_cast<System::Byte>(0)));
+            this->box_sortData->Location = System::Drawing::Point(0, 50);
+            this->box_sortData->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
+            this->box_sortData->Name = L"box_sortData";
+            this->box_sortData->Padding = System::Windows::Forms::Padding(3, 2, 3, 2);
+            this->box_sortData->Size = System::Drawing::Size(653, 417);
+            this->box_sortData->TabIndex = 3;
+            this->box_sortData->TabStop = false;
+            this->box_sortData->Text = L"Sắp xếp dữ liệu";
+            this->box_sortData->Visible = false;
+            // 
+            // bt_view_sortData
+            // 
+            this->bt_view_sortData->Location = System::Drawing::Point(407, 208);
+            this->bt_view_sortData->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
+            this->bt_view_sortData->Name = L"bt_view_sortData";
+            this->bt_view_sortData->Size = System::Drawing::Size(75, 30);
+            this->bt_view_sortData->TabIndex = 5;
+            this->bt_view_sortData->Text = L"Xem";
+            this->bt_view_sortData->UseVisualStyleBackColor = true;
+            this->bt_view_sortData->Click += gcnew System::EventHandler(this, &Form1::button3_Click_2);
+            // 
+            // bt_sortData
+            // 
+            this->bt_sortData->Location = System::Drawing::Point(279, 208);
+            this->bt_sortData->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
+            this->bt_sortData->Name = L"bt_sortData";
+            this->bt_sortData->Size = System::Drawing::Size(91, 30);
+            this->bt_sortData->TabIndex = 4;
+            this->bt_sortData->Text = L"Sắp xếp";
+            this->bt_sortData->UseVisualStyleBackColor = true;
+            this->bt_sortData->Click += gcnew System::EventHandler(this, &Form1::bt_sortData_Click);
+            // 
+            // box_sortType
+            // 
+            this->box_sortType->FormattingEnabled = true;
+            this->box_sortType->Items->AddRange(gcnew cli::array< System::Object^  >(2) { L"Tăng dần", L"Giảm dần" });
+            this->box_sortType->Location = System::Drawing::Point(279, 150);
+            this->box_sortType->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
+            this->box_sortType->Name = L"box_sortType";
+            this->box_sortType->Size = System::Drawing::Size(203, 27);
+            this->box_sortType->TabIndex = 3;
+            // 
+            // box_sortSelect
+            // 
+            this->box_sortSelect->FormattingEnabled = true;
+            this->box_sortSelect->Items->AddRange(gcnew cli::array< System::Object^  >(4) {
+                L"Mã công dân", L"Ngày đăng ký", L"Ngày tiêm mũi 1",
+                    L"Ngày tiêm mũi 2"
+            });
+            this->box_sortSelect->Location = System::Drawing::Point(279, 105);
+            this->box_sortSelect->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
+            this->box_sortSelect->Name = L"box_sortSelect";
+            this->box_sortSelect->Size = System::Drawing::Size(203, 27);
+            this->box_sortSelect->TabIndex = 2;
+            // 
+            // label6
+            // 
+            this->label6->AutoSize = true;
+            this->label6->Location = System::Drawing::Point(129, 153);
+            this->label6->Name = L"label6";
+            this->label6->Size = System::Drawing::Size(121, 19);
+            this->label6->TabIndex = 1;
+            this->label6->Text = L"Thứ tự sắp xếp";
+            // 
+            // label5
+            // 
+            this->label5->AutoSize = true;
+            this->label5->Location = System::Drawing::Point(141, 108);
+            this->label5->Name = L"label5";
+            this->label5->Size = System::Drawing::Size(108, 19);
+            this->label5->TabIndex = 0;
+            this->label5->Text = L"Sắp xếp theo";
+            // 
+            // box_inputFile
+            // 
+            this->box_inputFile->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Bottom)
+                | System::Windows::Forms::AnchorStyles::Left)
+                | System::Windows::Forms::AnchorStyles::Right));
+            this->box_inputFile->Controls->Add(this->bt_selectFile3);
+            this->box_inputFile->Controls->Add(this->bt_selectFile2);
+            this->box_inputFile->Controls->Add(this->bt_selectFile1);
+            this->box_inputFile->Controls->Add(this->bt_inputFile);
+            this->box_inputFile->Controls->Add(this->fileName3);
+            this->box_inputFile->Controls->Add(this->fileName2);
+            this->box_inputFile->Controls->Add(this->label_fileName3);
+            this->box_inputFile->Controls->Add(this->label_fileName1);
+            this->box_inputFile->Controls->Add(this->label_fileName2);
+            this->box_inputFile->Controls->Add(this->fileName1);
+            this->box_inputFile->Font = (gcnew System::Drawing::Font(L"MS Reference Sans Serif", 9, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+                static_cast<System::Byte>(0)));
+            this->box_inputFile->Location = System::Drawing::Point(0, 50);
+            this->box_inputFile->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
+            this->box_inputFile->Name = L"box_inputFile";
+            this->box_inputFile->Padding = System::Windows::Forms::Padding(3, 2, 3, 2);
+            this->box_inputFile->Size = System::Drawing::Size(653, 417);
+            this->box_inputFile->TabIndex = 5;
+            this->box_inputFile->TabStop = false;
+            this->box_inputFile->Text = L"Nhập dữ liệu từ tập tin";
+            this->box_inputFile->Visible = false;
+            // 
+            // bt_selectFile3
+            // 
+            this->bt_selectFile3->Location = System::Drawing::Point(512, 117);
+            this->bt_selectFile3->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
+            this->bt_selectFile3->Name = L"bt_selectFile3";
+            this->bt_selectFile3->Size = System::Drawing::Size(40, 26);
+            this->bt_selectFile3->TabIndex = 9;
+            this->bt_selectFile3->Text = L"...";
+            this->bt_selectFile3->UseVisualStyleBackColor = true;
+            this->bt_selectFile3->Click += gcnew System::EventHandler(this, &Form1::bt_selectFile3_Click);
+            // 
+            // bt_selectFile2
+            // 
+            this->bt_selectFile2->Location = System::Drawing::Point(512, 80);
+            this->bt_selectFile2->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
+            this->bt_selectFile2->Name = L"bt_selectFile2";
+            this->bt_selectFile2->Size = System::Drawing::Size(40, 26);
+            this->bt_selectFile2->TabIndex = 8;
+            this->bt_selectFile2->Text = L"...";
+            this->bt_selectFile2->UseVisualStyleBackColor = true;
+            this->bt_selectFile2->Click += gcnew System::EventHandler(this, &Form1::bt_selectFile2_Click);
+            // 
+            // bt_selectFile1
+            // 
+            this->bt_selectFile1->Location = System::Drawing::Point(512, 43);
+            this->bt_selectFile1->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
+            this->bt_selectFile1->Name = L"bt_selectFile1";
+            this->bt_selectFile1->Size = System::Drawing::Size(40, 26);
+            this->bt_selectFile1->TabIndex = 7;
+            this->bt_selectFile1->Text = L"...";
+            this->bt_selectFile1->UseVisualStyleBackColor = true;
+            this->bt_selectFile1->Click += gcnew System::EventHandler(this, &Form1::bt_selectFile1_Click);
+            // 
+            // bt_inputFile
+            // 
+            this->bt_inputFile->Location = System::Drawing::Point(363, 162);
+            this->bt_inputFile->Margin = System::Windows::Forms::Padding(4);
+            this->bt_inputFile->Name = L"bt_inputFile";
+            this->bt_inputFile->Size = System::Drawing::Size(100, 28);
+            this->bt_inputFile->TabIndex = 6;
+            this->bt_inputFile->Text = L"Nhập";
+            this->bt_inputFile->UseVisualStyleBackColor = true;
+            this->bt_inputFile->Click += gcnew System::EventHandler(this, &Form1::bt_inputFile_Click);
+            // 
+            // fileName3
+            // 
+            this->fileName3->Location = System::Drawing::Point(320, 117);
+            this->fileName3->Margin = System::Windows::Forms::Padding(4);
+            this->fileName3->Name = L"fileName3";
+            this->fileName3->ReadOnly = true;
+            this->fileName3->Size = System::Drawing::Size(185, 26);
+            this->fileName3->TabIndex = 5;
+            // 
+            // fileName2
+            // 
+            this->fileName2->Location = System::Drawing::Point(320, 80);
+            this->fileName2->Margin = System::Windows::Forms::Padding(4);
+            this->fileName2->Name = L"fileName2";
+            this->fileName2->ReadOnly = true;
+            this->fileName2->Size = System::Drawing::Size(185, 26);
+            this->fileName2->TabIndex = 4;
+            // 
+            // label_fileName3
+            // 
+            this->label_fileName3->AutoSize = true;
+            this->label_fileName3->Location = System::Drawing::Point(40, 117);
+            this->label_fileName3->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
+            this->label_fileName3->Name = L"label_fileName3";
+            this->label_fileName3->Size = System::Drawing::Size(236, 19);
+            this->label_fileName3->TabIndex = 3;
+            this->label_fileName3->Text = L"Nhập file dữ liệu tiêm chủng(*)";
+            // 
+            // label_fileName1
+            // 
+            this->label_fileName1->AutoSize = true;
+            this->label_fileName1->Location = System::Drawing::Point(40, 43);
+            this->label_fileName1->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
+            this->label_fileName1->Name = L"label_fileName1";
+            this->label_fileName1->Size = System::Drawing::Size(222, 19);
+            this->label_fileName1->TabIndex = 2;
+            this->label_fileName1->Text = L"Nhập file dữ liệu công dân(*)";
+            // 
+            // label_fileName2
+            // 
+            this->label_fileName2->AutoSize = true;
+            this->label_fileName2->Location = System::Drawing::Point(40, 80);
+            this->label_fileName2->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
+            this->label_fileName2->Name = L"label_fileName2";
+            this->label_fileName2->Size = System::Drawing::Size(165, 19);
+            this->label_fileName2->TabIndex = 1;
+            this->label_fileName2->Text = L"Nhập file đăng ký (*)";
+            // 
+            // fileName1
+            // 
+            this->fileName1->Location = System::Drawing::Point(320, 43);
+            this->fileName1->Margin = System::Windows::Forms::Padding(4);
+            this->fileName1->Name = L"fileName1";
+            this->fileName1->ReadOnly = true;
+            this->fileName1->Size = System::Drawing::Size(185, 26);
+            this->fileName1->TabIndex = 0;
+            // 
             // box_inputHand
             // 
             this->box_inputHand->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Bottom)
@@ -902,11 +1482,11 @@ private: System::Windows::Forms::ToolStripMenuItem^ thốngKêToolStripMenuItem;
             this->box_inputHand->Controls->Add(this->label8);
             this->box_inputHand->Font = (gcnew System::Drawing::Font(L"MS Reference Sans Serif", 9, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
                 static_cast<System::Byte>(0)));
-            this->box_inputHand->Location = System::Drawing::Point(0, 51);
+            this->box_inputHand->Location = System::Drawing::Point(0, 50);
             this->box_inputHand->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
             this->box_inputHand->Name = L"box_inputHand";
             this->box_inputHand->Padding = System::Windows::Forms::Padding(3, 2, 3, 2);
-            this->box_inputHand->Size = System::Drawing::Size(654, 417);
+            this->box_inputHand->Size = System::Drawing::Size(653, 417);
             this->box_inputHand->TabIndex = 6;
             this->box_inputHand->TabStop = false;
             this->box_inputHand->Text = L"Nhập dữ liệu thủ công";
@@ -920,9 +1500,10 @@ private: System::Windows::Forms::ToolStripMenuItem^ thốngKêToolStripMenuItem;
             this->panel_insertType->Controls->Add(this->label19);
             this->panel_insertType->Controls->Add(this->button2);
             this->panel_insertType->Controls->Add(this->button3);
-            this->panel_insertType->Location = System::Drawing::Point(10, 292);
+            this->panel_insertType->Location = System::Drawing::Point(11, 292);
+            this->panel_insertType->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
             this->panel_insertType->Name = L"panel_insertType";
-            this->panel_insertType->Size = System::Drawing::Size(638, 100);
+            this->panel_insertType->Size = System::Drawing::Size(637, 100);
             this->panel_insertType->TabIndex = 39;
             this->panel_insertType->Visible = false;
             // 
@@ -937,7 +1518,8 @@ private: System::Windows::Forms::ToolStripMenuItem^ thốngKêToolStripMenuItem;
             // 
             // insertTypeA
             // 
-            this->insertTypeA->Location = System::Drawing::Point(154, 17);
+            this->insertTypeA->Location = System::Drawing::Point(155, 17);
+            this->insertTypeA->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
             this->insertTypeA->Name = L"insertTypeA";
             this->insertTypeA->Size = System::Drawing::Size(137, 26);
             this->insertTypeA->TabIndex = 28;
@@ -954,6 +1536,7 @@ private: System::Windows::Forms::ToolStripMenuItem^ thốngKêToolStripMenuItem;
             // button2
             // 
             this->button2->Location = System::Drawing::Point(297, 15);
+            this->button2->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
             this->button2->Name = L"button2";
             this->button2->Size = System::Drawing::Size(75, 30);
             this->button2->TabIndex = 32;
@@ -963,7 +1546,8 @@ private: System::Windows::Forms::ToolStripMenuItem^ thốngKêToolStripMenuItem;
             // 
             // button3
             // 
-            this->button3->Location = System::Drawing::Point(518, 60);
+            this->button3->Location = System::Drawing::Point(517, 60);
+            this->button3->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
             this->button3->Name = L"button3";
             this->button3->Size = System::Drawing::Size(75, 30);
             this->button3->TabIndex = 33;
@@ -975,6 +1559,7 @@ private: System::Windows::Forms::ToolStripMenuItem^ thốngKêToolStripMenuItem;
             // 
             this->input_mui_2->AutoSize = true;
             this->input_mui_2->Location = System::Drawing::Point(360, 220);
+            this->input_mui_2->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
             this->input_mui_2->Name = L"input_mui_2";
             this->input_mui_2->Size = System::Drawing::Size(71, 23);
             this->input_mui_2->TabIndex = 38;
@@ -985,6 +1570,7 @@ private: System::Windows::Forms::ToolStripMenuItem^ thốngKêToolStripMenuItem;
             // 
             this->input_mui_1->AutoSize = true;
             this->input_mui_1->Location = System::Drawing::Point(360, 185);
+            this->input_mui_1->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
             this->input_mui_1->Name = L"input_mui_1";
             this->input_mui_1->Size = System::Drawing::Size(71, 23);
             this->input_mui_1->TabIndex = 37;
@@ -1002,14 +1588,16 @@ private: System::Windows::Forms::ToolStripMenuItem^ thốngKêToolStripMenuItem;
             // 
             // input_ma_DK
             // 
-            this->input_ma_DK->Location = System::Drawing::Point(502, 110);
+            this->input_ma_DK->Location = System::Drawing::Point(501, 110);
+            this->input_ma_DK->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
             this->input_ma_DK->Name = L"input_ma_DK";
-            this->input_ma_DK->Size = System::Drawing::Size(122, 26);
+            this->input_ma_DK->Size = System::Drawing::Size(121, 26);
             this->input_ma_DK->TabIndex = 35;
             // 
             // bt_saveInputCD
             // 
             this->bt_saveInputCD->Location = System::Drawing::Point(399, 247);
+            this->bt_saveInputCD->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
             this->bt_saveInputCD->Name = L"bt_saveInputCD";
             this->bt_saveInputCD->Size = System::Drawing::Size(201, 30);
             this->bt_saveInputCD->TabIndex = 34;
@@ -1019,48 +1607,54 @@ private: System::Windows::Forms::ToolStripMenuItem^ thốngKêToolStripMenuItem;
             // 
             // input_address
             // 
-            this->input_address->Location = System::Drawing::Point(502, 40);
+            this->input_address->Location = System::Drawing::Point(501, 39);
+            this->input_address->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
             this->input_address->Name = L"input_address";
-            this->input_address->Size = System::Drawing::Size(122, 26);
+            this->input_address->Size = System::Drawing::Size(121, 26);
             this->input_address->TabIndex = 25;
             // 
             // input_ngayM2
             // 
-            this->input_ngayM2->Location = System::Drawing::Point(502, 215);
+            this->input_ngayM2->Location = System::Drawing::Point(501, 215);
+            this->input_ngayM2->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
             this->input_ngayM2->Name = L"input_ngayM2";
-            this->input_ngayM2->Size = System::Drawing::Size(122, 26);
+            this->input_ngayM2->Size = System::Drawing::Size(121, 26);
             this->input_ngayM2->TabIndex = 24;
             this->input_ngayM2->Value = System::DateTime(2021, 11, 4, 0, 0, 0, 0);
             // 
             // input_ngayM1
             // 
-            this->input_ngayM1->Location = System::Drawing::Point(502, 180);
+            this->input_ngayM1->Location = System::Drawing::Point(501, 180);
+            this->input_ngayM1->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
             this->input_ngayM1->Name = L"input_ngayM1";
-            this->input_ngayM1->Size = System::Drawing::Size(122, 26);
+            this->input_ngayM1->Size = System::Drawing::Size(121, 26);
             this->input_ngayM1->TabIndex = 23;
             this->input_ngayM1->Value = System::DateTime(2021, 11, 3, 0, 0, 0, 0);
             this->input_ngayM1->ValueChanged += gcnew System::EventHandler(this, &Form1::dateTimePicker3_ValueChanged);
             // 
             // input_noi_DK
             // 
-            this->input_noi_DK->Location = System::Drawing::Point(502, 145);
+            this->input_noi_DK->Location = System::Drawing::Point(501, 145);
+            this->input_noi_DK->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
             this->input_noi_DK->Name = L"input_noi_DK";
-            this->input_noi_DK->Size = System::Drawing::Size(122, 26);
+            this->input_noi_DK->Size = System::Drawing::Size(121, 26);
             this->input_noi_DK->TabIndex = 20;
             // 
             // input_birth
             // 
             this->input_birth->Location = System::Drawing::Point(204, 145);
+            this->input_birth->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
             this->input_birth->Name = L"input_birth";
-            this->input_birth->Size = System::Drawing::Size(122, 26);
+            this->input_birth->Size = System::Drawing::Size(121, 26);
             this->input_birth->TabIndex = 19;
             this->input_birth->Value = System::DateTime(2021, 11, 1, 0, 0, 0, 0);
             // 
             // input_ngay_DK
             // 
-            this->input_ngay_DK->Location = System::Drawing::Point(502, 73);
+            this->input_ngay_DK->Location = System::Drawing::Point(501, 73);
+            this->input_ngay_DK->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
             this->input_ngay_DK->Name = L"input_ngay_DK";
-            this->input_ngay_DK->Size = System::Drawing::Size(122, 26);
+            this->input_ngay_DK->Size = System::Drawing::Size(121, 26);
             this->input_ngay_DK->TabIndex = 18;
             this->input_ngay_DK->Value = System::DateTime(2021, 11, 2, 0, 0, 0, 0);
             this->input_ngay_DK->ValueChanged += gcnew System::EventHandler(this, &Form1::dateTimePicker1_ValueChanged);
@@ -1086,7 +1680,7 @@ private: System::Windows::Forms::ToolStripMenuItem^ thốngKêToolStripMenuItem;
             // label15
             // 
             this->label15->AutoSize = true;
-            this->label15->Location = System::Drawing::Point(356, 40);
+            this->label15->Location = System::Drawing::Point(356, 39);
             this->label15->Name = L"label15";
             this->label15->Size = System::Drawing::Size(81, 19);
             this->label15->TabIndex = 15;
@@ -1096,7 +1690,8 @@ private: System::Windows::Forms::ToolStripMenuItem^ thốngKêToolStripMenuItem;
             // 
             this->input_sex->FormattingEnabled = true;
             this->input_sex->Items->AddRange(gcnew cli::array< System::Object^  >(2) { L"Nam", L"Nữ" });
-            this->input_sex->Location = System::Drawing::Point(204, 109);
+            this->input_sex->Location = System::Drawing::Point(204, 110);
+            this->input_sex->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
             this->input_sex->Name = L"input_sex";
             this->input_sex->Size = System::Drawing::Size(121, 27);
             this->input_sex->TabIndex = 14;
@@ -1104,42 +1699,47 @@ private: System::Windows::Forms::ToolStripMenuItem^ thốngKêToolStripMenuItem;
             // input_soCMND
             // 
             this->input_soCMND->Location = System::Drawing::Point(203, 247);
+            this->input_soCMND->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
             this->input_soCMND->Name = L"input_soCMND";
-            this->input_soCMND->Size = System::Drawing::Size(122, 26);
+            this->input_soCMND->Size = System::Drawing::Size(121, 26);
             this->input_soCMND->TabIndex = 13;
             // 
             // input_soBHXH
             // 
             this->input_soBHXH->Location = System::Drawing::Point(203, 212);
+            this->input_soBHXH->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
             this->input_soBHXH->Name = L"input_soBHXH";
-            this->input_soBHXH->Size = System::Drawing::Size(122, 26);
+            this->input_soBHXH->Size = System::Drawing::Size(121, 26);
             this->input_soBHXH->TabIndex = 12;
             // 
             // input_phone
             // 
             this->input_phone->Location = System::Drawing::Point(203, 177);
+            this->input_phone->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
             this->input_phone->Name = L"input_phone";
-            this->input_phone->Size = System::Drawing::Size(122, 26);
+            this->input_phone->Size = System::Drawing::Size(121, 26);
             this->input_phone->TabIndex = 11;
             // 
             // input_fullName
             // 
-            this->input_fullName->Location = System::Drawing::Point(203, 72);
+            this->input_fullName->Location = System::Drawing::Point(203, 71);
+            this->input_fullName->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
             this->input_fullName->Name = L"input_fullName";
-            this->input_fullName->Size = System::Drawing::Size(122, 26);
+            this->input_fullName->Size = System::Drawing::Size(121, 26);
             this->input_fullName->TabIndex = 8;
             // 
             // input_ma_CD
             // 
             this->input_ma_CD->Location = System::Drawing::Point(203, 37);
+            this->input_ma_CD->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
             this->input_ma_CD->Name = L"input_ma_CD";
-            this->input_ma_CD->Size = System::Drawing::Size(122, 26);
+            this->input_ma_CD->Size = System::Drawing::Size(121, 26);
             this->input_ma_CD->TabIndex = 7;
             // 
             // label14
             // 
             this->label14->AutoSize = true;
-            this->label14->Location = System::Drawing::Point(30, 250);
+            this->label14->Location = System::Drawing::Point(29, 250);
             this->label14->Name = L"label14";
             this->label14->Size = System::Drawing::Size(165, 19);
             this->label14->TabIndex = 6;
@@ -1148,7 +1748,7 @@ private: System::Windows::Forms::ToolStripMenuItem^ thốngKêToolStripMenuItem;
             // label13
             // 
             this->label13->AutoSize = true;
-            this->label13->Location = System::Drawing::Point(30, 215);
+            this->label13->Location = System::Drawing::Point(29, 215);
             this->label13->Name = L"label13";
             this->label13->Size = System::Drawing::Size(110, 19);
             this->label13->TabIndex = 5;
@@ -1157,7 +1757,7 @@ private: System::Windows::Forms::ToolStripMenuItem^ thốngKêToolStripMenuItem;
             // label12
             // 
             this->label12->AutoSize = true;
-            this->label12->Location = System::Drawing::Point(30, 180);
+            this->label12->Location = System::Drawing::Point(29, 180);
             this->label12->Name = L"label12";
             this->label12->Size = System::Drawing::Size(106, 19);
             this->label12->TabIndex = 4;
@@ -1166,7 +1766,7 @@ private: System::Windows::Forms::ToolStripMenuItem^ thốngKêToolStripMenuItem;
             // label11
             // 
             this->label11->AutoSize = true;
-            this->label11->Location = System::Drawing::Point(30, 145);
+            this->label11->Location = System::Drawing::Point(29, 145);
             this->label11->Name = L"label11";
             this->label11->Size = System::Drawing::Size(81, 19);
             this->label11->TabIndex = 3;
@@ -1175,7 +1775,7 @@ private: System::Windows::Forms::ToolStripMenuItem^ thốngKêToolStripMenuItem;
             // label10
             // 
             this->label10->AutoSize = true;
-            this->label10->Location = System::Drawing::Point(30, 110);
+            this->label10->Location = System::Drawing::Point(29, 110);
             this->label10->Name = L"label10";
             this->label10->Size = System::Drawing::Size(93, 19);
             this->label10->TabIndex = 2;
@@ -1184,7 +1784,7 @@ private: System::Windows::Forms::ToolStripMenuItem^ thốngKêToolStripMenuItem;
             // label9
             // 
             this->label9->AutoSize = true;
-            this->label9->Location = System::Drawing::Point(30, 40);
+            this->label9->Location = System::Drawing::Point(29, 39);
             this->label9->Name = L"label9";
             this->label9->Size = System::Drawing::Size(138, 19);
             this->label9->TabIndex = 1;
@@ -1193,7 +1793,7 @@ private: System::Windows::Forms::ToolStripMenuItem^ thốngKêToolStripMenuItem;
             // label8
             // 
             this->label8->AutoSize = true;
-            this->label8->Location = System::Drawing::Point(30, 75);
+            this->label8->Location = System::Drawing::Point(29, 75);
             this->label8->Name = L"label8";
             this->label8->Size = System::Drawing::Size(106, 19);
             this->label8->TabIndex = 0;
@@ -1211,11 +1811,11 @@ private: System::Windows::Forms::ToolStripMenuItem^ thốngKêToolStripMenuItem;
             this->export_allData_people->Controls->Add(this->view_exportAllData_people);
             this->export_allData_people->Font = (gcnew System::Drawing::Font(L"MS Reference Sans Serif", 9, System::Drawing::FontStyle::Regular,
                 System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
-            this->export_allData_people->Location = System::Drawing::Point(0, 51);
+            this->export_allData_people->Location = System::Drawing::Point(0, 50);
             this->export_allData_people->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
             this->export_allData_people->Name = L"export_allData_people";
             this->export_allData_people->Padding = System::Windows::Forms::Padding(3, 2, 3, 2);
-            this->export_allData_people->Size = System::Drawing::Size(658, 417);
+            this->export_allData_people->Size = System::Drawing::Size(659, 417);
             this->export_allData_people->TabIndex = 9;
             this->export_allData_people->TabStop = false;
             this->export_allData_people->Text = L"Toàn bộ dữ liệu";
@@ -1225,6 +1825,7 @@ private: System::Windows::Forms::ToolStripMenuItem^ thốngKêToolStripMenuItem;
             // 
             this->bt_saveAllData->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((System::Windows::Forms::AnchorStyles::Bottom | System::Windows::Forms::AnchorStyles::Right));
             this->bt_saveAllData->Location = System::Drawing::Point(555, 377);
+            this->bt_saveAllData->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
             this->bt_saveAllData->Name = L"bt_saveAllData";
             this->bt_saveAllData->Size = System::Drawing::Size(91, 30);
             this->bt_saveAllData->TabIndex = 4;
@@ -1235,8 +1836,9 @@ private: System::Windows::Forms::ToolStripMenuItem^ thốngKêToolStripMenuItem;
             // 
             this->bt_loadAllData->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((System::Windows::Forms::AnchorStyles::Bottom | System::Windows::Forms::AnchorStyles::Right));
             this->bt_loadAllData->Location = System::Drawing::Point(283, 377);
+            this->bt_loadAllData->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
             this->bt_loadAllData->Name = L"bt_loadAllData";
-            this->bt_loadAllData->Size = System::Drawing::Size(130, 30);
+            this->bt_loadAllData->Size = System::Drawing::Size(131, 30);
             this->bt_loadAllData->TabIndex = 3;
             this->bt_loadAllData->Text = L"Tải dữ liệu";
             this->bt_loadAllData->UseVisualStyleBackColor = true;
@@ -1246,8 +1848,9 @@ private: System::Windows::Forms::ToolStripMenuItem^ thốngKêToolStripMenuItem;
             // 
             this->bt_modAllData->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((System::Windows::Forms::AnchorStyles::Bottom | System::Windows::Forms::AnchorStyles::Right));
             this->bt_modAllData->Location = System::Drawing::Point(419, 377);
+            this->bt_modAllData->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
             this->bt_modAllData->Name = L"bt_modAllData";
-            this->bt_modAllData->Size = System::Drawing::Size(130, 30);
+            this->bt_modAllData->Size = System::Drawing::Size(131, 30);
             this->bt_modAllData->TabIndex = 2;
             this->bt_modAllData->Text = L"Chỉnh sửa";
             this->bt_modAllData->UseVisualStyleBackColor = true;
@@ -1256,6 +1859,7 @@ private: System::Windows::Forms::ToolStripMenuItem^ thốngKêToolStripMenuItem;
             // 
             this->button7->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((System::Windows::Forms::AnchorStyles::Bottom | System::Windows::Forms::AnchorStyles::Right));
             this->button7->Location = System::Drawing::Point(555, 388);
+            this->button7->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
             this->button7->Name = L"button7";
             this->button7->Size = System::Drawing::Size(0, 0);
             this->button7->TabIndex = 1;
@@ -1276,12 +1880,13 @@ private: System::Windows::Forms::ToolStripMenuItem^ thốngKêToolStripMenuItem;
                     this->address_allData, this->ma_DK_allData, this->ngay_DK_allData, this->noi_DK_allData, this->mui1_allData, this->ngayM1_allData,
                     this->mui2_allData, this->ngay_M2_allData
             });
-            this->view_exportAllData_people->Location = System::Drawing::Point(10, 24);
+            this->view_exportAllData_people->Location = System::Drawing::Point(11, 25);
+            this->view_exportAllData_people->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
             this->view_exportAllData_people->Name = L"view_exportAllData_people";
             this->view_exportAllData_people->ReadOnly = true;
             this->view_exportAllData_people->RowHeadersWidth = 51;
             this->view_exportAllData_people->RowTemplate->Height = 24;
-            this->view_exportAllData_people->Size = System::Drawing::Size(648, 344);
+            this->view_exportAllData_people->Size = System::Drawing::Size(648, 345);
             this->view_exportAllData_people->TabIndex = 0;
             // 
             // maCD
@@ -1416,11 +2021,11 @@ private: System::Windows::Forms::ToolStripMenuItem^ thốngKêToolStripMenuItem;
             this->exportData_vaccination->Controls->Add(this->view_exportData_vaccination);
             this->exportData_vaccination->Font = (gcnew System::Drawing::Font(L"MS Reference Sans Serif", 9, System::Drawing::FontStyle::Regular,
                 System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
-            this->exportData_vaccination->Location = System::Drawing::Point(0, 51);
+            this->exportData_vaccination->Location = System::Drawing::Point(0, 50);
             this->exportData_vaccination->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
             this->exportData_vaccination->Name = L"exportData_vaccination";
             this->exportData_vaccination->Padding = System::Windows::Forms::Padding(3, 2, 3, 2);
-            this->exportData_vaccination->Size = System::Drawing::Size(654, 417);
+            this->exportData_vaccination->Size = System::Drawing::Size(653, 417);
             this->exportData_vaccination->TabIndex = 8;
             this->exportData_vaccination->TabStop = false;
             this->exportData_vaccination->Text = L"Dữ liệu tiêm chủng";
@@ -1430,6 +2035,7 @@ private: System::Windows::Forms::ToolStripMenuItem^ thốngKêToolStripMenuItem;
             // 
             this->bt_saveData_vaccination->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((System::Windows::Forms::AnchorStyles::Bottom | System::Windows::Forms::AnchorStyles::Right));
             this->bt_saveData_vaccination->Location = System::Drawing::Point(551, 377);
+            this->bt_saveData_vaccination->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
             this->bt_saveData_vaccination->Name = L"bt_saveData_vaccination";
             this->bt_saveData_vaccination->Size = System::Drawing::Size(91, 30);
             this->bt_saveData_vaccination->TabIndex = 4;
@@ -1440,8 +2046,9 @@ private: System::Windows::Forms::ToolStripMenuItem^ thốngKêToolStripMenuItem;
             // 
             this->bt_loadData_vaccination->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((System::Windows::Forms::AnchorStyles::Bottom | System::Windows::Forms::AnchorStyles::Right));
             this->bt_loadData_vaccination->Location = System::Drawing::Point(279, 377);
+            this->bt_loadData_vaccination->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
             this->bt_loadData_vaccination->Name = L"bt_loadData_vaccination";
-            this->bt_loadData_vaccination->Size = System::Drawing::Size(130, 30);
+            this->bt_loadData_vaccination->Size = System::Drawing::Size(131, 30);
             this->bt_loadData_vaccination->TabIndex = 3;
             this->bt_loadData_vaccination->Text = L"Tải dữ liệu";
             this->bt_loadData_vaccination->UseVisualStyleBackColor = true;
@@ -1451,8 +2058,9 @@ private: System::Windows::Forms::ToolStripMenuItem^ thốngKêToolStripMenuItem;
             // 
             this->bt_modData_vaccination->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((System::Windows::Forms::AnchorStyles::Bottom | System::Windows::Forms::AnchorStyles::Right));
             this->bt_modData_vaccination->Location = System::Drawing::Point(415, 377);
+            this->bt_modData_vaccination->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
             this->bt_modData_vaccination->Name = L"bt_modData_vaccination";
-            this->bt_modData_vaccination->Size = System::Drawing::Size(130, 30);
+            this->bt_modData_vaccination->Size = System::Drawing::Size(131, 30);
             this->bt_modData_vaccination->TabIndex = 2;
             this->bt_modData_vaccination->Text = L"Chỉnh sửa";
             this->bt_modData_vaccination->UseVisualStyleBackColor = true;
@@ -1461,6 +2069,7 @@ private: System::Windows::Forms::ToolStripMenuItem^ thốngKêToolStripMenuItem;
             // 
             this->button6->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((System::Windows::Forms::AnchorStyles::Bottom | System::Windows::Forms::AnchorStyles::Right));
             this->button6->Location = System::Drawing::Point(551, 388);
+            this->button6->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
             this->button6->Name = L"button6";
             this->button6->Size = System::Drawing::Size(0, 0);
             this->button6->TabIndex = 1;
@@ -1479,7 +2088,8 @@ private: System::Windows::Forms::ToolStripMenuItem^ thốngKêToolStripMenuItem;
                 this->fullName3,
                     this->mui1, this->ngay_M1, this->mui2, this->ngay_M2
             });
-            this->view_exportData_vaccination->Location = System::Drawing::Point(10, 24);
+            this->view_exportData_vaccination->Location = System::Drawing::Point(11, 25);
+            this->view_exportData_vaccination->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
             this->view_exportData_vaccination->Name = L"view_exportData_vaccination";
             this->view_exportData_vaccination->ReadOnly = true;
             this->view_exportData_vaccination->RowHeadersWidth = 51;
@@ -1539,11 +2149,11 @@ private: System::Windows::Forms::ToolStripMenuItem^ thốngKêToolStripMenuItem;
             this->exportData_registry->Controls->Add(this->view_exportData_registry);
             this->exportData_registry->Font = (gcnew System::Drawing::Font(L"MS Reference Sans Serif", 9, System::Drawing::FontStyle::Regular,
                 System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
-            this->exportData_registry->Location = System::Drawing::Point(0, 51);
+            this->exportData_registry->Location = System::Drawing::Point(0, 50);
             this->exportData_registry->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
             this->exportData_registry->Name = L"exportData_registry";
             this->exportData_registry->Padding = System::Windows::Forms::Padding(3, 2, 3, 2);
-            this->exportData_registry->Size = System::Drawing::Size(654, 417);
+            this->exportData_registry->Size = System::Drawing::Size(653, 417);
             this->exportData_registry->TabIndex = 7;
             this->exportData_registry->TabStop = false;
             this->exportData_registry->Text = L"Dữ liệu đăng ký";
@@ -1553,6 +2163,7 @@ private: System::Windows::Forms::ToolStripMenuItem^ thốngKêToolStripMenuItem;
             // 
             this->bt_saveData_registry->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((System::Windows::Forms::AnchorStyles::Bottom | System::Windows::Forms::AnchorStyles::Right));
             this->bt_saveData_registry->Location = System::Drawing::Point(551, 377);
+            this->bt_saveData_registry->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
             this->bt_saveData_registry->Name = L"bt_saveData_registry";
             this->bt_saveData_registry->Size = System::Drawing::Size(91, 30);
             this->bt_saveData_registry->TabIndex = 4;
@@ -1563,8 +2174,9 @@ private: System::Windows::Forms::ToolStripMenuItem^ thốngKêToolStripMenuItem;
             // 
             this->bt_loadData_registry->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((System::Windows::Forms::AnchorStyles::Bottom | System::Windows::Forms::AnchorStyles::Right));
             this->bt_loadData_registry->Location = System::Drawing::Point(279, 377);
+            this->bt_loadData_registry->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
             this->bt_loadData_registry->Name = L"bt_loadData_registry";
-            this->bt_loadData_registry->Size = System::Drawing::Size(130, 30);
+            this->bt_loadData_registry->Size = System::Drawing::Size(131, 30);
             this->bt_loadData_registry->TabIndex = 3;
             this->bt_loadData_registry->Text = L"Tải dữ liệu";
             this->bt_loadData_registry->UseVisualStyleBackColor = true;
@@ -1574,8 +2186,9 @@ private: System::Windows::Forms::ToolStripMenuItem^ thốngKêToolStripMenuItem;
             // 
             this->bt_modData_registry->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((System::Windows::Forms::AnchorStyles::Bottom | System::Windows::Forms::AnchorStyles::Right));
             this->bt_modData_registry->Location = System::Drawing::Point(415, 377);
+            this->bt_modData_registry->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
             this->bt_modData_registry->Name = L"bt_modData_registry";
-            this->bt_modData_registry->Size = System::Drawing::Size(130, 30);
+            this->bt_modData_registry->Size = System::Drawing::Size(131, 30);
             this->bt_modData_registry->TabIndex = 2;
             this->bt_modData_registry->Text = L"Chỉnh sửa";
             this->bt_modData_registry->UseVisualStyleBackColor = true;
@@ -1584,6 +2197,7 @@ private: System::Windows::Forms::ToolStripMenuItem^ thốngKêToolStripMenuItem;
             // 
             this->button5->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((System::Windows::Forms::AnchorStyles::Bottom | System::Windows::Forms::AnchorStyles::Right));
             this->button5->Location = System::Drawing::Point(551, 388);
+            this->button5->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
             this->button5->Name = L"button5";
             this->button5->Size = System::Drawing::Size(0, 0);
             this->button5->TabIndex = 1;
@@ -1602,7 +2216,8 @@ private: System::Windows::Forms::ToolStripMenuItem^ thốngKêToolStripMenuItem;
                 this->fullName2,
                     this->ma_DK, this->ngay_DK, this->noi_DK
             });
-            this->view_exportData_registry->Location = System::Drawing::Point(10, 24);
+            this->view_exportData_registry->Location = System::Drawing::Point(11, 25);
+            this->view_exportData_registry->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
             this->view_exportData_registry->Name = L"view_exportData_registry";
             this->view_exportData_registry->ReadOnly = true;
             this->view_exportData_registry->RowHeadersWidth = 51;
@@ -1654,11 +2269,11 @@ private: System::Windows::Forms::ToolStripMenuItem^ thốngKêToolStripMenuItem;
             this->exportData_people->Controls->Add(this->view_exportData_people);
             this->exportData_people->Font = (gcnew System::Drawing::Font(L"MS Reference Sans Serif", 9, System::Drawing::FontStyle::Regular,
                 System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
-            this->exportData_people->Location = System::Drawing::Point(0, 51);
+            this->exportData_people->Location = System::Drawing::Point(0, 50);
             this->exportData_people->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
             this->exportData_people->Name = L"exportData_people";
             this->exportData_people->Padding = System::Windows::Forms::Padding(3, 2, 3, 2);
-            this->exportData_people->Size = System::Drawing::Size(654, 417);
+            this->exportData_people->Size = System::Drawing::Size(653, 417);
             this->exportData_people->TabIndex = 6;
             this->exportData_people->TabStop = false;
             this->exportData_people->Text = L"Dữ liệu công dân";
@@ -1668,6 +2283,7 @@ private: System::Windows::Forms::ToolStripMenuItem^ thốngKêToolStripMenuItem;
             // 
             this->bt_saveData_people->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((System::Windows::Forms::AnchorStyles::Bottom | System::Windows::Forms::AnchorStyles::Right));
             this->bt_saveData_people->Location = System::Drawing::Point(551, 377);
+            this->bt_saveData_people->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
             this->bt_saveData_people->Name = L"bt_saveData_people";
             this->bt_saveData_people->Size = System::Drawing::Size(91, 30);
             this->bt_saveData_people->TabIndex = 4;
@@ -1678,8 +2294,9 @@ private: System::Windows::Forms::ToolStripMenuItem^ thốngKêToolStripMenuItem;
             // 
             this->bt_loadData_people->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((System::Windows::Forms::AnchorStyles::Bottom | System::Windows::Forms::AnchorStyles::Right));
             this->bt_loadData_people->Location = System::Drawing::Point(279, 377);
+            this->bt_loadData_people->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
             this->bt_loadData_people->Name = L"bt_loadData_people";
-            this->bt_loadData_people->Size = System::Drawing::Size(130, 30);
+            this->bt_loadData_people->Size = System::Drawing::Size(131, 30);
             this->bt_loadData_people->TabIndex = 3;
             this->bt_loadData_people->Text = L"Tải dữ liệu";
             this->bt_loadData_people->UseVisualStyleBackColor = true;
@@ -1689,8 +2306,9 @@ private: System::Windows::Forms::ToolStripMenuItem^ thốngKêToolStripMenuItem;
             // 
             this->bt_modData_people->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((System::Windows::Forms::AnchorStyles::Bottom | System::Windows::Forms::AnchorStyles::Right));
             this->bt_modData_people->Location = System::Drawing::Point(415, 377);
+            this->bt_modData_people->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
             this->bt_modData_people->Name = L"bt_modData_people";
-            this->bt_modData_people->Size = System::Drawing::Size(130, 30);
+            this->bt_modData_people->Size = System::Drawing::Size(131, 30);
             this->bt_modData_people->TabIndex = 2;
             this->bt_modData_people->Text = L"Chỉnh sửa";
             this->bt_modData_people->UseVisualStyleBackColor = true;
@@ -1700,6 +2318,7 @@ private: System::Windows::Forms::ToolStripMenuItem^ thốngKêToolStripMenuItem;
             // 
             this->button1->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((System::Windows::Forms::AnchorStyles::Bottom | System::Windows::Forms::AnchorStyles::Right));
             this->button1->Location = System::Drawing::Point(551, 388);
+            this->button1->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
             this->button1->Name = L"button1";
             this->button1->Size = System::Drawing::Size(0, 0);
             this->button1->TabIndex = 1;
@@ -1718,7 +2337,8 @@ private: System::Windows::Forms::ToolStripMenuItem^ thốngKêToolStripMenuItem;
                 this->ma_CD,
                     this->fullName, this->sex, this->birth, this->phone, this->so_BHXH, this->so_CMND, this->address
             });
-            this->view_exportData_people->Location = System::Drawing::Point(10, 24);
+            this->view_exportData_people->Location = System::Drawing::Point(11, 25);
+            this->view_exportData_people->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
             this->view_exportData_people->Name = L"view_exportData_people";
             this->view_exportData_people->ReadOnly = true;
             this->view_exportData_people->RowHeadersWidth = 51;
@@ -1795,270 +2415,191 @@ private: System::Windows::Forms::ToolStripMenuItem^ thốngKêToolStripMenuItem;
             this->box_searchData->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Bottom)
                 | System::Windows::Forms::AnchorStyles::Left)
                 | System::Windows::Forms::AnchorStyles::Right));
+            this->box_searchData->Controls->Add(this->view_searchData);
+            this->box_searchData->Controls->Add(this->bt_search);
+            this->box_searchData->Controls->Add(this->box_search);
+            this->box_searchData->Controls->Add(this->label26);
             this->box_searchData->Font = (gcnew System::Drawing::Font(L"MS Reference Sans Serif", 9, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
                 static_cast<System::Byte>(0)));
-            this->box_searchData->Location = System::Drawing::Point(0, 51);
+            this->box_searchData->Location = System::Drawing::Point(0, 50);
             this->box_searchData->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
             this->box_searchData->Name = L"box_searchData";
             this->box_searchData->Padding = System::Windows::Forms::Padding(3, 2, 3, 2);
-            this->box_searchData->Size = System::Drawing::Size(654, 417);
+            this->box_searchData->Size = System::Drawing::Size(653, 417);
             this->box_searchData->TabIndex = 5;
             this->box_searchData->TabStop = false;
             this->box_searchData->Text = L"Tìm kiếm";
             this->box_searchData->Visible = false;
             // 
-            // box_deleteData
+            // view_searchData
             // 
-            this->box_deleteData->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Bottom)
+            this->view_searchData->AllowUserToAddRows = false;
+            this->view_searchData->AllowUserToDeleteRows = false;
+            this->view_searchData->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Bottom)
                 | System::Windows::Forms::AnchorStyles::Left)
                 | System::Windows::Forms::AnchorStyles::Right));
-            this->box_deleteData->Controls->Add(this->bt_deleteData);
-            this->box_deleteData->Controls->Add(this->textbox_deleteData);
-            this->box_deleteData->Controls->Add(this->label7);
-            this->box_deleteData->Font = (gcnew System::Drawing::Font(L"MS Reference Sans Serif", 9, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
-                static_cast<System::Byte>(0)));
-            this->box_deleteData->Location = System::Drawing::Point(0, 51);
-            this->box_deleteData->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
-            this->box_deleteData->Name = L"box_deleteData";
-            this->box_deleteData->Padding = System::Windows::Forms::Padding(3, 2, 3, 2);
-            this->box_deleteData->Size = System::Drawing::Size(654, 417);
-            this->box_deleteData->TabIndex = 4;
-            this->box_deleteData->TabStop = false;
-            this->box_deleteData->Text = L"Xoá dữ liệu";
-            this->box_deleteData->Visible = false;
-            // 
-            // bt_deleteData
-            // 
-            this->bt_deleteData->Location = System::Drawing::Point(283, 153);
-            this->bt_deleteData->Name = L"bt_deleteData";
-            this->bt_deleteData->Size = System::Drawing::Size(75, 30);
-            this->bt_deleteData->TabIndex = 2;
-            this->bt_deleteData->Text = L"Xoá";
-            this->bt_deleteData->UseVisualStyleBackColor = true;
-            this->bt_deleteData->Click += gcnew System::EventHandler(this, &Form1::bt_deleteData_Click);
-            // 
-            // textbox_deleteData
-            // 
-            this->textbox_deleteData->Location = System::Drawing::Point(445, 110);
-            this->textbox_deleteData->Name = L"textbox_deleteData";
-            this->textbox_deleteData->Size = System::Drawing::Size(100, 26);
-            this->textbox_deleteData->TabIndex = 1;
-            // 
-            // label7
-            // 
-            this->label7->AutoSize = true;
-            this->label7->Location = System::Drawing::Point(49, 113);
-            this->label7->Name = L"label7";
-            this->label7->Size = System::Drawing::Size(320, 19);
-            this->label7->TabIndex = 0;
-            this->label7->Text = L"Nhập mã công dân của đối tượng cần xoá";
-            // 
-            // box_sortData
-            // 
-            this->box_sortData->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Bottom)
-                | System::Windows::Forms::AnchorStyles::Left)
-                | System::Windows::Forms::AnchorStyles::Right));
-            this->box_sortData->Controls->Add(this->bt_view_sortData);
-            this->box_sortData->Controls->Add(this->bt_sortData);
-            this->box_sortData->Controls->Add(this->box_sortType);
-            this->box_sortData->Controls->Add(this->box_sortSelect);
-            this->box_sortData->Controls->Add(this->label6);
-            this->box_sortData->Controls->Add(this->label5);
-            this->box_sortData->Font = (gcnew System::Drawing::Font(L"MS Reference Sans Serif", 9, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
-                static_cast<System::Byte>(0)));
-            this->box_sortData->Location = System::Drawing::Point(0, 51);
-            this->box_sortData->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
-            this->box_sortData->Name = L"box_sortData";
-            this->box_sortData->Padding = System::Windows::Forms::Padding(3, 2, 3, 2);
-            this->box_sortData->Size = System::Drawing::Size(654, 417);
-            this->box_sortData->TabIndex = 3;
-            this->box_sortData->TabStop = false;
-            this->box_sortData->Text = L"Sắp xếp dữ liệu";
-            this->box_sortData->Visible = false;
-            // 
-            // bt_view_sortData
-            // 
-            this->bt_view_sortData->Location = System::Drawing::Point(407, 208);
-            this->bt_view_sortData->Name = L"bt_view_sortData";
-            this->bt_view_sortData->Size = System::Drawing::Size(75, 30);
-            this->bt_view_sortData->TabIndex = 5;
-            this->bt_view_sortData->Text = L"Xem";
-            this->bt_view_sortData->UseVisualStyleBackColor = true;
-            this->bt_view_sortData->Click += gcnew System::EventHandler(this, &Form1::button3_Click_2);
-            // 
-            // bt_sortData
-            // 
-            this->bt_sortData->Location = System::Drawing::Point(279, 208);
-            this->bt_sortData->Name = L"bt_sortData";
-            this->bt_sortData->Size = System::Drawing::Size(90, 30);
-            this->bt_sortData->TabIndex = 4;
-            this->bt_sortData->Text = L"Sắp xếp";
-            this->bt_sortData->UseVisualStyleBackColor = true;
-            this->bt_sortData->Click += gcnew System::EventHandler(this, &Form1::bt_sortData_Click);
-            // 
-            // box_sortType
-            // 
-            this->box_sortType->FormattingEnabled = true;
-            this->box_sortType->Items->AddRange(gcnew cli::array< System::Object^  >(2) { L"Tăng dần", L"Giảm dần" });
-            this->box_sortType->Location = System::Drawing::Point(279, 150);
-            this->box_sortType->Name = L"box_sortType";
-            this->box_sortType->Size = System::Drawing::Size(203, 27);
-            this->box_sortType->TabIndex = 3;
-            // 
-            // box_sortSelect
-            // 
-            this->box_sortSelect->FormattingEnabled = true;
-            this->box_sortSelect->Items->AddRange(gcnew cli::array< System::Object^  >(4) {
-                L"Mã công dân", L"Ngày đăng ký", L"Ngày tiêm mũi 1",
-                    L"Ngày tiêm mũi 2"
+            this->view_searchData->ColumnHeadersHeightSizeMode = System::Windows::Forms::DataGridViewColumnHeadersHeightSizeMode::AutoSize;
+            this->view_searchData->Columns->AddRange(gcnew cli::array< System::Windows::Forms::DataGridViewColumn^  >(15) {
+                this->dataGridViewTextBoxColumn1,
+                    this->dataGridViewTextBoxColumn2, this->dataGridViewTextBoxColumn3, this->dataGridViewTextBoxColumn4, this->dataGridViewTextBoxColumn5,
+                    this->dataGridViewTextBoxColumn6, this->dataGridViewTextBoxColumn7, this->dataGridViewTextBoxColumn8, this->dataGridViewTextBoxColumn9,
+                    this->dataGridViewTextBoxColumn10, this->dataGridViewTextBoxColumn11, this->dataGridViewTextBoxColumn12, this->dataGridViewTextBoxColumn13,
+                    this->dataGridViewTextBoxColumn14, this->dataGridViewTextBoxColumn15
             });
-            this->box_sortSelect->Location = System::Drawing::Point(279, 105);
-            this->box_sortSelect->Name = L"box_sortSelect";
-            this->box_sortSelect->Size = System::Drawing::Size(203, 27);
-            this->box_sortSelect->TabIndex = 2;
+            this->view_searchData->Location = System::Drawing::Point(14, 108);
+            this->view_searchData->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
+            this->view_searchData->Name = L"view_searchData";
+            this->view_searchData->ReadOnly = true;
+            this->view_searchData->RowHeadersWidth = 51;
+            this->view_searchData->RowTemplate->Height = 24;
+            this->view_searchData->Size = System::Drawing::Size(628, 273);
+            this->view_searchData->TabIndex = 4;
             // 
-            // label6
+            // dataGridViewTextBoxColumn1
             // 
-            this->label6->AutoSize = true;
-            this->label6->Location = System::Drawing::Point(129, 153);
-            this->label6->Name = L"label6";
-            this->label6->Size = System::Drawing::Size(121, 19);
-            this->label6->TabIndex = 1;
-            this->label6->Text = L"Thứ tự sắp xếp";
+            this->dataGridViewTextBoxColumn1->HeaderText = L"Mã công dân";
+            this->dataGridViewTextBoxColumn1->MinimumWidth = 6;
+            this->dataGridViewTextBoxColumn1->Name = L"dataGridViewTextBoxColumn1";
+            this->dataGridViewTextBoxColumn1->ReadOnly = true;
+            this->dataGridViewTextBoxColumn1->Width = 125;
             // 
-            // label5
+            // dataGridViewTextBoxColumn2
             // 
-            this->label5->AutoSize = true;
-            this->label5->Location = System::Drawing::Point(142, 108);
-            this->label5->Name = L"label5";
-            this->label5->Size = System::Drawing::Size(108, 19);
-            this->label5->TabIndex = 0;
-            this->label5->Text = L"Sắp xếp theo";
+            this->dataGridViewTextBoxColumn2->HeaderText = L"Họ và tên";
+            this->dataGridViewTextBoxColumn2->MinimumWidth = 6;
+            this->dataGridViewTextBoxColumn2->Name = L"dataGridViewTextBoxColumn2";
+            this->dataGridViewTextBoxColumn2->ReadOnly = true;
+            this->dataGridViewTextBoxColumn2->Width = 125;
             // 
-            // box_inputFile
+            // dataGridViewTextBoxColumn3
             // 
-            this->box_inputFile->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Bottom)
-                | System::Windows::Forms::AnchorStyles::Left)
-                | System::Windows::Forms::AnchorStyles::Right));
-            this->box_inputFile->Controls->Add(this->bt_selectFile3);
-            this->box_inputFile->Controls->Add(this->bt_selectFile2);
-            this->box_inputFile->Controls->Add(this->bt_selectFile1);
-            this->box_inputFile->Controls->Add(this->bt_inputFile);
-            this->box_inputFile->Controls->Add(this->fileName3);
-            this->box_inputFile->Controls->Add(this->fileName2);
-            this->box_inputFile->Controls->Add(this->label_fileName3);
-            this->box_inputFile->Controls->Add(this->label_fileName1);
-            this->box_inputFile->Controls->Add(this->label_fileName2);
-            this->box_inputFile->Controls->Add(this->fileName1);
-            this->box_inputFile->Font = (gcnew System::Drawing::Font(L"MS Reference Sans Serif", 9, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
-                static_cast<System::Byte>(0)));
-            this->box_inputFile->Location = System::Drawing::Point(0, 51);
-            this->box_inputFile->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
-            this->box_inputFile->Name = L"box_inputFile";
-            this->box_inputFile->Padding = System::Windows::Forms::Padding(3, 2, 3, 2);
-            this->box_inputFile->Size = System::Drawing::Size(654, 417);
-            this->box_inputFile->TabIndex = 5;
-            this->box_inputFile->TabStop = false;
-            this->box_inputFile->Text = L"Nhập dữ liệu từ tập tin";
-            this->box_inputFile->Visible = false;
+            this->dataGridViewTextBoxColumn3->HeaderText = L"Giới tính";
+            this->dataGridViewTextBoxColumn3->MinimumWidth = 6;
+            this->dataGridViewTextBoxColumn3->Name = L"dataGridViewTextBoxColumn3";
+            this->dataGridViewTextBoxColumn3->ReadOnly = true;
+            this->dataGridViewTextBoxColumn3->Width = 125;
             // 
-            // bt_selectFile3
+            // dataGridViewTextBoxColumn4
             // 
-            this->bt_selectFile3->Location = System::Drawing::Point(512, 117);
-            this->bt_selectFile3->Name = L"bt_selectFile3";
-            this->bt_selectFile3->Size = System::Drawing::Size(40, 26);
-            this->bt_selectFile3->TabIndex = 9;
-            this->bt_selectFile3->Text = L"...";
-            this->bt_selectFile3->UseVisualStyleBackColor = true;
-            this->bt_selectFile3->Click += gcnew System::EventHandler(this, &Form1::bt_selectFile3_Click);
+            this->dataGridViewTextBoxColumn4->HeaderText = L"Ngày sinh";
+            this->dataGridViewTextBoxColumn4->MinimumWidth = 6;
+            this->dataGridViewTextBoxColumn4->Name = L"dataGridViewTextBoxColumn4";
+            this->dataGridViewTextBoxColumn4->ReadOnly = true;
+            this->dataGridViewTextBoxColumn4->Width = 125;
             // 
-            // bt_selectFile2
+            // dataGridViewTextBoxColumn5
             // 
-            this->bt_selectFile2->Location = System::Drawing::Point(512, 80);
-            this->bt_selectFile2->Name = L"bt_selectFile2";
-            this->bt_selectFile2->Size = System::Drawing::Size(40, 26);
-            this->bt_selectFile2->TabIndex = 8;
-            this->bt_selectFile2->Text = L"...";
-            this->bt_selectFile2->UseVisualStyleBackColor = true;
-            this->bt_selectFile2->Click += gcnew System::EventHandler(this, &Form1::bt_selectFile2_Click);
+            this->dataGridViewTextBoxColumn5->HeaderText = L"SĐT";
+            this->dataGridViewTextBoxColumn5->MinimumWidth = 6;
+            this->dataGridViewTextBoxColumn5->Name = L"dataGridViewTextBoxColumn5";
+            this->dataGridViewTextBoxColumn5->ReadOnly = true;
+            this->dataGridViewTextBoxColumn5->Width = 125;
             // 
-            // bt_selectFile1
+            // dataGridViewTextBoxColumn6
             // 
-            this->bt_selectFile1->Location = System::Drawing::Point(512, 43);
-            this->bt_selectFile1->Name = L"bt_selectFile1";
-            this->bt_selectFile1->Size = System::Drawing::Size(40, 26);
-            this->bt_selectFile1->TabIndex = 7;
-            this->bt_selectFile1->Text = L"...";
-            this->bt_selectFile1->UseVisualStyleBackColor = true;
-            this->bt_selectFile1->Click += gcnew System::EventHandler(this, &Form1::bt_selectFile1_Click);
+            this->dataGridViewTextBoxColumn6->HeaderText = L"Số BHXH";
+            this->dataGridViewTextBoxColumn6->MinimumWidth = 6;
+            this->dataGridViewTextBoxColumn6->Name = L"dataGridViewTextBoxColumn6";
+            this->dataGridViewTextBoxColumn6->ReadOnly = true;
+            this->dataGridViewTextBoxColumn6->Width = 125;
             // 
-            // bt_inputFile
+            // dataGridViewTextBoxColumn7
             // 
-            this->bt_inputFile->Location = System::Drawing::Point(363, 162);
-            this->bt_inputFile->Margin = System::Windows::Forms::Padding(4);
-            this->bt_inputFile->Name = L"bt_inputFile";
-            this->bt_inputFile->Size = System::Drawing::Size(100, 28);
-            this->bt_inputFile->TabIndex = 6;
-            this->bt_inputFile->Text = L"Nhập";
-            this->bt_inputFile->UseVisualStyleBackColor = true;
-            this->bt_inputFile->Click += gcnew System::EventHandler(this, &Form1::bt_inputFile_Click);
+            this->dataGridViewTextBoxColumn7->HeaderText = L"Số CMND/CCCD";
+            this->dataGridViewTextBoxColumn7->MinimumWidth = 6;
+            this->dataGridViewTextBoxColumn7->Name = L"dataGridViewTextBoxColumn7";
+            this->dataGridViewTextBoxColumn7->ReadOnly = true;
+            this->dataGridViewTextBoxColumn7->Width = 125;
             // 
-            // fileName3
+            // dataGridViewTextBoxColumn8
             // 
-            this->fileName3->Location = System::Drawing::Point(320, 117);
-            this->fileName3->Margin = System::Windows::Forms::Padding(4);
-            this->fileName3->Name = L"fileName3";
-            this->fileName3->ReadOnly = true;
-            this->fileName3->Size = System::Drawing::Size(185, 26);
-            this->fileName3->TabIndex = 5;
+            this->dataGridViewTextBoxColumn8->HeaderText = L"Địa chỉ";
+            this->dataGridViewTextBoxColumn8->MinimumWidth = 6;
+            this->dataGridViewTextBoxColumn8->Name = L"dataGridViewTextBoxColumn8";
+            this->dataGridViewTextBoxColumn8->ReadOnly = true;
+            this->dataGridViewTextBoxColumn8->Width = 125;
             // 
-            // fileName2
+            // dataGridViewTextBoxColumn9
             // 
-            this->fileName2->Location = System::Drawing::Point(320, 80);
-            this->fileName2->Margin = System::Windows::Forms::Padding(4);
-            this->fileName2->Name = L"fileName2";
-            this->fileName2->ReadOnly = true;
-            this->fileName2->Size = System::Drawing::Size(185, 26);
-            this->fileName2->TabIndex = 4;
+            this->dataGridViewTextBoxColumn9->HeaderText = L"Mã đăng ký";
+            this->dataGridViewTextBoxColumn9->MinimumWidth = 6;
+            this->dataGridViewTextBoxColumn9->Name = L"dataGridViewTextBoxColumn9";
+            this->dataGridViewTextBoxColumn9->ReadOnly = true;
+            this->dataGridViewTextBoxColumn9->Width = 125;
             // 
-            // label_fileName3
+            // dataGridViewTextBoxColumn10
             // 
-            this->label_fileName3->AutoSize = true;
-            this->label_fileName3->Location = System::Drawing::Point(40, 117);
-            this->label_fileName3->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
-            this->label_fileName3->Name = L"label_fileName3";
-            this->label_fileName3->Size = System::Drawing::Size(236, 19);
-            this->label_fileName3->TabIndex = 3;
-            this->label_fileName3->Text = L"Nhập file dữ liệu tiêm chủng(*)";
+            this->dataGridViewTextBoxColumn10->HeaderText = L"Ngày đăng ký";
+            this->dataGridViewTextBoxColumn10->MinimumWidth = 6;
+            this->dataGridViewTextBoxColumn10->Name = L"dataGridViewTextBoxColumn10";
+            this->dataGridViewTextBoxColumn10->ReadOnly = true;
+            this->dataGridViewTextBoxColumn10->Width = 125;
             // 
-            // label_fileName1
+            // dataGridViewTextBoxColumn11
             // 
-            this->label_fileName1->AutoSize = true;
-            this->label_fileName1->Location = System::Drawing::Point(40, 43);
-            this->label_fileName1->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
-            this->label_fileName1->Name = L"label_fileName1";
-            this->label_fileName1->Size = System::Drawing::Size(222, 19);
-            this->label_fileName1->TabIndex = 2;
-            this->label_fileName1->Text = L"Nhập file dữ liệu công dân(*)";
+            this->dataGridViewTextBoxColumn11->HeaderText = L"Nơi đăng ký";
+            this->dataGridViewTextBoxColumn11->MinimumWidth = 6;
+            this->dataGridViewTextBoxColumn11->Name = L"dataGridViewTextBoxColumn11";
+            this->dataGridViewTextBoxColumn11->ReadOnly = true;
+            this->dataGridViewTextBoxColumn11->Width = 125;
             // 
-            // label_fileName2
+            // dataGridViewTextBoxColumn12
             // 
-            this->label_fileName2->AutoSize = true;
-            this->label_fileName2->Location = System::Drawing::Point(40, 80);
-            this->label_fileName2->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
-            this->label_fileName2->Name = L"label_fileName2";
-            this->label_fileName2->Size = System::Drawing::Size(165, 19);
-            this->label_fileName2->TabIndex = 1;
-            this->label_fileName2->Text = L"Nhập file đăng ký (*)";
+            this->dataGridViewTextBoxColumn12->HeaderText = L"Tiêm mũi 1";
+            this->dataGridViewTextBoxColumn12->MinimumWidth = 6;
+            this->dataGridViewTextBoxColumn12->Name = L"dataGridViewTextBoxColumn12";
+            this->dataGridViewTextBoxColumn12->ReadOnly = true;
+            this->dataGridViewTextBoxColumn12->Width = 125;
             // 
-            // fileName1
+            // dataGridViewTextBoxColumn13
             // 
-            this->fileName1->Location = System::Drawing::Point(320, 43);
-            this->fileName1->Margin = System::Windows::Forms::Padding(4);
-            this->fileName1->Name = L"fileName1";
-            this->fileName1->ReadOnly = true;
-            this->fileName1->Size = System::Drawing::Size(185, 26);
-            this->fileName1->TabIndex = 0;
+            this->dataGridViewTextBoxColumn13->HeaderText = L"Ngày tiêm mũi 1";
+            this->dataGridViewTextBoxColumn13->MinimumWidth = 6;
+            this->dataGridViewTextBoxColumn13->Name = L"dataGridViewTextBoxColumn13";
+            this->dataGridViewTextBoxColumn13->ReadOnly = true;
+            this->dataGridViewTextBoxColumn13->Width = 125;
+            // 
+            // dataGridViewTextBoxColumn14
+            // 
+            this->dataGridViewTextBoxColumn14->HeaderText = L"Tiêm mũi 2";
+            this->dataGridViewTextBoxColumn14->MinimumWidth = 6;
+            this->dataGridViewTextBoxColumn14->Name = L"dataGridViewTextBoxColumn14";
+            this->dataGridViewTextBoxColumn14->ReadOnly = true;
+            this->dataGridViewTextBoxColumn14->Width = 125;
+            // 
+            // dataGridViewTextBoxColumn15
+            // 
+            this->dataGridViewTextBoxColumn15->HeaderText = L"Ngày tiêm mũi 2";
+            this->dataGridViewTextBoxColumn15->MinimumWidth = 6;
+            this->dataGridViewTextBoxColumn15->Name = L"dataGridViewTextBoxColumn15";
+            this->dataGridViewTextBoxColumn15->ReadOnly = true;
+            this->dataGridViewTextBoxColumn15->Width = 125;
+            // 
+            // bt_search
+            // 
+            this->bt_search->Location = System::Drawing::Point(427, 55);
+            this->bt_search->Name = L"bt_search";
+            this->bt_search->Size = System::Drawing::Size(128, 30);
+            this->bt_search->TabIndex = 3;
+            this->bt_search->Text = L"Tìm kiếm";
+            this->bt_search->UseVisualStyleBackColor = true;
+            this->bt_search->Click += gcnew System::EventHandler(this, &Form1::bt_search_Click);
+            // 
+            // box_search
+            // 
+            this->box_search->Location = System::Drawing::Point(281, 56);
+            this->box_search->Name = L"box_search";
+            this->box_search->Size = System::Drawing::Size(129, 26);
+            this->box_search->TabIndex = 2;
+            // 
+            // label26
+            // 
+            this->label26->AutoSize = true;
+            this->label26->Location = System::Drawing::Point(100, 61);
+            this->label26->Name = L"label26";
+            this->label26->Size = System::Drawing::Size(149, 19);
+            this->label26->TabIndex = 0;
+            this->label26->Text = L"Nhập mã công dân";
             // 
             // accountManager_newFullname
             // 
@@ -2095,11 +2636,17 @@ private: System::Windows::Forms::ToolStripMenuItem^ thốngKêToolStripMenuItem;
             this->Manager->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
             this->Manager->Name = L"Manager";
             this->Manager->SelectedIndex = 0;
-            this->Manager->Size = System::Drawing::Size(658, 500);
+            this->Manager->Size = System::Drawing::Size(659, 500);
             this->Manager->TabIndex = 1;
             // 
             // loginTab
             // 
+            this->loginTab->Controls->Add(this->label25);
+            this->loginTab->Controls->Add(this->label24);
+            this->loginTab->Controls->Add(this->label23);
+            this->loginTab->Controls->Add(this->label22);
+            this->loginTab->Controls->Add(this->label20);
+            this->loginTab->Controls->Add(this->intro_label1);
             this->loginTab->Controls->Add(this->bt_quit);
             this->loginTab->Controls->Add(this->loginBox);
             this->loginTab->Font = (gcnew System::Drawing::Font(L"MS Reference Sans Serif", 9, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
@@ -2109,23 +2656,98 @@ private: System::Windows::Forms::ToolStripMenuItem^ thốngKêToolStripMenuItem;
             this->loginTab->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
             this->loginTab->Name = L"loginTab";
             this->loginTab->Padding = System::Windows::Forms::Padding(3, 2, 3, 2);
-            this->loginTab->Size = System::Drawing::Size(650, 468);
+            this->loginTab->Size = System::Drawing::Size(651, 468);
             this->loginTab->TabIndex = 0;
             this->loginTab->Text = L"Đăng nhập";
             this->loginTab->UseVisualStyleBackColor = true;
+            // 
+            // label25
+            // 
+            this->label25->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Bottom)
+                | System::Windows::Forms::AnchorStyles::Left)
+                | System::Windows::Forms::AnchorStyles::Right));
+            this->label25->AutoSize = true;
+            this->label25->Location = System::Drawing::Point(327, 86);
+            this->label25->Name = L"label25";
+            this->label25->Size = System::Drawing::Size(176, 19);
+            this->label25->TabIndex = 7;
+            this->label25->Text = L"ThS. Đỗ Thị Tuyết Hoa";
+            // 
+            // label24
+            // 
+            this->label24->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Bottom)
+                | System::Windows::Forms::AnchorStyles::Left)
+                | System::Windows::Forms::AnchorStyles::Right));
+            this->label24->AutoSize = true;
+            this->label24->Location = System::Drawing::Point(327, 111);
+            this->label24->Name = L"label24";
+            this->label24->Size = System::Drawing::Size(160, 19);
+            this->label24->TabIndex = 6;
+            this->label24->Text = L"Đỗ Trần Bình - 20T1";
+            // 
+            // label23
+            // 
+            this->label23->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Bottom)
+                | System::Windows::Forms::AnchorStyles::Left)
+                | System::Windows::Forms::AnchorStyles::Right));
+            this->label23->AutoSize = true;
+            this->label23->Location = System::Drawing::Point(327, 135);
+            this->label23->Name = L"label23";
+            this->label23->Size = System::Drawing::Size(142, 19);
+            this->label23->TabIndex = 5;
+            this->label23->Text = L"Lê Phi Duy - 20T1";
+            // 
+            // label22
+            // 
+            this->label22->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Bottom)
+                | System::Windows::Forms::AnchorStyles::Left)
+                | System::Windows::Forms::AnchorStyles::Right));
+            this->label22->AutoSize = true;
+            this->label22->Location = System::Drawing::Point(181, 111);
+            this->label22->Name = L"label22";
+            this->label22->Size = System::Drawing::Size(130, 19);
+            this->label22->TabIndex = 4;
+            this->label22->Text = L"Nhóm sinh viên:";
+            // 
+            // label20
+            // 
+            this->label20->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Bottom)
+                | System::Windows::Forms::AnchorStyles::Left)
+                | System::Windows::Forms::AnchorStyles::Right));
+            this->label20->AutoSize = true;
+            this->label20->Location = System::Drawing::Point(136, 86);
+            this->label20->Name = L"label20";
+            this->label20->Size = System::Drawing::Size(169, 19);
+            this->label20->TabIndex = 3;
+            this->label20->Text = L"Giáo viên hướng dẫn:";
+            // 
+            // intro_label1
+            // 
+            this->intro_label1->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Bottom)
+                | System::Windows::Forms::AnchorStyles::Left)
+                | System::Windows::Forms::AnchorStyles::Right));
+            this->intro_label1->AutoSize = true;
+            this->intro_label1->Font = (gcnew System::Drawing::Font(L"MS Reference Sans Serif", 9, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+                static_cast<System::Byte>(0)));
+            this->intro_label1->Location = System::Drawing::Point(11, 31);
+            this->intro_label1->Name = L"intro_label1";
+            this->intro_label1->Size = System::Drawing::Size(570, 19);
+            this->intro_label1->TabIndex = 2;
+            this->intro_label1->Text = L"ĐỒ ÁN QUẢN LÝ CÔNG DÂN ĐĂNG KÝ TIÊM CHỦNG NGỪA COVID19";
             // 
             // bt_quit
             // 
             this->bt_quit->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((System::Windows::Forms::AnchorStyles::Bottom | System::Windows::Forms::AnchorStyles::Right));
             this->bt_quit->Font = (gcnew System::Drawing::Font(L"MS Reference Sans Serif", 9, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
                 static_cast<System::Byte>(0)));
-            this->bt_quit->Location = System::Drawing::Point(570, 433);
+            this->bt_quit->Location = System::Drawing::Point(571, 433);
             this->bt_quit->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
             this->bt_quit->Name = L"bt_quit";
             this->bt_quit->Size = System::Drawing::Size(75, 28);
             this->bt_quit->TabIndex = 1;
             this->bt_quit->Text = L"Thoát";
             this->bt_quit->UseVisualStyleBackColor = true;
+            this->bt_quit->Click += gcnew System::EventHandler(this, &Form1::bt_quit_Click);
             // 
             // loginBox
             // 
@@ -2143,7 +2765,7 @@ private: System::Windows::Forms::ToolStripMenuItem^ thốngKêToolStripMenuItem;
             this->loginBox->Font = (gcnew System::Drawing::Font(L"MS Reference Sans Serif", 9, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
                 static_cast<System::Byte>(0)));
             this->loginBox->ForeColor = System::Drawing::SystemColors::ActiveCaptionText;
-            this->loginBox->Location = System::Drawing::Point(133, 142);
+            this->loginBox->Location = System::Drawing::Point(133, 172);
             this->loginBox->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
             this->loginBox->Name = L"loginBox";
             this->loginBox->Padding = System::Windows::Forms::Padding(3, 2, 3, 2);
@@ -2258,7 +2880,7 @@ private: System::Windows::Forms::ToolStripMenuItem^ thốngKêToolStripMenuItem;
             this->accountManagerTab->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
             this->accountManagerTab->Name = L"accountManagerTab";
             this->accountManagerTab->Padding = System::Windows::Forms::Padding(3, 2, 3, 2);
-            this->accountManagerTab->Size = System::Drawing::Size(650, 468);
+            this->accountManagerTab->Size = System::Drawing::Size(651, 468);
             this->accountManagerTab->TabIndex = 1;
             this->accountManagerTab->Text = L"Quản lý tài khoản";
             this->accountManagerTab->UseVisualStyleBackColor = true;
@@ -2284,7 +2906,7 @@ private: System::Windows::Forms::ToolStripMenuItem^ thốngKêToolStripMenuItem;
             this->accountManager_loginAlert->AutoSize = true;
             this->accountManager_loginAlert->Font = (gcnew System::Drawing::Font(L"MS Reference Sans Serif", 9, System::Drawing::FontStyle::Regular,
                 System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
-            this->accountManager_loginAlert->Location = System::Drawing::Point(134, 212);
+            this->accountManager_loginAlert->Location = System::Drawing::Point(133, 212);
             this->accountManager_loginAlert->Name = L"accountManager_loginAlert";
             this->accountManager_loginAlert->Size = System::Drawing::Size(376, 19);
             this->accountManager_loginAlert->TabIndex = 4;
@@ -2514,8 +3136,9 @@ private: System::Windows::Forms::ToolStripMenuItem^ thốngKêToolStripMenuItem;
             // 
             this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
             this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
-            this->ClientSize = System::Drawing::Size(682, 524);
+            this->ClientSize = System::Drawing::Size(683, 524);
             this->Controls->Add(this->Manager);
+            this->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
             this->Name = L"Form1";
             this->StartPosition = System::Windows::Forms::FormStartPosition::CenterScreen;
             this->Text = L"COVID19_VACCINATION_MANAGER";
@@ -2524,6 +3147,15 @@ private: System::Windows::Forms::ToolStripMenuItem^ thốngKêToolStripMenuItem;
             this->boxDataManager->PerformLayout();
             this->dataManager_menu->ResumeLayout(false);
             this->dataManager_menu->PerformLayout();
+            this->box_fillData->ResumeLayout(false);
+            this->box_fillData->PerformLayout();
+            (cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->view_filterData))->EndInit();
+            this->box_deleteData->ResumeLayout(false);
+            this->box_deleteData->PerformLayout();
+            this->box_sortData->ResumeLayout(false);
+            this->box_sortData->PerformLayout();
+            this->box_inputFile->ResumeLayout(false);
+            this->box_inputFile->PerformLayout();
             this->box_inputHand->ResumeLayout(false);
             this->box_inputHand->PerformLayout();
             this->panel_insertType->ResumeLayout(false);
@@ -2536,12 +3168,9 @@ private: System::Windows::Forms::ToolStripMenuItem^ thốngKêToolStripMenuItem;
             (cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->view_exportData_registry))->EndInit();
             this->exportData_people->ResumeLayout(false);
             (cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->view_exportData_people))->EndInit();
-            this->box_deleteData->ResumeLayout(false);
-            this->box_deleteData->PerformLayout();
-            this->box_sortData->ResumeLayout(false);
-            this->box_sortData->PerformLayout();
-            this->box_inputFile->ResumeLayout(false);
-            this->box_inputFile->PerformLayout();
+            this->box_searchData->ResumeLayout(false);
+            this->box_searchData->PerformLayout();
+            (cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->view_searchData))->EndInit();
             this->Manager->ResumeLayout(false);
             this->loginTab->ResumeLayout(false);
             this->loginTab->PerformLayout();
@@ -2693,6 +3322,7 @@ private: System::Windows::Forms::ToolStripMenuItem^ thốngKêToolStripMenuItem;
             this->exportData_registry->Visible = false;
             this->exportData_vaccination->Visible = false;
             this->export_allData_people->Visible = false;
+            this->box_fillData->Visible = false;
         }
     }
     private: System::Void deleteData_Click_1(System::Object^ sender, System::EventArgs^ e) {
@@ -2707,6 +3337,7 @@ private: System::Windows::Forms::ToolStripMenuItem^ thốngKêToolStripMenuItem;
             this->exportData_registry->Visible = false;
             this->exportData_vaccination->Visible = false;
             this->export_allData_people->Visible = false;
+            this->box_fillData->Visible = false;
         }
     }
     private: System::Void searchData_Click(System::Object^ sender, System::EventArgs^ e) {
@@ -2719,6 +3350,7 @@ private: System::Windows::Forms::ToolStripMenuItem^ thốngKêToolStripMenuItem;
         this->exportData_registry->Visible = false;
         this->exportData_vaccination->Visible = false;
         this->export_allData_people->Visible = false;
+        this->box_fillData->Visible = false;
     }
     private: System::Void inputHand_Click(System::Object^ sender, System::EventArgs^ e) {
         if (loginStatus == true)
@@ -2733,6 +3365,7 @@ private: System::Windows::Forms::ToolStripMenuItem^ thốngKêToolStripMenuItem;
             this->exportData_vaccination->Visible = false;
             this->export_allData_people->Visible = false;
             this->panel_insertType->Visible = false;
+            this->box_fillData->Visible = false;
         }
     }
     private: System::Void inputFile_Click(System::Object^ sender, System::EventArgs^ e) {
@@ -2747,6 +3380,7 @@ private: System::Windows::Forms::ToolStripMenuItem^ thốngKêToolStripMenuItem;
             this->exportData_registry->Visible = false;
             this->exportData_vaccination->Visible = false;
             this->export_allData_people->Visible = false;
+            this->box_fillData->Visible = false;
         }
     }
 
@@ -2839,6 +3473,7 @@ private: System::Windows::Forms::ToolStripMenuItem^ thốngKêToolStripMenuItem;
             this->exportData_registry->Visible = false;
             this->exportData_vaccination->Visible = false;
             this->export_allData_people->Visible = false;
+            this->box_fillData->Visible = false;
         }
 
     }
@@ -2865,6 +3500,7 @@ private: System::Void toolStripMenuItem9_Click(System::Object^ sender, System::E
         this->box_searchData->Visible = false;
         this->exportData_vaccination->Visible = false;
         this->export_allData_people->Visible = false;
+        this->box_fillData->Visible = false;
 
     }
 
@@ -2881,6 +3517,7 @@ private: System::Void toolStripMenuItem10_Click(System::Object^ sender, System::
         this->box_deleteData->Visible = false;
         this->box_searchData->Visible = false;
         this->export_allData_people->Visible = false;
+        this->box_fillData->Visible = false;
     }
 }
 private: System::Void bt_loadData_vaccination_Click(System::Object^ sender, System::EventArgs^ e) {
@@ -2907,6 +3544,7 @@ private: System::Void button3_Click_2(System::Object^ sender, System::EventArgs^
         this->exportData_registry->Visible = false;
         this->exportData_vaccination->Visible = false;
         this->export_allData_people->Visible = false;
+        this->box_fillData->Visible = false;
     }
 }
 private: System::Void bt_sortData_Click(System::Object^ sender, System::EventArgs^ e) {
@@ -2995,6 +3633,7 @@ private: System::Void xuấtToànBộDữLiệuToolStripMenuItem_Click(System::O
     this->box_sortData->Visible = false;
     this->box_deleteData->Visible = false;
     this->box_searchData->Visible = false;
+    this->box_fillData->Visible = false;
 }
 private: System::Void bt_deleteData_Click(System::Object^ sender, System::EventArgs^ e) {
     String ^obj = this->textbox_deleteData->Text;
@@ -3126,5 +3765,113 @@ private: System::Void button3_Click_3(System::Object^ sender, System::EventArgs^
     if (status) MessageBox::Show(L"Đã thêm đối tượng.", L"THÔNG BÁO");
     else MessageBox::Show(L"Vị trí thêm không chính xác, hãy nhập lại.", "THÔNG BÁO");
 }
+
+
+
+private: System::Void bt_quit_Click(System::Object^ sender, System::EventArgs^ e) {
+    //if (MessageBox::Show(L"Bạn có chắc chắn muốn thoát không?", L"THÔNG BÁO", MessageBoxButtons::YesNo, MessageBoxIcon::Question) == DialogResult::yes) {
+
+    //}
+    this->Close();
+}
+
+private: System::Void bt_search_Click(System::Object^ sender, System::EventArgs^ e) {
+    String^ s1 = this->box_search->Text;
+    string ma_CD; convertString(s1, ma_CD);
+    CongDan A;
+    if (ma_CD != "") {
+        A = DN.Search_MaCD(ma_CD);
+        string s2 = A.get_MaCD();
+        if (s2 != "") {
+            this->view_searchData->RowCount = 2;
+            this->view_searchData->Rows[0]->Cells[0]->Value = gcnew String(A.get("ma_CD").c_str());
+            this->view_searchData->Rows[0]->Cells[1]->Value = gcnew String(A.get("fullName").c_str());
+            this->view_searchData->Rows[0]->Cells[2]->Value = gcnew String(A.get("sex").c_str());
+            this->view_searchData->Rows[0]->Cells[3]->Value = gcnew String(A.get("birth").c_str());
+            this->view_searchData->Rows[0]->Cells[4]->Value = gcnew String(A.get("phone").c_str());
+            this->view_searchData->Rows[0]->Cells[5]->Value = gcnew String(A.get("so_BHXH").c_str());
+            this->view_searchData->Rows[0]->Cells[6]->Value = gcnew String(A.get("so_CMND").c_str());
+            this->view_searchData->Rows[0]->Cells[7]->Value = gcnew String(A.get("address").c_str());
+            this->view_searchData->Rows[0]->Cells[8]->Value = gcnew String(A.get("ma_DK").c_str());
+            this->view_searchData->Rows[0]->Cells[9]->Value = gcnew String(A.get("ngay_DK").c_str());
+            this->view_searchData->Rows[0]->Cells[10]->Value = gcnew String(A.get("noi_DK").c_str());
+            this->view_searchData->Rows[0]->Cells[11]->Value = gcnew String(A.get("mui1").c_str());
+            this->view_searchData->Rows[0]->Cells[12]->Value = gcnew String(A.get("ngay_M1").c_str());
+            this->view_searchData->Rows[0]->Cells[13]->Value = gcnew String(A.get("mui2").c_str());
+            this->view_searchData->Rows[0]->Cells[14]->Value = gcnew String(A.get("ngay_M2").c_str());
+        }
+        else {
+            MessageBox::Show(L"Không tìm thấy người này.", L"THÔNG BÁO");
+        }
+    }
+    else {
+        MessageBox::Show(L"Không thể để trống.", L"THÔNG BÁO");
+    }
+}
+private: System::Void thốngKêToolStripMenuItem_Click(System::Object^ sender, System::EventArgs^ e) {
+    if (loginStatus == true) {
+        this->box_fillData->Visible = true;
+        this->export_allData_people->Visible = false;
+        this->exportData_vaccination->Visible = false;
+        this->exportData_registry->Visible = false;
+        this->exportData_people->Visible = false;
+        this->box_inputHand->Visible = false;
+        this->box_inputFile->Visible = false;
+        this->box_sortData->Visible = false;
+        this->box_deleteData->Visible = false;
+        this->box_searchData->Visible = false;
+
+    }
+}
+private: System::Void bt_typeFilter_Click(System::Object^ sender, System::EventArgs^ e) {
+    String ^q = this->box_selectTypeFilter->Text;
+    if (q == L"Đã tiêm mũi 1") {
+        DSCD A = DN.thongKe_M1();
+        /*int n = A.getRows();
+        this->view_filterData->RowCount = n;
+        for (int i = 0; i < n; i++) {
+            this->view_filterData->Rows[i]->Cells[0]->Value = gcnew String(A.get("ma_CD", i).c_str());
+            this->view_filterData->Rows[i]->Cells[1]->Value = gcnew String(A.get("fullName", i).c_str());
+            this->view_filterData->Rows[i]->Cells[2]->Value = gcnew String(A.get("sex", i).c_str());
+            this->view_filterData->Rows[i]->Cells[3]->Value = gcnew String(A.get("birth", i).c_str());
+            this->view_filterData->Rows[i]->Cells[4]->Value = gcnew String(A.get("phone", i).c_str());
+            this->view_filterData->Rows[i]->Cells[5]->Value = gcnew String(A.get("so_BHXH", i).c_str());
+            this->view_filterData->Rows[i]->Cells[6]->Value = gcnew String(A.get("so_CMND", i).c_str());
+            this->view_filterData->Rows[i]->Cells[7]->Value = gcnew String(A.get("address", i).c_str());
+            this->view_filterData->Rows[i]->Cells[8]->Value = gcnew String(A.get("ma_DK", i).c_str());
+            this->view_filterData->Rows[i]->Cells[9]->Value = gcnew String(A.get("ngay_DK", i).c_str());
+            this->view_filterData->Rows[i]->Cells[10]->Value = gcnew String(A.get("noi_DK", i).c_str());
+            this->view_filterData->Rows[i]->Cells[11]->Value = gcnew String(A.get("mui1", i).c_str());
+            this->view_filterData->Rows[i]->Cells[12]->Value = gcnew String(A.get("ngay_M1", i).c_str());
+            this->view_filterData->Rows[i]->Cells[13]->Value = gcnew String(A.get("mui2", i).c_str());
+            this->view_filterData->Rows[i]->Cells[14]->Value = gcnew String(A.get("ngay_M2", i).c_str());
+        }*/
+    }
+    else if (q == L"Tiêm đủ 2 mũi") {
+
+    }
+    else if (q == L"Chưa tiêm mũi nào") {
+
+    }
+    else if (q == L"Tiêm mũi 1 chưa tiêm mũi 2") {
+
+    }
+    else if (q == L"Người đã tiêm mũi 1 trong ngày") {
+
+    }
+    else if (q == L"Người đã tiêm mũi 2 trong ngày") {
+
+    }
+    else if (q == L"Giới tính") {
+
+    }
+    else if (q == L"Người đã đăng ký trong 1 ngày") {
+
+    }
+    else {
+        MessageBox::Show(L"Không có loại thống kê này.", L"THÔNG BÁO");
+    }
+}
+
 };
 }

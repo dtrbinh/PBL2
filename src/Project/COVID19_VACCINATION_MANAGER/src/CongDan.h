@@ -28,9 +28,15 @@ class CongDan
         friend ostream &operator << (ostream&, const CongDan&);
         CongDan();
         ~CongDan();
+        // Hàm toán tử gán
         const CongDan& operator = (const CongDan&);
+        //Hàm chuyển chuỗi(ngày) sang số nguyên
         int dayToInt(string);
+        // Hàm chuyển mã công dân từ chuỗi sang số nguyên
         int maCDToInt(string);
+        // Hàm lấy về mã CD
+        string get_MaCD();
+        string get(string key);
         friend class DSCD;
 };
 #endif

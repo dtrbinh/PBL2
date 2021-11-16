@@ -2,7 +2,9 @@
 #include<iostream>
 using namespace std;
 
+//Hàm dựng mặc định
 CongDan::CongDan(){
+    ma_CD = "";
 
 }
 
@@ -59,7 +61,7 @@ istream &operator >> (istream &in, CongDan &CD)
     }
     return in;
 }
-
+// Hàm toán tửu gán
 const CongDan& CongDan :: operator = (const CongDan &CD) 
 {
     if (this != &CD) {
@@ -82,6 +84,7 @@ const CongDan& CongDan :: operator = (const CongDan &CD)
     return *this;
 }
 
+//Hàm chuyển chuỗi(ngày) sang số nguyên
 int CongDan::dayToInt(string s)
 {
     if(s == "NULL")
@@ -99,9 +102,46 @@ int CongDan::dayToInt(string s)
     }
 }
 
+// Hàm chuyển mã công dân từ chuỗi sang số nguyên
 int CongDan::maCDToInt(string s)
 {
     return stoi(ma_CD);
+}
+
+// Hàm lấy về mã CD
+string CongDan::get_MaCD()
+{
+    return this->ma_CD;
+}
+
+string CongDan::get(string key){
+
+    if (key == "ma_CD") return CongDan::ma_CD ;
+    else if(key == "fullName")return CongDan::fullName ;
+    else if(key == "birth") return CongDan::birth ;
+    else if(key == "phone") return CongDan::phone ;
+    else if(key == "so_BHXH") return CongDan::so_BHXH;
+    else if(key == "so_CMND") return CongDan::so_CMND ;
+    else if(key == "address") return CongDan::address ;
+    else if(key == "ngay_DK") return CongDan::ngay_DK ;
+    else if(key == "ma_DK") return CongDan::ma_DK ;
+    else if(key == "noi_DK") return CongDan::noi_DK ;
+    else if(key == "ngay_M1") return CongDan::ngay_M1 ;
+    else if(key == "ngay_M2") return CongDan::ngay_M2 ;
+    else if (key == "sex") {
+        if (CongDan::sex == true) return "Nam";
+            else return "Nu";
+    }
+
+    else if(key == "mui1") {
+        if (CongDan::mui1 == true) return "Co";
+            else return "Khong";
+    }
+    else if(key == "mui2") {
+        if (CongDan::mui2 == true) return "Co";
+            else return "Khong";
+    }
+    else return "null";
 }
 
 void CongDan::set(string key, string value){

@@ -104,9 +104,14 @@ DSCD::~DSCD(){
     delete []data;
 }
 
+DSCD::DSCD(const DSCD &obj_clone){
+    this->n = obj_clone.n;
+    this->data = obj_clone.data;
+}
+
 void DSCD::xuatDuLieu(){
     for(int i = 0; i < DSCD::n; i++){
-            cout << DSCD::data[i].ngay_DK << endl;
+            cout << DSCD::data[i].fullName << endl;
     }
 }
 
@@ -176,6 +181,18 @@ bool descending(int left, int right)
     return left < right;
 }
 
+// Hàm xác định giới tính nam
+bool nam()
+{
+    return 1;
+}
+
+// Hàm xác định giới tính nữ
+bool nu()
+{
+    return 0;
+}
+
 // Hàm hoán vị
 void swap(CongDan &x, CongDan &y)
 {
@@ -198,29 +215,29 @@ void DSCD::nhapTay(int n)
 // Hàm thêm công dân vào danh sách tại 1 vị trí bất kì ( thứ tự cd từ 1 -> n)
 bool DSCD::Them(CongDan cd, int position)
 {
-    if (position < 0 || position > this->n + 1)
+    if ( position <= 0 || position > n + 2)
     {
-        //cout<<"Vi tri them khong hop le"<<endl;
         return false;
-    }else 
-    {
-        for (int i = 0; i < n; i++)
-        {
-                if (data[i].ma_CD == cd.ma_CD)
-                {
-                    //cout<<"Ma cong dan da ton tai "<<endl;
-                    return false;
-                }else
-                {
-                    this->n++;
-                    for (int i = n - 2; i >= position - 1; i--)
-                    {
-                        data[i + 1] = data[i];
-                    }
-                    data[position - 1] = cd;
-                }
-        }
     }
+    else
+    {
+        int size = this->n + 1;
+        CongDan *a = new CongDan[size];
+        for(int i = 0; i < position - 1; i++) {
+            a[i] = this->data[i];
+        }
+        a[position - 1] = cd;
+        for(int i = position; i < size; i++) {
+            a[i] = this->data[i-1];
+        }
+        delete [] data;
+        this->n = size;
+        this->data = new CongDan[n];
+        for (int i = 0; i < n; i++)
+            this->data[i] = a[i];
+        return true;
+    }
+    
 }
 
 // Hàm sắp xếp công dân theo tiêu chí bất kì bằng phương pháp sap xep chon
@@ -297,10 +314,12 @@ bool DSCD::Insert_ma_CD(CongDan cd, bool (*func_ptr)(int, int))
     if (func_ptr(data[0].maCDToInt(data[0].ma_CD), cd.maCDToInt(cd.ma_CD)))
     {
         Them(cd, 1);
+        return true;
     }
     else if(!func_ptr(data[n].maCDToInt(data[n].ma_CD), cd.maCDToInt(cd.ma_CD)))
     {
         Them(cd, n + 1);
+        return true;
     }
     else
     {
@@ -314,8 +333,22 @@ bool DSCD::Insert_ma_CD(CongDan cd, bool (*func_ptr)(int, int))
             }
         }
         Them(cd, index + 2);
+        return true;
     }
-    return true;
+}
+
+// Hàm tìm kiếm công dân theo mã công dân
+CongDan DSCD::Search_MaCD(string maCD)
+{
+    CongDan cd;
+    for(int i = 0; i < n; i++)
+    {
+        if (data[i].ma_CD == maCD)
+        {
+            cd = data[i];
+        }
+    }
+    return cd;
 }
 
 string DSCD::Delete(string maCD)
@@ -350,4 +383,162 @@ string DSCD::Delete(string maCD)
     }
 }
 
+// Hàm toán tử gán 2 danh sách công dân
+// const DSCD& DSCD:: operator = (const DSCD &dscd)
+// {
+//     if (this != &dscd)
+//     {
+//         this->n = dscd.n;
+//         this->data = dscd.data;
+//         // this->data = new CongDan[n];
+//         // for (int i = 0; i < n; i++)
+//         // {
+//         //     this->data[i] = dscd.data[i];
+//         // }
+//     }
+//     return *this;
+// }
+
+// Hàm thống kê danh sách công dân đã tiêm mũi 1
+DSCD DSCD::thongKe_M1()
+{
+    DSCD dscd;
+    int count = 0;
+
+    for(int i = 0; i < n; i++)
+    {
+        if (this->data[i].mui1)
+        {
+            dscd.data[count] = this->data[i];
+            count++;
+        }
+    }
+    dscd.n = count;
+    return dscd;
+}
+
+// Hàm thống kê dscd đã tiêm đủ 2 mũi
+DSCD DSCD::thongKe_2Mui()
+{
+    DSCD dscd;
+    int count = 0;
+
+    for(int i = 0; i < n; i++)
+    {
+        if (this->data[i].mui2)
+        {
+            dscd.data[count] = this->data[i];
+            count++;
+        }
+    }
+    dscd.n = count;
+    return dscd;
+}
+
+// Hàm thống kê những người chưa tiêm mũi nào
+DSCD DSCD::thongKeChuaTiem()
+{
+    DSCD dscd;
+    int count = 0;
+
+    for(int i = 0; i < n; i++)
+    {
+        if (!this->data[i].mui1)
+        {
+            dscd.data[count] = this->data[i];
+            count++;
+        }
+    }
+    dscd.n = count;
+    return dscd;
+}
+
+// Hàm thống kê những người đã tiêm mũi 1 nhưng chưa tiêm mũi 2
+DSCD DSCD::thongKe_M1_Not_M2()
+{
+    DSCD dscd;
+    int count = 0;
+
+    for(int i = 0; i < n; i++)
+    {
+        if (this->data[i].mui1 && !this->data[i].mui2)
+        {
+            dscd.data[count] = this->data[i];
+            count++;
+        }
+    }
+    dscd.n = count;
+    return dscd;
+}
+
+// Hàm thống kê những công dân đã tiêm mũi 1 trong ngày bất kì
+DSCD DSCD::thongKeTheoNgayTiemM1(string ngayM1)
+{
+    DSCD dscd;
+    int count = 0;
+
+    for(int i = 0; i < n; i++)
+    {
+        if (this->data[i].ngay_M1 == ngayM1)
+        {
+            dscd.data[count] = this->data[i];
+            count++;
+        }
+    }
+    dscd.n = count;
+    return dscd;
+}
+
+//Hàm thống kê những công dân đã tiêm mũi 2 trong ngày bất kì
+DSCD DSCD::thongKeTheoNgayTiemM2(string ngayM2)
+{
+    DSCD dscd;
+    int count = 0;
+
+    for(int i = 0; i < n; i++)
+    {
+        if (this->data[i].ngay_M2 == ngayM2)
+        {
+            dscd.data[count] = this->data[i];
+            count++;
+        }
+    }
+    dscd.n = count;
+    return dscd;
+}
+
+// Hàm thống kê công dân theo giới tính ( mặc định là nam), nếu muốn tke theo nữ thì dùng con trỏ hàm nu
+DSCD DSCD::thongKeTheoGioiTinh(bool (*func_ptr)())
+{
+    DSCD dscd;
+    int count = 0;
+    for(int i = 0; i < n; i++)
+    {
+        if (this->data[i].sex == func_ptr())
+        {
+            dscd.data[count] = this->data[i];
+            count++;
+        }
+    }
+    dscd.n = count;
+    return dscd;
+}
+
+// Hàm thống kê theo ngày đăng kí bất kì
+DSCD DSCD::thongKeTheoNgayDangKi(string ngayDK)
+{
+    DSCD dscd;
+    int count = 0;
+
+    for(int i = 0; i < n; i++)
+    {
+        if (this->data[i].ngay_DK == ngayDK)
+        {
+            dscd.data[count] = this->data[i];
+            count++;
+        }
+    }
+    dscd.n = count;
+    return dscd;
+}
 

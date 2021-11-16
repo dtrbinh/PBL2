@@ -1,6 +1,5 @@
 ﻿  CppCLR_WinformsProjekt.cpp
   Form1.cpp
   Generating Code...
-D:\workzone\Learning\PBL2\C++ 2\PBL2\src\Project\COVID19_VACCINATION_MANAGER\src\DanhSachCongDan.cpp(224): warning C4715: 'DSCD::Them': not all control paths return a value
   AssemblyInfo.obj : MSIL module encountered; incremental linking is disabled for MSIL; performing full link
   COVID19_VACCINATION_MANAGER.vcxproj -> D:\workzone\Learning\PBL2\C++ 2\PBL2\src\Project\COVID19_VACCINATION_MANAGER\Debug\COVID19_VACCINATION_MANAGER.exe

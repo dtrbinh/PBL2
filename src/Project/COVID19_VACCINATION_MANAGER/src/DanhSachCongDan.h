@@ -25,15 +25,17 @@ class DSCD
 {   
     private:
         int n;
-        CongDan *data = new CongDan[50];
+        CongDan *data;
     public:
         DSCD();
+        DSCD(int n);
         DSCD(const DSCD &obj_clone);
         ~DSCD();
 
               // Hàm đọc file
         void nhapFile(string f1, string f2,string f3);
         string get(string type, int i);
+        void set(string type, int i, string value);
 
         // Hàm nhập dữ liệu bằng tay
         void nhapTay(int n);
@@ -72,28 +74,31 @@ class DSCD
         const DSCD& operator = (const DSCD&);
 
         // Hàm thống kê những người đã tiêm vắc xin mũi 1
-        DSCD thongKe_M1();
+        void thongke_M1(DSCD &out);
 
         // Hàm thống kê những người đã tiêm đủ 2 mũi
-        DSCD thongKe_2Mui();
+        void thongKe_2Mui(DSCD& out);
 
         // Hàm thống kê những người chưa tiêm mũi nào
-        DSCD thongKeChuaTiem();
+        void thongKeChuaTiem(DSCD& out);
 
         // Hàm thống kê những người đã tiêm mũi 1 nhưng chưa tiêm mũi 2
-        DSCD thongKe_M1_Not_M2();
+        void thongKe_M1_Not_M2(DSCD& out);
 
         // Hàm thống kê những công dân đã tiêm mũi 1 trong ngày bất kì
-        DSCD thongKeTheoNgayTiemM1(string);
+        void thongKeTheoNgayTiemM1(DSCD& out, string);
 
         // Hàm thống kê những công dân đã tiêm mũi 2 trong ngày bất kì
-        DSCD thongKeTheoNgayTiemM2(string);
+        void thongKeTheoNgayTiemM2(DSCD& out, string);
 
         // Hàm thống kê công dân theo giới tính ( mặc định là nam), nếu muốn tke theo nữ thì dùng con trỏ hàm nu
-        DSCD thongKeTheoGioiTinh(bool (*func_ptr)() = nam);
+        void thongKeTheoGioiTinh(DSCD &out,bool (*func_ptr)() = nam);
 
         // Hàm thống kê công dân theo ngày đăng kí bất kì
-        DSCD thongKeTheoNgayDangKi(string ngayDK);
+        void thongKeTheoNgayDangKi(DSCD &out, string ngayDK);
+
+        friend class Form1;
+        
 
 };
 

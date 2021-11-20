@@ -97,16 +97,23 @@ void DSCD::nhapFile(string f1, string f2, string f3){
 }
 
 DSCD::DSCD(){
-
+    this->n = 10;
+    this->data = new CongDan[n];
 }
-
+DSCD::DSCD(int n){
+    this->n = n;
+    this->data = new CongDan[n];
+}
 DSCD::~DSCD(){
     delete []data;
 }
 
 DSCD::DSCD(const DSCD &obj_clone){
     this->n = obj_clone.n;
-    this->data = obj_clone.data;
+    this->data = new CongDan[n];
+    for(int i = 0; i<this->n; i++){
+            this->data[i] = obj_clone.data[i];
+        }
 }
 
 void DSCD::xuatDuLieu(){
@@ -168,6 +175,59 @@ string DSCD::get(string type, int i){
  
 }
 
+//Cập nhật thông tin
+void DSCD::set(string type, int i, string value){
+    if (type == "ma_CD"){
+        DSCD::data[i].ma_CD = value;
+    }
+    else if (type == "fullName"){
+        DSCD::data[i].fullName = value;
+    }
+    else if (type == "sex"){
+        if (value == "Nam")DSCD::data[i].sex = true;
+            else DSCD::data[i].sex = false;
+    }
+    else if (type == "birth"){
+        DSCD::data[i].birth = value;
+    }
+    else if (type == "phone"){
+        DSCD::data[i].phone = value;
+    }
+    else if (type == "so_BHXH"){
+        DSCD::data[i].so_BHXH = value;
+    }
+    else if (type == "so_CMND"){
+        DSCD::data[i].so_CMND = value;
+    }
+    else if (type == "address"){
+        DSCD::data[i].address = value;
+    }
+    else if (type == "ma_DK"){
+        DSCD::data[i].ma_DK = value;
+    }
+    else if (type == "ngay_DK"){
+        DSCD::data[i].ngay_DK = value;
+    }
+    else if (type == "noi_DK"){
+        DSCD::data[i].noi_DK = value;
+    }
+    else if (type == "mui1"){
+        if(value == "Co") DSCD::data[i].mui1 = true;
+            else DSCD::data[i].mui1 = false;
+    }
+    else if (type == "mui2" == true){
+        if(value == "Co") DSCD::data[i].mui2 = true;
+            else DSCD::data[i].mui2 = false;
+        
+    }
+    else if (type == "ngay_M1"){
+        DSCD::data[i].ngay_M1 = value;
+    }
+    else if (type == "ngay_M2"){
+        DSCD::data[i].ngay_M2 = value;
+    }
+    else return ;
+}
 
 // kiểm tra tăng dần
 bool ascending(int left, int right)
@@ -384,161 +444,139 @@ string DSCD::Delete(string maCD)
 }
 
 // Hàm toán tử gán 2 danh sách công dân
-// const DSCD& DSCD:: operator = (const DSCD &dscd)
-// {
-//     if (this != &dscd)
-//     {
-//         this->n = dscd.n;
-//         this->data = dscd.data;
-//         // this->data = new CongDan[n];
-//         // for (int i = 0; i < n; i++)
-//         // {
-//         //     this->data[i] = dscd.data[i];
-//         // }
-//     }
-//     return *this;
-// }
+const DSCD& DSCD:: operator = (const DSCD &dscd)
+{
+    if (this != &dscd)
+    {
+        this->n = dscd.n;
+        this->data = dscd.data;
+    }
+    return *this;
+}
 
 // Hàm thống kê danh sách công dân đã tiêm mũi 1
-DSCD DSCD::thongKe_M1()
+void DSCD::thongke_M1(DSCD& out)
 {
-    DSCD dscd;
-    int count = 0;
-
+    int count =0;
     for(int i = 0; i < n; i++)
     {
         if (this->data[i].mui1)
         {
-            dscd.data[count] = this->data[i];
+            out.data[count] = this->data[i];
             count++;
         }
     }
-    dscd.n = count;
-    return dscd;
+    out.n = count;
 }
 
 // Hàm thống kê dscd đã tiêm đủ 2 mũi
-DSCD DSCD::thongKe_2Mui()
+void DSCD::thongKe_2Mui(DSCD &out)
 {
-    DSCD dscd;
     int count = 0;
 
     for(int i = 0; i < n; i++)
     {
         if (this->data[i].mui2)
         {
-            dscd.data[count] = this->data[i];
+            out.data[count] = this->data[i];
             count++;
         }
     }
-    dscd.n = count;
-    return dscd;
+    out.n = count;
 }
 
 // Hàm thống kê những người chưa tiêm mũi nào
-DSCD DSCD::thongKeChuaTiem()
+void DSCD::thongKeChuaTiem(DSCD &out)
 {
-    DSCD dscd;
     int count = 0;
 
     for(int i = 0; i < n; i++)
     {
         if (!this->data[i].mui1)
         {
-            dscd.data[count] = this->data[i];
+            out.data[count] = this->data[i];
             count++;
         }
     }
-    dscd.n = count;
-    return dscd;
+    out.n = count;
 }
 
 // Hàm thống kê những người đã tiêm mũi 1 nhưng chưa tiêm mũi 2
-DSCD DSCD::thongKe_M1_Not_M2()
+void DSCD::thongKe_M1_Not_M2(DSCD &out)
 {
-    DSCD dscd;
     int count = 0;
 
     for(int i = 0; i < n; i++)
     {
         if (this->data[i].mui1 && !this->data[i].mui2)
         {
-            dscd.data[count] = this->data[i];
+            out.data[count] = this->data[i];
             count++;
         }
     }
-    dscd.n = count;
-    return dscd;
+    out.n = count;
+
 }
 
 // Hàm thống kê những công dân đã tiêm mũi 1 trong ngày bất kì
-DSCD DSCD::thongKeTheoNgayTiemM1(string ngayM1)
+void DSCD::thongKeTheoNgayTiemM1(DSCD &out,string ngayM1)
 {
-    DSCD dscd;
     int count = 0;
-
     for(int i = 0; i < n; i++)
     {
         if (this->data[i].ngay_M1 == ngayM1)
         {
-            dscd.data[count] = this->data[i];
+            out.data[count] = this->data[i];
             count++;
         }
     }
-    dscd.n = count;
-    return dscd;
+    out.n = count;
 }
 
 //Hàm thống kê những công dân đã tiêm mũi 2 trong ngày bất kì
-DSCD DSCD::thongKeTheoNgayTiemM2(string ngayM2)
+void DSCD::thongKeTheoNgayTiemM2(DSCD &out,string ngayM2)
 {
-    DSCD dscd;
     int count = 0;
 
     for(int i = 0; i < n; i++)
     {
         if (this->data[i].ngay_M2 == ngayM2)
         {
-            dscd.data[count] = this->data[i];
+            out.data[count] = this->data[i];
             count++;
         }
     }
-    dscd.n = count;
-    return dscd;
+    out.n = count;
 }
 
 // Hàm thống kê công dân theo giới tính ( mặc định là nam), nếu muốn tke theo nữ thì dùng con trỏ hàm nu
-DSCD DSCD::thongKeTheoGioiTinh(bool (*func_ptr)())
+void DSCD::thongKeTheoGioiTinh(DSCD &out,bool (*func_ptr)())
 {
-    DSCD dscd;
     int count = 0;
     for(int i = 0; i < n; i++)
     {
         if (this->data[i].sex == func_ptr())
         {
-            dscd.data[count] = this->data[i];
+            out.data[count] = this->data[i];
             count++;
         }
     }
-    dscd.n = count;
-    return dscd;
+    out.n = count;
 }
 
 // Hàm thống kê theo ngày đăng kí bất kì
-DSCD DSCD::thongKeTheoNgayDangKi(string ngayDK)
+void DSCD::thongKeTheoNgayDangKi(DSCD &out, string ngayDK)
 {
-    DSCD dscd;
     int count = 0;
 
     for(int i = 0; i < n; i++)
     {
         if (this->data[i].ngay_DK == ngayDK)
         {
-            dscd.data[count] = this->data[i];
+            out.data[count] = this->data[i];
             count++;
         }
     }
-    dscd.n = count;
-    return dscd;
+    out.n = count;
 }
 

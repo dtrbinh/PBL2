@@ -60,5 +60,8 @@
     <Image Include="Image1.bmp">
       <Filter>Ressourcendateien</Filter>
     </Image>
+    <Image Include="Icon1.ico">
+      <Filter>Ressourcendateien</Filter>
+    </Image>
   </ItemGroup>
 </Project>

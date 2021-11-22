@@ -503,27 +503,6 @@ private: System::Windows::Forms::Label^ label30;
             this->toolStripMenuItem9 = (gcnew System::Windows::Forms::ToolStripMenuItem());
             this->toolStripMenuItem10 = (gcnew System::Windows::Forms::ToolStripMenuItem());
             this->xuấtToànBộDữLiệuToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
-            this->exportData_vaccination = (gcnew System::Windows::Forms::GroupBox());
-            this->bt_saveData_vaccination = (gcnew System::Windows::Forms::Button());
-            this->bt_loadData_vaccination = (gcnew System::Windows::Forms::Button());
-            this->bt_modData_vaccination = (gcnew System::Windows::Forms::Button());
-            this->button6 = (gcnew System::Windows::Forms::Button());
-            this->view_exportData_vaccination = (gcnew System::Windows::Forms::DataGridView());
-            this->fullName3 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
-            this->mui1 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
-            this->ngay_M1 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
-            this->mui2 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
-            this->ngay_M2 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
-            this->exportData_registry = (gcnew System::Windows::Forms::GroupBox());
-            this->bt_saveData_registry = (gcnew System::Windows::Forms::Button());
-            this->bt_loadData_registry = (gcnew System::Windows::Forms::Button());
-            this->bt_modData_registry = (gcnew System::Windows::Forms::Button());
-            this->button5 = (gcnew System::Windows::Forms::Button());
-            this->view_exportData_registry = (gcnew System::Windows::Forms::DataGridView());
-            this->fullName2 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
-            this->ma_DK = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
-            this->ngay_DK = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
-            this->noi_DK = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
             this->exportData_people = (gcnew System::Windows::Forms::GroupBox());
             this->bt_saveData_people = (gcnew System::Windows::Forms::Button());
             this->bt_loadData_people = (gcnew System::Windows::Forms::Button());
@@ -677,6 +656,27 @@ private: System::Windows::Forms::Label^ label30;
             this->ngayM1_allData = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
             this->mui2_allData = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
             this->ngay_M2_allData = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
+            this->exportData_vaccination = (gcnew System::Windows::Forms::GroupBox());
+            this->bt_saveData_vaccination = (gcnew System::Windows::Forms::Button());
+            this->bt_loadData_vaccination = (gcnew System::Windows::Forms::Button());
+            this->bt_modData_vaccination = (gcnew System::Windows::Forms::Button());
+            this->button6 = (gcnew System::Windows::Forms::Button());
+            this->view_exportData_vaccination = (gcnew System::Windows::Forms::DataGridView());
+            this->fullName3 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
+            this->mui1 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
+            this->ngay_M1 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
+            this->mui2 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
+            this->ngay_M2 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
+            this->exportData_registry = (gcnew System::Windows::Forms::GroupBox());
+            this->bt_saveData_registry = (gcnew System::Windows::Forms::Button());
+            this->bt_loadData_registry = (gcnew System::Windows::Forms::Button());
+            this->bt_modData_registry = (gcnew System::Windows::Forms::Button());
+            this->button5 = (gcnew System::Windows::Forms::Button());
+            this->view_exportData_registry = (gcnew System::Windows::Forms::DataGridView());
+            this->fullName2 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
+            this->ma_DK = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
+            this->ngay_DK = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
+            this->noi_DK = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
             this->accountManager_newFullname = (gcnew System::Windows::Forms::TextBox());
             this->label4 = (gcnew System::Windows::Forms::Label());
             this->Manager = (gcnew System::Windows::Forms::TabControl());
@@ -720,10 +720,6 @@ private: System::Windows::Forms::Label^ label30;
             this->dataManagerTab->SuspendLayout();
             this->boxDataManager->SuspendLayout();
             this->dataManager_menu->SuspendLayout();
-            this->exportData_vaccination->SuspendLayout();
-            (cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->view_exportData_vaccination))->BeginInit();
-            this->exportData_registry->SuspendLayout();
-            (cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->view_exportData_registry))->BeginInit();
             this->exportData_people->SuspendLayout();
             (cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->view_exportData_people))->BeginInit();
             this->box_searchData->SuspendLayout();
@@ -738,6 +734,10 @@ private: System::Windows::Forms::Label^ label30;
             this->panel_insertType->SuspendLayout();
             this->export_allData_people->SuspendLayout();
             (cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->view_exportAllData_people))->BeginInit();
+            this->exportData_vaccination->SuspendLayout();
+            (cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->view_exportData_vaccination))->BeginInit();
+            this->exportData_registry->SuspendLayout();
+            (cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->view_exportData_registry))->BeginInit();
             this->Manager->SuspendLayout();
             this->loginTab->SuspendLayout();
             this->loginBox->SuspendLayout();
@@ -763,15 +763,17 @@ private: System::Windows::Forms::Label^ label30;
             // 
             // bt_saveFullname
             // 
+            this->bt_saveFullname->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(57)), static_cast<System::Int32>(static_cast<System::Byte>(162)),
+                static_cast<System::Int32>(static_cast<System::Byte>(219)));
             this->bt_saveFullname->Font = (gcnew System::Drawing::Font(L"MS Reference Sans Serif", 9, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
                 static_cast<System::Byte>(0)));
             this->bt_saveFullname->Location = System::Drawing::Point(181, 89);
             this->bt_saveFullname->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
             this->bt_saveFullname->Name = L"bt_saveFullname";
-            this->bt_saveFullname->Size = System::Drawing::Size(75, 31);
+            this->bt_saveFullname->Size = System::Drawing::Size(75, 35);
             this->bt_saveFullname->TabIndex = 5;
             this->bt_saveFullname->Text = L"Lưu";
-            this->bt_saveFullname->UseVisualStyleBackColor = true;
+            this->bt_saveFullname->UseVisualStyleBackColor = false;
             this->bt_saveFullname->Click += gcnew System::EventHandler(this, &Form1::bt_saveFullname_Click);
             // 
             // accountManager_fullname
@@ -871,17 +873,19 @@ private: System::Windows::Forms::Label^ label30;
             this->boxDataManager->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Bottom)
                 | System::Windows::Forms::AnchorStyles::Left)
                 | System::Windows::Forms::AnchorStyles::Right));
+            this->boxDataManager->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(232)), static_cast<System::Int32>(static_cast<System::Byte>(240)),
+                static_cast<System::Int32>(static_cast<System::Byte>(242)));
             this->boxDataManager->Controls->Add(this->dataManager_menu);
-            this->boxDataManager->Controls->Add(this->box_fillData);
-            this->boxDataManager->Controls->Add(this->box_deleteData);
-            this->boxDataManager->Controls->Add(this->box_sortData);
-            this->boxDataManager->Controls->Add(this->box_inputFile);
             this->boxDataManager->Controls->Add(this->box_inputHand);
             this->boxDataManager->Controls->Add(this->export_allData_people);
             this->boxDataManager->Controls->Add(this->exportData_vaccination);
             this->boxDataManager->Controls->Add(this->exportData_registry);
             this->boxDataManager->Controls->Add(this->exportData_people);
             this->boxDataManager->Controls->Add(this->box_searchData);
+            this->boxDataManager->Controls->Add(this->box_fillData);
+            this->boxDataManager->Controls->Add(this->box_deleteData);
+            this->boxDataManager->Controls->Add(this->box_sortData);
+            this->boxDataManager->Controls->Add(this->box_inputFile);
             this->boxDataManager->Location = System::Drawing::Point(-4, 0);
             this->boxDataManager->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
             this->boxDataManager->Name = L"boxDataManager";
@@ -909,6 +913,8 @@ private: System::Windows::Forms::Label^ label30;
             // 
             // dataManager_input
             // 
+            this->dataManager_input->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(162)),
+                static_cast<System::Int32>(static_cast<System::Byte>(219)), static_cast<System::Int32>(static_cast<System::Byte>(250)));
             this->dataManager_input->DropDownItems->AddRange(gcnew cli::array< System::Windows::Forms::ToolStripItem^  >(5) {
                 this->toolStripMenuItem2,
                     this->sortData, this->deleteData, this->searchData, this->thốngKêToolStripMenuItem
@@ -921,6 +927,8 @@ private: System::Windows::Forms::Label^ label30;
             // 
             // toolStripMenuItem2
             // 
+            this->toolStripMenuItem2->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(41)),
+                static_cast<System::Int32>(static_cast<System::Byte>(162)), static_cast<System::Int32>(static_cast<System::Byte>(219)));
             this->toolStripMenuItem2->DropDownItems->AddRange(gcnew cli::array< System::Windows::Forms::ToolStripItem^  >(2) {
                 this->inputFile,
                     this->inputHand
@@ -933,6 +941,8 @@ private: System::Windows::Forms::Label^ label30;
             // 
             // inputFile
             // 
+            this->inputFile->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(57)), static_cast<System::Int32>(static_cast<System::Byte>(162)),
+                static_cast<System::Int32>(static_cast<System::Byte>(219)));
             this->inputFile->Font = (gcnew System::Drawing::Font(L"MS Reference Sans Serif", 9, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
                 static_cast<System::Byte>(0)));
             this->inputFile->Name = L"inputFile";
@@ -942,6 +952,8 @@ private: System::Windows::Forms::Label^ label30;
             // 
             // inputHand
             // 
+            this->inputHand->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(57)), static_cast<System::Int32>(static_cast<System::Byte>(162)),
+                static_cast<System::Int32>(static_cast<System::Byte>(219)));
             this->inputHand->Font = (gcnew System::Drawing::Font(L"MS Reference Sans Serif", 9, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
                 static_cast<System::Byte>(0)));
             this->inputHand->Name = L"inputHand";
@@ -951,6 +963,8 @@ private: System::Windows::Forms::Label^ label30;
             // 
             // sortData
             // 
+            this->sortData->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(57)), static_cast<System::Int32>(static_cast<System::Byte>(162)),
+                static_cast<System::Int32>(static_cast<System::Byte>(219)));
             this->sortData->Font = (gcnew System::Drawing::Font(L"MS Reference Sans Serif", 9, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
                 static_cast<System::Byte>(0)));
             this->sortData->Name = L"sortData";
@@ -960,6 +974,8 @@ private: System::Windows::Forms::Label^ label30;
             // 
             // deleteData
             // 
+            this->deleteData->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(57)), static_cast<System::Int32>(static_cast<System::Byte>(162)),
+                static_cast<System::Int32>(static_cast<System::Byte>(219)));
             this->deleteData->Font = (gcnew System::Drawing::Font(L"MS Reference Sans Serif", 9, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
                 static_cast<System::Byte>(0)));
             this->deleteData->Name = L"deleteData";
@@ -969,6 +985,8 @@ private: System::Windows::Forms::Label^ label30;
             // 
             // searchData
             // 
+            this->searchData->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(57)), static_cast<System::Int32>(static_cast<System::Byte>(162)),
+                static_cast<System::Int32>(static_cast<System::Byte>(219)));
             this->searchData->Name = L"searchData";
             this->searchData->Size = System::Drawing::Size(205, 26);
             this->searchData->Text = L"Tìm kiếm";
@@ -976,6 +994,8 @@ private: System::Windows::Forms::Label^ label30;
             // 
             // thốngKêToolStripMenuItem
             // 
+            this->thốngKêToolStripMenuItem->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(57)),
+                static_cast<System::Int32>(static_cast<System::Byte>(162)), static_cast<System::Int32>(static_cast<System::Byte>(219)));
             this->thốngKêToolStripMenuItem->Name = L"thốngKêToolStripMenuItem";
             this->thốngKêToolStripMenuItem->Size = System::Drawing::Size(205, 26);
             this->thốngKêToolStripMenuItem->Text = L"Thống kê";
@@ -983,6 +1003,8 @@ private: System::Windows::Forms::Label^ label30;
             // 
             // dataManager_output
             // 
+            this->dataManager_output->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(162)),
+                static_cast<System::Int32>(static_cast<System::Byte>(219)), static_cast<System::Int32>(static_cast<System::Byte>(250)));
             this->dataManager_output->DropDownItems->AddRange(gcnew cli::array< System::Windows::Forms::ToolStripItem^  >(4) {
                 this->toolStripMenuItem8,
                     this->toolStripMenuItem9, this->toolStripMenuItem10, this->xuấtToànBộDữLiệuToolStripMenuItem
@@ -995,6 +1017,8 @@ private: System::Windows::Forms::Label^ label30;
             // 
             // toolStripMenuItem8
             // 
+            this->toolStripMenuItem8->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(57)),
+                static_cast<System::Int32>(static_cast<System::Byte>(162)), static_cast<System::Int32>(static_cast<System::Byte>(219)));
             this->toolStripMenuItem8->Font = (gcnew System::Drawing::Font(L"MS Reference Sans Serif", 9, System::Drawing::FontStyle::Regular,
                 System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
             this->toolStripMenuItem8->Name = L"toolStripMenuItem8";
@@ -1004,6 +1028,8 @@ private: System::Windows::Forms::Label^ label30;
             // 
             // toolStripMenuItem9
             // 
+            this->toolStripMenuItem9->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(57)),
+                static_cast<System::Int32>(static_cast<System::Byte>(162)), static_cast<System::Int32>(static_cast<System::Byte>(219)));
             this->toolStripMenuItem9->Font = (gcnew System::Drawing::Font(L"MS Reference Sans Serif", 9, System::Drawing::FontStyle::Regular,
                 System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
             this->toolStripMenuItem9->Name = L"toolStripMenuItem9";
@@ -1013,6 +1039,8 @@ private: System::Windows::Forms::Label^ label30;
             // 
             // toolStripMenuItem10
             // 
+            this->toolStripMenuItem10->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(57)),
+                static_cast<System::Int32>(static_cast<System::Byte>(162)), static_cast<System::Int32>(static_cast<System::Byte>(219)));
             this->toolStripMenuItem10->Font = (gcnew System::Drawing::Font(L"MS Reference Sans Serif", 9, System::Drawing::FontStyle::Regular,
                 System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
             this->toolStripMenuItem10->Name = L"toolStripMenuItem10";
@@ -1022,262 +1050,12 @@ private: System::Windows::Forms::Label^ label30;
             // 
             // xuấtToànBộDữLiệuToolStripMenuItem
             // 
+            this->xuấtToànBộDữLiệuToolStripMenuItem->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(57)),
+                static_cast<System::Int32>(static_cast<System::Byte>(162)), static_cast<System::Int32>(static_cast<System::Byte>(219)));
             this->xuấtToànBộDữLiệuToolStripMenuItem->Name = L"xuấtToànBộDữLiệuToolStripMenuItem";
             this->xuấtToànBộDữLiệuToolStripMenuItem->Size = System::Drawing::Size(229, 26);
             this->xuấtToànBộDữLiệuToolStripMenuItem->Text = L"Toàn bộ dữ liệu";
             this->xuấtToànBộDữLiệuToolStripMenuItem->Click += gcnew System::EventHandler(this, &Form1::xuấtToànBộDữLiệuToolStripMenuItem_Click);
-            // 
-            // exportData_vaccination
-            // 
-            this->exportData_vaccination->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Bottom)
-                | System::Windows::Forms::AnchorStyles::Left)
-                | System::Windows::Forms::AnchorStyles::Right));
-            this->exportData_vaccination->Controls->Add(this->bt_saveData_vaccination);
-            this->exportData_vaccination->Controls->Add(this->bt_loadData_vaccination);
-            this->exportData_vaccination->Controls->Add(this->bt_modData_vaccination);
-            this->exportData_vaccination->Controls->Add(this->button6);
-            this->exportData_vaccination->Controls->Add(this->view_exportData_vaccination);
-            this->exportData_vaccination->Font = (gcnew System::Drawing::Font(L"MS Reference Sans Serif", 9, System::Drawing::FontStyle::Regular,
-                System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
-            this->exportData_vaccination->Location = System::Drawing::Point(0, 50);
-            this->exportData_vaccination->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
-            this->exportData_vaccination->Name = L"exportData_vaccination";
-            this->exportData_vaccination->Padding = System::Windows::Forms::Padding(3, 2, 3, 2);
-            this->exportData_vaccination->Size = System::Drawing::Size(653, 417);
-            this->exportData_vaccination->TabIndex = 8;
-            this->exportData_vaccination->TabStop = false;
-            this->exportData_vaccination->Text = L"Dữ liệu tiêm chủng";
-            this->exportData_vaccination->Visible = false;
-            // 
-            // bt_saveData_vaccination
-            // 
-            this->bt_saveData_vaccination->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((System::Windows::Forms::AnchorStyles::Bottom | System::Windows::Forms::AnchorStyles::Right));
-            this->bt_saveData_vaccination->Location = System::Drawing::Point(551, 377);
-            this->bt_saveData_vaccination->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
-            this->bt_saveData_vaccination->Name = L"bt_saveData_vaccination";
-            this->bt_saveData_vaccination->Size = System::Drawing::Size(91, 30);
-            this->bt_saveData_vaccination->TabIndex = 4;
-            this->bt_saveData_vaccination->Text = L"Lưu";
-            this->bt_saveData_vaccination->UseVisualStyleBackColor = true;
-            this->bt_saveData_vaccination->Click += gcnew System::EventHandler(this, &Form1::bt_saveData_vaccination_Click);
-            // 
-            // bt_loadData_vaccination
-            // 
-            this->bt_loadData_vaccination->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((System::Windows::Forms::AnchorStyles::Bottom | System::Windows::Forms::AnchorStyles::Right));
-            this->bt_loadData_vaccination->Location = System::Drawing::Point(279, 377);
-            this->bt_loadData_vaccination->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
-            this->bt_loadData_vaccination->Name = L"bt_loadData_vaccination";
-            this->bt_loadData_vaccination->Size = System::Drawing::Size(131, 30);
-            this->bt_loadData_vaccination->TabIndex = 3;
-            this->bt_loadData_vaccination->Text = L"Tải dữ liệu";
-            this->bt_loadData_vaccination->UseVisualStyleBackColor = true;
-            this->bt_loadData_vaccination->Click += gcnew System::EventHandler(this, &Form1::bt_loadData_vaccination_Click);
-            // 
-            // bt_modData_vaccination
-            // 
-            this->bt_modData_vaccination->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((System::Windows::Forms::AnchorStyles::Bottom | System::Windows::Forms::AnchorStyles::Right));
-            this->bt_modData_vaccination->Location = System::Drawing::Point(415, 377);
-            this->bt_modData_vaccination->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
-            this->bt_modData_vaccination->Name = L"bt_modData_vaccination";
-            this->bt_modData_vaccination->Size = System::Drawing::Size(131, 30);
-            this->bt_modData_vaccination->TabIndex = 2;
-            this->bt_modData_vaccination->Text = L"Chỉnh sửa";
-            this->bt_modData_vaccination->UseVisualStyleBackColor = true;
-            this->bt_modData_vaccination->Click += gcnew System::EventHandler(this, &Form1::bt_modData_vaccination_Click);
-            // 
-            // button6
-            // 
-            this->button6->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((System::Windows::Forms::AnchorStyles::Bottom | System::Windows::Forms::AnchorStyles::Right));
-            this->button6->Location = System::Drawing::Point(551, 388);
-            this->button6->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
-            this->button6->Name = L"button6";
-            this->button6->Size = System::Drawing::Size(0, 0);
-            this->button6->TabIndex = 1;
-            this->button6->Text = L"button6";
-            this->button6->UseVisualStyleBackColor = true;
-            // 
-            // view_exportData_vaccination
-            // 
-            this->view_exportData_vaccination->AllowUserToAddRows = false;
-            this->view_exportData_vaccination->AllowUserToDeleteRows = false;
-            this->view_exportData_vaccination->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Bottom)
-                | System::Windows::Forms::AnchorStyles::Left)
-                | System::Windows::Forms::AnchorStyles::Right));
-            this->view_exportData_vaccination->ColumnHeadersHeightSizeMode = System::Windows::Forms::DataGridViewColumnHeadersHeightSizeMode::AutoSize;
-            this->view_exportData_vaccination->Columns->AddRange(gcnew cli::array< System::Windows::Forms::DataGridViewColumn^  >(5) {
-                this->fullName3,
-                    this->mui1, this->ngay_M1, this->mui2, this->ngay_M2
-            });
-            this->view_exportData_vaccination->Location = System::Drawing::Point(11, 25);
-            this->view_exportData_vaccination->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
-            this->view_exportData_vaccination->Name = L"view_exportData_vaccination";
-            this->view_exportData_vaccination->ReadOnly = true;
-            this->view_exportData_vaccination->RowHeadersWidth = 51;
-            this->view_exportData_vaccination->RowTemplate->Height = 24;
-            this->view_exportData_vaccination->Size = System::Drawing::Size(644, 342);
-            this->view_exportData_vaccination->TabIndex = 0;
-            // 
-            // fullName3
-            // 
-            this->fullName3->HeaderText = L"Họ và tên";
-            this->fullName3->MinimumWidth = 6;
-            this->fullName3->Name = L"fullName3";
-            this->fullName3->ReadOnly = true;
-            this->fullName3->Width = 125;
-            // 
-            // mui1
-            // 
-            this->mui1->HeaderText = L"Mũi số 1";
-            this->mui1->MinimumWidth = 6;
-            this->mui1->Name = L"mui1";
-            this->mui1->ReadOnly = true;
-            this->mui1->Width = 125;
-            // 
-            // ngay_M1
-            // 
-            this->ngay_M1->HeaderText = L"Ngày tiêm mũi 1";
-            this->ngay_M1->MinimumWidth = 6;
-            this->ngay_M1->Name = L"ngay_M1";
-            this->ngay_M1->ReadOnly = true;
-            this->ngay_M1->Width = 125;
-            // 
-            // mui2
-            // 
-            this->mui2->HeaderText = L"Mũi số 2";
-            this->mui2->MinimumWidth = 6;
-            this->mui2->Name = L"mui2";
-            this->mui2->ReadOnly = true;
-            this->mui2->Width = 125;
-            // 
-            // ngay_M2
-            // 
-            this->ngay_M2->HeaderText = L"Ngày tiêm mũi 2";
-            this->ngay_M2->MinimumWidth = 6;
-            this->ngay_M2->Name = L"ngay_M2";
-            this->ngay_M2->ReadOnly = true;
-            this->ngay_M2->Width = 125;
-            // 
-            // exportData_registry
-            // 
-            this->exportData_registry->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Bottom)
-                | System::Windows::Forms::AnchorStyles::Left)
-                | System::Windows::Forms::AnchorStyles::Right));
-            this->exportData_registry->Controls->Add(this->bt_saveData_registry);
-            this->exportData_registry->Controls->Add(this->bt_loadData_registry);
-            this->exportData_registry->Controls->Add(this->bt_modData_registry);
-            this->exportData_registry->Controls->Add(this->button5);
-            this->exportData_registry->Controls->Add(this->view_exportData_registry);
-            this->exportData_registry->Font = (gcnew System::Drawing::Font(L"MS Reference Sans Serif", 9, System::Drawing::FontStyle::Regular,
-                System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
-            this->exportData_registry->Location = System::Drawing::Point(0, 50);
-            this->exportData_registry->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
-            this->exportData_registry->Name = L"exportData_registry";
-            this->exportData_registry->Padding = System::Windows::Forms::Padding(3, 2, 3, 2);
-            this->exportData_registry->Size = System::Drawing::Size(653, 417);
-            this->exportData_registry->TabIndex = 7;
-            this->exportData_registry->TabStop = false;
-            this->exportData_registry->Text = L"Dữ liệu đăng ký";
-            this->exportData_registry->Visible = false;
-            // 
-            // bt_saveData_registry
-            // 
-            this->bt_saveData_registry->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((System::Windows::Forms::AnchorStyles::Bottom | System::Windows::Forms::AnchorStyles::Right));
-            this->bt_saveData_registry->Location = System::Drawing::Point(551, 377);
-            this->bt_saveData_registry->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
-            this->bt_saveData_registry->Name = L"bt_saveData_registry";
-            this->bt_saveData_registry->Size = System::Drawing::Size(91, 30);
-            this->bt_saveData_registry->TabIndex = 4;
-            this->bt_saveData_registry->Text = L"Lưu";
-            this->bt_saveData_registry->UseVisualStyleBackColor = true;
-            this->bt_saveData_registry->Click += gcnew System::EventHandler(this, &Form1::bt_saveData_registry_Click);
-            // 
-            // bt_loadData_registry
-            // 
-            this->bt_loadData_registry->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((System::Windows::Forms::AnchorStyles::Bottom | System::Windows::Forms::AnchorStyles::Right));
-            this->bt_loadData_registry->Location = System::Drawing::Point(279, 377);
-            this->bt_loadData_registry->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
-            this->bt_loadData_registry->Name = L"bt_loadData_registry";
-            this->bt_loadData_registry->Size = System::Drawing::Size(131, 30);
-            this->bt_loadData_registry->TabIndex = 3;
-            this->bt_loadData_registry->Text = L"Tải dữ liệu";
-            this->bt_loadData_registry->UseVisualStyleBackColor = true;
-            this->bt_loadData_registry->Click += gcnew System::EventHandler(this, &Form1::button3_Click_1);
-            // 
-            // bt_modData_registry
-            // 
-            this->bt_modData_registry->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((System::Windows::Forms::AnchorStyles::Bottom | System::Windows::Forms::AnchorStyles::Right));
-            this->bt_modData_registry->Location = System::Drawing::Point(415, 377);
-            this->bt_modData_registry->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
-            this->bt_modData_registry->Name = L"bt_modData_registry";
-            this->bt_modData_registry->Size = System::Drawing::Size(131, 30);
-            this->bt_modData_registry->TabIndex = 2;
-            this->bt_modData_registry->Text = L"Chỉnh sửa";
-            this->bt_modData_registry->UseVisualStyleBackColor = true;
-            this->bt_modData_registry->Click += gcnew System::EventHandler(this, &Form1::bt_modData_registry_Click);
-            // 
-            // button5
-            // 
-            this->button5->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((System::Windows::Forms::AnchorStyles::Bottom | System::Windows::Forms::AnchorStyles::Right));
-            this->button5->Location = System::Drawing::Point(551, 388);
-            this->button5->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
-            this->button5->Name = L"button5";
-            this->button5->Size = System::Drawing::Size(0, 0);
-            this->button5->TabIndex = 1;
-            this->button5->Text = L"button5";
-            this->button5->UseVisualStyleBackColor = true;
-            // 
-            // view_exportData_registry
-            // 
-            this->view_exportData_registry->AllowUserToAddRows = false;
-            this->view_exportData_registry->AllowUserToDeleteRows = false;
-            this->view_exportData_registry->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Bottom)
-                | System::Windows::Forms::AnchorStyles::Left)
-                | System::Windows::Forms::AnchorStyles::Right));
-            this->view_exportData_registry->ColumnHeadersHeightSizeMode = System::Windows::Forms::DataGridViewColumnHeadersHeightSizeMode::AutoSize;
-            this->view_exportData_registry->Columns->AddRange(gcnew cli::array< System::Windows::Forms::DataGridViewColumn^  >(4) {
-                this->fullName2,
-                    this->ma_DK, this->ngay_DK, this->noi_DK
-            });
-            this->view_exportData_registry->Location = System::Drawing::Point(11, 25);
-            this->view_exportData_registry->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
-            this->view_exportData_registry->Name = L"view_exportData_registry";
-            this->view_exportData_registry->ReadOnly = true;
-            this->view_exportData_registry->RowHeadersWidth = 51;
-            this->view_exportData_registry->RowTemplate->Height = 24;
-            this->view_exportData_registry->Size = System::Drawing::Size(644, 342);
-            this->view_exportData_registry->TabIndex = 0;
-            // 
-            // fullName2
-            // 
-            this->fullName2->HeaderText = L"Họ và tên";
-            this->fullName2->MinimumWidth = 6;
-            this->fullName2->Name = L"fullName2";
-            this->fullName2->ReadOnly = true;
-            this->fullName2->Width = 125;
-            // 
-            // ma_DK
-            // 
-            this->ma_DK->HeaderText = L"Mã đăng ký";
-            this->ma_DK->MinimumWidth = 6;
-            this->ma_DK->Name = L"ma_DK";
-            this->ma_DK->ReadOnly = true;
-            this->ma_DK->Width = 125;
-            // 
-            // ngay_DK
-            // 
-            this->ngay_DK->HeaderText = L"Ngày đăng ký";
-            this->ngay_DK->MinimumWidth = 6;
-            this->ngay_DK->Name = L"ngay_DK";
-            this->ngay_DK->ReadOnly = true;
-            this->ngay_DK->Width = 125;
-            // 
-            // noi_DK
-            // 
-            this->noi_DK->HeaderText = L"Nơi đăng ký";
-            this->noi_DK->MinimumWidth = 6;
-            this->noi_DK->Name = L"noi_DK";
-            this->noi_DK->ReadOnly = true;
-            this->noi_DK->Width = 125;
             // 
             // exportData_people
             // 
@@ -1304,37 +1082,43 @@ private: System::Windows::Forms::Label^ label30;
             // bt_saveData_people
             // 
             this->bt_saveData_people->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((System::Windows::Forms::AnchorStyles::Bottom | System::Windows::Forms::AnchorStyles::Right));
+            this->bt_saveData_people->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(57)),
+                static_cast<System::Int32>(static_cast<System::Byte>(162)), static_cast<System::Int32>(static_cast<System::Byte>(219)));
             this->bt_saveData_people->Location = System::Drawing::Point(551, 377);
             this->bt_saveData_people->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
             this->bt_saveData_people->Name = L"bt_saveData_people";
-            this->bt_saveData_people->Size = System::Drawing::Size(91, 30);
+            this->bt_saveData_people->Size = System::Drawing::Size(91, 35);
             this->bt_saveData_people->TabIndex = 4;
             this->bt_saveData_people->Text = L"Lưu";
-            this->bt_saveData_people->UseVisualStyleBackColor = true;
+            this->bt_saveData_people->UseVisualStyleBackColor = false;
             this->bt_saveData_people->Click += gcnew System::EventHandler(this, &Form1::bt_saveData_people_Click);
             // 
             // bt_loadData_people
             // 
             this->bt_loadData_people->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((System::Windows::Forms::AnchorStyles::Bottom | System::Windows::Forms::AnchorStyles::Right));
+            this->bt_loadData_people->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(57)),
+                static_cast<System::Int32>(static_cast<System::Byte>(162)), static_cast<System::Int32>(static_cast<System::Byte>(219)));
             this->bt_loadData_people->Location = System::Drawing::Point(279, 377);
             this->bt_loadData_people->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
             this->bt_loadData_people->Name = L"bt_loadData_people";
-            this->bt_loadData_people->Size = System::Drawing::Size(131, 30);
+            this->bt_loadData_people->Size = System::Drawing::Size(131, 35);
             this->bt_loadData_people->TabIndex = 3;
             this->bt_loadData_people->Text = L"Tải dữ liệu";
-            this->bt_loadData_people->UseVisualStyleBackColor = true;
+            this->bt_loadData_people->UseVisualStyleBackColor = false;
             this->bt_loadData_people->Click += gcnew System::EventHandler(this, &Form1::button3_Click);
             // 
             // bt_modData_people
             // 
             this->bt_modData_people->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((System::Windows::Forms::AnchorStyles::Bottom | System::Windows::Forms::AnchorStyles::Right));
+            this->bt_modData_people->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(57)),
+                static_cast<System::Int32>(static_cast<System::Byte>(162)), static_cast<System::Int32>(static_cast<System::Byte>(219)));
             this->bt_modData_people->Location = System::Drawing::Point(415, 377);
             this->bt_modData_people->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
             this->bt_modData_people->Name = L"bt_modData_people";
-            this->bt_modData_people->Size = System::Drawing::Size(131, 30);
+            this->bt_modData_people->Size = System::Drawing::Size(131, 35);
             this->bt_modData_people->TabIndex = 2;
             this->bt_modData_people->Text = L"Chỉnh sửa";
-            this->bt_modData_people->UseVisualStyleBackColor = true;
+            this->bt_modData_people->UseVisualStyleBackColor = false;
             this->bt_modData_people->Click += gcnew System::EventHandler(this, &Form1::button2_Click);
             // 
             // button1
@@ -1355,11 +1139,15 @@ private: System::Windows::Forms::Label^ label30;
             this->view_exportData_people->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Bottom)
                 | System::Windows::Forms::AnchorStyles::Left)
                 | System::Windows::Forms::AnchorStyles::Right));
+            this->view_exportData_people->BackgroundColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(162)),
+                static_cast<System::Int32>(static_cast<System::Byte>(219)), static_cast<System::Int32>(static_cast<System::Byte>(250)));
             this->view_exportData_people->ColumnHeadersHeightSizeMode = System::Windows::Forms::DataGridViewColumnHeadersHeightSizeMode::AutoSize;
             this->view_exportData_people->Columns->AddRange(gcnew cli::array< System::Windows::Forms::DataGridViewColumn^  >(8) {
                 this->ma_CD,
                     this->fullName, this->sex, this->birth, this->phone, this->so_BHXH, this->so_CMND, this->address
             });
+            this->view_exportData_people->GridColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(162)),
+                static_cast<System::Int32>(static_cast<System::Byte>(219)), static_cast<System::Int32>(static_cast<System::Byte>(250)));
             this->view_exportData_people->Location = System::Drawing::Point(11, 25);
             this->view_exportData_people->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
             this->view_exportData_people->Name = L"view_exportData_people";
@@ -1461,6 +1249,8 @@ private: System::Windows::Forms::Label^ label30;
             this->view_searchData->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Bottom)
                 | System::Windows::Forms::AnchorStyles::Left)
                 | System::Windows::Forms::AnchorStyles::Right));
+            this->view_searchData->BackgroundColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(162)),
+                static_cast<System::Int32>(static_cast<System::Byte>(219)), static_cast<System::Int32>(static_cast<System::Byte>(250)));
             this->view_searchData->ColumnHeadersHeightSizeMode = System::Windows::Forms::DataGridViewColumnHeadersHeightSizeMode::AutoSize;
             this->view_searchData->Columns->AddRange(gcnew cli::array< System::Windows::Forms::DataGridViewColumn^  >(15) {
                 this->dataGridViewTextBoxColumn1,
@@ -1469,6 +1259,8 @@ private: System::Windows::Forms::Label^ label30;
                     this->dataGridViewTextBoxColumn10, this->dataGridViewTextBoxColumn11, this->dataGridViewTextBoxColumn12, this->dataGridViewTextBoxColumn13,
                     this->dataGridViewTextBoxColumn14, this->dataGridViewTextBoxColumn15
             });
+            this->view_searchData->GridColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(162)), static_cast<System::Int32>(static_cast<System::Byte>(219)),
+                static_cast<System::Int32>(static_cast<System::Byte>(250)));
             this->view_searchData->Location = System::Drawing::Point(14, 108);
             this->view_searchData->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
             this->view_searchData->Name = L"view_searchData";
@@ -1601,12 +1393,14 @@ private: System::Windows::Forms::Label^ label30;
             // bt_search
             // 
             this->bt_search->Anchor = System::Windows::Forms::AnchorStyles::Top;
-            this->bt_search->Location = System::Drawing::Point(427, 55);
+            this->bt_search->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(57)), static_cast<System::Int32>(static_cast<System::Byte>(162)),
+                static_cast<System::Int32>(static_cast<System::Byte>(219)));
+            this->bt_search->Location = System::Drawing::Point(427, 52);
             this->bt_search->Name = L"bt_search";
-            this->bt_search->Size = System::Drawing::Size(128, 30);
+            this->bt_search->Size = System::Drawing::Size(128, 35);
             this->bt_search->TabIndex = 3;
             this->bt_search->Text = L"Tìm kiếm";
-            this->bt_search->UseVisualStyleBackColor = true;
+            this->bt_search->UseVisualStyleBackColor = false;
             this->bt_search->Click += gcnew System::EventHandler(this, &Form1::bt_search_Click);
             // 
             // box_search
@@ -1672,19 +1466,23 @@ private: System::Windows::Forms::Label^ label30;
             this->box_typeOfSex->Items->AddRange(gcnew cli::array< System::Object^  >(2) { L"Nam", L"Nữ" });
             this->box_typeOfSex->Location = System::Drawing::Point(181, 73);
             this->box_typeOfSex->Name = L"box_typeOfSex";
-            this->box_typeOfSex->Size = System::Drawing::Size(314, 27);
+            this->box_typeOfSex->Size = System::Drawing::Size(296, 27);
             this->box_typeOfSex->TabIndex = 10;
             this->box_typeOfSex->Visible = false;
             // 
             // bt_submitFilter
             // 
             this->bt_submitFilter->Anchor = System::Windows::Forms::AnchorStyles::Top;
-            this->bt_submitFilter->Location = System::Drawing::Point(512, 72);
+            this->bt_submitFilter->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(57)), static_cast<System::Int32>(static_cast<System::Byte>(162)),
+                static_cast<System::Int32>(static_cast<System::Byte>(219)));
+            this->bt_submitFilter->Font = (gcnew System::Drawing::Font(L"MS Reference Sans Serif", 9, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+                static_cast<System::Byte>(0)));
+            this->bt_submitFilter->Location = System::Drawing::Point(497, 70);
             this->bt_submitFilter->Name = L"bt_submitFilter";
-            this->bt_submitFilter->Size = System::Drawing::Size(110, 30);
+            this->bt_submitFilter->Size = System::Drawing::Size(125, 35);
             this->bt_submitFilter->TabIndex = 9;
             this->bt_submitFilter->Text = L"Thống kê";
-            this->bt_submitFilter->UseVisualStyleBackColor = true;
+            this->bt_submitFilter->UseVisualStyleBackColor = false;
             this->bt_submitFilter->Visible = false;
             this->bt_submitFilter->Click += gcnew System::EventHandler(this, &Form1::bt_submitFilter_Click);
             // 
@@ -1693,7 +1491,7 @@ private: System::Windows::Forms::Label^ label30;
             this->box_infoType->Anchor = System::Windows::Forms::AnchorStyles::Top;
             this->box_infoType->Location = System::Drawing::Point(180, 73);
             this->box_infoType->Name = L"box_infoType";
-            this->box_infoType->Size = System::Drawing::Size(314, 26);
+            this->box_infoType->Size = System::Drawing::Size(297, 26);
             this->box_infoType->TabIndex = 8;
             this->box_infoType->Visible = false;
             // 
@@ -1715,6 +1513,9 @@ private: System::Windows::Forms::Label^ label30;
             this->view_filterData->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Bottom)
                 | System::Windows::Forms::AnchorStyles::Left)
                 | System::Windows::Forms::AnchorStyles::Right));
+            this->view_filterData->BackgroundColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(162)),
+                static_cast<System::Int32>(static_cast<System::Byte>(219)), static_cast<System::Int32>(static_cast<System::Byte>(250)));
+            this->view_filterData->BorderStyle = System::Windows::Forms::BorderStyle::Fixed3D;
             this->view_filterData->ColumnHeadersHeightSizeMode = System::Windows::Forms::DataGridViewColumnHeadersHeightSizeMode::AutoSize;
             this->view_filterData->Columns->AddRange(gcnew cli::array< System::Windows::Forms::DataGridViewColumn^  >(15) {
                 this->dataGridViewTextBoxColumn16,
@@ -1723,6 +1524,8 @@ private: System::Windows::Forms::Label^ label30;
                     this->dataGridViewTextBoxColumn25, this->dataGridViewTextBoxColumn26, this->dataGridViewTextBoxColumn27, this->dataGridViewTextBoxColumn28,
                     this->dataGridViewTextBoxColumn29, this->dataGridViewTextBoxColumn30
             });
+            this->view_filterData->GridColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(162)), static_cast<System::Int32>(static_cast<System::Byte>(219)),
+                static_cast<System::Int32>(static_cast<System::Byte>(250)));
             this->view_filterData->Location = System::Drawing::Point(14, 117);
             this->view_filterData->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
             this->view_filterData->Name = L"view_filterData";
@@ -1854,12 +1657,16 @@ private: System::Windows::Forms::Label^ label30;
             // 
             // bt_exportFile
             // 
-            this->bt_exportFile->Location = System::Drawing::Point(499, 382);
+            this->bt_exportFile->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(57)), static_cast<System::Int32>(static_cast<System::Byte>(162)),
+                static_cast<System::Int32>(static_cast<System::Byte>(219)));
+            this->bt_exportFile->Font = (gcnew System::Drawing::Font(L"MS Reference Sans Serif", 9, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+                static_cast<System::Byte>(0)));
+            this->bt_exportFile->Location = System::Drawing::Point(497, 380);
             this->bt_exportFile->Name = L"bt_exportFile";
-            this->bt_exportFile->Size = System::Drawing::Size(143, 30);
+            this->bt_exportFile->Size = System::Drawing::Size(125, 35);
             this->bt_exportFile->TabIndex = 5;
-            this->bt_exportFile->Text = L"Xuất file Excel";
-            this->bt_exportFile->UseVisualStyleBackColor = true;
+            this->bt_exportFile->Text = L"Xuất file";
+            this->bt_exportFile->UseVisualStyleBackColor = false;
             // 
             // box_selectTypeFilter
             // 
@@ -1872,19 +1679,23 @@ private: System::Windows::Forms::Label^ label30;
             });
             this->box_selectTypeFilter->Location = System::Drawing::Point(180, 31);
             this->box_selectTypeFilter->Name = L"box_selectTypeFilter";
-            this->box_selectTypeFilter->Size = System::Drawing::Size(314, 27);
+            this->box_selectTypeFilter->Size = System::Drawing::Size(297, 27);
             this->box_selectTypeFilter->TabIndex = 3;
             // 
             // bt_typeFilter
             // 
             this->bt_typeFilter->Anchor = System::Windows::Forms::AnchorStyles::Top;
-            this->bt_typeFilter->Location = System::Drawing::Point(512, 29);
+            this->bt_typeFilter->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(57)), static_cast<System::Int32>(static_cast<System::Byte>(162)),
+                static_cast<System::Int32>(static_cast<System::Byte>(219)));
+            this->bt_typeFilter->Font = (gcnew System::Drawing::Font(L"MS Reference Sans Serif", 9, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+                static_cast<System::Byte>(0)));
+            this->bt_typeFilter->Location = System::Drawing::Point(497, 27);
             this->bt_typeFilter->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
             this->bt_typeFilter->Name = L"bt_typeFilter";
-            this->bt_typeFilter->Size = System::Drawing::Size(110, 30);
+            this->bt_typeFilter->Size = System::Drawing::Size(125, 35);
             this->bt_typeFilter->TabIndex = 2;
             this->bt_typeFilter->Text = L"Chọn";
-            this->bt_typeFilter->UseVisualStyleBackColor = true;
+            this->bt_typeFilter->UseVisualStyleBackColor = false;
             this->bt_typeFilter->Click += gcnew System::EventHandler(this, &Form1::bt_typeFilter_Click);
             // 
             // label27
@@ -1920,22 +1731,26 @@ private: System::Windows::Forms::Label^ label30;
             // bt_deleteData
             // 
             this->bt_deleteData->Anchor = System::Windows::Forms::AnchorStyles::Top;
+            this->bt_deleteData->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(57)), static_cast<System::Int32>(static_cast<System::Byte>(162)),
+                static_cast<System::Int32>(static_cast<System::Byte>(219)));
+            this->bt_deleteData->Font = (gcnew System::Drawing::Font(L"MS Reference Sans Serif", 9, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+                static_cast<System::Byte>(0)));
             this->bt_deleteData->Location = System::Drawing::Point(283, 153);
             this->bt_deleteData->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
             this->bt_deleteData->Name = L"bt_deleteData";
-            this->bt_deleteData->Size = System::Drawing::Size(75, 30);
+            this->bt_deleteData->Size = System::Drawing::Size(86, 35);
             this->bt_deleteData->TabIndex = 2;
             this->bt_deleteData->Text = L"Xoá";
-            this->bt_deleteData->UseVisualStyleBackColor = true;
+            this->bt_deleteData->UseVisualStyleBackColor = false;
             this->bt_deleteData->Click += gcnew System::EventHandler(this, &Form1::bt_deleteData_Click);
             // 
             // textbox_deleteData
             // 
             this->textbox_deleteData->Anchor = System::Windows::Forms::AnchorStyles::Top;
-            this->textbox_deleteData->Location = System::Drawing::Point(445, 110);
+            this->textbox_deleteData->Location = System::Drawing::Point(418, 110);
             this->textbox_deleteData->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
             this->textbox_deleteData->Name = L"textbox_deleteData";
-            this->textbox_deleteData->Size = System::Drawing::Size(100, 26);
+            this->textbox_deleteData->Size = System::Drawing::Size(146, 26);
             this->textbox_deleteData->TabIndex = 1;
             // 
             // label7
@@ -1979,6 +1794,8 @@ private: System::Windows::Forms::Label^ label30;
             this->view_sortData_people->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Bottom)
                 | System::Windows::Forms::AnchorStyles::Left)
                 | System::Windows::Forms::AnchorStyles::Right));
+            this->view_sortData_people->BackgroundColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(162)),
+                static_cast<System::Int32>(static_cast<System::Byte>(219)), static_cast<System::Int32>(static_cast<System::Byte>(250)));
             this->view_sortData_people->ColumnHeadersHeightSizeMode = System::Windows::Forms::DataGridViewColumnHeadersHeightSizeMode::AutoSize;
             this->view_sortData_people->Columns->AddRange(gcnew cli::array< System::Windows::Forms::DataGridViewColumn^  >(15) {
                 this->dataGridViewTextBoxColumn31,
@@ -1987,6 +1804,8 @@ private: System::Windows::Forms::Label^ label30;
                     this->dataGridViewTextBoxColumn40, this->dataGridViewTextBoxColumn41, this->dataGridViewTextBoxColumn42, this->dataGridViewTextBoxColumn43,
                     this->dataGridViewTextBoxColumn44, this->dataGridViewTextBoxColumn45
             });
+            this->view_sortData_people->GridColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(162)),
+                static_cast<System::Int32>(static_cast<System::Byte>(219)), static_cast<System::Int32>(static_cast<System::Byte>(250)));
             this->view_sortData_people->Location = System::Drawing::Point(4, 117);
             this->view_sortData_people->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
             this->view_sortData_people->Name = L"view_sortData_people";
@@ -2119,26 +1938,34 @@ private: System::Windows::Forms::Label^ label30;
             // bt_view_sortData
             // 
             this->bt_view_sortData->Anchor = System::Windows::Forms::AnchorStyles::Top;
-            this->bt_view_sortData->Location = System::Drawing::Point(483, 70);
+            this->bt_view_sortData->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(57)), static_cast<System::Int32>(static_cast<System::Byte>(162)),
+                static_cast<System::Int32>(static_cast<System::Byte>(219)));
+            this->bt_view_sortData->Font = (gcnew System::Drawing::Font(L"MS Reference Sans Serif", 9, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+                static_cast<System::Byte>(0)));
+            this->bt_view_sortData->Location = System::Drawing::Point(483, 68);
             this->bt_view_sortData->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
             this->bt_view_sortData->Name = L"bt_view_sortData";
-            this->bt_view_sortData->Size = System::Drawing::Size(91, 30);
+            this->bt_view_sortData->Size = System::Drawing::Size(105, 35);
             this->bt_view_sortData->TabIndex = 5;
             this->bt_view_sortData->Text = L"Xem";
-            this->bt_view_sortData->UseVisualStyleBackColor = true;
+            this->bt_view_sortData->UseVisualStyleBackColor = false;
             this->bt_view_sortData->Visible = false;
             this->bt_view_sortData->Click += gcnew System::EventHandler(this, &Form1::button3_Click_2);
             // 
             // bt_sortData
             // 
             this->bt_sortData->Anchor = System::Windows::Forms::AnchorStyles::Top;
-            this->bt_sortData->Location = System::Drawing::Point(483, 25);
+            this->bt_sortData->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(57)), static_cast<System::Int32>(static_cast<System::Byte>(162)),
+                static_cast<System::Int32>(static_cast<System::Byte>(219)));
+            this->bt_sortData->Font = (gcnew System::Drawing::Font(L"MS Reference Sans Serif", 9, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+                static_cast<System::Byte>(0)));
+            this->bt_sortData->Location = System::Drawing::Point(483, 21);
             this->bt_sortData->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
             this->bt_sortData->Name = L"bt_sortData";
-            this->bt_sortData->Size = System::Drawing::Size(91, 30);
+            this->bt_sortData->Size = System::Drawing::Size(105, 35);
             this->bt_sortData->TabIndex = 4;
             this->bt_sortData->Text = L"Sắp xếp";
-            this->bt_sortData->UseVisualStyleBackColor = true;
+            this->bt_sortData->UseVisualStyleBackColor = false;
             this->bt_sortData->Click += gcnew System::EventHandler(this, &Form1::bt_sortData_Click);
             // 
             // box_sortType
@@ -2216,55 +2043,63 @@ private: System::Windows::Forms::Label^ label30;
             // bt_selectFile3
             // 
             this->bt_selectFile3->Anchor = System::Windows::Forms::AnchorStyles::Top;
-            this->bt_selectFile3->Location = System::Drawing::Point(512, 117);
+            this->bt_selectFile3->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(57)), static_cast<System::Int32>(static_cast<System::Byte>(162)),
+                static_cast<System::Int32>(static_cast<System::Byte>(219)));
+            this->bt_selectFile3->Location = System::Drawing::Point(515, 140);
             this->bt_selectFile3->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
             this->bt_selectFile3->Name = L"bt_selectFile3";
-            this->bt_selectFile3->Size = System::Drawing::Size(40, 26);
+            this->bt_selectFile3->Size = System::Drawing::Size(40, 35);
             this->bt_selectFile3->TabIndex = 9;
             this->bt_selectFile3->Text = L"...";
-            this->bt_selectFile3->UseVisualStyleBackColor = true;
+            this->bt_selectFile3->UseVisualStyleBackColor = false;
             this->bt_selectFile3->Click += gcnew System::EventHandler(this, &Form1::bt_selectFile3_Click);
             // 
             // bt_selectFile2
             // 
             this->bt_selectFile2->Anchor = System::Windows::Forms::AnchorStyles::Top;
-            this->bt_selectFile2->Location = System::Drawing::Point(512, 80);
+            this->bt_selectFile2->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(57)), static_cast<System::Int32>(static_cast<System::Byte>(162)),
+                static_cast<System::Int32>(static_cast<System::Byte>(219)));
+            this->bt_selectFile2->Location = System::Drawing::Point(515, 90);
             this->bt_selectFile2->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
             this->bt_selectFile2->Name = L"bt_selectFile2";
-            this->bt_selectFile2->Size = System::Drawing::Size(40, 26);
+            this->bt_selectFile2->Size = System::Drawing::Size(40, 35);
             this->bt_selectFile2->TabIndex = 8;
             this->bt_selectFile2->Text = L"...";
-            this->bt_selectFile2->UseVisualStyleBackColor = true;
+            this->bt_selectFile2->UseVisualStyleBackColor = false;
             this->bt_selectFile2->Click += gcnew System::EventHandler(this, &Form1::bt_selectFile2_Click);
             // 
             // bt_selectFile1
             // 
             this->bt_selectFile1->Anchor = System::Windows::Forms::AnchorStyles::Top;
-            this->bt_selectFile1->Location = System::Drawing::Point(512, 43);
+            this->bt_selectFile1->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(57)), static_cast<System::Int32>(static_cast<System::Byte>(162)),
+                static_cast<System::Int32>(static_cast<System::Byte>(219)));
+            this->bt_selectFile1->Location = System::Drawing::Point(515, 40);
             this->bt_selectFile1->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
             this->bt_selectFile1->Name = L"bt_selectFile1";
-            this->bt_selectFile1->Size = System::Drawing::Size(40, 26);
+            this->bt_selectFile1->Size = System::Drawing::Size(40, 35);
             this->bt_selectFile1->TabIndex = 7;
             this->bt_selectFile1->Text = L"...";
-            this->bt_selectFile1->UseVisualStyleBackColor = true;
+            this->bt_selectFile1->UseVisualStyleBackColor = false;
             this->bt_selectFile1->Click += gcnew System::EventHandler(this, &Form1::bt_selectFile1_Click);
             // 
             // bt_inputFile
             // 
             this->bt_inputFile->Anchor = System::Windows::Forms::AnchorStyles::Top;
-            this->bt_inputFile->Location = System::Drawing::Point(363, 162);
+            this->bt_inputFile->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(57)), static_cast<System::Int32>(static_cast<System::Byte>(162)),
+                static_cast<System::Int32>(static_cast<System::Byte>(219)));
+            this->bt_inputFile->Location = System::Drawing::Point(363, 191);
             this->bt_inputFile->Margin = System::Windows::Forms::Padding(4);
             this->bt_inputFile->Name = L"bt_inputFile";
-            this->bt_inputFile->Size = System::Drawing::Size(100, 28);
+            this->bt_inputFile->Size = System::Drawing::Size(100, 35);
             this->bt_inputFile->TabIndex = 6;
             this->bt_inputFile->Text = L"Nhập";
-            this->bt_inputFile->UseVisualStyleBackColor = true;
+            this->bt_inputFile->UseVisualStyleBackColor = false;
             this->bt_inputFile->Click += gcnew System::EventHandler(this, &Form1::bt_inputFile_Click);
             // 
             // fileName3
             // 
             this->fileName3->Anchor = System::Windows::Forms::AnchorStyles::Top;
-            this->fileName3->Location = System::Drawing::Point(320, 117);
+            this->fileName3->Location = System::Drawing::Point(320, 145);
             this->fileName3->Margin = System::Windows::Forms::Padding(4);
             this->fileName3->Name = L"fileName3";
             this->fileName3->ReadOnly = true;
@@ -2274,7 +2109,7 @@ private: System::Windows::Forms::Label^ label30;
             // fileName2
             // 
             this->fileName2->Anchor = System::Windows::Forms::AnchorStyles::Top;
-            this->fileName2->Location = System::Drawing::Point(320, 80);
+            this->fileName2->Location = System::Drawing::Point(320, 95);
             this->fileName2->Margin = System::Windows::Forms::Padding(4);
             this->fileName2->Name = L"fileName2";
             this->fileName2->ReadOnly = true;
@@ -2285,7 +2120,7 @@ private: System::Windows::Forms::Label^ label30;
             // 
             this->label_fileName3->Anchor = System::Windows::Forms::AnchorStyles::Top;
             this->label_fileName3->AutoSize = true;
-            this->label_fileName3->Location = System::Drawing::Point(40, 117);
+            this->label_fileName3->Location = System::Drawing::Point(40, 150);
             this->label_fileName3->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
             this->label_fileName3->Name = L"label_fileName3";
             this->label_fileName3->Size = System::Drawing::Size(236, 19);
@@ -2296,7 +2131,7 @@ private: System::Windows::Forms::Label^ label30;
             // 
             this->label_fileName1->Anchor = System::Windows::Forms::AnchorStyles::Top;
             this->label_fileName1->AutoSize = true;
-            this->label_fileName1->Location = System::Drawing::Point(40, 43);
+            this->label_fileName1->Location = System::Drawing::Point(40, 50);
             this->label_fileName1->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
             this->label_fileName1->Name = L"label_fileName1";
             this->label_fileName1->Size = System::Drawing::Size(222, 19);
@@ -2307,7 +2142,7 @@ private: System::Windows::Forms::Label^ label30;
             // 
             this->label_fileName2->Anchor = System::Windows::Forms::AnchorStyles::Top;
             this->label_fileName2->AutoSize = true;
-            this->label_fileName2->Location = System::Drawing::Point(40, 80);
+            this->label_fileName2->Location = System::Drawing::Point(40, 100);
             this->label_fileName2->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
             this->label_fileName2->Name = L"label_fileName2";
             this->label_fileName2->Size = System::Drawing::Size(165, 19);
@@ -2317,7 +2152,7 @@ private: System::Windows::Forms::Label^ label30;
             // fileName1
             // 
             this->fileName1->Anchor = System::Windows::Forms::AnchorStyles::Top;
-            this->fileName1->Location = System::Drawing::Point(320, 43);
+            this->fileName1->Location = System::Drawing::Point(320, 45);
             this->fileName1->Margin = System::Windows::Forms::Padding(4);
             this->fileName1->Name = L"fileName1";
             this->fileName1->ReadOnly = true;
@@ -2371,7 +2206,9 @@ private: System::Windows::Forms::Label^ label30;
             // 
             // panel_insertType
             // 
-            this->panel_insertType->BackColor = System::Drawing::Color::Silver;
+            this->panel_insertType->Anchor = System::Windows::Forms::AnchorStyles::None;
+            this->panel_insertType->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(162)),
+                static_cast<System::Int32>(static_cast<System::Byte>(219)), static_cast<System::Int32>(static_cast<System::Byte>(250)));
             this->panel_insertType->Controls->Add(this->label18);
             this->panel_insertType->Controls->Add(this->insertTypeA);
             this->panel_insertType->Controls->Add(this->label19);
@@ -2395,6 +2232,8 @@ private: System::Windows::Forms::Label^ label30;
             // 
             // insertTypeA
             // 
+            this->insertTypeA->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(232)), static_cast<System::Int32>(static_cast<System::Byte>(240)),
+                static_cast<System::Int32>(static_cast<System::Byte>(242)));
             this->insertTypeA->Location = System::Drawing::Point(155, 17);
             this->insertTypeA->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
             this->insertTypeA->Name = L"insertTypeA";
@@ -2412,28 +2251,33 @@ private: System::Windows::Forms::Label^ label30;
             // 
             // button2
             // 
-            this->button2->Location = System::Drawing::Point(297, 15);
+            this->button2->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(57)), static_cast<System::Int32>(static_cast<System::Byte>(162)),
+                static_cast<System::Int32>(static_cast<System::Byte>(219)));
+            this->button2->Location = System::Drawing::Point(297, 13);
             this->button2->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
             this->button2->Name = L"button2";
-            this->button2->Size = System::Drawing::Size(75, 30);
+            this->button2->Size = System::Drawing::Size(75, 35);
             this->button2->TabIndex = 32;
             this->button2->Text = L"Lưu";
-            this->button2->UseVisualStyleBackColor = true;
+            this->button2->UseVisualStyleBackColor = false;
             this->button2->Click += gcnew System::EventHandler(this, &Form1::button2_Click_1);
             // 
             // button3
             // 
-            this->button3->Location = System::Drawing::Point(526, 60);
+            this->button3->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(57)), static_cast<System::Int32>(static_cast<System::Byte>(162)),
+                static_cast<System::Int32>(static_cast<System::Byte>(219)));
+            this->button3->Location = System::Drawing::Point(526, 58);
             this->button3->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
             this->button3->Name = L"button3";
-            this->button3->Size = System::Drawing::Size(75, 30);
+            this->button3->Size = System::Drawing::Size(75, 35);
             this->button3->TabIndex = 33;
             this->button3->Text = L"Lưu";
-            this->button3->UseVisualStyleBackColor = true;
+            this->button3->UseVisualStyleBackColor = false;
             this->button3->Click += gcnew System::EventHandler(this, &Form1::button3_Click_3);
             // 
             // input_mui_2
             // 
+            this->input_mui_2->Anchor = System::Windows::Forms::AnchorStyles::None;
             this->input_mui_2->AutoSize = true;
             this->input_mui_2->Location = System::Drawing::Point(360, 220);
             this->input_mui_2->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
@@ -2445,6 +2289,7 @@ private: System::Windows::Forms::Label^ label30;
             // 
             // input_mui_1
             // 
+            this->input_mui_1->Anchor = System::Windows::Forms::AnchorStyles::None;
             this->input_mui_1->AutoSize = true;
             this->input_mui_1->Location = System::Drawing::Point(360, 185);
             this->input_mui_1->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
@@ -2456,6 +2301,7 @@ private: System::Windows::Forms::Label^ label30;
             // 
             // label21
             // 
+            this->label21->Anchor = System::Windows::Forms::AnchorStyles::None;
             this->label21->AutoSize = true;
             this->label21->Location = System::Drawing::Point(356, 110);
             this->label21->Name = L"label21";
@@ -2465,6 +2311,7 @@ private: System::Windows::Forms::Label^ label30;
             // 
             // input_ma_DK
             // 
+            this->input_ma_DK->Anchor = System::Windows::Forms::AnchorStyles::None;
             this->input_ma_DK->Location = System::Drawing::Point(501, 110);
             this->input_ma_DK->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
             this->input_ma_DK->Name = L"input_ma_DK";
@@ -2473,17 +2320,21 @@ private: System::Windows::Forms::Label^ label30;
             // 
             // bt_saveInputCD
             // 
+            this->bt_saveInputCD->Anchor = System::Windows::Forms::AnchorStyles::None;
+            this->bt_saveInputCD->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(57)), static_cast<System::Int32>(static_cast<System::Byte>(162)),
+                static_cast<System::Int32>(static_cast<System::Byte>(219)));
             this->bt_saveInputCD->Location = System::Drawing::Point(399, 247);
             this->bt_saveInputCD->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
             this->bt_saveInputCD->Name = L"bt_saveInputCD";
-            this->bt_saveInputCD->Size = System::Drawing::Size(201, 30);
+            this->bt_saveInputCD->Size = System::Drawing::Size(201, 35);
             this->bt_saveInputCD->TabIndex = 34;
             this->bt_saveInputCD->Text = L"Xác nhận thông tin";
-            this->bt_saveInputCD->UseVisualStyleBackColor = true;
+            this->bt_saveInputCD->UseVisualStyleBackColor = false;
             this->bt_saveInputCD->Click += gcnew System::EventHandler(this, &Form1::bt_saveInputCD_Click);
             // 
             // input_address
             // 
+            this->input_address->Anchor = System::Windows::Forms::AnchorStyles::None;
             this->input_address->Location = System::Drawing::Point(501, 39);
             this->input_address->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
             this->input_address->Name = L"input_address";
@@ -2492,6 +2343,8 @@ private: System::Windows::Forms::Label^ label30;
             // 
             // input_ngayM2
             // 
+            this->input_ngayM2->Anchor = System::Windows::Forms::AnchorStyles::None;
+            this->input_ngayM2->Format = System::Windows::Forms::DateTimePickerFormat::Short;
             this->input_ngayM2->Location = System::Drawing::Point(501, 215);
             this->input_ngayM2->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
             this->input_ngayM2->Name = L"input_ngayM2";
@@ -2501,6 +2354,8 @@ private: System::Windows::Forms::Label^ label30;
             // 
             // input_ngayM1
             // 
+            this->input_ngayM1->Anchor = System::Windows::Forms::AnchorStyles::None;
+            this->input_ngayM1->Format = System::Windows::Forms::DateTimePickerFormat::Short;
             this->input_ngayM1->Location = System::Drawing::Point(501, 180);
             this->input_ngayM1->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
             this->input_ngayM1->Name = L"input_ngayM1";
@@ -2511,6 +2366,7 @@ private: System::Windows::Forms::Label^ label30;
             // 
             // input_noi_DK
             // 
+            this->input_noi_DK->Anchor = System::Windows::Forms::AnchorStyles::None;
             this->input_noi_DK->Location = System::Drawing::Point(501, 145);
             this->input_noi_DK->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
             this->input_noi_DK->Name = L"input_noi_DK";
@@ -2519,6 +2375,8 @@ private: System::Windows::Forms::Label^ label30;
             // 
             // input_birth
             // 
+            this->input_birth->Anchor = System::Windows::Forms::AnchorStyles::None;
+            this->input_birth->Format = System::Windows::Forms::DateTimePickerFormat::Short;
             this->input_birth->Location = System::Drawing::Point(204, 145);
             this->input_birth->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
             this->input_birth->Name = L"input_birth";
@@ -2528,6 +2386,8 @@ private: System::Windows::Forms::Label^ label30;
             // 
             // input_ngay_DK
             // 
+            this->input_ngay_DK->Anchor = System::Windows::Forms::AnchorStyles::None;
+            this->input_ngay_DK->Format = System::Windows::Forms::DateTimePickerFormat::Short;
             this->input_ngay_DK->Location = System::Drawing::Point(501, 73);
             this->input_ngay_DK->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
             this->input_ngay_DK->Name = L"input_ngay_DK";
@@ -2538,6 +2398,7 @@ private: System::Windows::Forms::Label^ label30;
             // 
             // label17
             // 
+            this->label17->Anchor = System::Windows::Forms::AnchorStyles::None;
             this->label17->AutoSize = true;
             this->label17->Location = System::Drawing::Point(356, 145);
             this->label17->Name = L"label17";
@@ -2547,6 +2408,7 @@ private: System::Windows::Forms::Label^ label30;
             // 
             // label16
             // 
+            this->label16->Anchor = System::Windows::Forms::AnchorStyles::None;
             this->label16->AutoSize = true;
             this->label16->Location = System::Drawing::Point(356, 75);
             this->label16->Name = L"label16";
@@ -2556,6 +2418,7 @@ private: System::Windows::Forms::Label^ label30;
             // 
             // label15
             // 
+            this->label15->Anchor = System::Windows::Forms::AnchorStyles::None;
             this->label15->AutoSize = true;
             this->label15->Location = System::Drawing::Point(356, 39);
             this->label15->Name = L"label15";
@@ -2565,6 +2428,7 @@ private: System::Windows::Forms::Label^ label30;
             // 
             // input_sex
             // 
+            this->input_sex->Anchor = System::Windows::Forms::AnchorStyles::None;
             this->input_sex->FormattingEnabled = true;
             this->input_sex->Items->AddRange(gcnew cli::array< System::Object^  >(2) { L"Nam", L"Nữ" });
             this->input_sex->Location = System::Drawing::Point(204, 110);
@@ -2575,6 +2439,7 @@ private: System::Windows::Forms::Label^ label30;
             // 
             // input_soCMND
             // 
+            this->input_soCMND->Anchor = System::Windows::Forms::AnchorStyles::None;
             this->input_soCMND->Location = System::Drawing::Point(203, 247);
             this->input_soCMND->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
             this->input_soCMND->Name = L"input_soCMND";
@@ -2583,6 +2448,7 @@ private: System::Windows::Forms::Label^ label30;
             // 
             // input_soBHXH
             // 
+            this->input_soBHXH->Anchor = System::Windows::Forms::AnchorStyles::None;
             this->input_soBHXH->Location = System::Drawing::Point(203, 212);
             this->input_soBHXH->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
             this->input_soBHXH->Name = L"input_soBHXH";
@@ -2591,6 +2457,7 @@ private: System::Windows::Forms::Label^ label30;
             // 
             // input_phone
             // 
+            this->input_phone->Anchor = System::Windows::Forms::AnchorStyles::None;
             this->input_phone->Location = System::Drawing::Point(203, 177);
             this->input_phone->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
             this->input_phone->Name = L"input_phone";
@@ -2599,6 +2466,7 @@ private: System::Windows::Forms::Label^ label30;
             // 
             // input_fullName
             // 
+            this->input_fullName->Anchor = System::Windows::Forms::AnchorStyles::None;
             this->input_fullName->Location = System::Drawing::Point(203, 71);
             this->input_fullName->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
             this->input_fullName->Name = L"input_fullName";
@@ -2607,6 +2475,7 @@ private: System::Windows::Forms::Label^ label30;
             // 
             // input_ma_CD
             // 
+            this->input_ma_CD->Anchor = System::Windows::Forms::AnchorStyles::None;
             this->input_ma_CD->Location = System::Drawing::Point(203, 37);
             this->input_ma_CD->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
             this->input_ma_CD->Name = L"input_ma_CD";
@@ -2615,6 +2484,7 @@ private: System::Windows::Forms::Label^ label30;
             // 
             // label14
             // 
+            this->label14->Anchor = System::Windows::Forms::AnchorStyles::None;
             this->label14->AutoSize = true;
             this->label14->Location = System::Drawing::Point(29, 250);
             this->label14->Name = L"label14";
@@ -2624,6 +2494,7 @@ private: System::Windows::Forms::Label^ label30;
             // 
             // label13
             // 
+            this->label13->Anchor = System::Windows::Forms::AnchorStyles::None;
             this->label13->AutoSize = true;
             this->label13->Location = System::Drawing::Point(29, 215);
             this->label13->Name = L"label13";
@@ -2633,6 +2504,7 @@ private: System::Windows::Forms::Label^ label30;
             // 
             // label12
             // 
+            this->label12->Anchor = System::Windows::Forms::AnchorStyles::None;
             this->label12->AutoSize = true;
             this->label12->Location = System::Drawing::Point(29, 180);
             this->label12->Name = L"label12";
@@ -2642,6 +2514,7 @@ private: System::Windows::Forms::Label^ label30;
             // 
             // label11
             // 
+            this->label11->Anchor = System::Windows::Forms::AnchorStyles::None;
             this->label11->AutoSize = true;
             this->label11->Location = System::Drawing::Point(29, 145);
             this->label11->Name = L"label11";
@@ -2651,6 +2524,7 @@ private: System::Windows::Forms::Label^ label30;
             // 
             // label10
             // 
+            this->label10->Anchor = System::Windows::Forms::AnchorStyles::None;
             this->label10->AutoSize = true;
             this->label10->Location = System::Drawing::Point(29, 110);
             this->label10->Name = L"label10";
@@ -2660,6 +2534,7 @@ private: System::Windows::Forms::Label^ label30;
             // 
             // label9
             // 
+            this->label9->Anchor = System::Windows::Forms::AnchorStyles::None;
             this->label9->AutoSize = true;
             this->label9->Location = System::Drawing::Point(29, 39);
             this->label9->Name = L"label9";
@@ -2669,6 +2544,7 @@ private: System::Windows::Forms::Label^ label30;
             // 
             // label8
             // 
+            this->label8->Anchor = System::Windows::Forms::AnchorStyles::None;
             this->label8->AutoSize = true;
             this->label8->Location = System::Drawing::Point(29, 75);
             this->label8->Name = L"label8";
@@ -2701,49 +2577,57 @@ private: System::Windows::Forms::Label^ label30;
             // bt_saveAllData
             // 
             this->bt_saveAllData->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((System::Windows::Forms::AnchorStyles::Bottom | System::Windows::Forms::AnchorStyles::Right));
+            this->bt_saveAllData->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(57)), static_cast<System::Int32>(static_cast<System::Byte>(162)),
+                static_cast<System::Int32>(static_cast<System::Byte>(219)));
             this->bt_saveAllData->Location = System::Drawing::Point(555, 377);
             this->bt_saveAllData->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
             this->bt_saveAllData->Name = L"bt_saveAllData";
-            this->bt_saveAllData->Size = System::Drawing::Size(91, 30);
+            this->bt_saveAllData->Size = System::Drawing::Size(91, 35);
             this->bt_saveAllData->TabIndex = 4;
             this->bt_saveAllData->Text = L"Lưu";
-            this->bt_saveAllData->UseVisualStyleBackColor = true;
+            this->bt_saveAllData->UseVisualStyleBackColor = false;
             this->bt_saveAllData->Click += gcnew System::EventHandler(this, &Form1::bt_saveAllData_Click);
             // 
             // bt_loadAllData
             // 
             this->bt_loadAllData->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((System::Windows::Forms::AnchorStyles::Bottom | System::Windows::Forms::AnchorStyles::Right));
+            this->bt_loadAllData->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(57)), static_cast<System::Int32>(static_cast<System::Byte>(162)),
+                static_cast<System::Int32>(static_cast<System::Byte>(219)));
             this->bt_loadAllData->Location = System::Drawing::Point(283, 377);
             this->bt_loadAllData->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
             this->bt_loadAllData->Name = L"bt_loadAllData";
-            this->bt_loadAllData->Size = System::Drawing::Size(131, 30);
+            this->bt_loadAllData->Size = System::Drawing::Size(131, 35);
             this->bt_loadAllData->TabIndex = 3;
             this->bt_loadAllData->Text = L"Tải dữ liệu";
-            this->bt_loadAllData->UseVisualStyleBackColor = true;
+            this->bt_loadAllData->UseVisualStyleBackColor = false;
             this->bt_loadAllData->Click += gcnew System::EventHandler(this, &Form1::bt_loadAllData_Click);
             // 
             // bt_modAllData
             // 
             this->bt_modAllData->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((System::Windows::Forms::AnchorStyles::Bottom | System::Windows::Forms::AnchorStyles::Right));
+            this->bt_modAllData->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(57)), static_cast<System::Int32>(static_cast<System::Byte>(162)),
+                static_cast<System::Int32>(static_cast<System::Byte>(219)));
             this->bt_modAllData->Location = System::Drawing::Point(419, 377);
             this->bt_modAllData->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
             this->bt_modAllData->Name = L"bt_modAllData";
-            this->bt_modAllData->Size = System::Drawing::Size(131, 30);
+            this->bt_modAllData->Size = System::Drawing::Size(131, 35);
             this->bt_modAllData->TabIndex = 2;
             this->bt_modAllData->Text = L"Chỉnh sửa";
-            this->bt_modAllData->UseVisualStyleBackColor = true;
+            this->bt_modAllData->UseVisualStyleBackColor = false;
             this->bt_modAllData->Click += gcnew System::EventHandler(this, &Form1::bt_modAllData_Click);
             // 
             // button7
             // 
             this->button7->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((System::Windows::Forms::AnchorStyles::Bottom | System::Windows::Forms::AnchorStyles::Right));
+            this->button7->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(57)), static_cast<System::Int32>(static_cast<System::Byte>(162)),
+                static_cast<System::Int32>(static_cast<System::Byte>(219)));
             this->button7->Location = System::Drawing::Point(555, 388);
             this->button7->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
             this->button7->Name = L"button7";
             this->button7->Size = System::Drawing::Size(0, 0);
             this->button7->TabIndex = 1;
             this->button7->Text = L"button7";
-            this->button7->UseVisualStyleBackColor = true;
+            this->button7->UseVisualStyleBackColor = false;
             // 
             // view_exportAllData_people
             // 
@@ -2752,6 +2636,8 @@ private: System::Windows::Forms::Label^ label30;
             this->view_exportAllData_people->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Bottom)
                 | System::Windows::Forms::AnchorStyles::Left)
                 | System::Windows::Forms::AnchorStyles::Right));
+            this->view_exportAllData_people->BackgroundColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(162)),
+                static_cast<System::Int32>(static_cast<System::Byte>(219)), static_cast<System::Int32>(static_cast<System::Byte>(250)));
             this->view_exportAllData_people->ColumnHeadersHeightSizeMode = System::Windows::Forms::DataGridViewColumnHeadersHeightSizeMode::AutoSize;
             this->view_exportAllData_people->Columns->AddRange(gcnew cli::array< System::Windows::Forms::DataGridViewColumn^  >(15) {
                 this->maCD,
@@ -2759,6 +2645,8 @@ private: System::Windows::Forms::Label^ label30;
                     this->address_allData, this->ma_DK_allData, this->ngay_DK_allData, this->noi_DK_allData, this->mui1_allData, this->ngayM1_allData,
                     this->mui2_allData, this->ngay_M2_allData
             });
+            this->view_exportAllData_people->GridColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(162)),
+                static_cast<System::Int32>(static_cast<System::Byte>(219)), static_cast<System::Int32>(static_cast<System::Byte>(250)));
             this->view_exportAllData_people->Location = System::Drawing::Point(11, 25);
             this->view_exportAllData_people->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
             this->view_exportAllData_people->Name = L"view_exportAllData_people";
@@ -2888,8 +2776,286 @@ private: System::Windows::Forms::Label^ label30;
             this->ngay_M2_allData->ReadOnly = true;
             this->ngay_M2_allData->Width = 125;
             // 
+            // exportData_vaccination
+            // 
+            this->exportData_vaccination->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Bottom)
+                | System::Windows::Forms::AnchorStyles::Left)
+                | System::Windows::Forms::AnchorStyles::Right));
+            this->exportData_vaccination->Controls->Add(this->bt_saveData_vaccination);
+            this->exportData_vaccination->Controls->Add(this->bt_loadData_vaccination);
+            this->exportData_vaccination->Controls->Add(this->bt_modData_vaccination);
+            this->exportData_vaccination->Controls->Add(this->button6);
+            this->exportData_vaccination->Controls->Add(this->view_exportData_vaccination);
+            this->exportData_vaccination->Font = (gcnew System::Drawing::Font(L"MS Reference Sans Serif", 9, System::Drawing::FontStyle::Regular,
+                System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
+            this->exportData_vaccination->Location = System::Drawing::Point(0, 50);
+            this->exportData_vaccination->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
+            this->exportData_vaccination->Name = L"exportData_vaccination";
+            this->exportData_vaccination->Padding = System::Windows::Forms::Padding(3, 2, 3, 2);
+            this->exportData_vaccination->Size = System::Drawing::Size(653, 417);
+            this->exportData_vaccination->TabIndex = 8;
+            this->exportData_vaccination->TabStop = false;
+            this->exportData_vaccination->Text = L"Dữ liệu tiêm chủng";
+            this->exportData_vaccination->Visible = false;
+            // 
+            // bt_saveData_vaccination
+            // 
+            this->bt_saveData_vaccination->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((System::Windows::Forms::AnchorStyles::Bottom | System::Windows::Forms::AnchorStyles::Right));
+            this->bt_saveData_vaccination->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(57)),
+                static_cast<System::Int32>(static_cast<System::Byte>(162)), static_cast<System::Int32>(static_cast<System::Byte>(219)));
+            this->bt_saveData_vaccination->Location = System::Drawing::Point(551, 377);
+            this->bt_saveData_vaccination->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
+            this->bt_saveData_vaccination->Name = L"bt_saveData_vaccination";
+            this->bt_saveData_vaccination->Size = System::Drawing::Size(91, 35);
+            this->bt_saveData_vaccination->TabIndex = 4;
+            this->bt_saveData_vaccination->Text = L"Lưu";
+            this->bt_saveData_vaccination->UseVisualStyleBackColor = false;
+            this->bt_saveData_vaccination->Click += gcnew System::EventHandler(this, &Form1::bt_saveData_vaccination_Click);
+            // 
+            // bt_loadData_vaccination
+            // 
+            this->bt_loadData_vaccination->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((System::Windows::Forms::AnchorStyles::Bottom | System::Windows::Forms::AnchorStyles::Right));
+            this->bt_loadData_vaccination->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(57)),
+                static_cast<System::Int32>(static_cast<System::Byte>(162)), static_cast<System::Int32>(static_cast<System::Byte>(219)));
+            this->bt_loadData_vaccination->Location = System::Drawing::Point(279, 377);
+            this->bt_loadData_vaccination->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
+            this->bt_loadData_vaccination->Name = L"bt_loadData_vaccination";
+            this->bt_loadData_vaccination->Size = System::Drawing::Size(131, 35);
+            this->bt_loadData_vaccination->TabIndex = 3;
+            this->bt_loadData_vaccination->Text = L"Tải dữ liệu";
+            this->bt_loadData_vaccination->UseVisualStyleBackColor = false;
+            this->bt_loadData_vaccination->Click += gcnew System::EventHandler(this, &Form1::bt_loadData_vaccination_Click);
+            // 
+            // bt_modData_vaccination
+            // 
+            this->bt_modData_vaccination->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((System::Windows::Forms::AnchorStyles::Bottom | System::Windows::Forms::AnchorStyles::Right));
+            this->bt_modData_vaccination->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(57)),
+                static_cast<System::Int32>(static_cast<System::Byte>(162)), static_cast<System::Int32>(static_cast<System::Byte>(219)));
+            this->bt_modData_vaccination->Location = System::Drawing::Point(415, 377);
+            this->bt_modData_vaccination->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
+            this->bt_modData_vaccination->Name = L"bt_modData_vaccination";
+            this->bt_modData_vaccination->Size = System::Drawing::Size(131, 35);
+            this->bt_modData_vaccination->TabIndex = 2;
+            this->bt_modData_vaccination->Text = L"Chỉnh sửa";
+            this->bt_modData_vaccination->UseVisualStyleBackColor = false;
+            this->bt_modData_vaccination->Click += gcnew System::EventHandler(this, &Form1::bt_modData_vaccination_Click);
+            // 
+            // button6
+            // 
+            this->button6->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((System::Windows::Forms::AnchorStyles::Bottom | System::Windows::Forms::AnchorStyles::Right));
+            this->button6->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(57)), static_cast<System::Int32>(static_cast<System::Byte>(162)),
+                static_cast<System::Int32>(static_cast<System::Byte>(219)));
+            this->button6->Location = System::Drawing::Point(551, 388);
+            this->button6->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
+            this->button6->Name = L"button6";
+            this->button6->Size = System::Drawing::Size(0, 0);
+            this->button6->TabIndex = 1;
+            this->button6->Text = L"button6";
+            this->button6->UseVisualStyleBackColor = false;
+            // 
+            // view_exportData_vaccination
+            // 
+            this->view_exportData_vaccination->AllowUserToAddRows = false;
+            this->view_exportData_vaccination->AllowUserToDeleteRows = false;
+            this->view_exportData_vaccination->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Bottom)
+                | System::Windows::Forms::AnchorStyles::Left)
+                | System::Windows::Forms::AnchorStyles::Right));
+            this->view_exportData_vaccination->BackgroundColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(162)),
+                static_cast<System::Int32>(static_cast<System::Byte>(219)), static_cast<System::Int32>(static_cast<System::Byte>(250)));
+            this->view_exportData_vaccination->ColumnHeadersHeightSizeMode = System::Windows::Forms::DataGridViewColumnHeadersHeightSizeMode::AutoSize;
+            this->view_exportData_vaccination->Columns->AddRange(gcnew cli::array< System::Windows::Forms::DataGridViewColumn^  >(5) {
+                this->fullName3,
+                    this->mui1, this->ngay_M1, this->mui2, this->ngay_M2
+            });
+            this->view_exportData_vaccination->GridColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(162)),
+                static_cast<System::Int32>(static_cast<System::Byte>(219)), static_cast<System::Int32>(static_cast<System::Byte>(250)));
+            this->view_exportData_vaccination->Location = System::Drawing::Point(11, 25);
+            this->view_exportData_vaccination->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
+            this->view_exportData_vaccination->Name = L"view_exportData_vaccination";
+            this->view_exportData_vaccination->ReadOnly = true;
+            this->view_exportData_vaccination->RowHeadersWidth = 51;
+            this->view_exportData_vaccination->RowTemplate->Height = 24;
+            this->view_exportData_vaccination->Size = System::Drawing::Size(644, 342);
+            this->view_exportData_vaccination->TabIndex = 0;
+            // 
+            // fullName3
+            // 
+            this->fullName3->HeaderText = L"Họ và tên";
+            this->fullName3->MinimumWidth = 6;
+            this->fullName3->Name = L"fullName3";
+            this->fullName3->ReadOnly = true;
+            this->fullName3->Width = 125;
+            // 
+            // mui1
+            // 
+            this->mui1->HeaderText = L"Mũi số 1";
+            this->mui1->MinimumWidth = 6;
+            this->mui1->Name = L"mui1";
+            this->mui1->ReadOnly = true;
+            this->mui1->Width = 125;
+            // 
+            // ngay_M1
+            // 
+            this->ngay_M1->HeaderText = L"Ngày tiêm mũi 1";
+            this->ngay_M1->MinimumWidth = 6;
+            this->ngay_M1->Name = L"ngay_M1";
+            this->ngay_M1->ReadOnly = true;
+            this->ngay_M1->Width = 125;
+            // 
+            // mui2
+            // 
+            this->mui2->HeaderText = L"Mũi số 2";
+            this->mui2->MinimumWidth = 6;
+            this->mui2->Name = L"mui2";
+            this->mui2->ReadOnly = true;
+            this->mui2->Width = 125;
+            // 
+            // ngay_M2
+            // 
+            this->ngay_M2->HeaderText = L"Ngày tiêm mũi 2";
+            this->ngay_M2->MinimumWidth = 6;
+            this->ngay_M2->Name = L"ngay_M2";
+            this->ngay_M2->ReadOnly = true;
+            this->ngay_M2->Width = 125;
+            // 
+            // exportData_registry
+            // 
+            this->exportData_registry->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Bottom)
+                | System::Windows::Forms::AnchorStyles::Left)
+                | System::Windows::Forms::AnchorStyles::Right));
+            this->exportData_registry->Controls->Add(this->bt_saveData_registry);
+            this->exportData_registry->Controls->Add(this->bt_loadData_registry);
+            this->exportData_registry->Controls->Add(this->bt_modData_registry);
+            this->exportData_registry->Controls->Add(this->button5);
+            this->exportData_registry->Controls->Add(this->view_exportData_registry);
+            this->exportData_registry->Font = (gcnew System::Drawing::Font(L"MS Reference Sans Serif", 9, System::Drawing::FontStyle::Regular,
+                System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
+            this->exportData_registry->Location = System::Drawing::Point(0, 50);
+            this->exportData_registry->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
+            this->exportData_registry->Name = L"exportData_registry";
+            this->exportData_registry->Padding = System::Windows::Forms::Padding(3, 2, 3, 2);
+            this->exportData_registry->Size = System::Drawing::Size(653, 417);
+            this->exportData_registry->TabIndex = 7;
+            this->exportData_registry->TabStop = false;
+            this->exportData_registry->Text = L"Dữ liệu đăng ký";
+            this->exportData_registry->Visible = false;
+            // 
+            // bt_saveData_registry
+            // 
+            this->bt_saveData_registry->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((System::Windows::Forms::AnchorStyles::Bottom | System::Windows::Forms::AnchorStyles::Right));
+            this->bt_saveData_registry->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(57)),
+                static_cast<System::Int32>(static_cast<System::Byte>(162)), static_cast<System::Int32>(static_cast<System::Byte>(219)));
+            this->bt_saveData_registry->Location = System::Drawing::Point(551, 377);
+            this->bt_saveData_registry->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
+            this->bt_saveData_registry->Name = L"bt_saveData_registry";
+            this->bt_saveData_registry->Size = System::Drawing::Size(91, 35);
+            this->bt_saveData_registry->TabIndex = 4;
+            this->bt_saveData_registry->Text = L"Lưu";
+            this->bt_saveData_registry->UseVisualStyleBackColor = false;
+            this->bt_saveData_registry->Click += gcnew System::EventHandler(this, &Form1::bt_saveData_registry_Click);
+            // 
+            // bt_loadData_registry
+            // 
+            this->bt_loadData_registry->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((System::Windows::Forms::AnchorStyles::Bottom | System::Windows::Forms::AnchorStyles::Right));
+            this->bt_loadData_registry->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(57)),
+                static_cast<System::Int32>(static_cast<System::Byte>(162)), static_cast<System::Int32>(static_cast<System::Byte>(219)));
+            this->bt_loadData_registry->Location = System::Drawing::Point(279, 377);
+            this->bt_loadData_registry->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
+            this->bt_loadData_registry->Name = L"bt_loadData_registry";
+            this->bt_loadData_registry->Size = System::Drawing::Size(131, 35);
+            this->bt_loadData_registry->TabIndex = 3;
+            this->bt_loadData_registry->Text = L"Tải dữ liệu";
+            this->bt_loadData_registry->UseVisualStyleBackColor = false;
+            this->bt_loadData_registry->Click += gcnew System::EventHandler(this, &Form1::button3_Click_1);
+            // 
+            // bt_modData_registry
+            // 
+            this->bt_modData_registry->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((System::Windows::Forms::AnchorStyles::Bottom | System::Windows::Forms::AnchorStyles::Right));
+            this->bt_modData_registry->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(57)),
+                static_cast<System::Int32>(static_cast<System::Byte>(162)), static_cast<System::Int32>(static_cast<System::Byte>(219)));
+            this->bt_modData_registry->Location = System::Drawing::Point(415, 377);
+            this->bt_modData_registry->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
+            this->bt_modData_registry->Name = L"bt_modData_registry";
+            this->bt_modData_registry->Size = System::Drawing::Size(131, 35);
+            this->bt_modData_registry->TabIndex = 2;
+            this->bt_modData_registry->Text = L"Chỉnh sửa";
+            this->bt_modData_registry->UseVisualStyleBackColor = false;
+            this->bt_modData_registry->Click += gcnew System::EventHandler(this, &Form1::bt_modData_registry_Click);
+            // 
+            // button5
+            // 
+            this->button5->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((System::Windows::Forms::AnchorStyles::Bottom | System::Windows::Forms::AnchorStyles::Right));
+            this->button5->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(57)), static_cast<System::Int32>(static_cast<System::Byte>(162)),
+                static_cast<System::Int32>(static_cast<System::Byte>(219)));
+            this->button5->Location = System::Drawing::Point(551, 388);
+            this->button5->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
+            this->button5->Name = L"button5";
+            this->button5->Size = System::Drawing::Size(0, 0);
+            this->button5->TabIndex = 1;
+            this->button5->Text = L"button5";
+            this->button5->UseVisualStyleBackColor = false;
+            // 
+            // view_exportData_registry
+            // 
+            this->view_exportData_registry->AllowUserToAddRows = false;
+            this->view_exportData_registry->AllowUserToDeleteRows = false;
+            this->view_exportData_registry->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Bottom)
+                | System::Windows::Forms::AnchorStyles::Left)
+                | System::Windows::Forms::AnchorStyles::Right));
+            this->view_exportData_registry->BackgroundColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(162)),
+                static_cast<System::Int32>(static_cast<System::Byte>(219)), static_cast<System::Int32>(static_cast<System::Byte>(250)));
+            this->view_exportData_registry->ColumnHeadersHeightSizeMode = System::Windows::Forms::DataGridViewColumnHeadersHeightSizeMode::AutoSize;
+            this->view_exportData_registry->Columns->AddRange(gcnew cli::array< System::Windows::Forms::DataGridViewColumn^  >(4) {
+                this->fullName2,
+                    this->ma_DK, this->ngay_DK, this->noi_DK
+            });
+            this->view_exportData_registry->GridColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(162)),
+                static_cast<System::Int32>(static_cast<System::Byte>(219)), static_cast<System::Int32>(static_cast<System::Byte>(250)));
+            this->view_exportData_registry->Location = System::Drawing::Point(11, 25);
+            this->view_exportData_registry->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
+            this->view_exportData_registry->Name = L"view_exportData_registry";
+            this->view_exportData_registry->ReadOnly = true;
+            this->view_exportData_registry->RowHeadersWidth = 51;
+            this->view_exportData_registry->RowTemplate->Height = 24;
+            this->view_exportData_registry->Size = System::Drawing::Size(644, 342);
+            this->view_exportData_registry->TabIndex = 0;
+            // 
+            // fullName2
+            // 
+            this->fullName2->HeaderText = L"Họ và tên";
+            this->fullName2->MinimumWidth = 6;
+            this->fullName2->Name = L"fullName2";
+            this->fullName2->ReadOnly = true;
+            this->fullName2->Width = 125;
+            // 
+            // ma_DK
+            // 
+            this->ma_DK->HeaderText = L"Mã đăng ký";
+            this->ma_DK->MinimumWidth = 6;
+            this->ma_DK->Name = L"ma_DK";
+            this->ma_DK->ReadOnly = true;
+            this->ma_DK->Width = 125;
+            // 
+            // ngay_DK
+            // 
+            this->ngay_DK->HeaderText = L"Ngày đăng ký";
+            this->ngay_DK->MinimumWidth = 6;
+            this->ngay_DK->Name = L"ngay_DK";
+            this->ngay_DK->ReadOnly = true;
+            this->ngay_DK->Width = 125;
+            // 
+            // noi_DK
+            // 
+            this->noi_DK->HeaderText = L"Nơi đăng ký";
+            this->noi_DK->MinimumWidth = 6;
+            this->noi_DK->Name = L"noi_DK";
+            this->noi_DK->ReadOnly = true;
+            this->noi_DK->Width = 125;
+            // 
             // accountManager_newFullname
             // 
+            this->accountManager_newFullname->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(232)),
+                static_cast<System::Int32>(static_cast<System::Byte>(240)), static_cast<System::Int32>(static_cast<System::Byte>(242)));
             this->accountManager_newFullname->Font = (gcnew System::Drawing::Font(L"MS Reference Sans Serif", 9, System::Drawing::FontStyle::Regular,
                 System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
             this->accountManager_newFullname->Location = System::Drawing::Point(213, 36);
@@ -2928,6 +3094,8 @@ private: System::Windows::Forms::Label^ label30;
             // 
             // loginTab
             // 
+            this->loginTab->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(232)), static_cast<System::Int32>(static_cast<System::Byte>(240)),
+                static_cast<System::Int32>(static_cast<System::Byte>(242)));
             this->loginTab->Controls->Add(this->label29);
             this->loginTab->Controls->Add(this->label25);
             this->loginTab->Controls->Add(this->label24);
@@ -2947,13 +3115,15 @@ private: System::Windows::Forms::Label^ label30;
             this->loginTab->Size = System::Drawing::Size(651, 468);
             this->loginTab->TabIndex = 0;
             this->loginTab->Text = L"Đăng nhập";
-            this->loginTab->UseVisualStyleBackColor = true;
             // 
             // label29
             // 
+            this->label29->Anchor = System::Windows::Forms::AnchorStyles::None;
             this->label29->AutoSize = true;
             this->label29->Font = (gcnew System::Drawing::Font(L"MS Reference Sans Serif", 9, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
                 static_cast<System::Byte>(0)));
+            this->label29->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(5)), static_cast<System::Int32>(static_cast<System::Byte>(55)),
+                static_cast<System::Int32>(static_cast<System::Byte>(66)));
             this->label29->Location = System::Drawing::Point(100, 22);
             this->label29->Name = L"label29";
             this->label29->Size = System::Drawing::Size(403, 19);
@@ -2962,10 +3132,10 @@ private: System::Windows::Forms::Label^ label30;
             // 
             // label25
             // 
-            this->label25->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Bottom)
-                | System::Windows::Forms::AnchorStyles::Left)
-                | System::Windows::Forms::AnchorStyles::Right));
+            this->label25->Anchor = System::Windows::Forms::AnchorStyles::None;
             this->label25->AutoSize = true;
+            this->label25->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(5)), static_cast<System::Int32>(static_cast<System::Byte>(55)),
+                static_cast<System::Int32>(static_cast<System::Byte>(66)));
             this->label25->Location = System::Drawing::Point(327, 86);
             this->label25->Name = L"label25";
             this->label25->Size = System::Drawing::Size(176, 19);
@@ -2974,10 +3144,10 @@ private: System::Windows::Forms::Label^ label30;
             // 
             // label24
             // 
-            this->label24->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Bottom)
-                | System::Windows::Forms::AnchorStyles::Left)
-                | System::Windows::Forms::AnchorStyles::Right));
+            this->label24->Anchor = System::Windows::Forms::AnchorStyles::None;
             this->label24->AutoSize = true;
+            this->label24->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(5)), static_cast<System::Int32>(static_cast<System::Byte>(55)),
+                static_cast<System::Int32>(static_cast<System::Byte>(66)));
             this->label24->Location = System::Drawing::Point(327, 111);
             this->label24->Name = L"label24";
             this->label24->Size = System::Drawing::Size(160, 19);
@@ -2986,10 +3156,10 @@ private: System::Windows::Forms::Label^ label30;
             // 
             // label23
             // 
-            this->label23->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Bottom)
-                | System::Windows::Forms::AnchorStyles::Left)
-                | System::Windows::Forms::AnchorStyles::Right));
+            this->label23->Anchor = System::Windows::Forms::AnchorStyles::None;
             this->label23->AutoSize = true;
+            this->label23->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(5)), static_cast<System::Int32>(static_cast<System::Byte>(55)),
+                static_cast<System::Int32>(static_cast<System::Byte>(66)));
             this->label23->Location = System::Drawing::Point(327, 135);
             this->label23->Name = L"label23";
             this->label23->Size = System::Drawing::Size(142, 19);
@@ -2998,10 +3168,10 @@ private: System::Windows::Forms::Label^ label30;
             // 
             // label22
             // 
-            this->label22->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Bottom)
-                | System::Windows::Forms::AnchorStyles::Left)
-                | System::Windows::Forms::AnchorStyles::Right));
+            this->label22->Anchor = System::Windows::Forms::AnchorStyles::None;
             this->label22->AutoSize = true;
+            this->label22->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(5)), static_cast<System::Int32>(static_cast<System::Byte>(55)),
+                static_cast<System::Int32>(static_cast<System::Byte>(66)));
             this->label22->Location = System::Drawing::Point(181, 111);
             this->label22->Name = L"label22";
             this->label22->Size = System::Drawing::Size(130, 19);
@@ -3010,10 +3180,10 @@ private: System::Windows::Forms::Label^ label30;
             // 
             // label20
             // 
-            this->label20->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Bottom)
-                | System::Windows::Forms::AnchorStyles::Left)
-                | System::Windows::Forms::AnchorStyles::Right));
+            this->label20->Anchor = System::Windows::Forms::AnchorStyles::None;
             this->label20->AutoSize = true;
+            this->label20->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(5)), static_cast<System::Int32>(static_cast<System::Byte>(55)),
+                static_cast<System::Int32>(static_cast<System::Byte>(66)));
             this->label20->Location = System::Drawing::Point(136, 86);
             this->label20->Name = L"label20";
             this->label20->Size = System::Drawing::Size(169, 19);
@@ -3022,12 +3192,12 @@ private: System::Windows::Forms::Label^ label30;
             // 
             // intro_label1
             // 
-            this->intro_label1->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Bottom)
-                | System::Windows::Forms::AnchorStyles::Left)
-                | System::Windows::Forms::AnchorStyles::Right));
+            this->intro_label1->Anchor = System::Windows::Forms::AnchorStyles::None;
             this->intro_label1->AutoSize = true;
             this->intro_label1->Font = (gcnew System::Drawing::Font(L"MS Reference Sans Serif", 9, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
                 static_cast<System::Byte>(0)));
+            this->intro_label1->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(5)), static_cast<System::Int32>(static_cast<System::Byte>(55)),
+                static_cast<System::Int32>(static_cast<System::Byte>(66)));
             this->intro_label1->Location = System::Drawing::Point(53, 53);
             this->intro_label1->Name = L"intro_label1";
             this->intro_label1->Size = System::Drawing::Size(510, 19);
@@ -3037,22 +3207,27 @@ private: System::Windows::Forms::Label^ label30;
             // bt_quit
             // 
             this->bt_quit->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((System::Windows::Forms::AnchorStyles::Bottom | System::Windows::Forms::AnchorStyles::Right));
+            this->bt_quit->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(57)), static_cast<System::Int32>(static_cast<System::Byte>(162)),
+                static_cast<System::Int32>(static_cast<System::Byte>(219)));
             this->bt_quit->Font = (gcnew System::Drawing::Font(L"MS Reference Sans Serif", 9, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
                 static_cast<System::Byte>(0)));
-            this->bt_quit->Location = System::Drawing::Point(571, 433);
+            this->bt_quit->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(5)), static_cast<System::Int32>(static_cast<System::Byte>(55)),
+                static_cast<System::Int32>(static_cast<System::Byte>(66)));
+            this->bt_quit->Location = System::Drawing::Point(560, 429);
             this->bt_quit->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
             this->bt_quit->Name = L"bt_quit";
-            this->bt_quit->Size = System::Drawing::Size(75, 28);
+            this->bt_quit->Size = System::Drawing::Size(85, 35);
             this->bt_quit->TabIndex = 1;
             this->bt_quit->Text = L"Thoát";
-            this->bt_quit->UseVisualStyleBackColor = true;
+            this->bt_quit->UseVisualStyleBackColor = false;
             this->bt_quit->Click += gcnew System::EventHandler(this, &Form1::bt_quit_Click);
             // 
             // loginBox
             // 
             this->loginBox->Anchor = System::Windows::Forms::AnchorStyles::None;
             this->loginBox->AutoSize = true;
-            this->loginBox->BackColor = System::Drawing::Color::LightGray;
+            this->loginBox->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(162)), static_cast<System::Int32>(static_cast<System::Byte>(219)),
+                static_cast<System::Int32>(static_cast<System::Byte>(250)));
             this->loginBox->Controls->Add(this->text3);
             this->loginBox->Controls->Add(this->loginBox_status);
             this->loginBox->Controls->Add(this->bt_showPassword);
@@ -3078,7 +3253,7 @@ private: System::Windows::Forms::Label^ label30;
             this->text3->AutoSize = true;
             this->text3->Font = (gcnew System::Drawing::Font(L"MS Reference Sans Serif", 9, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
                 static_cast<System::Byte>(0)));
-            this->text3->Location = System::Drawing::Point(72, 149);
+            this->text3->Location = System::Drawing::Point(72, 152);
             this->text3->Name = L"text3";
             this->text3->Size = System::Drawing::Size(83, 19);
             this->text3->TabIndex = 7;
@@ -3090,7 +3265,7 @@ private: System::Windows::Forms::Label^ label30;
             this->loginBox_status->Font = (gcnew System::Drawing::Font(L"MS Reference Sans Serif", 9, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
                 static_cast<System::Byte>(0)));
             this->loginBox_status->ForeColor = System::Drawing::Color::Red;
-            this->loginBox_status->Location = System::Drawing::Point(168, 149);
+            this->loginBox_status->Location = System::Drawing::Point(168, 152);
             this->loginBox_status->Name = L"loginBox_status";
             this->loginBox_status->Size = System::Drawing::Size(130, 19);
             this->loginBox_status->TabIndex = 6;
@@ -3098,36 +3273,44 @@ private: System::Windows::Forms::Label^ label30;
             // 
             // bt_showPassword
             // 
+            this->bt_showPassword->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(57)), static_cast<System::Int32>(static_cast<System::Byte>(162)),
+                static_cast<System::Int32>(static_cast<System::Byte>(219)));
             this->bt_showPassword->Font = (gcnew System::Drawing::Font(L"MS Reference Sans Serif", 9, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
                 static_cast<System::Byte>(0)));
             this->bt_showPassword->ForeColor = System::Drawing::SystemColors::ActiveCaptionText;
             this->bt_showPassword->Location = System::Drawing::Point(331, 78);
             this->bt_showPassword->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
             this->bt_showPassword->Name = L"bt_showPassword";
-            this->bt_showPassword->Size = System::Drawing::Size(31, 25);
+            this->bt_showPassword->Size = System::Drawing::Size(39, 25);
             this->bt_showPassword->TabIndex = 5;
-            this->bt_showPassword->UseVisualStyleBackColor = true;
+            this->bt_showPassword->UseVisualStyleBackColor = false;
             this->bt_showPassword->MouseDown += gcnew System::Windows::Forms::MouseEventHandler(this, &Form1::bt_showPassword_MouseDown);
             this->bt_showPassword->MouseUp += gcnew System::Windows::Forms::MouseEventHandler(this, &Form1::bt_showPassword_MouseUp);
             // 
             // bt_login
             // 
+            this->bt_login->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(57)), static_cast<System::Int32>(static_cast<System::Byte>(162)),
+                static_cast<System::Int32>(static_cast<System::Byte>(219)));
             this->bt_login->Font = (gcnew System::Drawing::Font(L"MS Reference Sans Serif", 9, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
                 static_cast<System::Byte>(0)));
-            this->bt_login->Location = System::Drawing::Point(184, 113);
+            this->bt_login->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(5)), static_cast<System::Int32>(static_cast<System::Byte>(55)),
+                static_cast<System::Int32>(static_cast<System::Byte>(66)));
+            this->bt_login->Location = System::Drawing::Point(172, 112);
             this->bt_login->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
             this->bt_login->Name = L"bt_login";
-            this->bt_login->Size = System::Drawing::Size(125, 30);
+            this->bt_login->Size = System::Drawing::Size(151, 35);
             this->bt_login->TabIndex = 4;
             this->bt_login->Text = L"Đăng nhập";
-            this->bt_login->UseVisualStyleBackColor = true;
+            this->bt_login->UseVisualStyleBackColor = false;
             this->bt_login->Click += gcnew System::EventHandler(this, &Form1::bt_login_Click);
             // 
             // loginBox_password
             // 
+            this->loginBox_password->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(232)),
+                static_cast<System::Int32>(static_cast<System::Byte>(240)), static_cast<System::Int32>(static_cast<System::Byte>(242)));
             this->loginBox_password->Font = (gcnew System::Drawing::Font(L"MS Reference Sans Serif", 9, System::Drawing::FontStyle::Regular,
                 System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
-            this->loginBox_password->Location = System::Drawing::Point(171, 78);
+            this->loginBox_password->Location = System::Drawing::Point(171, 77);
             this->loginBox_password->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
             this->loginBox_password->Name = L"loginBox_password";
             this->loginBox_password->PasswordChar = '*';
@@ -3136,9 +3319,11 @@ private: System::Windows::Forms::Label^ label30;
             // 
             // loginBox_username
             // 
+            this->loginBox_username->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(232)),
+                static_cast<System::Int32>(static_cast<System::Byte>(240)), static_cast<System::Int32>(static_cast<System::Byte>(242)));
             this->loginBox_username->Font = (gcnew System::Drawing::Font(L"MS Reference Sans Serif", 9, System::Drawing::FontStyle::Regular,
                 System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
-            this->loginBox_username->Location = System::Drawing::Point(171, 47);
+            this->loginBox_username->Location = System::Drawing::Point(171, 43);
             this->loginBox_username->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
             this->loginBox_username->Name = L"loginBox_username";
             this->loginBox_username->Size = System::Drawing::Size(152, 26);
@@ -3149,7 +3334,7 @@ private: System::Windows::Forms::Label^ label30;
             this->text2->AutoSize = true;
             this->text2->Font = (gcnew System::Drawing::Font(L"MS Reference Sans Serif", 9, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
                 static_cast<System::Byte>(0)));
-            this->text2->Location = System::Drawing::Point(76, 81);
+            this->text2->Location = System::Drawing::Point(76, 80);
             this->text2->Name = L"text2";
             this->text2->Size = System::Drawing::Size(78, 19);
             this->text2->TabIndex = 1;
@@ -3160,7 +3345,7 @@ private: System::Windows::Forms::Label^ label30;
             this->text1->AutoSize = true;
             this->text1->Font = (gcnew System::Drawing::Font(L"MS Reference Sans Serif", 9, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
                 static_cast<System::Byte>(0)));
-            this->text1->Location = System::Drawing::Point(33, 50);
+            this->text1->Location = System::Drawing::Point(33, 46);
             this->text1->Name = L"text1";
             this->text1->Size = System::Drawing::Size(118, 19);
             this->text1->TabIndex = 0;
@@ -3168,6 +3353,8 @@ private: System::Windows::Forms::Label^ label30;
             // 
             // accountManagerTab
             // 
+            this->accountManagerTab->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(232)),
+                static_cast<System::Int32>(static_cast<System::Byte>(240)), static_cast<System::Int32>(static_cast<System::Byte>(242)));
             this->accountManagerTab->Controls->Add(this->bt_logout);
             this->accountManagerTab->Controls->Add(this->accountManager_loginAlert);
             this->accountManagerTab->Controls->Add(this->bt_refresh);
@@ -3182,20 +3369,24 @@ private: System::Windows::Forms::Label^ label30;
             this->accountManagerTab->Size = System::Drawing::Size(651, 468);
             this->accountManagerTab->TabIndex = 1;
             this->accountManagerTab->Text = L"Quản lý tài khoản";
-            this->accountManagerTab->UseVisualStyleBackColor = true;
+            this->accountManagerTab->Click += gcnew System::EventHandler(this, &Form1::accountManagerTab_Click);
             // 
             // bt_logout
             // 
-            this->bt_logout->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((System::Windows::Forms::AnchorStyles::Bottom | System::Windows::Forms::AnchorStyles::Right));
+            this->bt_logout->Anchor = System::Windows::Forms::AnchorStyles::None;
+            this->bt_logout->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(57)), static_cast<System::Int32>(static_cast<System::Byte>(162)),
+                static_cast<System::Int32>(static_cast<System::Byte>(219)));
             this->bt_logout->Font = (gcnew System::Drawing::Font(L"MS Reference Sans Serif", 9, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
                 static_cast<System::Byte>(0)));
-            this->bt_logout->Location = System::Drawing::Point(501, 363);
+            this->bt_logout->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(5)), static_cast<System::Int32>(static_cast<System::Byte>(55)),
+                static_cast<System::Int32>(static_cast<System::Byte>(66)));
+            this->bt_logout->Location = System::Drawing::Point(501, 352);
             this->bt_logout->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
             this->bt_logout->Name = L"bt_logout";
-            this->bt_logout->Size = System::Drawing::Size(127, 30);
+            this->bt_logout->Size = System::Drawing::Size(127, 35);
             this->bt_logout->TabIndex = 5;
             this->bt_logout->Text = L"Đăng xuất";
-            this->bt_logout->UseVisualStyleBackColor = true;
+            this->bt_logout->UseVisualStyleBackColor = false;
             this->bt_logout->Visible = false;
             this->bt_logout->Click += gcnew System::EventHandler(this, &Form1::bt_logout_Click);
             // 
@@ -3213,22 +3404,28 @@ private: System::Windows::Forms::Label^ label30;
             // 
             // bt_refresh
             // 
-            this->bt_refresh->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((System::Windows::Forms::AnchorStyles::Bottom | System::Windows::Forms::AnchorStyles::Right));
+            this->bt_refresh->Anchor = System::Windows::Forms::AnchorStyles::None;
+            this->bt_refresh->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(57)), static_cast<System::Int32>(static_cast<System::Byte>(162)),
+                static_cast<System::Int32>(static_cast<System::Byte>(219)));
             this->bt_refresh->Font = (gcnew System::Drawing::Font(L"MS Reference Sans Serif", 9, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
                 static_cast<System::Byte>(0)));
-            this->bt_refresh->Location = System::Drawing::Point(501, 398);
+            this->bt_refresh->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(5)), static_cast<System::Int32>(static_cast<System::Byte>(55)),
+                static_cast<System::Int32>(static_cast<System::Byte>(66)));
+            this->bt_refresh->Location = System::Drawing::Point(501, 391);
             this->bt_refresh->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
             this->bt_refresh->Name = L"bt_refresh";
-            this->bt_refresh->Size = System::Drawing::Size(127, 30);
+            this->bt_refresh->Size = System::Drawing::Size(127, 35);
             this->bt_refresh->TabIndex = 3;
             this->bt_refresh->Text = L"Tải lại";
-            this->bt_refresh->UseVisualStyleBackColor = true;
+            this->bt_refresh->UseVisualStyleBackColor = false;
             this->bt_refresh->Visible = false;
             this->bt_refresh->Click += gcnew System::EventHandler(this, &Form1::bt_refresh_Click);
             // 
             // accountManager_changer
             // 
             this->accountManager_changer->Anchor = System::Windows::Forms::AnchorStyles::None;
+            this->accountManager_changer->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(162)),
+                static_cast<System::Int32>(static_cast<System::Byte>(219)), static_cast<System::Int32>(static_cast<System::Byte>(250)));
             this->accountManager_changer->Controls->Add(this->accountManager_tabChanger);
             this->accountManager_changer->Font = (gcnew System::Drawing::Font(L"MS Reference Sans Serif", 9, System::Drawing::FontStyle::Regular,
                 System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
@@ -3259,6 +3456,8 @@ private: System::Windows::Forms::Label^ label30;
             // 
             // tabPage2
             // 
+            this->tabPage2->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(162)), static_cast<System::Int32>(static_cast<System::Byte>(219)),
+                static_cast<System::Int32>(static_cast<System::Byte>(250)));
             this->tabPage2->Controls->Add(this->bt_saveUsername);
             this->tabPage2->Controls->Add(this->accountManager_newUsername);
             this->tabPage2->Controls->Add(this->label1);
@@ -3271,23 +3470,26 @@ private: System::Windows::Forms::Label^ label30;
             this->tabPage2->Size = System::Drawing::Size(440, 130);
             this->tabPage2->TabIndex = 0;
             this->tabPage2->Text = L"Tên tài khoản";
-            this->tabPage2->UseVisualStyleBackColor = true;
             // 
             // bt_saveUsername
             // 
+            this->bt_saveUsername->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(57)), static_cast<System::Int32>(static_cast<System::Byte>(162)),
+                static_cast<System::Int32>(static_cast<System::Byte>(219)));
             this->bt_saveUsername->Font = (gcnew System::Drawing::Font(L"MS Reference Sans Serif", 9, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
                 static_cast<System::Byte>(0)));
             this->bt_saveUsername->Location = System::Drawing::Point(181, 89);
             this->bt_saveUsername->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
             this->bt_saveUsername->Name = L"bt_saveUsername";
-            this->bt_saveUsername->Size = System::Drawing::Size(75, 31);
+            this->bt_saveUsername->Size = System::Drawing::Size(75, 35);
             this->bt_saveUsername->TabIndex = 2;
             this->bt_saveUsername->Text = L"Lưu";
-            this->bt_saveUsername->UseVisualStyleBackColor = true;
+            this->bt_saveUsername->UseVisualStyleBackColor = false;
             this->bt_saveUsername->Click += gcnew System::EventHandler(this, &Form1::bt_saveUsername_Click);
             // 
             // accountManager_newUsername
             // 
+            this->accountManager_newUsername->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(232)),
+                static_cast<System::Int32>(static_cast<System::Byte>(240)), static_cast<System::Int32>(static_cast<System::Byte>(242)));
             this->accountManager_newUsername->Font = (gcnew System::Drawing::Font(L"MS Reference Sans Serif", 9, System::Drawing::FontStyle::Regular,
                 System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
             this->accountManager_newUsername->Location = System::Drawing::Point(200, 33);
@@ -3309,6 +3511,8 @@ private: System::Windows::Forms::Label^ label30;
             // 
             // tabPage3
             // 
+            this->tabPage3->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(162)), static_cast<System::Int32>(static_cast<System::Byte>(219)),
+                static_cast<System::Int32>(static_cast<System::Byte>(250)));
             this->tabPage3->Controls->Add(this->accountManager_newPasswordCheck);
             this->tabPage3->Controls->Add(this->label3);
             this->tabPage3->Controls->Add(this->bt_savePassword);
@@ -3323,10 +3527,11 @@ private: System::Windows::Forms::Label^ label30;
             this->tabPage3->Size = System::Drawing::Size(440, 130);
             this->tabPage3->TabIndex = 1;
             this->tabPage3->Text = L"Mật khẩu";
-            this->tabPage3->UseVisualStyleBackColor = true;
             // 
             // accountManager_newPasswordCheck
             // 
+            this->accountManager_newPasswordCheck->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(232)),
+                static_cast<System::Int32>(static_cast<System::Byte>(240)), static_cast<System::Int32>(static_cast<System::Byte>(242)));
             this->accountManager_newPasswordCheck->Font = (gcnew System::Drawing::Font(L"MS Reference Sans Serif", 9, System::Drawing::FontStyle::Regular,
                 System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
             this->accountManager_newPasswordCheck->Location = System::Drawing::Point(200, 54);
@@ -3348,19 +3553,23 @@ private: System::Windows::Forms::Label^ label30;
             // 
             // bt_savePassword
             // 
+            this->bt_savePassword->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(57)), static_cast<System::Int32>(static_cast<System::Byte>(162)),
+                static_cast<System::Int32>(static_cast<System::Byte>(219)));
             this->bt_savePassword->Font = (gcnew System::Drawing::Font(L"MS Reference Sans Serif", 9, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
                 static_cast<System::Byte>(0)));
             this->bt_savePassword->Location = System::Drawing::Point(181, 89);
             this->bt_savePassword->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
             this->bt_savePassword->Name = L"bt_savePassword";
-            this->bt_savePassword->Size = System::Drawing::Size(75, 31);
+            this->bt_savePassword->Size = System::Drawing::Size(75, 35);
             this->bt_savePassword->TabIndex = 5;
             this->bt_savePassword->Text = L"Lưu";
-            this->bt_savePassword->UseVisualStyleBackColor = true;
+            this->bt_savePassword->UseVisualStyleBackColor = false;
             this->bt_savePassword->Click += gcnew System::EventHandler(this, &Form1::bt_savePassword_Click);
             // 
             // accountManager_newPassword
             // 
+            this->accountManager_newPassword->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(232)),
+                static_cast<System::Int32>(static_cast<System::Byte>(240)), static_cast<System::Int32>(static_cast<System::Byte>(242)));
             this->accountManager_newPassword->Font = (gcnew System::Drawing::Font(L"MS Reference Sans Serif", 9, System::Drawing::FontStyle::Regular,
                 System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
             this->accountManager_newPassword->Location = System::Drawing::Point(200, 14);
@@ -3382,6 +3591,8 @@ private: System::Windows::Forms::Label^ label30;
             // 
             // tabPage4
             // 
+            this->tabPage4->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(162)), static_cast<System::Int32>(static_cast<System::Byte>(219)),
+                static_cast<System::Int32>(static_cast<System::Byte>(250)));
             this->tabPage4->Controls->Add(this->bt_saveFullname);
             this->tabPage4->Controls->Add(this->accountManager_newFullname);
             this->tabPage4->Controls->Add(this->label4);
@@ -3394,11 +3605,12 @@ private: System::Windows::Forms::Label^ label30;
             this->tabPage4->Size = System::Drawing::Size(440, 130);
             this->tabPage4->TabIndex = 2;
             this->tabPage4->Text = L"Tên chủ tài khoản";
-            this->tabPage4->UseVisualStyleBackColor = true;
             // 
             // accountManager_Info
             // 
             this->accountManager_Info->Anchor = System::Windows::Forms::AnchorStyles::None;
+            this->accountManager_Info->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(162)),
+                static_cast<System::Int32>(static_cast<System::Byte>(219)), static_cast<System::Int32>(static_cast<System::Byte>(250)));
             this->accountManager_Info->Controls->Add(this->accountManager_permission);
             this->accountManager_Info->Controls->Add(this->accountManager_fullname);
             this->accountManager_Info->Controls->Add(this->accountManager_password);
@@ -3446,10 +3658,6 @@ private: System::Windows::Forms::Label^ label30;
             this->boxDataManager->PerformLayout();
             this->dataManager_menu->ResumeLayout(false);
             this->dataManager_menu->PerformLayout();
-            this->exportData_vaccination->ResumeLayout(false);
-            (cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->view_exportData_vaccination))->EndInit();
-            this->exportData_registry->ResumeLayout(false);
-            (cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->view_exportData_registry))->EndInit();
             this->exportData_people->ResumeLayout(false);
             (cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->view_exportData_people))->EndInit();
             this->box_searchData->ResumeLayout(false);
@@ -3471,6 +3679,10 @@ private: System::Windows::Forms::Label^ label30;
             this->panel_insertType->PerformLayout();
             this->export_allData_people->ResumeLayout(false);
             (cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->view_exportAllData_people))->EndInit();
+            this->exportData_vaccination->ResumeLayout(false);
+            (cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->view_exportData_vaccination))->EndInit();
+            this->exportData_registry->ResumeLayout(false);
+            (cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->view_exportData_registry))->EndInit();
             this->Manager->ResumeLayout(false);
             this->loginTab->ResumeLayout(false);
             this->loginTab->PerformLayout();
@@ -4427,7 +4639,7 @@ private: System::Void bt_modAllData_Click(System::Object^ sender, System::EventA
 }
 private: System::Void bt_saveAllData_Click(System::Object^ sender, System::EventArgs^ e) {
     this->view_exportAllData_people->ReadOnly = true;
-    this->bt_modAllData->BackColor = Color::Transparent;
+    this->bt_modAllData->BackColor = Color::FromArgb(57, 162, 219);
     this->bt_modAllData->ForeColor = Color::Black;
     //Lưu lại vào biến DN
     String^ s0, ^ s1, ^ s2, ^ s3, ^ s4, ^ s5, ^ s6, ^ s7, ^ s8, ^ s9, ^ s10, ^ s11, ^ s12, ^ s13, ^ s14;
@@ -4476,7 +4688,7 @@ private: System::Void bt_modData_vaccination_Click(System::Object^ sender, Syste
 }
 private: System::Void bt_saveData_vaccination_Click(System::Object^ sender, System::EventArgs^ e) {
     this->view_exportData_vaccination->ReadOnly = true;
-    this->bt_modData_vaccination->BackColor = Color::Transparent;
+    this->bt_modData_vaccination->BackColor = Color::FromArgb(57, 162, 219);
     this->bt_modData_vaccination->ForeColor = Color::Black;
     //Lưu lại vào biến DN
     String ^ s1, ^ s11, ^ s12, ^ s13, ^ s14;
@@ -4506,7 +4718,7 @@ private: System::Void bt_modData_registry_Click(System::Object^ sender, System::
 }
 private: System::Void bt_saveData_registry_Click(System::Object^ sender, System::EventArgs^ e) {
     this->view_exportData_registry->ReadOnly = true;
-    this->bt_modData_registry->BackColor = Color::Transparent;
+    this->bt_modData_registry->BackColor = Color::FromArgb(57, 162, 219);
     this->bt_modData_registry->ForeColor = Color::Black;
     //Lưu lại vào biến DN
     String ^ s1, ^ s8, ^ s9, ^ s10;
@@ -4528,7 +4740,7 @@ private: System::Void bt_saveData_registry_Click(System::Object^ sender, System:
 }
 private: System::Void bt_saveData_people_Click(System::Object^ sender, System::EventArgs^ e) {
     this->view_exportData_people->ReadOnly = true;
-    this->bt_modData_people->BackColor = Color::Transparent;
+    this->bt_modData_people->BackColor = Color::FromArgb(57, 162, 219);
     this->bt_modData_people->ForeColor = Color::Black;
     //Lưu lại vào biến DN
     String^ s0, ^ s1, ^ s2, ^ s3, ^ s4, ^ s5, ^ s6, ^ s7;
@@ -4555,6 +4767,8 @@ private: System::Void bt_saveData_people_Click(System::Object^ sender, System::E
     MessageBox::Show(L"Đã lưu", L"THÔNG BÁO");
     //Hàm lưu file
 
+}
+private: System::Void accountManagerTab_Click(System::Object^ sender, System::EventArgs^ e) {
 }
 };
 }

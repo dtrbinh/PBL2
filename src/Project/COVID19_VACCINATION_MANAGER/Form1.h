@@ -26,7 +26,7 @@ namespace CppCLRWinformsProjekt {
 
     private:
 
-        static bool loginStatus = false, hasSort = false, sortType = false;
+        static bool loginStatus = false, hasSort = false, sortType = false, hasFile = false;
         static int currentUser_ID = NULL;
         static String^ currentUser_permission = "";
         static String^ ADMIN0 = "admin", ^ PASS0 = "admin", ^ PER0 = "admin", ^ NAME0 = "Administrator";
@@ -505,6 +505,40 @@ private: System::Windows::Forms::Label^ label30;
             this->toolStripMenuItem9 = (gcnew System::Windows::Forms::ToolStripMenuItem());
             this->toolStripMenuItem10 = (gcnew System::Windows::Forms::ToolStripMenuItem());
             this->xuấtToànBộDữLiệuToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
+            this->box_sortData = (gcnew System::Windows::Forms::GroupBox());
+            this->view_sortData_people = (gcnew System::Windows::Forms::DataGridView());
+            this->dataGridViewTextBoxColumn31 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
+            this->dataGridViewTextBoxColumn32 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
+            this->dataGridViewTextBoxColumn33 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
+            this->dataGridViewTextBoxColumn34 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
+            this->dataGridViewTextBoxColumn35 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
+            this->dataGridViewTextBoxColumn36 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
+            this->dataGridViewTextBoxColumn37 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
+            this->dataGridViewTextBoxColumn38 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
+            this->dataGridViewTextBoxColumn39 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
+            this->dataGridViewTextBoxColumn40 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
+            this->dataGridViewTextBoxColumn41 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
+            this->dataGridViewTextBoxColumn42 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
+            this->dataGridViewTextBoxColumn43 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
+            this->dataGridViewTextBoxColumn44 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
+            this->dataGridViewTextBoxColumn45 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
+            this->bt_view_sortData = (gcnew System::Windows::Forms::Button());
+            this->bt_sortData = (gcnew System::Windows::Forms::Button());
+            this->box_sortType = (gcnew System::Windows::Forms::ComboBox());
+            this->box_sortSelect = (gcnew System::Windows::Forms::ComboBox());
+            this->label6 = (gcnew System::Windows::Forms::Label());
+            this->label5 = (gcnew System::Windows::Forms::Label());
+            this->box_inputFile = (gcnew System::Windows::Forms::GroupBox());
+            this->bt_selectFile3 = (gcnew System::Windows::Forms::Button());
+            this->bt_selectFile2 = (gcnew System::Windows::Forms::Button());
+            this->bt_selectFile1 = (gcnew System::Windows::Forms::Button());
+            this->bt_inputFile = (gcnew System::Windows::Forms::Button());
+            this->fileName3 = (gcnew System::Windows::Forms::TextBox());
+            this->fileName2 = (gcnew System::Windows::Forms::TextBox());
+            this->label_fileName3 = (gcnew System::Windows::Forms::Label());
+            this->label_fileName1 = (gcnew System::Windows::Forms::Label());
+            this->label_fileName2 = (gcnew System::Windows::Forms::Label());
+            this->fileName1 = (gcnew System::Windows::Forms::TextBox());
             this->box_inputHand = (gcnew System::Windows::Forms::GroupBox());
             this->panel_insertType = (gcnew System::Windows::Forms::Panel());
             this->label18 = (gcnew System::Windows::Forms::Label());
@@ -645,40 +679,6 @@ private: System::Windows::Forms::Label^ label30;
             this->bt_deleteData = (gcnew System::Windows::Forms::Button());
             this->textbox_deleteData = (gcnew System::Windows::Forms::TextBox());
             this->label7 = (gcnew System::Windows::Forms::Label());
-            this->box_sortData = (gcnew System::Windows::Forms::GroupBox());
-            this->view_sortData_people = (gcnew System::Windows::Forms::DataGridView());
-            this->dataGridViewTextBoxColumn31 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
-            this->dataGridViewTextBoxColumn32 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
-            this->dataGridViewTextBoxColumn33 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
-            this->dataGridViewTextBoxColumn34 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
-            this->dataGridViewTextBoxColumn35 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
-            this->dataGridViewTextBoxColumn36 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
-            this->dataGridViewTextBoxColumn37 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
-            this->dataGridViewTextBoxColumn38 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
-            this->dataGridViewTextBoxColumn39 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
-            this->dataGridViewTextBoxColumn40 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
-            this->dataGridViewTextBoxColumn41 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
-            this->dataGridViewTextBoxColumn42 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
-            this->dataGridViewTextBoxColumn43 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
-            this->dataGridViewTextBoxColumn44 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
-            this->dataGridViewTextBoxColumn45 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
-            this->bt_view_sortData = (gcnew System::Windows::Forms::Button());
-            this->bt_sortData = (gcnew System::Windows::Forms::Button());
-            this->box_sortType = (gcnew System::Windows::Forms::ComboBox());
-            this->box_sortSelect = (gcnew System::Windows::Forms::ComboBox());
-            this->label6 = (gcnew System::Windows::Forms::Label());
-            this->label5 = (gcnew System::Windows::Forms::Label());
-            this->box_inputFile = (gcnew System::Windows::Forms::GroupBox());
-            this->bt_selectFile3 = (gcnew System::Windows::Forms::Button());
-            this->bt_selectFile2 = (gcnew System::Windows::Forms::Button());
-            this->bt_selectFile1 = (gcnew System::Windows::Forms::Button());
-            this->bt_inputFile = (gcnew System::Windows::Forms::Button());
-            this->fileName3 = (gcnew System::Windows::Forms::TextBox());
-            this->fileName2 = (gcnew System::Windows::Forms::TextBox());
-            this->label_fileName3 = (gcnew System::Windows::Forms::Label());
-            this->label_fileName1 = (gcnew System::Windows::Forms::Label());
-            this->label_fileName2 = (gcnew System::Windows::Forms::Label());
-            this->fileName1 = (gcnew System::Windows::Forms::TextBox());
             this->accountManager_newFullname = (gcnew System::Windows::Forms::TextBox());
             this->label4 = (gcnew System::Windows::Forms::Label());
             this->Manager = (gcnew System::Windows::Forms::TabControl());
@@ -722,6 +722,9 @@ private: System::Windows::Forms::Label^ label30;
             this->dataManagerTab->SuspendLayout();
             this->boxDataManager->SuspendLayout();
             this->dataManager_menu->SuspendLayout();
+            this->box_sortData->SuspendLayout();
+            (cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->view_sortData_people))->BeginInit();
+            this->box_inputFile->SuspendLayout();
             this->box_inputHand->SuspendLayout();
             this->panel_insertType->SuspendLayout();
             this->export_allData_people->SuspendLayout();
@@ -737,9 +740,6 @@ private: System::Windows::Forms::Label^ label30;
             this->box_fillData->SuspendLayout();
             (cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->view_filterData))->BeginInit();
             this->box_deleteData->SuspendLayout();
-            this->box_sortData->SuspendLayout();
-            (cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->view_sortData_people))->BeginInit();
-            this->box_inputFile->SuspendLayout();
             this->Manager->SuspendLayout();
             this->loginTab->SuspendLayout();
             this->loginBox->SuspendLayout();
@@ -878,6 +878,7 @@ private: System::Windows::Forms::Label^ label30;
             this->boxDataManager->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(232)), static_cast<System::Int32>(static_cast<System::Byte>(240)),
                 static_cast<System::Int32>(static_cast<System::Byte>(242)));
             this->boxDataManager->Controls->Add(this->dataManager_menu);
+            this->boxDataManager->Controls->Add(this->box_inputFile);
             this->boxDataManager->Controls->Add(this->box_inputHand);
             this->boxDataManager->Controls->Add(this->export_allData_people);
             this->boxDataManager->Controls->Add(this->exportData_vaccination);
@@ -887,7 +888,6 @@ private: System::Windows::Forms::Label^ label30;
             this->boxDataManager->Controls->Add(this->box_fillData);
             this->boxDataManager->Controls->Add(this->box_deleteData);
             this->boxDataManager->Controls->Add(this->box_sortData);
-            this->boxDataManager->Controls->Add(this->box_inputFile);
             this->boxDataManager->Location = System::Drawing::Point(-4, 0);
             this->boxDataManager->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
             this->boxDataManager->Name = L"boxDataManager";
@@ -909,7 +909,7 @@ private: System::Windows::Forms::Label^ label30;
             this->dataManager_menu->Location = System::Drawing::Point(3, 21);
             this->dataManager_menu->Name = L"dataManager_menu";
             this->dataManager_menu->Padding = System::Windows::Forms::Padding(5, 2, 0, 2);
-            this->dataManager_menu->Size = System::Drawing::Size(647, 27);
+            this->dataManager_menu->Size = System::Drawing::Size(647, 30);
             this->dataManager_menu->TabIndex = 7;
             this->dataManager_menu->Text = L"menuStrip1";
             // 
@@ -924,7 +924,7 @@ private: System::Windows::Forms::Label^ label30;
             this->dataManager_input->Font = (gcnew System::Drawing::Font(L"MS Reference Sans Serif", 9, System::Drawing::FontStyle::Regular,
                 System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
             this->dataManager_input->Name = L"dataManager_input";
-            this->dataManager_input->Size = System::Drawing::Size(149, 23);
+            this->dataManager_input->Size = System::Drawing::Size(149, 26);
             this->dataManager_input->Text = L"Chỉnh sửa dữ liệu";
             // 
             // toolStripMenuItem2
@@ -1014,7 +1014,7 @@ private: System::Windows::Forms::Label^ label30;
             this->dataManager_output->Font = (gcnew System::Drawing::Font(L"MS Reference Sans Serif", 9, System::Drawing::FontStyle::Regular,
                 System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
             this->dataManager_output->Name = L"dataManager_output";
-            this->dataManager_output->Size = System::Drawing::Size(174, 23);
+            this->dataManager_output->Size = System::Drawing::Size(174, 26);
             this->dataManager_output->Text = L"Xem dữ liệu đã nhập";
             // 
             // toolStripMenuItem8
@@ -1058,6 +1058,402 @@ private: System::Windows::Forms::Label^ label30;
             this->xuấtToànBộDữLiệuToolStripMenuItem->Size = System::Drawing::Size(229, 26);
             this->xuấtToànBộDữLiệuToolStripMenuItem->Text = L"Toàn bộ dữ liệu";
             this->xuấtToànBộDữLiệuToolStripMenuItem->Click += gcnew System::EventHandler(this, &Form1::xuấtToànBộDữLiệuToolStripMenuItem_Click);
+            // 
+            // box_sortData
+            // 
+            this->box_sortData->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Bottom)
+                | System::Windows::Forms::AnchorStyles::Left)
+                | System::Windows::Forms::AnchorStyles::Right));
+            this->box_sortData->Controls->Add(this->view_sortData_people);
+            this->box_sortData->Controls->Add(this->bt_view_sortData);
+            this->box_sortData->Controls->Add(this->bt_sortData);
+            this->box_sortData->Controls->Add(this->box_sortType);
+            this->box_sortData->Controls->Add(this->box_sortSelect);
+            this->box_sortData->Controls->Add(this->label6);
+            this->box_sortData->Controls->Add(this->label5);
+            this->box_sortData->Font = (gcnew System::Drawing::Font(L"MS Reference Sans Serif", 9, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+                static_cast<System::Byte>(0)));
+            this->box_sortData->Location = System::Drawing::Point(0, 50);
+            this->box_sortData->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
+            this->box_sortData->Name = L"box_sortData";
+            this->box_sortData->Padding = System::Windows::Forms::Padding(3, 2, 3, 2);
+            this->box_sortData->Size = System::Drawing::Size(653, 417);
+            this->box_sortData->TabIndex = 3;
+            this->box_sortData->TabStop = false;
+            this->box_sortData->Text = L"Sắp xếp dữ liệu";
+            this->box_sortData->Visible = false;
+            // 
+            // view_sortData_people
+            // 
+            this->view_sortData_people->AllowUserToAddRows = false;
+            this->view_sortData_people->AllowUserToDeleteRows = false;
+            this->view_sortData_people->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Bottom)
+                | System::Windows::Forms::AnchorStyles::Left)
+                | System::Windows::Forms::AnchorStyles::Right));
+            this->view_sortData_people->BackgroundColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(162)),
+                static_cast<System::Int32>(static_cast<System::Byte>(219)), static_cast<System::Int32>(static_cast<System::Byte>(250)));
+            this->view_sortData_people->ColumnHeadersHeightSizeMode = System::Windows::Forms::DataGridViewColumnHeadersHeightSizeMode::AutoSize;
+            this->view_sortData_people->Columns->AddRange(gcnew cli::array< System::Windows::Forms::DataGridViewColumn^  >(15) {
+                this->dataGridViewTextBoxColumn31,
+                    this->dataGridViewTextBoxColumn32, this->dataGridViewTextBoxColumn33, this->dataGridViewTextBoxColumn34, this->dataGridViewTextBoxColumn35,
+                    this->dataGridViewTextBoxColumn36, this->dataGridViewTextBoxColumn37, this->dataGridViewTextBoxColumn38, this->dataGridViewTextBoxColumn39,
+                    this->dataGridViewTextBoxColumn40, this->dataGridViewTextBoxColumn41, this->dataGridViewTextBoxColumn42, this->dataGridViewTextBoxColumn43,
+                    this->dataGridViewTextBoxColumn44, this->dataGridViewTextBoxColumn45
+            });
+            this->view_sortData_people->GridColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(162)),
+                static_cast<System::Int32>(static_cast<System::Byte>(219)), static_cast<System::Int32>(static_cast<System::Byte>(250)));
+            this->view_sortData_people->Location = System::Drawing::Point(4, 117);
+            this->view_sortData_people->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
+            this->view_sortData_people->Name = L"view_sortData_people";
+            this->view_sortData_people->ReadOnly = true;
+            this->view_sortData_people->RowHeadersWidth = 51;
+            this->view_sortData_people->RowTemplate->Height = 24;
+            this->view_sortData_people->Size = System::Drawing::Size(651, 301);
+            this->view_sortData_people->TabIndex = 6;
+            // 
+            // dataGridViewTextBoxColumn31
+            // 
+            this->dataGridViewTextBoxColumn31->HeaderText = L"Mã công dân";
+            this->dataGridViewTextBoxColumn31->MinimumWidth = 6;
+            this->dataGridViewTextBoxColumn31->Name = L"dataGridViewTextBoxColumn31";
+            this->dataGridViewTextBoxColumn31->ReadOnly = true;
+            this->dataGridViewTextBoxColumn31->Width = 125;
+            // 
+            // dataGridViewTextBoxColumn32
+            // 
+            this->dataGridViewTextBoxColumn32->HeaderText = L"Họ và tên";
+            this->dataGridViewTextBoxColumn32->MinimumWidth = 6;
+            this->dataGridViewTextBoxColumn32->Name = L"dataGridViewTextBoxColumn32";
+            this->dataGridViewTextBoxColumn32->ReadOnly = true;
+            this->dataGridViewTextBoxColumn32->Width = 125;
+            // 
+            // dataGridViewTextBoxColumn33
+            // 
+            this->dataGridViewTextBoxColumn33->HeaderText = L"Giới tính";
+            this->dataGridViewTextBoxColumn33->MinimumWidth = 6;
+            this->dataGridViewTextBoxColumn33->Name = L"dataGridViewTextBoxColumn33";
+            this->dataGridViewTextBoxColumn33->ReadOnly = true;
+            this->dataGridViewTextBoxColumn33->Width = 125;
+            // 
+            // dataGridViewTextBoxColumn34
+            // 
+            this->dataGridViewTextBoxColumn34->HeaderText = L"Ngày sinh";
+            this->dataGridViewTextBoxColumn34->MinimumWidth = 6;
+            this->dataGridViewTextBoxColumn34->Name = L"dataGridViewTextBoxColumn34";
+            this->dataGridViewTextBoxColumn34->ReadOnly = true;
+            this->dataGridViewTextBoxColumn34->Width = 125;
+            // 
+            // dataGridViewTextBoxColumn35
+            // 
+            this->dataGridViewTextBoxColumn35->HeaderText = L"SĐT";
+            this->dataGridViewTextBoxColumn35->MinimumWidth = 6;
+            this->dataGridViewTextBoxColumn35->Name = L"dataGridViewTextBoxColumn35";
+            this->dataGridViewTextBoxColumn35->ReadOnly = true;
+            this->dataGridViewTextBoxColumn35->Width = 125;
+            // 
+            // dataGridViewTextBoxColumn36
+            // 
+            this->dataGridViewTextBoxColumn36->HeaderText = L"Số BHXH";
+            this->dataGridViewTextBoxColumn36->MinimumWidth = 6;
+            this->dataGridViewTextBoxColumn36->Name = L"dataGridViewTextBoxColumn36";
+            this->dataGridViewTextBoxColumn36->ReadOnly = true;
+            this->dataGridViewTextBoxColumn36->Width = 125;
+            // 
+            // dataGridViewTextBoxColumn37
+            // 
+            this->dataGridViewTextBoxColumn37->HeaderText = L"Số CMND/CCCD";
+            this->dataGridViewTextBoxColumn37->MinimumWidth = 6;
+            this->dataGridViewTextBoxColumn37->Name = L"dataGridViewTextBoxColumn37";
+            this->dataGridViewTextBoxColumn37->ReadOnly = true;
+            this->dataGridViewTextBoxColumn37->Width = 125;
+            // 
+            // dataGridViewTextBoxColumn38
+            // 
+            this->dataGridViewTextBoxColumn38->HeaderText = L"Địa chỉ";
+            this->dataGridViewTextBoxColumn38->MinimumWidth = 6;
+            this->dataGridViewTextBoxColumn38->Name = L"dataGridViewTextBoxColumn38";
+            this->dataGridViewTextBoxColumn38->ReadOnly = true;
+            this->dataGridViewTextBoxColumn38->Width = 125;
+            // 
+            // dataGridViewTextBoxColumn39
+            // 
+            this->dataGridViewTextBoxColumn39->HeaderText = L"Mã đăng ký";
+            this->dataGridViewTextBoxColumn39->MinimumWidth = 6;
+            this->dataGridViewTextBoxColumn39->Name = L"dataGridViewTextBoxColumn39";
+            this->dataGridViewTextBoxColumn39->ReadOnly = true;
+            this->dataGridViewTextBoxColumn39->Width = 125;
+            // 
+            // dataGridViewTextBoxColumn40
+            // 
+            this->dataGridViewTextBoxColumn40->HeaderText = L"Ngày đăng ký";
+            this->dataGridViewTextBoxColumn40->MinimumWidth = 6;
+            this->dataGridViewTextBoxColumn40->Name = L"dataGridViewTextBoxColumn40";
+            this->dataGridViewTextBoxColumn40->ReadOnly = true;
+            this->dataGridViewTextBoxColumn40->Width = 125;
+            // 
+            // dataGridViewTextBoxColumn41
+            // 
+            this->dataGridViewTextBoxColumn41->HeaderText = L"Nơi đăng ký";
+            this->dataGridViewTextBoxColumn41->MinimumWidth = 6;
+            this->dataGridViewTextBoxColumn41->Name = L"dataGridViewTextBoxColumn41";
+            this->dataGridViewTextBoxColumn41->ReadOnly = true;
+            this->dataGridViewTextBoxColumn41->Width = 125;
+            // 
+            // dataGridViewTextBoxColumn42
+            // 
+            this->dataGridViewTextBoxColumn42->HeaderText = L"Tiêm mũi 1";
+            this->dataGridViewTextBoxColumn42->MinimumWidth = 6;
+            this->dataGridViewTextBoxColumn42->Name = L"dataGridViewTextBoxColumn42";
+            this->dataGridViewTextBoxColumn42->ReadOnly = true;
+            this->dataGridViewTextBoxColumn42->Width = 125;
+            // 
+            // dataGridViewTextBoxColumn43
+            // 
+            this->dataGridViewTextBoxColumn43->HeaderText = L"Ngày tiêm mũi 1";
+            this->dataGridViewTextBoxColumn43->MinimumWidth = 6;
+            this->dataGridViewTextBoxColumn43->Name = L"dataGridViewTextBoxColumn43";
+            this->dataGridViewTextBoxColumn43->ReadOnly = true;
+            this->dataGridViewTextBoxColumn43->Width = 125;
+            // 
+            // dataGridViewTextBoxColumn44
+            // 
+            this->dataGridViewTextBoxColumn44->HeaderText = L"Tiêm mũi 2";
+            this->dataGridViewTextBoxColumn44->MinimumWidth = 6;
+            this->dataGridViewTextBoxColumn44->Name = L"dataGridViewTextBoxColumn44";
+            this->dataGridViewTextBoxColumn44->ReadOnly = true;
+            this->dataGridViewTextBoxColumn44->Width = 125;
+            // 
+            // dataGridViewTextBoxColumn45
+            // 
+            this->dataGridViewTextBoxColumn45->HeaderText = L"Ngày tiêm mũi 2";
+            this->dataGridViewTextBoxColumn45->MinimumWidth = 6;
+            this->dataGridViewTextBoxColumn45->Name = L"dataGridViewTextBoxColumn45";
+            this->dataGridViewTextBoxColumn45->ReadOnly = true;
+            this->dataGridViewTextBoxColumn45->Width = 125;
+            // 
+            // bt_view_sortData
+            // 
+            this->bt_view_sortData->Anchor = System::Windows::Forms::AnchorStyles::Top;
+            this->bt_view_sortData->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(57)), static_cast<System::Int32>(static_cast<System::Byte>(162)),
+                static_cast<System::Int32>(static_cast<System::Byte>(219)));
+            this->bt_view_sortData->Font = (gcnew System::Drawing::Font(L"MS Reference Sans Serif", 9, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+                static_cast<System::Byte>(0)));
+            this->bt_view_sortData->Location = System::Drawing::Point(483, 68);
+            this->bt_view_sortData->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
+            this->bt_view_sortData->Name = L"bt_view_sortData";
+            this->bt_view_sortData->Size = System::Drawing::Size(105, 35);
+            this->bt_view_sortData->TabIndex = 5;
+            this->bt_view_sortData->Text = L"Xem";
+            this->bt_view_sortData->UseVisualStyleBackColor = false;
+            this->bt_view_sortData->Visible = false;
+            this->bt_view_sortData->Click += gcnew System::EventHandler(this, &Form1::button3_Click_2);
+            // 
+            // bt_sortData
+            // 
+            this->bt_sortData->Anchor = System::Windows::Forms::AnchorStyles::Top;
+            this->bt_sortData->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(57)), static_cast<System::Int32>(static_cast<System::Byte>(162)),
+                static_cast<System::Int32>(static_cast<System::Byte>(219)));
+            this->bt_sortData->Font = (gcnew System::Drawing::Font(L"MS Reference Sans Serif", 9, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+                static_cast<System::Byte>(0)));
+            this->bt_sortData->Location = System::Drawing::Point(483, 21);
+            this->bt_sortData->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
+            this->bt_sortData->Name = L"bt_sortData";
+            this->bt_sortData->Size = System::Drawing::Size(105, 35);
+            this->bt_sortData->TabIndex = 4;
+            this->bt_sortData->Text = L"Sắp xếp";
+            this->bt_sortData->UseVisualStyleBackColor = false;
+            this->bt_sortData->Click += gcnew System::EventHandler(this, &Form1::bt_sortData_Click);
+            // 
+            // box_sortType
+            // 
+            this->box_sortType->Anchor = System::Windows::Forms::AnchorStyles::Top;
+            this->box_sortType->FormattingEnabled = true;
+            this->box_sortType->Items->AddRange(gcnew cli::array< System::Object^  >(2) { L"Tăng dần", L"Giảm dần" });
+            this->box_sortType->Location = System::Drawing::Point(250, 71);
+            this->box_sortType->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
+            this->box_sortType->Name = L"box_sortType";
+            this->box_sortType->Size = System::Drawing::Size(203, 27);
+            this->box_sortType->TabIndex = 3;
+            // 
+            // box_sortSelect
+            // 
+            this->box_sortSelect->Anchor = System::Windows::Forms::AnchorStyles::Top;
+            this->box_sortSelect->FormattingEnabled = true;
+            this->box_sortSelect->Items->AddRange(gcnew cli::array< System::Object^  >(4) {
+                L"Mã công dân", L"Ngày đăng ký", L"Ngày tiêm mũi 1",
+                    L"Ngày tiêm mũi 2"
+            });
+            this->box_sortSelect->Location = System::Drawing::Point(250, 26);
+            this->box_sortSelect->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
+            this->box_sortSelect->Name = L"box_sortSelect";
+            this->box_sortSelect->Size = System::Drawing::Size(203, 27);
+            this->box_sortSelect->TabIndex = 2;
+            // 
+            // label6
+            // 
+            this->label6->Anchor = System::Windows::Forms::AnchorStyles::Top;
+            this->label6->AutoSize = true;
+            this->label6->Location = System::Drawing::Point(100, 74);
+            this->label6->Name = L"label6";
+            this->label6->Size = System::Drawing::Size(121, 19);
+            this->label6->TabIndex = 1;
+            this->label6->Text = L"Thứ tự sắp xếp";
+            // 
+            // label5
+            // 
+            this->label5->Anchor = System::Windows::Forms::AnchorStyles::Top;
+            this->label5->AutoSize = true;
+            this->label5->Location = System::Drawing::Point(112, 29);
+            this->label5->Name = L"label5";
+            this->label5->Size = System::Drawing::Size(108, 19);
+            this->label5->TabIndex = 0;
+            this->label5->Text = L"Sắp xếp theo";
+            // 
+            // box_inputFile
+            // 
+            this->box_inputFile->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Bottom)
+                | System::Windows::Forms::AnchorStyles::Left)
+                | System::Windows::Forms::AnchorStyles::Right));
+            this->box_inputFile->Controls->Add(this->bt_selectFile3);
+            this->box_inputFile->Controls->Add(this->bt_selectFile2);
+            this->box_inputFile->Controls->Add(this->bt_selectFile1);
+            this->box_inputFile->Controls->Add(this->bt_inputFile);
+            this->box_inputFile->Controls->Add(this->fileName3);
+            this->box_inputFile->Controls->Add(this->fileName2);
+            this->box_inputFile->Controls->Add(this->label_fileName3);
+            this->box_inputFile->Controls->Add(this->label_fileName1);
+            this->box_inputFile->Controls->Add(this->label_fileName2);
+            this->box_inputFile->Controls->Add(this->fileName1);
+            this->box_inputFile->Font = (gcnew System::Drawing::Font(L"MS Reference Sans Serif", 9, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+                static_cast<System::Byte>(0)));
+            this->box_inputFile->Location = System::Drawing::Point(0, 50);
+            this->box_inputFile->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
+            this->box_inputFile->Name = L"box_inputFile";
+            this->box_inputFile->Padding = System::Windows::Forms::Padding(3, 2, 3, 2);
+            this->box_inputFile->Size = System::Drawing::Size(653, 417);
+            this->box_inputFile->TabIndex = 5;
+            this->box_inputFile->TabStop = false;
+            this->box_inputFile->Text = L"Nhập dữ liệu từ tập tin";
+            this->box_inputFile->Visible = false;
+            // 
+            // bt_selectFile3
+            // 
+            this->bt_selectFile3->Anchor = System::Windows::Forms::AnchorStyles::Top;
+            this->bt_selectFile3->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(57)), static_cast<System::Int32>(static_cast<System::Byte>(162)),
+                static_cast<System::Int32>(static_cast<System::Byte>(219)));
+            this->bt_selectFile3->Location = System::Drawing::Point(515, 140);
+            this->bt_selectFile3->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
+            this->bt_selectFile3->Name = L"bt_selectFile3";
+            this->bt_selectFile3->Size = System::Drawing::Size(40, 35);
+            this->bt_selectFile3->TabIndex = 9;
+            this->bt_selectFile3->Text = L"...";
+            this->bt_selectFile3->UseVisualStyleBackColor = false;
+            this->bt_selectFile3->Click += gcnew System::EventHandler(this, &Form1::bt_selectFile3_Click);
+            // 
+            // bt_selectFile2
+            // 
+            this->bt_selectFile2->Anchor = System::Windows::Forms::AnchorStyles::Top;
+            this->bt_selectFile2->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(57)), static_cast<System::Int32>(static_cast<System::Byte>(162)),
+                static_cast<System::Int32>(static_cast<System::Byte>(219)));
+            this->bt_selectFile2->Location = System::Drawing::Point(515, 90);
+            this->bt_selectFile2->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
+            this->bt_selectFile2->Name = L"bt_selectFile2";
+            this->bt_selectFile2->Size = System::Drawing::Size(40, 35);
+            this->bt_selectFile2->TabIndex = 8;
+            this->bt_selectFile2->Text = L"...";
+            this->bt_selectFile2->UseVisualStyleBackColor = false;
+            this->bt_selectFile2->Click += gcnew System::EventHandler(this, &Form1::bt_selectFile2_Click);
+            // 
+            // bt_selectFile1
+            // 
+            this->bt_selectFile1->Anchor = System::Windows::Forms::AnchorStyles::Top;
+            this->bt_selectFile1->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(57)), static_cast<System::Int32>(static_cast<System::Byte>(162)),
+                static_cast<System::Int32>(static_cast<System::Byte>(219)));
+            this->bt_selectFile1->Location = System::Drawing::Point(515, 40);
+            this->bt_selectFile1->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
+            this->bt_selectFile1->Name = L"bt_selectFile1";
+            this->bt_selectFile1->Size = System::Drawing::Size(40, 35);
+            this->bt_selectFile1->TabIndex = 7;
+            this->bt_selectFile1->Text = L"...";
+            this->bt_selectFile1->UseVisualStyleBackColor = false;
+            this->bt_selectFile1->Click += gcnew System::EventHandler(this, &Form1::bt_selectFile1_Click);
+            // 
+            // bt_inputFile
+            // 
+            this->bt_inputFile->Anchor = System::Windows::Forms::AnchorStyles::Top;
+            this->bt_inputFile->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(57)), static_cast<System::Int32>(static_cast<System::Byte>(162)),
+                static_cast<System::Int32>(static_cast<System::Byte>(219)));
+            this->bt_inputFile->Location = System::Drawing::Point(363, 191);
+            this->bt_inputFile->Margin = System::Windows::Forms::Padding(4);
+            this->bt_inputFile->Name = L"bt_inputFile";
+            this->bt_inputFile->Size = System::Drawing::Size(100, 35);
+            this->bt_inputFile->TabIndex = 6;
+            this->bt_inputFile->Text = L"Nhập";
+            this->bt_inputFile->UseVisualStyleBackColor = false;
+            this->bt_inputFile->Click += gcnew System::EventHandler(this, &Form1::bt_inputFile_Click);
+            // 
+            // fileName3
+            // 
+            this->fileName3->Anchor = System::Windows::Forms::AnchorStyles::Top;
+            this->fileName3->Location = System::Drawing::Point(320, 145);
+            this->fileName3->Margin = System::Windows::Forms::Padding(4);
+            this->fileName3->Name = L"fileName3";
+            this->fileName3->ReadOnly = true;
+            this->fileName3->Size = System::Drawing::Size(185, 26);
+            this->fileName3->TabIndex = 5;
+            // 
+            // fileName2
+            // 
+            this->fileName2->Anchor = System::Windows::Forms::AnchorStyles::Top;
+            this->fileName2->Location = System::Drawing::Point(320, 95);
+            this->fileName2->Margin = System::Windows::Forms::Padding(4);
+            this->fileName2->Name = L"fileName2";
+            this->fileName2->ReadOnly = true;
+            this->fileName2->Size = System::Drawing::Size(185, 26);
+            this->fileName2->TabIndex = 4;
+            // 
+            // label_fileName3
+            // 
+            this->label_fileName3->Anchor = System::Windows::Forms::AnchorStyles::Top;
+            this->label_fileName3->AutoSize = true;
+            this->label_fileName3->Location = System::Drawing::Point(40, 150);
+            this->label_fileName3->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
+            this->label_fileName3->Name = L"label_fileName3";
+            this->label_fileName3->Size = System::Drawing::Size(236, 19);
+            this->label_fileName3->TabIndex = 3;
+            this->label_fileName3->Text = L"Nhập file dữ liệu tiêm chủng(*)";
+            // 
+            // label_fileName1
+            // 
+            this->label_fileName1->Anchor = System::Windows::Forms::AnchorStyles::Top;
+            this->label_fileName1->AutoSize = true;
+            this->label_fileName1->Location = System::Drawing::Point(40, 50);
+            this->label_fileName1->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
+            this->label_fileName1->Name = L"label_fileName1";
+            this->label_fileName1->Size = System::Drawing::Size(222, 19);
+            this->label_fileName1->TabIndex = 2;
+            this->label_fileName1->Text = L"Nhập file dữ liệu công dân(*)";
+            // 
+            // label_fileName2
+            // 
+            this->label_fileName2->Anchor = System::Windows::Forms::AnchorStyles::Top;
+            this->label_fileName2->AutoSize = true;
+            this->label_fileName2->Location = System::Drawing::Point(40, 100);
+            this->label_fileName2->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
+            this->label_fileName2->Name = L"label_fileName2";
+            this->label_fileName2->Size = System::Drawing::Size(165, 19);
+            this->label_fileName2->TabIndex = 1;
+            this->label_fileName2->Text = L"Nhập file đăng ký (*)";
+            // 
+            // fileName1
+            // 
+            this->fileName1->Anchor = System::Windows::Forms::AnchorStyles::Top;
+            this->fileName1->Location = System::Drawing::Point(320, 45);
+            this->fileName1->Margin = System::Windows::Forms::Padding(4);
+            this->fileName1->Name = L"fileName1";
+            this->fileName1->ReadOnly = true;
+            this->fileName1->Size = System::Drawing::Size(185, 26);
+            this->fileName1->TabIndex = 0;
             // 
             // box_inputHand
             // 
@@ -2658,402 +3054,6 @@ private: System::Windows::Forms::Label^ label30;
             this->label7->TabIndex = 0;
             this->label7->Text = L"Nhập mã công dân của đối tượng cần xoá";
             // 
-            // box_sortData
-            // 
-            this->box_sortData->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Bottom)
-                | System::Windows::Forms::AnchorStyles::Left)
-                | System::Windows::Forms::AnchorStyles::Right));
-            this->box_sortData->Controls->Add(this->view_sortData_people);
-            this->box_sortData->Controls->Add(this->bt_view_sortData);
-            this->box_sortData->Controls->Add(this->bt_sortData);
-            this->box_sortData->Controls->Add(this->box_sortType);
-            this->box_sortData->Controls->Add(this->box_sortSelect);
-            this->box_sortData->Controls->Add(this->label6);
-            this->box_sortData->Controls->Add(this->label5);
-            this->box_sortData->Font = (gcnew System::Drawing::Font(L"MS Reference Sans Serif", 9, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
-                static_cast<System::Byte>(0)));
-            this->box_sortData->Location = System::Drawing::Point(0, 50);
-            this->box_sortData->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
-            this->box_sortData->Name = L"box_sortData";
-            this->box_sortData->Padding = System::Windows::Forms::Padding(3, 2, 3, 2);
-            this->box_sortData->Size = System::Drawing::Size(653, 417);
-            this->box_sortData->TabIndex = 3;
-            this->box_sortData->TabStop = false;
-            this->box_sortData->Text = L"Sắp xếp dữ liệu";
-            this->box_sortData->Visible = false;
-            // 
-            // view_sortData_people
-            // 
-            this->view_sortData_people->AllowUserToAddRows = false;
-            this->view_sortData_people->AllowUserToDeleteRows = false;
-            this->view_sortData_people->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Bottom)
-                | System::Windows::Forms::AnchorStyles::Left)
-                | System::Windows::Forms::AnchorStyles::Right));
-            this->view_sortData_people->BackgroundColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(162)),
-                static_cast<System::Int32>(static_cast<System::Byte>(219)), static_cast<System::Int32>(static_cast<System::Byte>(250)));
-            this->view_sortData_people->ColumnHeadersHeightSizeMode = System::Windows::Forms::DataGridViewColumnHeadersHeightSizeMode::AutoSize;
-            this->view_sortData_people->Columns->AddRange(gcnew cli::array< System::Windows::Forms::DataGridViewColumn^  >(15) {
-                this->dataGridViewTextBoxColumn31,
-                    this->dataGridViewTextBoxColumn32, this->dataGridViewTextBoxColumn33, this->dataGridViewTextBoxColumn34, this->dataGridViewTextBoxColumn35,
-                    this->dataGridViewTextBoxColumn36, this->dataGridViewTextBoxColumn37, this->dataGridViewTextBoxColumn38, this->dataGridViewTextBoxColumn39,
-                    this->dataGridViewTextBoxColumn40, this->dataGridViewTextBoxColumn41, this->dataGridViewTextBoxColumn42, this->dataGridViewTextBoxColumn43,
-                    this->dataGridViewTextBoxColumn44, this->dataGridViewTextBoxColumn45
-            });
-            this->view_sortData_people->GridColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(162)),
-                static_cast<System::Int32>(static_cast<System::Byte>(219)), static_cast<System::Int32>(static_cast<System::Byte>(250)));
-            this->view_sortData_people->Location = System::Drawing::Point(4, 117);
-            this->view_sortData_people->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
-            this->view_sortData_people->Name = L"view_sortData_people";
-            this->view_sortData_people->ReadOnly = true;
-            this->view_sortData_people->RowHeadersWidth = 51;
-            this->view_sortData_people->RowTemplate->Height = 24;
-            this->view_sortData_people->Size = System::Drawing::Size(651, 301);
-            this->view_sortData_people->TabIndex = 6;
-            // 
-            // dataGridViewTextBoxColumn31
-            // 
-            this->dataGridViewTextBoxColumn31->HeaderText = L"Mã công dân";
-            this->dataGridViewTextBoxColumn31->MinimumWidth = 6;
-            this->dataGridViewTextBoxColumn31->Name = L"dataGridViewTextBoxColumn31";
-            this->dataGridViewTextBoxColumn31->ReadOnly = true;
-            this->dataGridViewTextBoxColumn31->Width = 125;
-            // 
-            // dataGridViewTextBoxColumn32
-            // 
-            this->dataGridViewTextBoxColumn32->HeaderText = L"Họ và tên";
-            this->dataGridViewTextBoxColumn32->MinimumWidth = 6;
-            this->dataGridViewTextBoxColumn32->Name = L"dataGridViewTextBoxColumn32";
-            this->dataGridViewTextBoxColumn32->ReadOnly = true;
-            this->dataGridViewTextBoxColumn32->Width = 125;
-            // 
-            // dataGridViewTextBoxColumn33
-            // 
-            this->dataGridViewTextBoxColumn33->HeaderText = L"Giới tính";
-            this->dataGridViewTextBoxColumn33->MinimumWidth = 6;
-            this->dataGridViewTextBoxColumn33->Name = L"dataGridViewTextBoxColumn33";
-            this->dataGridViewTextBoxColumn33->ReadOnly = true;
-            this->dataGridViewTextBoxColumn33->Width = 125;
-            // 
-            // dataGridViewTextBoxColumn34
-            // 
-            this->dataGridViewTextBoxColumn34->HeaderText = L"Ngày sinh";
-            this->dataGridViewTextBoxColumn34->MinimumWidth = 6;
-            this->dataGridViewTextBoxColumn34->Name = L"dataGridViewTextBoxColumn34";
-            this->dataGridViewTextBoxColumn34->ReadOnly = true;
-            this->dataGridViewTextBoxColumn34->Width = 125;
-            // 
-            // dataGridViewTextBoxColumn35
-            // 
-            this->dataGridViewTextBoxColumn35->HeaderText = L"SĐT";
-            this->dataGridViewTextBoxColumn35->MinimumWidth = 6;
-            this->dataGridViewTextBoxColumn35->Name = L"dataGridViewTextBoxColumn35";
-            this->dataGridViewTextBoxColumn35->ReadOnly = true;
-            this->dataGridViewTextBoxColumn35->Width = 125;
-            // 
-            // dataGridViewTextBoxColumn36
-            // 
-            this->dataGridViewTextBoxColumn36->HeaderText = L"Số BHXH";
-            this->dataGridViewTextBoxColumn36->MinimumWidth = 6;
-            this->dataGridViewTextBoxColumn36->Name = L"dataGridViewTextBoxColumn36";
-            this->dataGridViewTextBoxColumn36->ReadOnly = true;
-            this->dataGridViewTextBoxColumn36->Width = 125;
-            // 
-            // dataGridViewTextBoxColumn37
-            // 
-            this->dataGridViewTextBoxColumn37->HeaderText = L"Số CMND/CCCD";
-            this->dataGridViewTextBoxColumn37->MinimumWidth = 6;
-            this->dataGridViewTextBoxColumn37->Name = L"dataGridViewTextBoxColumn37";
-            this->dataGridViewTextBoxColumn37->ReadOnly = true;
-            this->dataGridViewTextBoxColumn37->Width = 125;
-            // 
-            // dataGridViewTextBoxColumn38
-            // 
-            this->dataGridViewTextBoxColumn38->HeaderText = L"Địa chỉ";
-            this->dataGridViewTextBoxColumn38->MinimumWidth = 6;
-            this->dataGridViewTextBoxColumn38->Name = L"dataGridViewTextBoxColumn38";
-            this->dataGridViewTextBoxColumn38->ReadOnly = true;
-            this->dataGridViewTextBoxColumn38->Width = 125;
-            // 
-            // dataGridViewTextBoxColumn39
-            // 
-            this->dataGridViewTextBoxColumn39->HeaderText = L"Mã đăng ký";
-            this->dataGridViewTextBoxColumn39->MinimumWidth = 6;
-            this->dataGridViewTextBoxColumn39->Name = L"dataGridViewTextBoxColumn39";
-            this->dataGridViewTextBoxColumn39->ReadOnly = true;
-            this->dataGridViewTextBoxColumn39->Width = 125;
-            // 
-            // dataGridViewTextBoxColumn40
-            // 
-            this->dataGridViewTextBoxColumn40->HeaderText = L"Ngày đăng ký";
-            this->dataGridViewTextBoxColumn40->MinimumWidth = 6;
-            this->dataGridViewTextBoxColumn40->Name = L"dataGridViewTextBoxColumn40";
-            this->dataGridViewTextBoxColumn40->ReadOnly = true;
-            this->dataGridViewTextBoxColumn40->Width = 125;
-            // 
-            // dataGridViewTextBoxColumn41
-            // 
-            this->dataGridViewTextBoxColumn41->HeaderText = L"Nơi đăng ký";
-            this->dataGridViewTextBoxColumn41->MinimumWidth = 6;
-            this->dataGridViewTextBoxColumn41->Name = L"dataGridViewTextBoxColumn41";
-            this->dataGridViewTextBoxColumn41->ReadOnly = true;
-            this->dataGridViewTextBoxColumn41->Width = 125;
-            // 
-            // dataGridViewTextBoxColumn42
-            // 
-            this->dataGridViewTextBoxColumn42->HeaderText = L"Tiêm mũi 1";
-            this->dataGridViewTextBoxColumn42->MinimumWidth = 6;
-            this->dataGridViewTextBoxColumn42->Name = L"dataGridViewTextBoxColumn42";
-            this->dataGridViewTextBoxColumn42->ReadOnly = true;
-            this->dataGridViewTextBoxColumn42->Width = 125;
-            // 
-            // dataGridViewTextBoxColumn43
-            // 
-            this->dataGridViewTextBoxColumn43->HeaderText = L"Ngày tiêm mũi 1";
-            this->dataGridViewTextBoxColumn43->MinimumWidth = 6;
-            this->dataGridViewTextBoxColumn43->Name = L"dataGridViewTextBoxColumn43";
-            this->dataGridViewTextBoxColumn43->ReadOnly = true;
-            this->dataGridViewTextBoxColumn43->Width = 125;
-            // 
-            // dataGridViewTextBoxColumn44
-            // 
-            this->dataGridViewTextBoxColumn44->HeaderText = L"Tiêm mũi 2";
-            this->dataGridViewTextBoxColumn44->MinimumWidth = 6;
-            this->dataGridViewTextBoxColumn44->Name = L"dataGridViewTextBoxColumn44";
-            this->dataGridViewTextBoxColumn44->ReadOnly = true;
-            this->dataGridViewTextBoxColumn44->Width = 125;
-            // 
-            // dataGridViewTextBoxColumn45
-            // 
-            this->dataGridViewTextBoxColumn45->HeaderText = L"Ngày tiêm mũi 2";
-            this->dataGridViewTextBoxColumn45->MinimumWidth = 6;
-            this->dataGridViewTextBoxColumn45->Name = L"dataGridViewTextBoxColumn45";
-            this->dataGridViewTextBoxColumn45->ReadOnly = true;
-            this->dataGridViewTextBoxColumn45->Width = 125;
-            // 
-            // bt_view_sortData
-            // 
-            this->bt_view_sortData->Anchor = System::Windows::Forms::AnchorStyles::Top;
-            this->bt_view_sortData->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(57)), static_cast<System::Int32>(static_cast<System::Byte>(162)),
-                static_cast<System::Int32>(static_cast<System::Byte>(219)));
-            this->bt_view_sortData->Font = (gcnew System::Drawing::Font(L"MS Reference Sans Serif", 9, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
-                static_cast<System::Byte>(0)));
-            this->bt_view_sortData->Location = System::Drawing::Point(483, 68);
-            this->bt_view_sortData->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
-            this->bt_view_sortData->Name = L"bt_view_sortData";
-            this->bt_view_sortData->Size = System::Drawing::Size(105, 35);
-            this->bt_view_sortData->TabIndex = 5;
-            this->bt_view_sortData->Text = L"Xem";
-            this->bt_view_sortData->UseVisualStyleBackColor = false;
-            this->bt_view_sortData->Visible = false;
-            this->bt_view_sortData->Click += gcnew System::EventHandler(this, &Form1::button3_Click_2);
-            // 
-            // bt_sortData
-            // 
-            this->bt_sortData->Anchor = System::Windows::Forms::AnchorStyles::Top;
-            this->bt_sortData->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(57)), static_cast<System::Int32>(static_cast<System::Byte>(162)),
-                static_cast<System::Int32>(static_cast<System::Byte>(219)));
-            this->bt_sortData->Font = (gcnew System::Drawing::Font(L"MS Reference Sans Serif", 9, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
-                static_cast<System::Byte>(0)));
-            this->bt_sortData->Location = System::Drawing::Point(483, 21);
-            this->bt_sortData->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
-            this->bt_sortData->Name = L"bt_sortData";
-            this->bt_sortData->Size = System::Drawing::Size(105, 35);
-            this->bt_sortData->TabIndex = 4;
-            this->bt_sortData->Text = L"Sắp xếp";
-            this->bt_sortData->UseVisualStyleBackColor = false;
-            this->bt_sortData->Click += gcnew System::EventHandler(this, &Form1::bt_sortData_Click);
-            // 
-            // box_sortType
-            // 
-            this->box_sortType->Anchor = System::Windows::Forms::AnchorStyles::Top;
-            this->box_sortType->FormattingEnabled = true;
-            this->box_sortType->Items->AddRange(gcnew cli::array< System::Object^  >(2) { L"Tăng dần", L"Giảm dần" });
-            this->box_sortType->Location = System::Drawing::Point(250, 71);
-            this->box_sortType->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
-            this->box_sortType->Name = L"box_sortType";
-            this->box_sortType->Size = System::Drawing::Size(203, 27);
-            this->box_sortType->TabIndex = 3;
-            // 
-            // box_sortSelect
-            // 
-            this->box_sortSelect->Anchor = System::Windows::Forms::AnchorStyles::Top;
-            this->box_sortSelect->FormattingEnabled = true;
-            this->box_sortSelect->Items->AddRange(gcnew cli::array< System::Object^  >(4) {
-                L"Mã công dân", L"Ngày đăng ký", L"Ngày tiêm mũi 1",
-                    L"Ngày tiêm mũi 2"
-            });
-            this->box_sortSelect->Location = System::Drawing::Point(250, 26);
-            this->box_sortSelect->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
-            this->box_sortSelect->Name = L"box_sortSelect";
-            this->box_sortSelect->Size = System::Drawing::Size(203, 27);
-            this->box_sortSelect->TabIndex = 2;
-            // 
-            // label6
-            // 
-            this->label6->Anchor = System::Windows::Forms::AnchorStyles::Top;
-            this->label6->AutoSize = true;
-            this->label6->Location = System::Drawing::Point(100, 74);
-            this->label6->Name = L"label6";
-            this->label6->Size = System::Drawing::Size(121, 19);
-            this->label6->TabIndex = 1;
-            this->label6->Text = L"Thứ tự sắp xếp";
-            // 
-            // label5
-            // 
-            this->label5->Anchor = System::Windows::Forms::AnchorStyles::Top;
-            this->label5->AutoSize = true;
-            this->label5->Location = System::Drawing::Point(112, 29);
-            this->label5->Name = L"label5";
-            this->label5->Size = System::Drawing::Size(108, 19);
-            this->label5->TabIndex = 0;
-            this->label5->Text = L"Sắp xếp theo";
-            // 
-            // box_inputFile
-            // 
-            this->box_inputFile->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Bottom)
-                | System::Windows::Forms::AnchorStyles::Left)
-                | System::Windows::Forms::AnchorStyles::Right));
-            this->box_inputFile->Controls->Add(this->bt_selectFile3);
-            this->box_inputFile->Controls->Add(this->bt_selectFile2);
-            this->box_inputFile->Controls->Add(this->bt_selectFile1);
-            this->box_inputFile->Controls->Add(this->bt_inputFile);
-            this->box_inputFile->Controls->Add(this->fileName3);
-            this->box_inputFile->Controls->Add(this->fileName2);
-            this->box_inputFile->Controls->Add(this->label_fileName3);
-            this->box_inputFile->Controls->Add(this->label_fileName1);
-            this->box_inputFile->Controls->Add(this->label_fileName2);
-            this->box_inputFile->Controls->Add(this->fileName1);
-            this->box_inputFile->Font = (gcnew System::Drawing::Font(L"MS Reference Sans Serif", 9, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
-                static_cast<System::Byte>(0)));
-            this->box_inputFile->Location = System::Drawing::Point(0, 50);
-            this->box_inputFile->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
-            this->box_inputFile->Name = L"box_inputFile";
-            this->box_inputFile->Padding = System::Windows::Forms::Padding(3, 2, 3, 2);
-            this->box_inputFile->Size = System::Drawing::Size(653, 417);
-            this->box_inputFile->TabIndex = 5;
-            this->box_inputFile->TabStop = false;
-            this->box_inputFile->Text = L"Nhập dữ liệu từ tập tin";
-            this->box_inputFile->Visible = false;
-            // 
-            // bt_selectFile3
-            // 
-            this->bt_selectFile3->Anchor = System::Windows::Forms::AnchorStyles::Top;
-            this->bt_selectFile3->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(57)), static_cast<System::Int32>(static_cast<System::Byte>(162)),
-                static_cast<System::Int32>(static_cast<System::Byte>(219)));
-            this->bt_selectFile3->Location = System::Drawing::Point(515, 140);
-            this->bt_selectFile3->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
-            this->bt_selectFile3->Name = L"bt_selectFile3";
-            this->bt_selectFile3->Size = System::Drawing::Size(40, 35);
-            this->bt_selectFile3->TabIndex = 9;
-            this->bt_selectFile3->Text = L"...";
-            this->bt_selectFile3->UseVisualStyleBackColor = false;
-            this->bt_selectFile3->Click += gcnew System::EventHandler(this, &Form1::bt_selectFile3_Click);
-            // 
-            // bt_selectFile2
-            // 
-            this->bt_selectFile2->Anchor = System::Windows::Forms::AnchorStyles::Top;
-            this->bt_selectFile2->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(57)), static_cast<System::Int32>(static_cast<System::Byte>(162)),
-                static_cast<System::Int32>(static_cast<System::Byte>(219)));
-            this->bt_selectFile2->Location = System::Drawing::Point(515, 90);
-            this->bt_selectFile2->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
-            this->bt_selectFile2->Name = L"bt_selectFile2";
-            this->bt_selectFile2->Size = System::Drawing::Size(40, 35);
-            this->bt_selectFile2->TabIndex = 8;
-            this->bt_selectFile2->Text = L"...";
-            this->bt_selectFile2->UseVisualStyleBackColor = false;
-            this->bt_selectFile2->Click += gcnew System::EventHandler(this, &Form1::bt_selectFile2_Click);
-            // 
-            // bt_selectFile1
-            // 
-            this->bt_selectFile1->Anchor = System::Windows::Forms::AnchorStyles::Top;
-            this->bt_selectFile1->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(57)), static_cast<System::Int32>(static_cast<System::Byte>(162)),
-                static_cast<System::Int32>(static_cast<System::Byte>(219)));
-            this->bt_selectFile1->Location = System::Drawing::Point(515, 40);
-            this->bt_selectFile1->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
-            this->bt_selectFile1->Name = L"bt_selectFile1";
-            this->bt_selectFile1->Size = System::Drawing::Size(40, 35);
-            this->bt_selectFile1->TabIndex = 7;
-            this->bt_selectFile1->Text = L"...";
-            this->bt_selectFile1->UseVisualStyleBackColor = false;
-            this->bt_selectFile1->Click += gcnew System::EventHandler(this, &Form1::bt_selectFile1_Click);
-            // 
-            // bt_inputFile
-            // 
-            this->bt_inputFile->Anchor = System::Windows::Forms::AnchorStyles::Top;
-            this->bt_inputFile->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(57)), static_cast<System::Int32>(static_cast<System::Byte>(162)),
-                static_cast<System::Int32>(static_cast<System::Byte>(219)));
-            this->bt_inputFile->Location = System::Drawing::Point(363, 191);
-            this->bt_inputFile->Margin = System::Windows::Forms::Padding(4);
-            this->bt_inputFile->Name = L"bt_inputFile";
-            this->bt_inputFile->Size = System::Drawing::Size(100, 35);
-            this->bt_inputFile->TabIndex = 6;
-            this->bt_inputFile->Text = L"Nhập";
-            this->bt_inputFile->UseVisualStyleBackColor = false;
-            this->bt_inputFile->Click += gcnew System::EventHandler(this, &Form1::bt_inputFile_Click);
-            // 
-            // fileName3
-            // 
-            this->fileName3->Anchor = System::Windows::Forms::AnchorStyles::Top;
-            this->fileName3->Location = System::Drawing::Point(320, 145);
-            this->fileName3->Margin = System::Windows::Forms::Padding(4);
-            this->fileName3->Name = L"fileName3";
-            this->fileName3->ReadOnly = true;
-            this->fileName3->Size = System::Drawing::Size(185, 26);
-            this->fileName3->TabIndex = 5;
-            // 
-            // fileName2
-            // 
-            this->fileName2->Anchor = System::Windows::Forms::AnchorStyles::Top;
-            this->fileName2->Location = System::Drawing::Point(320, 95);
-            this->fileName2->Margin = System::Windows::Forms::Padding(4);
-            this->fileName2->Name = L"fileName2";
-            this->fileName2->ReadOnly = true;
-            this->fileName2->Size = System::Drawing::Size(185, 26);
-            this->fileName2->TabIndex = 4;
-            // 
-            // label_fileName3
-            // 
-            this->label_fileName3->Anchor = System::Windows::Forms::AnchorStyles::Top;
-            this->label_fileName3->AutoSize = true;
-            this->label_fileName3->Location = System::Drawing::Point(40, 150);
-            this->label_fileName3->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
-            this->label_fileName3->Name = L"label_fileName3";
-            this->label_fileName3->Size = System::Drawing::Size(236, 19);
-            this->label_fileName3->TabIndex = 3;
-            this->label_fileName3->Text = L"Nhập file dữ liệu tiêm chủng(*)";
-            // 
-            // label_fileName1
-            // 
-            this->label_fileName1->Anchor = System::Windows::Forms::AnchorStyles::Top;
-            this->label_fileName1->AutoSize = true;
-            this->label_fileName1->Location = System::Drawing::Point(40, 50);
-            this->label_fileName1->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
-            this->label_fileName1->Name = L"label_fileName1";
-            this->label_fileName1->Size = System::Drawing::Size(222, 19);
-            this->label_fileName1->TabIndex = 2;
-            this->label_fileName1->Text = L"Nhập file dữ liệu công dân(*)";
-            // 
-            // label_fileName2
-            // 
-            this->label_fileName2->Anchor = System::Windows::Forms::AnchorStyles::Top;
-            this->label_fileName2->AutoSize = true;
-            this->label_fileName2->Location = System::Drawing::Point(40, 100);
-            this->label_fileName2->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
-            this->label_fileName2->Name = L"label_fileName2";
-            this->label_fileName2->Size = System::Drawing::Size(165, 19);
-            this->label_fileName2->TabIndex = 1;
-            this->label_fileName2->Text = L"Nhập file đăng ký (*)";
-            // 
-            // fileName1
-            // 
-            this->fileName1->Anchor = System::Windows::Forms::AnchorStyles::Top;
-            this->fileName1->Location = System::Drawing::Point(320, 45);
-            this->fileName1->Margin = System::Windows::Forms::Padding(4);
-            this->fileName1->Name = L"fileName1";
-            this->fileName1->ReadOnly = true;
-            this->fileName1->Size = System::Drawing::Size(185, 26);
-            this->fileName1->TabIndex = 0;
-            // 
             // accountManager_newFullname
             // 
             this->accountManager_newFullname->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(232)),
@@ -3661,6 +3661,11 @@ private: System::Windows::Forms::Label^ label30;
             this->boxDataManager->PerformLayout();
             this->dataManager_menu->ResumeLayout(false);
             this->dataManager_menu->PerformLayout();
+            this->box_sortData->ResumeLayout(false);
+            this->box_sortData->PerformLayout();
+            (cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->view_sortData_people))->EndInit();
+            this->box_inputFile->ResumeLayout(false);
+            this->box_inputFile->PerformLayout();
             this->box_inputHand->ResumeLayout(false);
             this->box_inputHand->PerformLayout();
             this->panel_insertType->ResumeLayout(false);
@@ -3681,11 +3686,6 @@ private: System::Windows::Forms::Label^ label30;
             (cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->view_filterData))->EndInit();
             this->box_deleteData->ResumeLayout(false);
             this->box_deleteData->PerformLayout();
-            this->box_sortData->ResumeLayout(false);
-            this->box_sortData->PerformLayout();
-            (cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->view_sortData_people))->EndInit();
-            this->box_inputFile->ResumeLayout(false);
-            this->box_inputFile->PerformLayout();
             this->Manager->ResumeLayout(false);
             this->loginTab->ResumeLayout(false);
             this->loginTab->PerformLayout();
@@ -3950,10 +3950,12 @@ private: System::Windows::Forms::Label^ label30;
             convertString(f2, path2);
             convertString(f3, path3);
             DN.nhapFile(path1, path2, path3);
+            hasFile = true;
             MessageBox::Show(L"Đã nhập dữ liệu", L"THÔNG BÁO");
         }
         else {
             MessageBox::Show(L"Thiếu file.\nBạn phải nhập đủ 3 file dữ liệu đầu vào.", L"THÔNG BÁO");
+            hasFile = false;
         }
 
     }
@@ -3961,25 +3963,31 @@ private: System::Windows::Forms::Label^ label30;
     }
 
     private: System::Void button2_Click(System::Object^ sender, System::EventArgs^ e) {
-        this->view_exportData_people->ReadOnly = false;
-        this->bt_modData_people->BackColor = Color::Black;
-        this->bt_modData_people->ForeColor = Color::White;
+        if(hasFile){
+            this->view_exportData_people->ReadOnly = false;
+            this->bt_modData_people->BackColor = Color::Black;
+            this->bt_modData_people->ForeColor = Color::White;
+        }else{ MessageBox::Show(L"Chưa có file dữ liệu vào.", L"THÔNG BÁO"); }
+        
     }
     private: System::Void button3_Click(System::Object^ sender, System::EventArgs^ e) {
-        int n = DN.getRows();
-        this->view_exportData_people->RowCount = n;
+        if (hasFile){
+            int n = DN.getRows();
+            this->view_exportData_people->RowCount = n;
+
+            for (int i = 0; i < n; i++) {
+                //phải convert từ dạng standard string về system string
+                this->view_exportData_people->Rows[i]->Cells[0]->Value = gcnew String(DN.get("ma_CD", i).c_str());
+                this->view_exportData_people->Rows[i]->Cells[1]->Value = gcnew String(DN.get("fullName", i).c_str());
+                this->view_exportData_people->Rows[i]->Cells[2]->Value = gcnew String(DN.get("sex", i).c_str());
+                this->view_exportData_people->Rows[i]->Cells[3]->Value = gcnew String(DN.get("birth", i).c_str());
+                this->view_exportData_people->Rows[i]->Cells[4]->Value = gcnew String(DN.get("phone", i).c_str());
+                this->view_exportData_people->Rows[i]->Cells[5]->Value = gcnew String(DN.get("so_BHXH", i).c_str());
+                this->view_exportData_people->Rows[i]->Cells[6]->Value = gcnew String(DN.get("so_CMND", i).c_str());
+                this->view_exportData_people->Rows[i]->Cells[7]->Value = gcnew String(DN.get("address", i).c_str());
+            };
+        }else{ MessageBox::Show(L"Chưa có file dữ liệu vào.", L"THÔNG BÁO"); }
         
-        for (int i = 0 ; i < n; i++) {
-            //phải convert từ dạng standard string về system string
-            this->view_exportData_people->Rows[i]->Cells[0]->Value = gcnew String(DN.get("ma_CD", i).c_str());
-            this->view_exportData_people->Rows[i]->Cells[1]->Value = gcnew String(DN.get("fullName", i).c_str());
-            this->view_exportData_people->Rows[i]->Cells[2]->Value = gcnew String(DN.get("sex", i).c_str());
-            this->view_exportData_people->Rows[i]->Cells[3]->Value = gcnew String(DN.get("birth", i).c_str());
-            this->view_exportData_people->Rows[i]->Cells[4]->Value = gcnew String(DN.get("phone", i).c_str());
-            this->view_exportData_people->Rows[i]->Cells[5]->Value = gcnew String(DN.get("so_BHXH", i).c_str());
-            this->view_exportData_people->Rows[i]->Cells[6]->Value = gcnew String(DN.get("so_CMND", i).c_str());
-            this->view_exportData_people->Rows[i]->Cells[7]->Value = gcnew String(DN.get("address", i).c_str());
-        };
     }
     private: System::Void toolStripMenuItem8_Click(System::Object^ sender, System::EventArgs^ e) {
         if (loginStatus == true)
@@ -3999,14 +4007,17 @@ private: System::Windows::Forms::Label^ label30;
     }
 
     private: System::Void button3_Click_1(System::Object^ sender, System::EventArgs^ e) {
-        int n = DN.getRows();
-        this->view_exportData_registry->RowCount = n;
-        for (int i = 0; i < n; i++) {
-            this->view_exportData_registry->Rows[i]->Cells[0]->Value = gcnew String(DN.get("fullName", i).c_str());
-            this->view_exportData_registry->Rows[i]->Cells[1]->Value = gcnew String(DN.get("ma_DK", i).c_str());
-            this->view_exportData_registry->Rows[i]->Cells[2]->Value = gcnew String(DN.get("ngay_DK", i).c_str());
-            this->view_exportData_registry->Rows[i]->Cells[3]->Value = gcnew String(DN.get("noi_DK", i).c_str());
-        }
+        if(hasFile){
+            int n = DN.getRows();
+            this->view_exportData_registry->RowCount = n;
+            for (int i = 0; i < n; i++) {
+                this->view_exportData_registry->Rows[i]->Cells[0]->Value = gcnew String(DN.get("fullName", i).c_str());
+                this->view_exportData_registry->Rows[i]->Cells[1]->Value = gcnew String(DN.get("ma_DK", i).c_str());
+                this->view_exportData_registry->Rows[i]->Cells[2]->Value = gcnew String(DN.get("ngay_DK", i).c_str());
+                this->view_exportData_registry->Rows[i]->Cells[3]->Value = gcnew String(DN.get("noi_DK", i).c_str());
+            }
+        }else{ MessageBox::Show(L"Chưa có file dữ liệu vào.", L"THÔNG BÁO"); }
+        
     }
 private: System::Void toolStripMenuItem9_Click(System::Object^ sender, System::EventArgs^ e) {
     if (loginStatus == true)
@@ -4041,18 +4052,21 @@ private: System::Void toolStripMenuItem10_Click(System::Object^ sender, System::
     }
 }
 private: System::Void bt_loadData_vaccination_Click(System::Object^ sender, System::EventArgs^ e) {
-    int n = DN.getRows();
-    this->view_exportData_vaccination->RowCount = n;
-    for (int i = 0; i < n; i++) {
-        this->view_exportData_vaccination->Rows[i]->Cells[0]->Value = gcnew String(DN.get("fullName", i).c_str());
-        this->view_exportData_vaccination->Rows[i]->Cells[1]->Value = gcnew String(DN.get("mui1", i).c_str());
-        this->view_exportData_vaccination->Rows[i]->Cells[2]->Value = gcnew String(DN.get("ngay_M1", i).c_str());
-        this->view_exportData_vaccination->Rows[i]->Cells[3]->Value = gcnew String(DN.get("mui2", i).c_str());
-        this->view_exportData_vaccination->Rows[i]->Cells[4]->Value = gcnew String(DN.get("ngay_M2", i).c_str());
+    if(hasFile){
+        int n = DN.getRows();
+        this->view_exportData_vaccination->RowCount = n;
+        for (int i = 0; i < n; i++) {
+            this->view_exportData_vaccination->Rows[i]->Cells[0]->Value = gcnew String(DN.get("fullName", i).c_str());
+            this->view_exportData_vaccination->Rows[i]->Cells[1]->Value = gcnew String(DN.get("mui1", i).c_str());
+            this->view_exportData_vaccination->Rows[i]->Cells[2]->Value = gcnew String(DN.get("ngay_M1", i).c_str());
+            this->view_exportData_vaccination->Rows[i]->Cells[3]->Value = gcnew String(DN.get("mui2", i).c_str());
+            this->view_exportData_vaccination->Rows[i]->Cells[4]->Value = gcnew String(DN.get("ngay_M2", i).c_str());
+        }
+    }else{ MessageBox::Show(L"Chưa có file dữ liệu vào.", L"THÔNG BÁO"); }
 
-    }
 }
 private: System::Void button3_Click_2(System::Object^ sender, System::EventArgs^ e) {
+
     //MessageBox::Show(L"Trả về thành công", L"THÔNG BÁO");
     int n = DN.getRows();
     this->view_sortData_people->RowCount = n;
@@ -4075,101 +4089,107 @@ private: System::Void button3_Click_2(System::Object^ sender, System::EventArgs^
     }
 }
 private: System::Void bt_sortData_Click(System::Object^ sender, System::EventArgs^ e) {
-    
-    String ^s1 = this->box_sortSelect->Text;
-    String ^s2 = this->box_sortType->Text;
+    if(hasFile){
+        String^ s1 = this->box_sortSelect->Text;
+        String^ s2 = this->box_sortType->Text;
 
-    if (s2 == L"Tăng dần") {
-        sortType = true;
-        hasSort = true;
-        if (s1 == L"Mã công dân") {
-            DN.Sort_ma_CD(ascending);
-            MessageBox::Show(L"Đã sắp xếp.\nNhấn 'Xem' để xem dữ liệu. ", L"THÔNG BÁO");
-            this->bt_view_sortData->Visible = true;
+        if (s2 == L"Tăng dần") {
+            sortType = true;
+            hasSort = true;
+            if (s1 == L"Mã công dân") {
+                DN.Sort_ma_CD(ascending);
+                MessageBox::Show(L"Đã sắp xếp.\nNhấn 'Xem' để xem dữ liệu. ", L"THÔNG BÁO");
+                this->bt_view_sortData->Visible = true;
+            }
+            else if (s1 == L"Mã đăng ký") {
+
+            }
+            else if (s1 == L"Ngày đăng ký") {
+                DN.Sort_ngay_DK(ascending);
+                MessageBox::Show(L"Đã sắp xếp.\nNhấn 'Xem' để xem dữ liệu. ", L"THÔNG BÁO");
+                this->bt_view_sortData->Visible = true;
+            }
+            else if (s1 == L"Ngày tiêm mũi 1") {
+                DN.Sort_ngay_M1(ascending);
+                MessageBox::Show(L"Đã sắp xếp.\nNhấn 'Xem' để xem dữ liệu. ", L"THÔNG BÁO");
+                this->bt_view_sortData->Visible = true;
+            }
+            else if (s1 == L"Ngày tiêm mũi 2") {
+                DN.Sort_ngay_M2(ascending);
+                MessageBox::Show(L"Đã sắp xếp.\nNhấn 'Xem' để xem dữ liệu. ", L"THÔNG BÁO");
+                this->bt_view_sortData->Visible = true;
+            }
+            else {
+                MessageBox::Show(L"Lỗi nhập dữ liệu", L"THÔNG BÁO");
+                this->bt_view_sortData->Visible = false;
+            }
         }
-        else if (s1 == L"Mã đăng ký") {
-          
-        }
-        else if (s1 == L"Ngày đăng ký") {
-            DN.Sort_ngay_DK(ascending);
-            MessageBox::Show(L"Đã sắp xếp.\nNhấn 'Xem' để xem dữ liệu. ", L"THÔNG BÁO");
-            this->bt_view_sortData->Visible = true;
-        }
-        else if (s1 == L"Ngày tiêm mũi 1") {
-            DN.Sort_ngay_M1(ascending);
-            MessageBox::Show(L"Đã sắp xếp.\nNhấn 'Xem' để xem dữ liệu. ", L"THÔNG BÁO");
-            this->bt_view_sortData->Visible = true;
-        }
-        else if (s1 == L"Ngày tiêm mũi 2") {
-            DN.Sort_ngay_M2(ascending);
-            MessageBox::Show(L"Đã sắp xếp.\nNhấn 'Xem' để xem dữ liệu. ", L"THÔNG BÁO");
-            this->bt_view_sortData->Visible = true;
+        else if (s2 == L"Giảm dần") {
+            sortType = false;
+            hasSort = true;
+            if (s1 == L"Mã công dân") {
+                DN.Sort_ma_CD(descending);
+                MessageBox::Show(L"Đã sắp xếp.\nNhấn 'Xem' để xem dữ liệu. ", L"THÔNG BÁO");
+                this->bt_view_sortData->Visible = true;
+            }
+            else if (s1 == L"Mã đăng ký") {
+
+            }
+            else if (s1 == L"Ngày đăng ký") {
+                DN.Sort_ngay_DK(descending);
+                MessageBox::Show(L"Đã sắp xếp.\nNhấn 'Xem' để xem dữ liệu. ", L"THÔNG BÁO");
+                this->bt_view_sortData->Visible = true;
+            }
+            else if (s1 == L"Ngày tiêm mũi 1") {
+                DN.Sort_ngay_M1(descending);
+                MessageBox::Show(L"Đã sắp xếp.\nNhấn 'Xem' để xem dữ liệu. ", L"THÔNG BÁO");
+                this->bt_view_sortData->Visible = true;
+            }
+            else if (s1 == L"Ngày tiêm mũi 2") {
+                DN.Sort_ngay_M2(descending);
+                MessageBox::Show(L"Đã sắp xếp.\nNhấn 'Xem' để xem dữ liệu. ", L"THÔNG BÁO");
+                this->bt_view_sortData->Visible = true;
+            }
+            else {
+                hasSort = false;
+                MessageBox::Show(L"Lỗi nhập dữ liệu", L"THÔNG BÁO");
+                this->bt_view_sortData->Visible = false;
+            }
         }
         else {
+            hasSort = false;
             MessageBox::Show(L"Lỗi nhập dữ liệu", L"THÔNG BÁO");
             this->bt_view_sortData->Visible = false;
         }
-    }
-    else if (s2 == L"Giảm dần") {
-        sortType = false;
-        hasSort = true;
-        if (s1 == L"Mã công dân") {
-            DN.Sort_ma_CD(descending);
-            MessageBox::Show(L"Đã sắp xếp.\nNhấn 'Xem' để xem dữ liệu. ", L"THÔNG BÁO");
-            this->bt_view_sortData->Visible = true;
-        }
-        else if (s1 == L"Mã đăng ký") {
+    }else{ MessageBox::Show(L"Chưa có file dữ liệu vào.", L"THÔNG BÁO"); }
 
-        }
-        else if (s1 == L"Ngày đăng ký") {
-            DN.Sort_ngay_DK(descending);
-            MessageBox::Show(L"Đã sắp xếp.\nNhấn 'Xem' để xem dữ liệu. ", L"THÔNG BÁO");
-            this->bt_view_sortData->Visible = true;
-        }
-        else if (s1 == L"Ngày tiêm mũi 1") {
-            DN.Sort_ngay_M1(descending);
-            MessageBox::Show(L"Đã sắp xếp.\nNhấn 'Xem' để xem dữ liệu. ", L"THÔNG BÁO");
-            this->bt_view_sortData->Visible = true;
-        }
-        else if (s1 == L"Ngày tiêm mũi 2") {
-            DN.Sort_ngay_M2(descending);
-            MessageBox::Show(L"Đã sắp xếp.\nNhấn 'Xem' để xem dữ liệu. ", L"THÔNG BÁO");
-                this->bt_view_sortData->Visible = true;
-        }
-        else { 
-            hasSort = false;
-            MessageBox::Show(L"Lỗi nhập dữ liệu", L"THÔNG BÁO"); 
-            this->bt_view_sortData->Visible = false;
-        }
-    }
-    else {
-        hasSort = false;
-        MessageBox::Show(L"Lỗi nhập dữ liệu", L"THÔNG BÁO");
-        this->bt_view_sortData->Visible = false;
-    }
+    
     //MessageBox::Show("Đã sắp xếp.\nNhấn 'Xem' để chuyển sang trang xem dữ liệu. ", "THÔNG BÁO");
 }
 
 private: System::Void bt_loadAllData_Click(System::Object^ sender, System::EventArgs^ e) {
-    int n = DN.getRows();
-    this->view_exportAllData_people->RowCount = n;
-    for (int i = 0; i < n; i++) {
-        this->view_exportAllData_people->Rows[i]->Cells[0]->Value = gcnew String(DN.get("ma_CD", i).c_str());
-        this->view_exportAllData_people->Rows[i]->Cells[1]->Value = gcnew String(DN.get("fullName", i).c_str());
-        this->view_exportAllData_people->Rows[i]->Cells[2]->Value = gcnew String(DN.get("sex", i).c_str());
-        this->view_exportAllData_people->Rows[i]->Cells[3]->Value = gcnew String(DN.get("birth", i).c_str());
-        this->view_exportAllData_people->Rows[i]->Cells[4]->Value = gcnew String(DN.get("phone", i).c_str());
-        this->view_exportAllData_people->Rows[i]->Cells[5]->Value = gcnew String(DN.get("so_BHXH", i).c_str());
-        this->view_exportAllData_people->Rows[i]->Cells[6]->Value = gcnew String(DN.get("so_CMND", i).c_str());
-        this->view_exportAllData_people->Rows[i]->Cells[7]->Value = gcnew String(DN.get("address", i).c_str());
-        this->view_exportAllData_people->Rows[i]->Cells[8]->Value = gcnew String(DN.get("ma_DK", i).c_str());
-        this->view_exportAllData_people->Rows[i]->Cells[9]->Value = gcnew String(DN.get("ngay_DK", i).c_str());
-        this->view_exportAllData_people->Rows[i]->Cells[10]->Value = gcnew String(DN.get("noi_DK", i).c_str());
-        this->view_exportAllData_people->Rows[i]->Cells[11]->Value = gcnew String(DN.get("mui1", i).c_str());
-        this->view_exportAllData_people->Rows[i]->Cells[12]->Value = gcnew String(DN.get("ngay_M1", i).c_str());
-        this->view_exportAllData_people->Rows[i]->Cells[13]->Value = gcnew String(DN.get("mui2", i).c_str());
-        this->view_exportAllData_people->Rows[i]->Cells[14]->Value = gcnew String(DN.get("ngay_M2", i).c_str());
-    }
+    if (hasFile){
+        int n = DN.getRows();
+        this->view_exportAllData_people->RowCount = n;
+        for (int i = 0; i < n; i++) {
+            this->view_exportAllData_people->Rows[i]->Cells[0]->Value = gcnew String(DN.get("ma_CD", i).c_str());
+            this->view_exportAllData_people->Rows[i]->Cells[1]->Value = gcnew String(DN.get("fullName", i).c_str());
+            this->view_exportAllData_people->Rows[i]->Cells[2]->Value = gcnew String(DN.get("sex", i).c_str());
+            this->view_exportAllData_people->Rows[i]->Cells[3]->Value = gcnew String(DN.get("birth", i).c_str());
+            this->view_exportAllData_people->Rows[i]->Cells[4]->Value = gcnew String(DN.get("phone", i).c_str());
+            this->view_exportAllData_people->Rows[i]->Cells[5]->Value = gcnew String(DN.get("so_BHXH", i).c_str());
+            this->view_exportAllData_people->Rows[i]->Cells[6]->Value = gcnew String(DN.get("so_CMND", i).c_str());
+            this->view_exportAllData_people->Rows[i]->Cells[7]->Value = gcnew String(DN.get("address", i).c_str());
+            this->view_exportAllData_people->Rows[i]->Cells[8]->Value = gcnew String(DN.get("ma_DK", i).c_str());
+            this->view_exportAllData_people->Rows[i]->Cells[9]->Value = gcnew String(DN.get("ngay_DK", i).c_str());
+            this->view_exportAllData_people->Rows[i]->Cells[10]->Value = gcnew String(DN.get("noi_DK", i).c_str());
+            this->view_exportAllData_people->Rows[i]->Cells[11]->Value = gcnew String(DN.get("mui1", i).c_str());
+            this->view_exportAllData_people->Rows[i]->Cells[12]->Value = gcnew String(DN.get("ngay_M1", i).c_str());
+            this->view_exportAllData_people->Rows[i]->Cells[13]->Value = gcnew String(DN.get("mui2", i).c_str());
+            this->view_exportAllData_people->Rows[i]->Cells[14]->Value = gcnew String(DN.get("ngay_M2", i).c_str());
+        }
+    }else{ MessageBox::Show(L"Chưa có file dữ liệu vào.", L"THÔNG BÁO"); }
+    
 }
 private: System::Void xuấtToànBộDữLiệuToolStripMenuItem_Click(System::Object^ sender, System::EventArgs^ e) {
     this->export_allData_people->Visible = true;
@@ -4184,30 +4204,34 @@ private: System::Void xuấtToànBộDữLiệuToolStripMenuItem_Click(System::O
     this->box_fillData->Visible = false;
 }
 private: System::Void bt_deleteData_Click(System::Object^ sender, System::EventArgs^ e) {
-    String ^obj = this->textbox_deleteData->Text;
-    string s;
-    convertString(obj, s);
-    if (MessageBox::Show(L"Bạn có chắc chắn muốn xoá không?", L"THÔNG BÁO", MessageBoxButtons::YesNo, MessageBoxIcon::Question) == System::Windows::Forms::DialogResult::Yes) {
-        String^ msg = gcnew String(DN.Delete(s).c_str());
-        MessageBox::Show(msg, L"THÔNG BÁO");
-    }
-    else {
-
-    }
+    if(hasFile){
+        String^ obj = this->textbox_deleteData->Text;
+        string s;
+        convertString(obj, s);
+        if (MessageBox::Show(L"Bạn có chắc chắn muốn xoá không?", L"THÔNG BÁO", MessageBoxButtons::YesNo, MessageBoxIcon::Question) == System::Windows::Forms::DialogResult::Yes) {
+            String^ msg = gcnew String(DN.Delete(s).c_str());
+            MessageBox::Show(msg, L"THÔNG BÁO");
+        }
+        else {}
+    }else{ MessageBox::Show(L"Chưa có file dữ liệu vào.", L"THÔNG BÁO"); }
+    
 }
-
 
 private: System::Void dateTimePicker1_ValueChanged(System::Object^ sender, System::EventArgs^ e) {
 }
 private: System::Void dateTimePicker3_ValueChanged(System::Object^ sender, System::EventArgs^ e) {
 }
 private: System::Void button2_Click_1(System::Object^ sender, System::EventArgs^ e) {
-    String ^s = insertTypeA->Text;
-    string pos; convertString(s, pos);
-    int x = stoi(pos);
-    bool status = DN.Them(CD, x);
-    if (status) MessageBox::Show(L"Đã thêm đối tượng.", L"THÔNG BÁO");
-    else MessageBox::Show(L"Vị trí thêm không chính xác, hãy nhập lại.", "THÔNG BÁO");
+    if (hasFile){
+        String^ s = insertTypeA->Text;
+        string pos; convertString(s, pos);
+        int x = stoi(pos);
+        bool status = DN.Them(CD, x);
+        if (status) MessageBox::Show(L"Đã thêm đối tượng.", L"THÔNG BÁO");
+        else MessageBox::Show(L"Vị trí thêm không chính xác, hãy nhập lại.", "THÔNG BÁO");
+    }
+    else { MessageBox::Show(L"Chưa có file dữ liệu vào.", L"THÔNG BÁO"); }
+    
 
 }
 private: System::Void bt_saveInputCD_Click(System::Object^ sender, System::EventArgs^ e) {
@@ -4313,25 +4337,28 @@ private: System::Void bt_saveInputCD_Click(System::Object^ sender, System::Event
     }
 }
 private: System::Void button3_Click_3(System::Object^ sender, System::EventArgs^ e) {
-    if (!hasSort) { MessageBox::Show(L"Danh sách chưa sắp xếp.\nKhông thể dùng chức năng này.", L"THÔNG BÁO"); }
-    else if (hasSort){
-        if (sortType == true)
-        {
-            bool status = DN.Insert_ma_CD(CD,ascending);
-            if (status) MessageBox::Show(L"Đã thêm đối tượng.", L"THÔNG BÁO");
-            else MessageBox::Show(L"Vị trí thêm không chính xác, hãy nhập lại.", "THÔNG BÁO");
-        }else{
-            bool status = DN.Insert_ma_CD(CD, descending);
-            if (status) MessageBox::Show(L"Đã thêm đối tượng.", L"THÔNG BÁO");
-            else MessageBox::Show(L"Vị trí thêm không chính xác, hãy nhập lại.", "THÔNG BÁO");
+
+    if (hasFile){
+        if (!hasSort) { MessageBox::Show(L"Danh sách chưa sắp xếp.\nKhông thể dùng chức năng này.", L"THÔNG BÁO"); }
+        else if (hasSort) {
+            if (sortType == true)
+            {
+                bool status = DN.Insert_ma_CD(CD, ascending);
+                if (status) MessageBox::Show(L"Đã thêm đối tượng.", L"THÔNG BÁO");
+                else MessageBox::Show(L"Vị trí thêm không chính xác, hãy nhập lại.", "THÔNG BÁO");
+            }
+            else {
+                bool status = DN.Insert_ma_CD(CD, descending);
+                if (status) MessageBox::Show(L"Đã thêm đối tượng.", L"THÔNG BÁO");
+                else MessageBox::Show(L"Vị trí thêm không chính xác, hãy nhập lại.", "THÔNG BÁO");
+            }
+
         }
-        
-    }
-    else{}
+        else {}
+    }else{ MessageBox::Show(L"Chưa có file dữ liệu vào.", L"THÔNG BÁO"); }
+    
     
 }
-
-
 
 private: System::Void bt_quit_Click(System::Object^ sender, System::EventArgs^ e) {
     //if (MessageBox::Show(L"Bạn có chắc chắn muốn thoát không?", L"THÔNG BÁO", MessageBoxButtons::YesNo, MessageBoxIcon::Question) == DialogResult::yes) {
@@ -4341,37 +4368,40 @@ private: System::Void bt_quit_Click(System::Object^ sender, System::EventArgs^ e
 }
 
 private: System::Void bt_search_Click(System::Object^ sender, System::EventArgs^ e) {
-    String^ s1 = this->box_search->Text;
-    string ma_CD; convertString(s1, ma_CD);
-    CongDan A;
-    if (ma_CD != "") {
-        A = DN.Search_MaCD(ma_CD);
-        string s2 = A.get_MaCD();
-        if (s2 != "") {
-            this->view_searchData->RowCount = 2;
-            this->view_searchData->Rows[0]->Cells[0]->Value = gcnew String(A.get("ma_CD").c_str());
-            this->view_searchData->Rows[0]->Cells[1]->Value = gcnew String(A.get("fullName").c_str());
-            this->view_searchData->Rows[0]->Cells[2]->Value = gcnew String(A.get("sex").c_str());
-            this->view_searchData->Rows[0]->Cells[3]->Value = gcnew String(A.get("birth").c_str());
-            this->view_searchData->Rows[0]->Cells[4]->Value = gcnew String(A.get("phone").c_str());
-            this->view_searchData->Rows[0]->Cells[5]->Value = gcnew String(A.get("so_BHXH").c_str());
-            this->view_searchData->Rows[0]->Cells[6]->Value = gcnew String(A.get("so_CMND").c_str());
-            this->view_searchData->Rows[0]->Cells[7]->Value = gcnew String(A.get("address").c_str());
-            this->view_searchData->Rows[0]->Cells[8]->Value = gcnew String(A.get("ma_DK").c_str());
-            this->view_searchData->Rows[0]->Cells[9]->Value = gcnew String(A.get("ngay_DK").c_str());
-            this->view_searchData->Rows[0]->Cells[10]->Value = gcnew String(A.get("noi_DK").c_str());
-            this->view_searchData->Rows[0]->Cells[11]->Value = gcnew String(A.get("mui1").c_str());
-            this->view_searchData->Rows[0]->Cells[12]->Value = gcnew String(A.get("ngay_M1").c_str());
-            this->view_searchData->Rows[0]->Cells[13]->Value = gcnew String(A.get("mui2").c_str());
-            this->view_searchData->Rows[0]->Cells[14]->Value = gcnew String(A.get("ngay_M2").c_str());
+    if(hasFile){
+        String^ s1 = this->box_search->Text;
+        string ma_CD; convertString(s1, ma_CD);
+        CongDan A;
+        if (ma_CD != "") {
+            A = DN.Search_MaCD(ma_CD);
+            string s2 = A.get_MaCD();
+            if (s2 != "") {
+                this->view_searchData->RowCount = 2;
+                this->view_searchData->Rows[0]->Cells[0]->Value = gcnew String(A.get("ma_CD").c_str());
+                this->view_searchData->Rows[0]->Cells[1]->Value = gcnew String(A.get("fullName").c_str());
+                this->view_searchData->Rows[0]->Cells[2]->Value = gcnew String(A.get("sex").c_str());
+                this->view_searchData->Rows[0]->Cells[3]->Value = gcnew String(A.get("birth").c_str());
+                this->view_searchData->Rows[0]->Cells[4]->Value = gcnew String(A.get("phone").c_str());
+                this->view_searchData->Rows[0]->Cells[5]->Value = gcnew String(A.get("so_BHXH").c_str());
+                this->view_searchData->Rows[0]->Cells[6]->Value = gcnew String(A.get("so_CMND").c_str());
+                this->view_searchData->Rows[0]->Cells[7]->Value = gcnew String(A.get("address").c_str());
+                this->view_searchData->Rows[0]->Cells[8]->Value = gcnew String(A.get("ma_DK").c_str());
+                this->view_searchData->Rows[0]->Cells[9]->Value = gcnew String(A.get("ngay_DK").c_str());
+                this->view_searchData->Rows[0]->Cells[10]->Value = gcnew String(A.get("noi_DK").c_str());
+                this->view_searchData->Rows[0]->Cells[11]->Value = gcnew String(A.get("mui1").c_str());
+                this->view_searchData->Rows[0]->Cells[12]->Value = gcnew String(A.get("ngay_M1").c_str());
+                this->view_searchData->Rows[0]->Cells[13]->Value = gcnew String(A.get("mui2").c_str());
+                this->view_searchData->Rows[0]->Cells[14]->Value = gcnew String(A.get("ngay_M2").c_str());
+            }
+            else {
+                MessageBox::Show(L"Không tìm thấy người này.", L"THÔNG BÁO");
+            }
         }
         else {
-            MessageBox::Show(L"Không tìm thấy người này.", L"THÔNG BÁO");
+            MessageBox::Show(L"Không thể để trống.", L"THÔNG BÁO");
         }
-    }
-    else {
-        MessageBox::Show(L"Không thể để trống.", L"THÔNG BÁO");
-    }
+    }else{ MessageBox::Show(L"Chưa có file dữ liệu vào.", L"THÔNG BÁO"); }
+    
 }
 private: System::Void thốngKêToolStripMenuItem_Click(System::Object^ sender, System::EventArgs^ e) {
     if (loginStatus == true) {
@@ -4389,431 +4419,459 @@ private: System::Void thốngKêToolStripMenuItem_Click(System::Object^ sender, 
     }
 }
 private: System::Void bt_typeFilter_Click(System::Object^ sender, System::EventArgs^ e) {
-    this->label28->Visible = false;
-    this->label30->Visible = false;
-    this->box_infoType->Visible = false;
-    this->bt_submitFilter->Visible = false;
-    this->box_typeOfSex->Visible = false;
-    String ^q = this->box_selectTypeFilter->Text;
-    if (q == L"Đã tiêm mũi 1") {
-        //Hàm trả về DSCD đã lọc
-        DSCD A;
-        DN.thongke_M1(A);
-        //MessageBox::Show(L"Trả về thành công", L"THÔNG BÁO");
-        int n = A.getRows();
-        this->view_filterData->RowCount = n;
-        for (int i = 0; i < n; i++) {
-            this->view_filterData->Rows[i]->Cells[0]->Value = gcnew String(A.get("ma_CD", i).c_str());
-            this->view_filterData->Rows[i]->Cells[1]->Value = gcnew String(A.get("fullName", i).c_str());
-            this->view_filterData->Rows[i]->Cells[2]->Value = gcnew String(A.get("sex", i).c_str());
-            this->view_filterData->Rows[i]->Cells[3]->Value = gcnew String(A.get("birth", i).c_str());
-            this->view_filterData->Rows[i]->Cells[4]->Value = gcnew String(A.get("phone", i).c_str());
-            this->view_filterData->Rows[i]->Cells[5]->Value = gcnew String(A.get("so_BHXH", i).c_str());
-            this->view_filterData->Rows[i]->Cells[6]->Value = gcnew String(A.get("so_CMND", i).c_str());
-            this->view_filterData->Rows[i]->Cells[7]->Value = gcnew String(A.get("address", i).c_str());
-            this->view_filterData->Rows[i]->Cells[8]->Value = gcnew String(A.get("ma_DK", i).c_str());
-            this->view_filterData->Rows[i]->Cells[9]->Value = gcnew String(A.get("ngay_DK", i).c_str());
-            this->view_filterData->Rows[i]->Cells[10]->Value = gcnew String(A.get("noi_DK", i).c_str());
-            this->view_filterData->Rows[i]->Cells[11]->Value = gcnew String(A.get("mui1", i).c_str());
-            this->view_filterData->Rows[i]->Cells[12]->Value = gcnew String(A.get("ngay_M1", i).c_str());
-            this->view_filterData->Rows[i]->Cells[13]->Value = gcnew String(A.get("mui2", i).c_str());
-            this->view_filterData->Rows[i]->Cells[14]->Value = gcnew String(A.get("ngay_M2", i).c_str());
-        }
-    }
-    else if (q == L"Tiêm đủ 2 mũi") {
-        DSCD A;
-        DN.thongKe_2Mui(A);
-        //MessageBox::Show(L"Trả về thành công", L"THÔNG BÁO");
-        int n = A.getRows();
-        this->view_filterData->RowCount = n;
-        for (int i = 0; i < n; i++) {
-            this->view_filterData->Rows[i]->Cells[0]->Value = gcnew String(A.get("ma_CD", i).c_str());
-            this->view_filterData->Rows[i]->Cells[1]->Value = gcnew String(A.get("fullName", i).c_str());
-            this->view_filterData->Rows[i]->Cells[2]->Value = gcnew String(A.get("sex", i).c_str());
-            this->view_filterData->Rows[i]->Cells[3]->Value = gcnew String(A.get("birth", i).c_str());
-            this->view_filterData->Rows[i]->Cells[4]->Value = gcnew String(A.get("phone", i).c_str());
-            this->view_filterData->Rows[i]->Cells[5]->Value = gcnew String(A.get("so_BHXH", i).c_str());
-            this->view_filterData->Rows[i]->Cells[6]->Value = gcnew String(A.get("so_CMND", i).c_str());
-            this->view_filterData->Rows[i]->Cells[7]->Value = gcnew String(A.get("address", i).c_str());
-            this->view_filterData->Rows[i]->Cells[8]->Value = gcnew String(A.get("ma_DK", i).c_str());
-            this->view_filterData->Rows[i]->Cells[9]->Value = gcnew String(A.get("ngay_DK", i).c_str());
-            this->view_filterData->Rows[i]->Cells[10]->Value = gcnew String(A.get("noi_DK", i).c_str());
-            this->view_filterData->Rows[i]->Cells[11]->Value = gcnew String(A.get("mui1", i).c_str());
-            this->view_filterData->Rows[i]->Cells[12]->Value = gcnew String(A.get("ngay_M1", i).c_str());
-            this->view_filterData->Rows[i]->Cells[13]->Value = gcnew String(A.get("mui2", i).c_str());
-            this->view_filterData->Rows[i]->Cells[14]->Value = gcnew String(A.get("ngay_M2", i).c_str());
-        }
-    }
-    else if (q == L"Chưa tiêm mũi nào") {
-        DSCD A;
-        DN.thongKeChuaTiem(A);
-        //MessageBox::Show(L"Trả về thành công", L"THÔNG BÁO");
-        int n = A.getRows();
-        this->view_filterData->RowCount = n;
-        for (int i = 0; i < n; i++) {
-            this->view_filterData->Rows[i]->Cells[0]->Value = gcnew String(A.get("ma_CD", i).c_str());
-            this->view_filterData->Rows[i]->Cells[1]->Value = gcnew String(A.get("fullName", i).c_str());
-            this->view_filterData->Rows[i]->Cells[2]->Value = gcnew String(A.get("sex", i).c_str());
-            this->view_filterData->Rows[i]->Cells[3]->Value = gcnew String(A.get("birth", i).c_str());
-            this->view_filterData->Rows[i]->Cells[4]->Value = gcnew String(A.get("phone", i).c_str());
-            this->view_filterData->Rows[i]->Cells[5]->Value = gcnew String(A.get("so_BHXH", i).c_str());
-            this->view_filterData->Rows[i]->Cells[6]->Value = gcnew String(A.get("so_CMND", i).c_str());
-            this->view_filterData->Rows[i]->Cells[7]->Value = gcnew String(A.get("address", i).c_str());
-            this->view_filterData->Rows[i]->Cells[8]->Value = gcnew String(A.get("ma_DK", i).c_str());
-            this->view_filterData->Rows[i]->Cells[9]->Value = gcnew String(A.get("ngay_DK", i).c_str());
-            this->view_filterData->Rows[i]->Cells[10]->Value = gcnew String(A.get("noi_DK", i).c_str());
-            this->view_filterData->Rows[i]->Cells[11]->Value = gcnew String(A.get("mui1", i).c_str());
-            this->view_filterData->Rows[i]->Cells[12]->Value = gcnew String(A.get("ngay_M1", i).c_str());
-            this->view_filterData->Rows[i]->Cells[13]->Value = gcnew String(A.get("mui2", i).c_str());
-            this->view_filterData->Rows[i]->Cells[14]->Value = gcnew String(A.get("ngay_M2", i).c_str());
-        }
-    }
-    else if (q == L"Tiêm mũi 1 chưa tiêm mũi 2") {
-        DSCD A;
-        DN.thongKe_M1_Not_M2(A);
-        //MessageBox::Show(L"Trả về thành công", L"THÔNG BÁO");
-        int n = A.getRows();
-        this->view_filterData->RowCount = n;
-        for (int i = 0; i < n; i++) {
-            this->view_filterData->Rows[i]->Cells[0]->Value = gcnew String(A.get("ma_CD", i).c_str());
-            this->view_filterData->Rows[i]->Cells[1]->Value = gcnew String(A.get("fullName", i).c_str());
-            this->view_filterData->Rows[i]->Cells[2]->Value = gcnew String(A.get("sex", i).c_str());
-            this->view_filterData->Rows[i]->Cells[3]->Value = gcnew String(A.get("birth", i).c_str());
-            this->view_filterData->Rows[i]->Cells[4]->Value = gcnew String(A.get("phone", i).c_str());
-            this->view_filterData->Rows[i]->Cells[5]->Value = gcnew String(A.get("so_BHXH", i).c_str());
-            this->view_filterData->Rows[i]->Cells[6]->Value = gcnew String(A.get("so_CMND", i).c_str());
-            this->view_filterData->Rows[i]->Cells[7]->Value = gcnew String(A.get("address", i).c_str());
-            this->view_filterData->Rows[i]->Cells[8]->Value = gcnew String(A.get("ma_DK", i).c_str());
-            this->view_filterData->Rows[i]->Cells[9]->Value = gcnew String(A.get("ngay_DK", i).c_str());
-            this->view_filterData->Rows[i]->Cells[10]->Value = gcnew String(A.get("noi_DK", i).c_str());
-            this->view_filterData->Rows[i]->Cells[11]->Value = gcnew String(A.get("mui1", i).c_str());
-            this->view_filterData->Rows[i]->Cells[12]->Value = gcnew String(A.get("ngay_M1", i).c_str());
-            this->view_filterData->Rows[i]->Cells[13]->Value = gcnew String(A.get("mui2", i).c_str());
-            this->view_filterData->Rows[i]->Cells[14]->Value = gcnew String(A.get("ngay_M2", i).c_str());
-        }
-    }
-    else if (q == L"Người đã tiêm mũi 1 trong ngày") {
-        //Hiện thi thanh điền thông tin bộ lọc
-        this->label28->Visible = true;
-        this->label30->Visible = false;
-        this->box_typeOfSex->Visible = false;
-        this->box_infoType->Visible = true;
-        this->bt_submitFilter->Visible = true;
-    }
-    else if (q == L"Người đã tiêm mũi 2 trong ngày") {
-        this->label28->Visible = true;
-        this->label30->Visible = false;
-        this->box_typeOfSex->Visible = false;
-        this->box_infoType->Visible = true;
-        this->bt_submitFilter->Visible = true;
-    }
-    else if (q == L"Giới tính") {
-        this->label28->Visible = false;
-        this->label30->Visible = true;
-        this->box_infoType->Visible = false;
-        this->box_typeOfSex->Visible = true;
-        this->bt_submitFilter->Visible = true;
-    }
-    else if (q == L"Người đã đăng ký trong 1 ngày") {
-        this->label28->Visible = true;
-        this->label30->Visible = false;
-        this->box_typeOfSex->Visible = false;
-        this->box_infoType->Visible = true;
-        this->bt_submitFilter->Visible = true;
-    }
-    else {
-        MessageBox::Show(L"Không có loại thống kê này.", L"THÔNG BÁO");
+    if (hasFile){
         this->label28->Visible = false;
         this->label30->Visible = false;
         this->box_infoType->Visible = false;
-        this->box_typeOfSex->Visible = false;
         this->bt_submitFilter->Visible = false;
-    }
+        this->box_typeOfSex->Visible = false;
+        String^ q = this->box_selectTypeFilter->Text;
+        if (q == L"Đã tiêm mũi 1") {
+            //Hàm trả về DSCD đã lọc
+            DSCD A;
+            DN.thongke_M1(A);
+            //MessageBox::Show(L"Trả về thành công", L"THÔNG BÁO");
+            int n = A.getRows();
+            this->view_filterData->RowCount = n;
+            for (int i = 0; i < n; i++) {
+                this->view_filterData->Rows[i]->Cells[0]->Value = gcnew String(A.get("ma_CD", i).c_str());
+                this->view_filterData->Rows[i]->Cells[1]->Value = gcnew String(A.get("fullName", i).c_str());
+                this->view_filterData->Rows[i]->Cells[2]->Value = gcnew String(A.get("sex", i).c_str());
+                this->view_filterData->Rows[i]->Cells[3]->Value = gcnew String(A.get("birth", i).c_str());
+                this->view_filterData->Rows[i]->Cells[4]->Value = gcnew String(A.get("phone", i).c_str());
+                this->view_filterData->Rows[i]->Cells[5]->Value = gcnew String(A.get("so_BHXH", i).c_str());
+                this->view_filterData->Rows[i]->Cells[6]->Value = gcnew String(A.get("so_CMND", i).c_str());
+                this->view_filterData->Rows[i]->Cells[7]->Value = gcnew String(A.get("address", i).c_str());
+                this->view_filterData->Rows[i]->Cells[8]->Value = gcnew String(A.get("ma_DK", i).c_str());
+                this->view_filterData->Rows[i]->Cells[9]->Value = gcnew String(A.get("ngay_DK", i).c_str());
+                this->view_filterData->Rows[i]->Cells[10]->Value = gcnew String(A.get("noi_DK", i).c_str());
+                this->view_filterData->Rows[i]->Cells[11]->Value = gcnew String(A.get("mui1", i).c_str());
+                this->view_filterData->Rows[i]->Cells[12]->Value = gcnew String(A.get("ngay_M1", i).c_str());
+                this->view_filterData->Rows[i]->Cells[13]->Value = gcnew String(A.get("mui2", i).c_str());
+                this->view_filterData->Rows[i]->Cells[14]->Value = gcnew String(A.get("ngay_M2", i).c_str());
+            }
+        }
+        else if (q == L"Tiêm đủ 2 mũi") {
+            DSCD A;
+            DN.thongKe_2Mui(A);
+            //MessageBox::Show(L"Trả về thành công", L"THÔNG BÁO");
+            int n = A.getRows();
+            this->view_filterData->RowCount = n;
+            for (int i = 0; i < n; i++) {
+                this->view_filterData->Rows[i]->Cells[0]->Value = gcnew String(A.get("ma_CD", i).c_str());
+                this->view_filterData->Rows[i]->Cells[1]->Value = gcnew String(A.get("fullName", i).c_str());
+                this->view_filterData->Rows[i]->Cells[2]->Value = gcnew String(A.get("sex", i).c_str());
+                this->view_filterData->Rows[i]->Cells[3]->Value = gcnew String(A.get("birth", i).c_str());
+                this->view_filterData->Rows[i]->Cells[4]->Value = gcnew String(A.get("phone", i).c_str());
+                this->view_filterData->Rows[i]->Cells[5]->Value = gcnew String(A.get("so_BHXH", i).c_str());
+                this->view_filterData->Rows[i]->Cells[6]->Value = gcnew String(A.get("so_CMND", i).c_str());
+                this->view_filterData->Rows[i]->Cells[7]->Value = gcnew String(A.get("address", i).c_str());
+                this->view_filterData->Rows[i]->Cells[8]->Value = gcnew String(A.get("ma_DK", i).c_str());
+                this->view_filterData->Rows[i]->Cells[9]->Value = gcnew String(A.get("ngay_DK", i).c_str());
+                this->view_filterData->Rows[i]->Cells[10]->Value = gcnew String(A.get("noi_DK", i).c_str());
+                this->view_filterData->Rows[i]->Cells[11]->Value = gcnew String(A.get("mui1", i).c_str());
+                this->view_filterData->Rows[i]->Cells[12]->Value = gcnew String(A.get("ngay_M1", i).c_str());
+                this->view_filterData->Rows[i]->Cells[13]->Value = gcnew String(A.get("mui2", i).c_str());
+                this->view_filterData->Rows[i]->Cells[14]->Value = gcnew String(A.get("ngay_M2", i).c_str());
+            }
+        }
+        else if (q == L"Chưa tiêm mũi nào") {
+            DSCD A;
+            DN.thongKeChuaTiem(A);
+            //MessageBox::Show(L"Trả về thành công", L"THÔNG BÁO");
+            int n = A.getRows();
+            this->view_filterData->RowCount = n;
+            for (int i = 0; i < n; i++) {
+                this->view_filterData->Rows[i]->Cells[0]->Value = gcnew String(A.get("ma_CD", i).c_str());
+                this->view_filterData->Rows[i]->Cells[1]->Value = gcnew String(A.get("fullName", i).c_str());
+                this->view_filterData->Rows[i]->Cells[2]->Value = gcnew String(A.get("sex", i).c_str());
+                this->view_filterData->Rows[i]->Cells[3]->Value = gcnew String(A.get("birth", i).c_str());
+                this->view_filterData->Rows[i]->Cells[4]->Value = gcnew String(A.get("phone", i).c_str());
+                this->view_filterData->Rows[i]->Cells[5]->Value = gcnew String(A.get("so_BHXH", i).c_str());
+                this->view_filterData->Rows[i]->Cells[6]->Value = gcnew String(A.get("so_CMND", i).c_str());
+                this->view_filterData->Rows[i]->Cells[7]->Value = gcnew String(A.get("address", i).c_str());
+                this->view_filterData->Rows[i]->Cells[8]->Value = gcnew String(A.get("ma_DK", i).c_str());
+                this->view_filterData->Rows[i]->Cells[9]->Value = gcnew String(A.get("ngay_DK", i).c_str());
+                this->view_filterData->Rows[i]->Cells[10]->Value = gcnew String(A.get("noi_DK", i).c_str());
+                this->view_filterData->Rows[i]->Cells[11]->Value = gcnew String(A.get("mui1", i).c_str());
+                this->view_filterData->Rows[i]->Cells[12]->Value = gcnew String(A.get("ngay_M1", i).c_str());
+                this->view_filterData->Rows[i]->Cells[13]->Value = gcnew String(A.get("mui2", i).c_str());
+                this->view_filterData->Rows[i]->Cells[14]->Value = gcnew String(A.get("ngay_M2", i).c_str());
+            }
+        }
+        else if (q == L"Tiêm mũi 1 chưa tiêm mũi 2") {
+            DSCD A;
+            DN.thongKe_M1_Not_M2(A);
+            //MessageBox::Show(L"Trả về thành công", L"THÔNG BÁO");
+            int n = A.getRows();
+            this->view_filterData->RowCount = n;
+            for (int i = 0; i < n; i++) {
+                this->view_filterData->Rows[i]->Cells[0]->Value = gcnew String(A.get("ma_CD", i).c_str());
+                this->view_filterData->Rows[i]->Cells[1]->Value = gcnew String(A.get("fullName", i).c_str());
+                this->view_filterData->Rows[i]->Cells[2]->Value = gcnew String(A.get("sex", i).c_str());
+                this->view_filterData->Rows[i]->Cells[3]->Value = gcnew String(A.get("birth", i).c_str());
+                this->view_filterData->Rows[i]->Cells[4]->Value = gcnew String(A.get("phone", i).c_str());
+                this->view_filterData->Rows[i]->Cells[5]->Value = gcnew String(A.get("so_BHXH", i).c_str());
+                this->view_filterData->Rows[i]->Cells[6]->Value = gcnew String(A.get("so_CMND", i).c_str());
+                this->view_filterData->Rows[i]->Cells[7]->Value = gcnew String(A.get("address", i).c_str());
+                this->view_filterData->Rows[i]->Cells[8]->Value = gcnew String(A.get("ma_DK", i).c_str());
+                this->view_filterData->Rows[i]->Cells[9]->Value = gcnew String(A.get("ngay_DK", i).c_str());
+                this->view_filterData->Rows[i]->Cells[10]->Value = gcnew String(A.get("noi_DK", i).c_str());
+                this->view_filterData->Rows[i]->Cells[11]->Value = gcnew String(A.get("mui1", i).c_str());
+                this->view_filterData->Rows[i]->Cells[12]->Value = gcnew String(A.get("ngay_M1", i).c_str());
+                this->view_filterData->Rows[i]->Cells[13]->Value = gcnew String(A.get("mui2", i).c_str());
+                this->view_filterData->Rows[i]->Cells[14]->Value = gcnew String(A.get("ngay_M2", i).c_str());
+            }
+        }
+        else if (q == L"Người đã tiêm mũi 1 trong ngày") {
+            //Hiện thi thanh điền thông tin bộ lọc
+            this->label28->Visible = true;
+            this->label30->Visible = false;
+            this->box_typeOfSex->Visible = false;
+            this->box_infoType->Visible = true;
+            this->bt_submitFilter->Visible = true;
+        }
+        else if (q == L"Người đã tiêm mũi 2 trong ngày") {
+            this->label28->Visible = true;
+            this->label30->Visible = false;
+            this->box_typeOfSex->Visible = false;
+            this->box_infoType->Visible = true;
+            this->bt_submitFilter->Visible = true;
+        }
+        else if (q == L"Giới tính") {
+            this->label28->Visible = false;
+            this->label30->Visible = true;
+            this->box_infoType->Visible = false;
+            this->box_typeOfSex->Visible = true;
+            this->bt_submitFilter->Visible = true;
+        }
+        else if (q == L"Người đã đăng ký trong 1 ngày") {
+            this->label28->Visible = true;
+            this->label30->Visible = false;
+            this->box_typeOfSex->Visible = false;
+            this->box_infoType->Visible = true;
+            this->bt_submitFilter->Visible = true;
+        }
+        else {
+            MessageBox::Show(L"Không có loại thống kê này.", L"THÔNG BÁO");
+            this->label28->Visible = false;
+            this->label30->Visible = false;
+            this->box_infoType->Visible = false;
+            this->box_typeOfSex->Visible = false;
+            this->bt_submitFilter->Visible = false;
+        }
+    }else{ MessageBox::Show(L"Chưa có file dữ liệu vào.", L"THÔNG BÁO"); }
+    
 }
 
 private: System::Void bt_submitFilter_Click(System::Object^ sender, System::EventArgs^ e) {
-    String^ q = this->box_selectTypeFilter->Text;
-    if (q == L"Người đã tiêm mũi 1 trong ngày") {
-        string ngayM1;
-        String^ s1;
-        s1 = this->box_infoType->Text;
-        convertString(s1, ngayM1);
+    if(hasFile){
+        String^ q = this->box_selectTypeFilter->Text;
+        if (q == L"Người đã tiêm mũi 1 trong ngày") {
+            string ngayM1;
+            String^ s1;
+            s1 = this->box_infoType->Text;
+            convertString(s1, ngayM1);
 
-        DSCD A;
-        DN.thongKeTheoNgayTiemM1(A, ngayM1);
-        //MessageBox::Show(L"Trả về thành công", L"THÔNG BÁO");
-        int n = A.getRows();
-        this->view_filterData->RowCount = n;
-        for (int i = 0; i < n; i++) {
-            this->view_filterData->Rows[i]->Cells[0]->Value = gcnew String(A.get("ma_CD", i).c_str());
-            this->view_filterData->Rows[i]->Cells[1]->Value = gcnew String(A.get("fullName", i).c_str());
-            this->view_filterData->Rows[i]->Cells[2]->Value = gcnew String(A.get("sex", i).c_str());
-            this->view_filterData->Rows[i]->Cells[3]->Value = gcnew String(A.get("birth", i).c_str());
-            this->view_filterData->Rows[i]->Cells[4]->Value = gcnew String(A.get("phone", i).c_str());
-            this->view_filterData->Rows[i]->Cells[5]->Value = gcnew String(A.get("so_BHXH", i).c_str());
-            this->view_filterData->Rows[i]->Cells[6]->Value = gcnew String(A.get("so_CMND", i).c_str());
-            this->view_filterData->Rows[i]->Cells[7]->Value = gcnew String(A.get("address", i).c_str());
-            this->view_filterData->Rows[i]->Cells[8]->Value = gcnew String(A.get("ma_DK", i).c_str());
-            this->view_filterData->Rows[i]->Cells[9]->Value = gcnew String(A.get("ngay_DK", i).c_str());
-            this->view_filterData->Rows[i]->Cells[10]->Value = gcnew String(A.get("noi_DK", i).c_str());
-            this->view_filterData->Rows[i]->Cells[11]->Value = gcnew String(A.get("mui1", i).c_str());
-            this->view_filterData->Rows[i]->Cells[12]->Value = gcnew String(A.get("ngay_M1", i).c_str());
-            this->view_filterData->Rows[i]->Cells[13]->Value = gcnew String(A.get("mui2", i).c_str());
-            this->view_filterData->Rows[i]->Cells[14]->Value = gcnew String(A.get("ngay_M2", i).c_str());
+            DSCD A;
+            DN.thongKeTheoNgayTiemM1(A, ngayM1);
+            //MessageBox::Show(L"Trả về thành công", L"THÔNG BÁO");
+            int n = A.getRows();
+            this->view_filterData->RowCount = n;
+            for (int i = 0; i < n; i++) {
+                this->view_filterData->Rows[i]->Cells[0]->Value = gcnew String(A.get("ma_CD", i).c_str());
+                this->view_filterData->Rows[i]->Cells[1]->Value = gcnew String(A.get("fullName", i).c_str());
+                this->view_filterData->Rows[i]->Cells[2]->Value = gcnew String(A.get("sex", i).c_str());
+                this->view_filterData->Rows[i]->Cells[3]->Value = gcnew String(A.get("birth", i).c_str());
+                this->view_filterData->Rows[i]->Cells[4]->Value = gcnew String(A.get("phone", i).c_str());
+                this->view_filterData->Rows[i]->Cells[5]->Value = gcnew String(A.get("so_BHXH", i).c_str());
+                this->view_filterData->Rows[i]->Cells[6]->Value = gcnew String(A.get("so_CMND", i).c_str());
+                this->view_filterData->Rows[i]->Cells[7]->Value = gcnew String(A.get("address", i).c_str());
+                this->view_filterData->Rows[i]->Cells[8]->Value = gcnew String(A.get("ma_DK", i).c_str());
+                this->view_filterData->Rows[i]->Cells[9]->Value = gcnew String(A.get("ngay_DK", i).c_str());
+                this->view_filterData->Rows[i]->Cells[10]->Value = gcnew String(A.get("noi_DK", i).c_str());
+                this->view_filterData->Rows[i]->Cells[11]->Value = gcnew String(A.get("mui1", i).c_str());
+                this->view_filterData->Rows[i]->Cells[12]->Value = gcnew String(A.get("ngay_M1", i).c_str());
+                this->view_filterData->Rows[i]->Cells[13]->Value = gcnew String(A.get("mui2", i).c_str());
+                this->view_filterData->Rows[i]->Cells[14]->Value = gcnew String(A.get("ngay_M2", i).c_str());
+            }
         }
-    }
-    else if (q == L"Người đã tiêm mũi 2 trong ngày") {
-        string ngayM2;
-        String^ s2;
-        s2 = this->box_infoType->Text;
-        convertString(s2, ngayM2);
+        else if (q == L"Người đã tiêm mũi 2 trong ngày") {
+            string ngayM2;
+            String^ s2;
+            s2 = this->box_infoType->Text;
+            convertString(s2, ngayM2);
 
-        DSCD A;
-        DN.thongKeTheoNgayTiemM2(A, ngayM2);
-        int n = A.getRows();
-        this->view_filterData->RowCount = n;
-        for (int i = 0; i < n; i++) {
-            this->view_filterData->Rows[i]->Cells[0]->Value = gcnew String(A.get("ma_CD", i).c_str());
-            this->view_filterData->Rows[i]->Cells[1]->Value = gcnew String(A.get("fullName", i).c_str());
-            this->view_filterData->Rows[i]->Cells[2]->Value = gcnew String(A.get("sex", i).c_str());
-            this->view_filterData->Rows[i]->Cells[3]->Value = gcnew String(A.get("birth", i).c_str());
-            this->view_filterData->Rows[i]->Cells[4]->Value = gcnew String(A.get("phone", i).c_str());
-            this->view_filterData->Rows[i]->Cells[5]->Value = gcnew String(A.get("so_BHXH", i).c_str());
-            this->view_filterData->Rows[i]->Cells[6]->Value = gcnew String(A.get("so_CMND", i).c_str());
-            this->view_filterData->Rows[i]->Cells[7]->Value = gcnew String(A.get("address", i).c_str());
-            this->view_filterData->Rows[i]->Cells[8]->Value = gcnew String(A.get("ma_DK", i).c_str());
-            this->view_filterData->Rows[i]->Cells[9]->Value = gcnew String(A.get("ngay_DK", i).c_str());
-            this->view_filterData->Rows[i]->Cells[10]->Value = gcnew String(A.get("noi_DK", i).c_str());
-            this->view_filterData->Rows[i]->Cells[11]->Value = gcnew String(A.get("mui1", i).c_str());
-            this->view_filterData->Rows[i]->Cells[12]->Value = gcnew String(A.get("ngay_M1", i).c_str());
-            this->view_filterData->Rows[i]->Cells[13]->Value = gcnew String(A.get("mui2", i).c_str());
-            this->view_filterData->Rows[i]->Cells[14]->Value = gcnew String(A.get("ngay_M2", i).c_str());
+            DSCD A;
+            DN.thongKeTheoNgayTiemM2(A, ngayM2);
+            int n = A.getRows();
+            this->view_filterData->RowCount = n;
+            for (int i = 0; i < n; i++) {
+                this->view_filterData->Rows[i]->Cells[0]->Value = gcnew String(A.get("ma_CD", i).c_str());
+                this->view_filterData->Rows[i]->Cells[1]->Value = gcnew String(A.get("fullName", i).c_str());
+                this->view_filterData->Rows[i]->Cells[2]->Value = gcnew String(A.get("sex", i).c_str());
+                this->view_filterData->Rows[i]->Cells[3]->Value = gcnew String(A.get("birth", i).c_str());
+                this->view_filterData->Rows[i]->Cells[4]->Value = gcnew String(A.get("phone", i).c_str());
+                this->view_filterData->Rows[i]->Cells[5]->Value = gcnew String(A.get("so_BHXH", i).c_str());
+                this->view_filterData->Rows[i]->Cells[6]->Value = gcnew String(A.get("so_CMND", i).c_str());
+                this->view_filterData->Rows[i]->Cells[7]->Value = gcnew String(A.get("address", i).c_str());
+                this->view_filterData->Rows[i]->Cells[8]->Value = gcnew String(A.get("ma_DK", i).c_str());
+                this->view_filterData->Rows[i]->Cells[9]->Value = gcnew String(A.get("ngay_DK", i).c_str());
+                this->view_filterData->Rows[i]->Cells[10]->Value = gcnew String(A.get("noi_DK", i).c_str());
+                this->view_filterData->Rows[i]->Cells[11]->Value = gcnew String(A.get("mui1", i).c_str());
+                this->view_filterData->Rows[i]->Cells[12]->Value = gcnew String(A.get("ngay_M1", i).c_str());
+                this->view_filterData->Rows[i]->Cells[13]->Value = gcnew String(A.get("mui2", i).c_str());
+                this->view_filterData->Rows[i]->Cells[14]->Value = gcnew String(A.get("ngay_M2", i).c_str());
+            }
         }
-    }
-    else if (q == L"Giới tính") {
-        string sex;
-        String^ s3;
-        s3 = this->box_typeOfSex->Text;
-        convertString(s3, sex);
+        else if (q == L"Giới tính") {
+            string sex;
+            String^ s3;
+            s3 = this->box_typeOfSex->Text;
+            convertString(s3, sex);
 
-        DSCD A;
-        if (sex == "Nam") {
-            DN.thongKeTheoGioiTinh(A, nam);
+            DSCD A;
+            if (sex == "Nam") {
+                DN.thongKeTheoGioiTinh(A, nam);
+            }
+            else {
+                DN.thongKeTheoGioiTinh(A, nu);
+            }
+            //MessageBox::Show(L"Trả về thành công", L"THÔNG BÁO");
+            int n = A.getRows();
+            this->view_filterData->RowCount = n;
+            for (int i = 0; i < n; i++) {
+                this->view_filterData->Rows[i]->Cells[0]->Value = gcnew String(A.get("ma_CD", i).c_str());
+                this->view_filterData->Rows[i]->Cells[1]->Value = gcnew String(A.get("fullName", i).c_str());
+                this->view_filterData->Rows[i]->Cells[2]->Value = gcnew String(A.get("sex", i).c_str());
+                this->view_filterData->Rows[i]->Cells[3]->Value = gcnew String(A.get("birth", i).c_str());
+                this->view_filterData->Rows[i]->Cells[4]->Value = gcnew String(A.get("phone", i).c_str());
+                this->view_filterData->Rows[i]->Cells[5]->Value = gcnew String(A.get("so_BHXH", i).c_str());
+                this->view_filterData->Rows[i]->Cells[6]->Value = gcnew String(A.get("so_CMND", i).c_str());
+                this->view_filterData->Rows[i]->Cells[7]->Value = gcnew String(A.get("address", i).c_str());
+                this->view_filterData->Rows[i]->Cells[8]->Value = gcnew String(A.get("ma_DK", i).c_str());
+                this->view_filterData->Rows[i]->Cells[9]->Value = gcnew String(A.get("ngay_DK", i).c_str());
+                this->view_filterData->Rows[i]->Cells[10]->Value = gcnew String(A.get("noi_DK", i).c_str());
+                this->view_filterData->Rows[i]->Cells[11]->Value = gcnew String(A.get("mui1", i).c_str());
+                this->view_filterData->Rows[i]->Cells[12]->Value = gcnew String(A.get("ngay_M1", i).c_str());
+                this->view_filterData->Rows[i]->Cells[13]->Value = gcnew String(A.get("mui2", i).c_str());
+                this->view_filterData->Rows[i]->Cells[14]->Value = gcnew String(A.get("ngay_M2", i).c_str());
+            }
         }
-        else{
-            DN.thongKeTheoGioiTinh(A, nu);
-        }
-        //MessageBox::Show(L"Trả về thành công", L"THÔNG BÁO");
-        int n = A.getRows();
-        this->view_filterData->RowCount = n;
-        for (int i = 0; i < n; i++) {
-            this->view_filterData->Rows[i]->Cells[0]->Value = gcnew String(A.get("ma_CD", i).c_str());
-            this->view_filterData->Rows[i]->Cells[1]->Value = gcnew String(A.get("fullName", i).c_str());
-            this->view_filterData->Rows[i]->Cells[2]->Value = gcnew String(A.get("sex", i).c_str());
-            this->view_filterData->Rows[i]->Cells[3]->Value = gcnew String(A.get("birth", i).c_str());
-            this->view_filterData->Rows[i]->Cells[4]->Value = gcnew String(A.get("phone", i).c_str());
-            this->view_filterData->Rows[i]->Cells[5]->Value = gcnew String(A.get("so_BHXH", i).c_str());
-            this->view_filterData->Rows[i]->Cells[6]->Value = gcnew String(A.get("so_CMND", i).c_str());
-            this->view_filterData->Rows[i]->Cells[7]->Value = gcnew String(A.get("address", i).c_str());
-            this->view_filterData->Rows[i]->Cells[8]->Value = gcnew String(A.get("ma_DK", i).c_str());
-            this->view_filterData->Rows[i]->Cells[9]->Value = gcnew String(A.get("ngay_DK", i).c_str());
-            this->view_filterData->Rows[i]->Cells[10]->Value = gcnew String(A.get("noi_DK", i).c_str());
-            this->view_filterData->Rows[i]->Cells[11]->Value = gcnew String(A.get("mui1", i).c_str());
-            this->view_filterData->Rows[i]->Cells[12]->Value = gcnew String(A.get("ngay_M1", i).c_str());
-            this->view_filterData->Rows[i]->Cells[13]->Value = gcnew String(A.get("mui2", i).c_str());
-            this->view_filterData->Rows[i]->Cells[14]->Value = gcnew String(A.get("ngay_M2", i).c_str());
-        }
-    }
-    else if (q == L"Người đã đăng ký trong 1 ngày") {
-        string ngayDK;
-        String^ s4;
-        s4 = this->box_infoType->Text;
-        convertString(s4, ngayDK);
+        else if (q == L"Người đã đăng ký trong 1 ngày") {
+            string ngayDK;
+            String^ s4;
+            s4 = this->box_infoType->Text;
+            convertString(s4, ngayDK);
 
-        DSCD A;
-        DN.thongKeTheoNgayDangKi(A, ngayDK);
-        //MessageBox::Show(L"Trả về thành công", L"THÔNG BÁO");
-        int n = A.getRows();
-        this->view_filterData->RowCount = n;
-        for (int i = 0; i < n; i++) {
-            this->view_filterData->Rows[i]->Cells[0]->Value = gcnew String(A.get("ma_CD", i).c_str());
-            this->view_filterData->Rows[i]->Cells[1]->Value = gcnew String(A.get("fullName", i).c_str());
-            this->view_filterData->Rows[i]->Cells[2]->Value = gcnew String(A.get("sex", i).c_str());
-            this->view_filterData->Rows[i]->Cells[3]->Value = gcnew String(A.get("birth", i).c_str());
-            this->view_filterData->Rows[i]->Cells[4]->Value = gcnew String(A.get("phone", i).c_str());
-            this->view_filterData->Rows[i]->Cells[5]->Value = gcnew String(A.get("so_BHXH", i).c_str());
-            this->view_filterData->Rows[i]->Cells[6]->Value = gcnew String(A.get("so_CMND", i).c_str());
-            this->view_filterData->Rows[i]->Cells[7]->Value = gcnew String(A.get("address", i).c_str());
-            this->view_filterData->Rows[i]->Cells[8]->Value = gcnew String(A.get("ma_DK", i).c_str());
-            this->view_filterData->Rows[i]->Cells[9]->Value = gcnew String(A.get("ngay_DK", i).c_str());
-            this->view_filterData->Rows[i]->Cells[10]->Value = gcnew String(A.get("noi_DK", i).c_str());
-            this->view_filterData->Rows[i]->Cells[11]->Value = gcnew String(A.get("mui1", i).c_str());
-            this->view_filterData->Rows[i]->Cells[12]->Value = gcnew String(A.get("ngay_M1", i).c_str());
-            this->view_filterData->Rows[i]->Cells[13]->Value = gcnew String(A.get("mui2", i).c_str());
-            this->view_filterData->Rows[i]->Cells[14]->Value = gcnew String(A.get("ngay_M2", i).c_str());
+            DSCD A;
+            DN.thongKeTheoNgayDangKi(A, ngayDK);
+            //MessageBox::Show(L"Trả về thành công", L"THÔNG BÁO");
+            int n = A.getRows();
+            this->view_filterData->RowCount = n;
+            for (int i = 0; i < n; i++) {
+                this->view_filterData->Rows[i]->Cells[0]->Value = gcnew String(A.get("ma_CD", i).c_str());
+                this->view_filterData->Rows[i]->Cells[1]->Value = gcnew String(A.get("fullName", i).c_str());
+                this->view_filterData->Rows[i]->Cells[2]->Value = gcnew String(A.get("sex", i).c_str());
+                this->view_filterData->Rows[i]->Cells[3]->Value = gcnew String(A.get("birth", i).c_str());
+                this->view_filterData->Rows[i]->Cells[4]->Value = gcnew String(A.get("phone", i).c_str());
+                this->view_filterData->Rows[i]->Cells[5]->Value = gcnew String(A.get("so_BHXH", i).c_str());
+                this->view_filterData->Rows[i]->Cells[6]->Value = gcnew String(A.get("so_CMND", i).c_str());
+                this->view_filterData->Rows[i]->Cells[7]->Value = gcnew String(A.get("address", i).c_str());
+                this->view_filterData->Rows[i]->Cells[8]->Value = gcnew String(A.get("ma_DK", i).c_str());
+                this->view_filterData->Rows[i]->Cells[9]->Value = gcnew String(A.get("ngay_DK", i).c_str());
+                this->view_filterData->Rows[i]->Cells[10]->Value = gcnew String(A.get("noi_DK", i).c_str());
+                this->view_filterData->Rows[i]->Cells[11]->Value = gcnew String(A.get("mui1", i).c_str());
+                this->view_filterData->Rows[i]->Cells[12]->Value = gcnew String(A.get("ngay_M1", i).c_str());
+                this->view_filterData->Rows[i]->Cells[13]->Value = gcnew String(A.get("mui2", i).c_str());
+                this->view_filterData->Rows[i]->Cells[14]->Value = gcnew String(A.get("ngay_M2", i).c_str());
+            }
         }
-    }
-    else {
-    MessageBox::Show(L"Không có loại thống kê này.", L"THÔNG BÁO");
-    this->label28->Visible = false;
-    this->box_infoType->Visible = false;
-    this->bt_submitFilter->Visible = false;
-}
+        else {
+            MessageBox::Show(L"Không có loại thống kê này.", L"THÔNG BÁO");
+            this->label28->Visible = false;
+            this->box_infoType->Visible = false;
+            this->bt_submitFilter->Visible = false;
+        }
+    }else{ MessageBox::Show(L"Chưa có file dữ liệu vào.", L"THÔNG BÁO"); }
+    
 }
 private: System::Void bt_modAllData_Click(System::Object^ sender, System::EventArgs^ e) {
-    this->view_exportAllData_people->ReadOnly = false;
-    this->bt_modAllData->BackColor = Color::Black;
-    this->bt_modAllData->ForeColor = Color::White;
+    if(hasFile){
+        this->view_exportAllData_people->ReadOnly = false;
+        this->bt_modAllData->BackColor = Color::Black;
+        this->bt_modAllData->ForeColor = Color::White;
+    }else{ MessageBox::Show(L"Chưa có file dữ liệu vào.", L"THÔNG BÁO"); }
+    
 }
 private: System::Void bt_saveAllData_Click(System::Object^ sender, System::EventArgs^ e) {
-    this->view_exportAllData_people->ReadOnly = true;
-    this->bt_modAllData->BackColor = Color::FromArgb(57, 162, 219);
-    this->bt_modAllData->ForeColor = Color::Black;
-    //Lưu lại vào biến DN
-    String^ s0, ^ s1, ^ s2, ^ s3, ^ s4, ^ s5, ^ s6, ^ s7, ^ s8, ^ s9, ^ s10, ^ s11, ^ s12, ^ s13, ^ s14;
-    string ma_CD, fullName, sex, birth, phone, so_BHXH, so_CMND, address, ma_DK, ngay_DK, noi_DK, mui1, mui2, ngay_M1, ngay_M2;
-    for (int i = 0; i < view_exportAllData_people->RowCount; i++) {
-        s0 = this->view_exportAllData_people->Rows[i]->Cells[0]->Value->ToString(); convertString(s0, ma_CD);
-        s1 = this->view_exportAllData_people->Rows[i]->Cells[1]->Value->ToString(); convertString(s1, fullName);
-        s2 = this->view_exportAllData_people->Rows[i]->Cells[2]->Value->ToString(); convertString(s2, sex);
-        s3 = this->view_exportAllData_people->Rows[i]->Cells[3]->Value->ToString(); convertString(s3, birth);
-        s4 = this->view_exportAllData_people->Rows[i]->Cells[4]->Value->ToString(); convertString(s4, phone);
-        s5 = this->view_exportAllData_people->Rows[i]->Cells[5]->Value->ToString(); convertString(s5, so_BHXH);
-        s6 = this->view_exportAllData_people->Rows[i]->Cells[6]->Value->ToString(); convertString(s6, so_CMND);
-        s7 = this->view_exportAllData_people->Rows[i]->Cells[7]->Value->ToString(); convertString(s7, address);
-        s8 = this->view_exportAllData_people->Rows[i]->Cells[8]->Value->ToString(); convertString(s8, ma_DK);
-        s9 = this->view_exportAllData_people->Rows[i]->Cells[9]->Value->ToString(); convertString(s9, ngay_DK);
-        s10 = this->view_exportAllData_people->Rows[i]->Cells[10]->Value->ToString(); convertString(s10, noi_DK);
-        s11 = this->view_exportAllData_people->Rows[i]->Cells[11]->Value->ToString(); convertString(s11, mui1);
-        s12 = this->view_exportAllData_people->Rows[i]->Cells[12]->Value->ToString(); convertString(s12, ngay_M1);
-        s13 = this->view_exportAllData_people->Rows[i]->Cells[13]->Value->ToString(); convertString(s13, mui2);
-        s14 = this->view_exportAllData_people->Rows[i]->Cells[14]->Value->ToString(); convertString(s14, ngay_M2);
+    if(hasFile){
+        this->view_exportAllData_people->ReadOnly = true;
+        this->bt_modAllData->BackColor = Color::FromArgb(57, 162, 219);
+        this->bt_modAllData->ForeColor = Color::Black;
+        //Lưu lại vào biến DN
+        String^ s0, ^ s1, ^ s2, ^ s3, ^ s4, ^ s5, ^ s6, ^ s7, ^ s8, ^ s9, ^ s10, ^ s11, ^ s12, ^ s13, ^ s14;
+        string ma_CD, fullName, sex, birth, phone, so_BHXH, so_CMND, address, ma_DK, ngay_DK, noi_DK, mui1, mui2, ngay_M1, ngay_M2;
+        for (int i = 0; i < view_exportAllData_people->RowCount; i++) {
+            s0 = this->view_exportAllData_people->Rows[i]->Cells[0]->Value->ToString(); convertString(s0, ma_CD);
+            s1 = this->view_exportAllData_people->Rows[i]->Cells[1]->Value->ToString(); convertString(s1, fullName);
+            s2 = this->view_exportAllData_people->Rows[i]->Cells[2]->Value->ToString(); convertString(s2, sex);
+            s3 = this->view_exportAllData_people->Rows[i]->Cells[3]->Value->ToString(); convertString(s3, birth);
+            s4 = this->view_exportAllData_people->Rows[i]->Cells[4]->Value->ToString(); convertString(s4, phone);
+            s5 = this->view_exportAllData_people->Rows[i]->Cells[5]->Value->ToString(); convertString(s5, so_BHXH);
+            s6 = this->view_exportAllData_people->Rows[i]->Cells[6]->Value->ToString(); convertString(s6, so_CMND);
+            s7 = this->view_exportAllData_people->Rows[i]->Cells[7]->Value->ToString(); convertString(s7, address);
+            s8 = this->view_exportAllData_people->Rows[i]->Cells[8]->Value->ToString(); convertString(s8, ma_DK);
+            s9 = this->view_exportAllData_people->Rows[i]->Cells[9]->Value->ToString(); convertString(s9, ngay_DK);
+            s10 = this->view_exportAllData_people->Rows[i]->Cells[10]->Value->ToString(); convertString(s10, noi_DK);
+            s11 = this->view_exportAllData_people->Rows[i]->Cells[11]->Value->ToString(); convertString(s11, mui1);
+            s12 = this->view_exportAllData_people->Rows[i]->Cells[12]->Value->ToString(); convertString(s12, ngay_M1);
+            s13 = this->view_exportAllData_people->Rows[i]->Cells[13]->Value->ToString(); convertString(s13, mui2);
+            s14 = this->view_exportAllData_people->Rows[i]->Cells[14]->Value->ToString(); convertString(s14, ngay_M2);
 
-        DN.set("ma_CD", i, ma_CD);
-        DN.set("fullName", i, fullName);
-        DN.set("sex", i, sex);
-        DN.set("birth", i, birth);
-        DN.set("phone", i, phone);
-        DN.set("so_BHXH", i, so_BHXH);
-        DN.set("so_CMND", i, so_CMND);
-        DN.set("address", i, address);
-        DN.set("ma_DK", i, ma_DK);
-        DN.set("ngay_DK", i, ngay_DK);
-        DN.set("noi_DK", i, noi_DK);
-        DN.set("mui1", i, mui1);
-        DN.set("mui2", i, mui2);
-        DN.set("ngay_M1", i, ngay_M1);
-        DN.set("ngay_M2", i, ngay_M2);
+            DN.set("ma_CD", i, ma_CD);
+            DN.set("fullName", i, fullName);
+            DN.set("sex", i, sex);
+            DN.set("birth", i, birth);
+            DN.set("phone", i, phone);
+            DN.set("so_BHXH", i, so_BHXH);
+            DN.set("so_CMND", i, so_CMND);
+            DN.set("address", i, address);
+            DN.set("ma_DK", i, ma_DK);
+            DN.set("ngay_DK", i, ngay_DK);
+            DN.set("noi_DK", i, noi_DK);
+            DN.set("mui1", i, mui1);
+            DN.set("mui2", i, mui2);
+            DN.set("ngay_M1", i, ngay_M1);
+            DN.set("ngay_M2", i, ngay_M2);
+        }
+        string path1, path2, path3;
+        convertString(f1, path1);
+        convertString(f2, path2);
+        convertString(f3, path3);
+        DN.luuFile(path1, path2, path3);
+        MessageBox::Show(L"Đã lưu", L"THÔNG BÁO");
+    }else
+    {
+        MessageBox::Show(L"Chưa có file dữ liệu vào.", L"THÔNG BÁO");
     }
-    string path1, path2, path3;
-    convertString(f1, path1);
-    convertString(f2, path2);
-    convertString(f3, path3);
-    DN.luuFile(path1, path2, path3);
-    MessageBox::Show(L"Đã lưu", L"THÔNG BÁO");
+    
     //Hàm lưu file
 }
 private: System::Void bt_modData_vaccination_Click(System::Object^ sender, System::EventArgs^ e) {
-    this->view_exportData_vaccination->ReadOnly = false;
-    this->bt_modData_vaccination->BackColor = Color::Black;
-    this->bt_modData_vaccination->ForeColor = Color::White;
-
+    if (hasFile){
+        this->view_exportData_vaccination->ReadOnly = false;
+        this->bt_modData_vaccination->BackColor = Color::Black;
+        this->bt_modData_vaccination->ForeColor = Color::White;
+    }else
+    {
+        MessageBox::Show(L"Chưa có file dữ liệu vào.", L"THÔNG BÁO");
+    }
 }
 private: System::Void bt_saveData_vaccination_Click(System::Object^ sender, System::EventArgs^ e) {
-    this->view_exportData_vaccination->ReadOnly = true;
-    this->bt_modData_vaccination->BackColor = Color::FromArgb(57, 162, 219);
-    this->bt_modData_vaccination->ForeColor = Color::Black;
-    //Lưu lại vào biến DN
-    String ^ s1, ^ s11, ^ s12, ^ s13, ^ s14;
-    string ma_CD, fullName, sex, birth, phone, so_BHXH, so_CMND, address, ma_DK, ngay_DK, noi_DK, mui1, mui2, ngay_M1, ngay_M2;
-    for (int i = 0; i < view_exportData_vaccination->RowCount; i++) {
-        s1 = this->view_exportData_vaccination->Rows[i]->Cells[0]->Value->ToString(); convertString(s1, fullName);
-        s11 = this->view_exportData_vaccination->Rows[i]->Cells[1]->Value->ToString(); convertString(s11, mui1);
-        s12 = this->view_exportData_vaccination->Rows[i]->Cells[2]->Value->ToString(); convertString(s12, ngay_M1);
-        s13 = this->view_exportData_vaccination->Rows[i]->Cells[3]->Value->ToString(); convertString(s13, mui2);
-        s14 = this->view_exportData_vaccination->Rows[i]->Cells[4]->Value->ToString(); convertString(s14, ngay_M2);
+    if (hasFile){
+        this->view_exportData_vaccination->ReadOnly = true;
+        this->bt_modData_vaccination->BackColor = Color::FromArgb(57, 162, 219);
+        this->bt_modData_vaccination->ForeColor = Color::Black;
+        //Lưu lại vào biến DN
+        String^ s1, ^ s11, ^ s12, ^ s13, ^ s14;
+        string ma_CD, fullName, sex, birth, phone, so_BHXH, so_CMND, address, ma_DK, ngay_DK, noi_DK, mui1, mui2, ngay_M1, ngay_M2;
+        for (int i = 0; i < view_exportData_vaccination->RowCount; i++) {
+            s1 = this->view_exportData_vaccination->Rows[i]->Cells[0]->Value->ToString(); convertString(s1, fullName);
+            s11 = this->view_exportData_vaccination->Rows[i]->Cells[1]->Value->ToString(); convertString(s11, mui1);
+            s12 = this->view_exportData_vaccination->Rows[i]->Cells[2]->Value->ToString(); convertString(s12, ngay_M1);
+            s13 = this->view_exportData_vaccination->Rows[i]->Cells[3]->Value->ToString(); convertString(s13, mui2);
+            s14 = this->view_exportData_vaccination->Rows[i]->Cells[4]->Value->ToString(); convertString(s14, ngay_M2);
 
-        DN.set("fullName", i, fullName);
-        DN.set("mui1", i, mui1);
-        DN.set("mui2", i, mui2);
-        DN.set("ngay_M1", i, ngay_M1);
-        DN.set("ngay_M2", i, ngay_M2);
-    }
-    string path1, path2, path3;
-    convertString(f1, path1);
-    convertString(f2, path2);
-    convertString(f3, path3);
-    DN.luuFile(path1, path2, path3);
-    MessageBox::Show(L"Đã lưu", L"THÔNG BÁO");
-    //Hàm lưu file
-
+            DN.set("fullName", i, fullName);
+            DN.set("mui1", i, mui1);
+            DN.set("mui2", i, mui2);
+            DN.set("ngay_M1", i, ngay_M1);
+            DN.set("ngay_M2", i, ngay_M2);
+        }
+        string path1, path2, path3;
+        convertString(f1, path1);
+        convertString(f2, path2);
+        convertString(f3, path3);
+        DN.luuFile(path1, path2, path3);
+        MessageBox::Show(L"Đã lưu", L"THÔNG BÁO");
+        //Hàm lưu file
+    }else{ MessageBox::Show(L"Chưa có file dữ liệu vào.", L"THÔNG BÁO"); }
+    
 }
 
 private: System::Void bt_modData_registry_Click(System::Object^ sender, System::EventArgs^ e) {
-    this->view_exportData_registry->ReadOnly = false;
-    this->bt_modData_registry->BackColor = Color::Black;
-    this->bt_modData_registry->ForeColor = Color::White;
+    if(hasFile){
+        this->view_exportData_registry->ReadOnly = false;
+        this->bt_modData_registry->BackColor = Color::Black;
+        this->bt_modData_registry->ForeColor = Color::White;
+    }else{ MessageBox::Show(L"Chưa có file dữ liệu vào.", L"THÔNG BÁO"); }
+    
 }
 private: System::Void bt_saveData_registry_Click(System::Object^ sender, System::EventArgs^ e) {
-    this->view_exportData_registry->ReadOnly = true;
-    this->bt_modData_registry->BackColor = Color::FromArgb(57, 162, 219);
-    this->bt_modData_registry->ForeColor = Color::Black;
-    //Lưu lại vào biến DN
-    String ^ s1, ^ s8, ^ s9, ^ s10;
-    string ma_CD, fullName, sex, birth, phone, so_BHXH, so_CMND, address, ma_DK, ngay_DK, noi_DK, mui1, mui2, ngay_M1, ngay_M2;
-    for (int i = 0; i < view_exportData_registry->RowCount; i++) {
-        s1 = this->view_exportData_registry->Rows[i]->Cells[0]->Value->ToString(); convertString(s1, fullName);
-        s8 = this->view_exportData_registry->Rows[i]->Cells[1]->Value->ToString(); convertString(s8, ma_DK);
-        s9 = this->view_exportData_registry->Rows[i]->Cells[2]->Value->ToString(); convertString(s9, ngay_DK);
-        s10 = this->view_exportData_registry->Rows[i]->Cells[3]->Value->ToString(); convertString(s10, noi_DK);
+    if(hasFile){
+        this->view_exportData_registry->ReadOnly = true;
+        this->bt_modData_registry->BackColor = Color::FromArgb(57, 162, 219);
+        this->bt_modData_registry->ForeColor = Color::Black;
+        //Lưu lại vào biến DN
+        String^ s1, ^ s8, ^ s9, ^ s10;
+        string ma_CD, fullName, sex, birth, phone, so_BHXH, so_CMND, address, ma_DK, ngay_DK, noi_DK, mui1, mui2, ngay_M1, ngay_M2;
+        for (int i = 0; i < view_exportData_registry->RowCount; i++) {
+            s1 = this->view_exportData_registry->Rows[i]->Cells[0]->Value->ToString(); convertString(s1, fullName);
+            s8 = this->view_exportData_registry->Rows[i]->Cells[1]->Value->ToString(); convertString(s8, ma_DK);
+            s9 = this->view_exportData_registry->Rows[i]->Cells[2]->Value->ToString(); convertString(s9, ngay_DK);
+            s10 = this->view_exportData_registry->Rows[i]->Cells[3]->Value->ToString(); convertString(s10, noi_DK);
 
-        DN.set("fullName", i, fullName);
-        DN.set("ma_DK", i, ma_DK);
-        DN.set("ngay_DK", i, ngay_DK);
-        DN.set("noi_DK", i, noi_DK);
-    }
-    string path1, path2, path3;
-    convertString(f1, path1);
-    convertString(f2, path2);
-    convertString(f3, path3);
-    DN.luuFile(path1, path2, path3);
-    MessageBox::Show(L"Đã lưu", L"THÔNG BÁO");
-    //Hàm lưu file
+            DN.set("fullName", i, fullName);
+            DN.set("ma_DK", i, ma_DK);
+            DN.set("ngay_DK", i, ngay_DK);
+            DN.set("noi_DK", i, noi_DK);
+        }
+        string path1, path2, path3;
+        convertString(f1, path1);
+        convertString(f2, path2);
+        convertString(f3, path3);
+        DN.luuFile(path1, path2, path3);
+        MessageBox::Show(L"Đã lưu", L"THÔNG BÁO");
+        //Hàm lưu file
+    }else{ MessageBox::Show(L"Chưa có file dữ liệu vào.", L"THÔNG BÁO"); }
+    
 
 }
 private: System::Void bt_saveData_people_Click(System::Object^ sender, System::EventArgs^ e) {
-    this->view_exportData_people->ReadOnly = true;
-    this->bt_modData_people->BackColor = Color::FromArgb(57, 162, 219);
-    this->bt_modData_people->ForeColor = Color::Black;
-    //Lưu lại vào biến DN
-    String^ s0, ^ s1, ^ s2, ^ s3, ^ s4, ^ s5, ^ s6, ^ s7;
-    string ma_CD, fullName, sex, birth, phone, so_BHXH, so_CMND, address;
-    for (int i = 0; i < view_exportData_people->RowCount; i++) {
-        s0 = this->view_exportData_people->Rows[i]->Cells[0]->Value->ToString(); convertString(s0, ma_CD);
-        s1 = this->view_exportData_people->Rows[i]->Cells[1]->Value->ToString(); convertString(s1, fullName);
-        s2 = this->view_exportData_people->Rows[i]->Cells[2]->Value->ToString(); convertString(s2, sex);
-        s3 = this->view_exportData_people->Rows[i]->Cells[3]->Value->ToString(); convertString(s3, birth);
-        s4 = this->view_exportData_people->Rows[i]->Cells[4]->Value->ToString(); convertString(s4, phone);
-        s5 = this->view_exportData_people->Rows[i]->Cells[5]->Value->ToString(); convertString(s5, so_BHXH);
-        s6 = this->view_exportData_people->Rows[i]->Cells[6]->Value->ToString(); convertString(s6, so_CMND);
-        s7 = this->view_exportData_people->Rows[i]->Cells[7]->Value->ToString(); convertString(s7, address);
+    if(hasFile){
+        this->view_exportData_people->ReadOnly = true;
+        this->bt_modData_people->BackColor = Color::FromArgb(57, 162, 219);
+        this->bt_modData_people->ForeColor = Color::Black;
+        //Lưu lại vào biến DN
+        String^ s0, ^ s1, ^ s2, ^ s3, ^ s4, ^ s5, ^ s6, ^ s7;
+        string ma_CD, fullName, sex, birth, phone, so_BHXH, so_CMND, address;
+        for (int i = 0; i < view_exportData_people->RowCount; i++) {
+            s0 = this->view_exportData_people->Rows[i]->Cells[0]->Value->ToString(); convertString(s0, ma_CD);
+            s1 = this->view_exportData_people->Rows[i]->Cells[1]->Value->ToString(); convertString(s1, fullName);
+            s2 = this->view_exportData_people->Rows[i]->Cells[2]->Value->ToString(); convertString(s2, sex);
+            s3 = this->view_exportData_people->Rows[i]->Cells[3]->Value->ToString(); convertString(s3, birth);
+            s4 = this->view_exportData_people->Rows[i]->Cells[4]->Value->ToString(); convertString(s4, phone);
+            s5 = this->view_exportData_people->Rows[i]->Cells[5]->Value->ToString(); convertString(s5, so_BHXH);
+            s6 = this->view_exportData_people->Rows[i]->Cells[6]->Value->ToString(); convertString(s6, so_CMND);
+            s7 = this->view_exportData_people->Rows[i]->Cells[7]->Value->ToString(); convertString(s7, address);
 
-        DN.set("ma_CD", i, ma_CD);
-        DN.set("fullName", i, fullName);
-        DN.set("sex", i, sex);
-        DN.set("birth", i, birth);
-        DN.set("phone", i, phone);
-        DN.set("so_BHXH", i, so_BHXH);
-        DN.set("so_CMND", i, so_CMND);
-        DN.set("address", i, address);
-    }
-    string path1, path2, path3;
-    convertString(f1, path1);
-    convertString(f2, path2);
-    convertString(f3, path3);
-    DN.luuFile(path1, path2, path3);
-    MessageBox::Show(L"Đã lưu", L"THÔNG BÁO");
-    //Hàm lưu file
+            DN.set("ma_CD", i, ma_CD);
+            DN.set("fullName", i, fullName);
+            DN.set("sex", i, sex);
+            DN.set("birth", i, birth);
+            DN.set("phone", i, phone);
+            DN.set("so_BHXH", i, so_BHXH);
+            DN.set("so_CMND", i, so_CMND);
+            DN.set("address", i, address);
+        }
+        string path1, path2, path3;
+        convertString(f1, path1);
+        convertString(f2, path2);
+        convertString(f3, path3);
+        DN.luuFile(path1, path2, path3);
+        MessageBox::Show(L"Đã lưu", L"THÔNG BÁO");
+    }else{ MessageBox::Show(L"Chưa có file dữ liệu vào.", L"THÔNG BÁO"); }
 
 }
 private: System::Void accountManagerTab_Click(System::Object^ sender, System::EventArgs^ e) {

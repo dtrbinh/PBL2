@@ -12,10 +12,10 @@ int count(string file)
     f1.open(file.c_str(), ios::in);
     if (f1)
     {
-        string count;
+        string temp;
         while (!f1.eof())
         {
-            getline(f1, count, '\n');
+            getline(f1, temp, '\n');
             k++;
         }
     }
@@ -35,6 +35,7 @@ void DSCD::nhapFile(string f1, string f2, string f3)
     //Đếm số CD để cấp bộ nhớ
     int k = 0;
     this->n = count(f1);
+    this->data = new CongDan[n];
 
     file1.open(f1.c_str(), ios::in);
     file2.open(f2.c_str(), ios::in);
@@ -125,7 +126,7 @@ void DSCD::nhapFile(string f1, string f2, string f3)
 
 DSCD::DSCD()
 {
-    this->n = 10;
+    this->n = 20;
     this->data = new CongDan[n];
 }
 DSCD::DSCD(int n)
@@ -674,9 +675,16 @@ void DSCD::luuFile(string path1, string path2, string path3)
 
     for (int i = 0; i < DSCD::n; i++)
     {
-        file1 << data[i].ma_CD << ';' << data[i].fullName << ';' << data[i].sex << ';' << data[i].birth << ';' << data[i].phone << ';' << data[i].so_BHXH << ';' << data[i].so_CMND << ';' << data[i].address << endl;
-        file2 << data[i].ma_DK << ';' << data[i].ma_CD << ';' << data[i].ngay_DK << ';' << data[i].noi_DK << endl;
-        file3 << data[i].ma_CD << ';' << data[i].mui1 << ';' << data[i].ngay_M1 << ';' << data[i].mui2 << ';' << data[i].ngay_M2 << endl;
+        file1 << data[i].ma_CD << ';' << data[i].fullName << ';' << data[i].sex << ';' << data[i].birth << ';' << data[i].phone << ';' << data[i].so_BHXH << ';' << data[i].so_CMND << ';' << data[i].address << "\n";
+        file2 << data[i].ma_DK << ';' << data[i].ma_CD << ';' << data[i].ngay_DK << ';' << data[i].noi_DK << "\n";
+        if (i == n - 1)
+        {
+            file3 << data[i].ma_CD << ';' << data[i].mui1 << ';' << data[i].ngay_M1 << ';' << data[i].mui2 << ';' << data[i].ngay_M2;
+        }
+        else
+        {
+            file3 << data[i].ma_CD << ';' << data[i].mui1 << ';' << data[i].ngay_M1 << ';' << data[i].mui2 << ';' << data[i].ngay_M2 << "\n";
+        }
     }
 
     file1.close();

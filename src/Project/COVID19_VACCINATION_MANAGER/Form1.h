@@ -16,9 +16,7 @@ namespace CppCLRWinformsProjekt {
     using namespace System::Drawing;
     using namespace System::IO;
 
-    /// <summary>
-    /// Zusammenfassung für Form1
-    /// </summary>
+    
     static DSCD DN;
     static CongDan CD;
     public ref class Form1 : public System::Windows::Forms::Form
@@ -299,14 +297,6 @@ private: System::Windows::Forms::Label^ label30;
 
 
 
-
-
-
-
-
-
-
-
     private: System::Windows::Forms::Label^ dataManager_loginAlert;
 
     public:
@@ -404,15 +394,11 @@ private: System::Windows::Forms::Label^ label30;
         Form1(void)
         {
             InitializeComponent();
-            //
-            //TODO: Konstruktorcode hier hinzufügen.
-            //
+            
         }
 
     protected:
-        /// <summary>
-        /// Verwendete Ressourcen bereinigen.
-        /// </summary>
+      
         ~Form1()
         {
             if (components)
@@ -468,16 +454,11 @@ private: System::Windows::Forms::Label^ label30;
 
 
     private:
-        /// <summary>
-        /// Erforderliche Designervariable.
-        /// </summary>
+     
         System::ComponentModel::Container^ components;
 
 #pragma region Windows Form Designer generated code
-        /// <summary>
-        /// Erforderliche Methode für die Designerunterstützung.
-        /// Der Inhalt der Methode darf nicht mit dem Code-Editor geändert werden.
-        /// </summary>
+
         void InitializeComponent(void)
         {
             this->accountManager_permission = (gcnew System::Windows::Forms::Label());
@@ -505,29 +486,6 @@ private: System::Windows::Forms::Label^ label30;
             this->toolStripMenuItem9 = (gcnew System::Windows::Forms::ToolStripMenuItem());
             this->toolStripMenuItem10 = (gcnew System::Windows::Forms::ToolStripMenuItem());
             this->xuấtToànBộDữLiệuToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
-            this->box_sortData = (gcnew System::Windows::Forms::GroupBox());
-            this->view_sortData_people = (gcnew System::Windows::Forms::DataGridView());
-            this->dataGridViewTextBoxColumn31 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
-            this->dataGridViewTextBoxColumn32 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
-            this->dataGridViewTextBoxColumn33 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
-            this->dataGridViewTextBoxColumn34 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
-            this->dataGridViewTextBoxColumn35 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
-            this->dataGridViewTextBoxColumn36 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
-            this->dataGridViewTextBoxColumn37 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
-            this->dataGridViewTextBoxColumn38 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
-            this->dataGridViewTextBoxColumn39 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
-            this->dataGridViewTextBoxColumn40 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
-            this->dataGridViewTextBoxColumn41 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
-            this->dataGridViewTextBoxColumn42 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
-            this->dataGridViewTextBoxColumn43 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
-            this->dataGridViewTextBoxColumn44 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
-            this->dataGridViewTextBoxColumn45 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
-            this->bt_view_sortData = (gcnew System::Windows::Forms::Button());
-            this->bt_sortData = (gcnew System::Windows::Forms::Button());
-            this->box_sortType = (gcnew System::Windows::Forms::ComboBox());
-            this->box_sortSelect = (gcnew System::Windows::Forms::ComboBox());
-            this->label6 = (gcnew System::Windows::Forms::Label());
-            this->label5 = (gcnew System::Windows::Forms::Label());
             this->box_inputFile = (gcnew System::Windows::Forms::GroupBox());
             this->bt_selectFile3 = (gcnew System::Windows::Forms::Button());
             this->bt_selectFile2 = (gcnew System::Windows::Forms::Button());
@@ -679,6 +637,29 @@ private: System::Windows::Forms::Label^ label30;
             this->bt_deleteData = (gcnew System::Windows::Forms::Button());
             this->textbox_deleteData = (gcnew System::Windows::Forms::TextBox());
             this->label7 = (gcnew System::Windows::Forms::Label());
+            this->box_sortData = (gcnew System::Windows::Forms::GroupBox());
+            this->view_sortData_people = (gcnew System::Windows::Forms::DataGridView());
+            this->dataGridViewTextBoxColumn31 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
+            this->dataGridViewTextBoxColumn32 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
+            this->dataGridViewTextBoxColumn33 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
+            this->dataGridViewTextBoxColumn34 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
+            this->dataGridViewTextBoxColumn35 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
+            this->dataGridViewTextBoxColumn36 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
+            this->dataGridViewTextBoxColumn37 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
+            this->dataGridViewTextBoxColumn38 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
+            this->dataGridViewTextBoxColumn39 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
+            this->dataGridViewTextBoxColumn40 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
+            this->dataGridViewTextBoxColumn41 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
+            this->dataGridViewTextBoxColumn42 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
+            this->dataGridViewTextBoxColumn43 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
+            this->dataGridViewTextBoxColumn44 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
+            this->dataGridViewTextBoxColumn45 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
+            this->bt_view_sortData = (gcnew System::Windows::Forms::Button());
+            this->bt_sortData = (gcnew System::Windows::Forms::Button());
+            this->box_sortType = (gcnew System::Windows::Forms::ComboBox());
+            this->box_sortSelect = (gcnew System::Windows::Forms::ComboBox());
+            this->label6 = (gcnew System::Windows::Forms::Label());
+            this->label5 = (gcnew System::Windows::Forms::Label());
             this->accountManager_newFullname = (gcnew System::Windows::Forms::TextBox());
             this->label4 = (gcnew System::Windows::Forms::Label());
             this->Manager = (gcnew System::Windows::Forms::TabControl());
@@ -722,8 +703,6 @@ private: System::Windows::Forms::Label^ label30;
             this->dataManagerTab->SuspendLayout();
             this->boxDataManager->SuspendLayout();
             this->dataManager_menu->SuspendLayout();
-            this->box_sortData->SuspendLayout();
-            (cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->view_sortData_people))->BeginInit();
             this->box_inputFile->SuspendLayout();
             this->box_inputHand->SuspendLayout();
             this->panel_insertType->SuspendLayout();
@@ -740,6 +719,8 @@ private: System::Windows::Forms::Label^ label30;
             this->box_fillData->SuspendLayout();
             (cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->view_filterData))->BeginInit();
             this->box_deleteData->SuspendLayout();
+            this->box_sortData->SuspendLayout();
+            (cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->view_sortData_people))->BeginInit();
             this->Manager->SuspendLayout();
             this->loginTab->SuspendLayout();
             this->loginBox->SuspendLayout();
@@ -909,7 +890,7 @@ private: System::Windows::Forms::Label^ label30;
             this->dataManager_menu->Location = System::Drawing::Point(3, 21);
             this->dataManager_menu->Name = L"dataManager_menu";
             this->dataManager_menu->Padding = System::Windows::Forms::Padding(5, 2, 0, 2);
-            this->dataManager_menu->Size = System::Drawing::Size(647, 30);
+            this->dataManager_menu->Size = System::Drawing::Size(647, 27);
             this->dataManager_menu->TabIndex = 7;
             this->dataManager_menu->Text = L"menuStrip1";
             // 
@@ -924,7 +905,7 @@ private: System::Windows::Forms::Label^ label30;
             this->dataManager_input->Font = (gcnew System::Drawing::Font(L"MS Reference Sans Serif", 9, System::Drawing::FontStyle::Regular,
                 System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
             this->dataManager_input->Name = L"dataManager_input";
-            this->dataManager_input->Size = System::Drawing::Size(149, 26);
+            this->dataManager_input->Size = System::Drawing::Size(149, 23);
             this->dataManager_input->Text = L"Chỉnh sửa dữ liệu";
             // 
             // toolStripMenuItem2
@@ -1014,7 +995,7 @@ private: System::Windows::Forms::Label^ label30;
             this->dataManager_output->Font = (gcnew System::Drawing::Font(L"MS Reference Sans Serif", 9, System::Drawing::FontStyle::Regular,
                 System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
             this->dataManager_output->Name = L"dataManager_output";
-            this->dataManager_output->Size = System::Drawing::Size(174, 26);
+            this->dataManager_output->Size = System::Drawing::Size(174, 23);
             this->dataManager_output->Text = L"Xem dữ liệu đã nhập";
             // 
             // toolStripMenuItem8
@@ -1058,256 +1039,6 @@ private: System::Windows::Forms::Label^ label30;
             this->xuấtToànBộDữLiệuToolStripMenuItem->Size = System::Drawing::Size(229, 26);
             this->xuấtToànBộDữLiệuToolStripMenuItem->Text = L"Toàn bộ dữ liệu";
             this->xuấtToànBộDữLiệuToolStripMenuItem->Click += gcnew System::EventHandler(this, &Form1::xuấtToànBộDữLiệuToolStripMenuItem_Click);
-            // 
-            // box_sortData
-            // 
-            this->box_sortData->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Bottom)
-                | System::Windows::Forms::AnchorStyles::Left)
-                | System::Windows::Forms::AnchorStyles::Right));
-            this->box_sortData->Controls->Add(this->view_sortData_people);
-            this->box_sortData->Controls->Add(this->bt_view_sortData);
-            this->box_sortData->Controls->Add(this->bt_sortData);
-            this->box_sortData->Controls->Add(this->box_sortType);
-            this->box_sortData->Controls->Add(this->box_sortSelect);
-            this->box_sortData->Controls->Add(this->label6);
-            this->box_sortData->Controls->Add(this->label5);
-            this->box_sortData->Font = (gcnew System::Drawing::Font(L"MS Reference Sans Serif", 9, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
-                static_cast<System::Byte>(0)));
-            this->box_sortData->Location = System::Drawing::Point(0, 50);
-            this->box_sortData->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
-            this->box_sortData->Name = L"box_sortData";
-            this->box_sortData->Padding = System::Windows::Forms::Padding(3, 2, 3, 2);
-            this->box_sortData->Size = System::Drawing::Size(653, 417);
-            this->box_sortData->TabIndex = 3;
-            this->box_sortData->TabStop = false;
-            this->box_sortData->Text = L"Sắp xếp dữ liệu";
-            this->box_sortData->Visible = false;
-            // 
-            // view_sortData_people
-            // 
-            this->view_sortData_people->AllowUserToAddRows = false;
-            this->view_sortData_people->AllowUserToDeleteRows = false;
-            this->view_sortData_people->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Bottom)
-                | System::Windows::Forms::AnchorStyles::Left)
-                | System::Windows::Forms::AnchorStyles::Right));
-            this->view_sortData_people->BackgroundColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(162)),
-                static_cast<System::Int32>(static_cast<System::Byte>(219)), static_cast<System::Int32>(static_cast<System::Byte>(250)));
-            this->view_sortData_people->ColumnHeadersHeightSizeMode = System::Windows::Forms::DataGridViewColumnHeadersHeightSizeMode::AutoSize;
-            this->view_sortData_people->Columns->AddRange(gcnew cli::array< System::Windows::Forms::DataGridViewColumn^  >(15) {
-                this->dataGridViewTextBoxColumn31,
-                    this->dataGridViewTextBoxColumn32, this->dataGridViewTextBoxColumn33, this->dataGridViewTextBoxColumn34, this->dataGridViewTextBoxColumn35,
-                    this->dataGridViewTextBoxColumn36, this->dataGridViewTextBoxColumn37, this->dataGridViewTextBoxColumn38, this->dataGridViewTextBoxColumn39,
-                    this->dataGridViewTextBoxColumn40, this->dataGridViewTextBoxColumn41, this->dataGridViewTextBoxColumn42, this->dataGridViewTextBoxColumn43,
-                    this->dataGridViewTextBoxColumn44, this->dataGridViewTextBoxColumn45
-            });
-            this->view_sortData_people->GridColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(162)),
-                static_cast<System::Int32>(static_cast<System::Byte>(219)), static_cast<System::Int32>(static_cast<System::Byte>(250)));
-            this->view_sortData_people->Location = System::Drawing::Point(4, 117);
-            this->view_sortData_people->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
-            this->view_sortData_people->Name = L"view_sortData_people";
-            this->view_sortData_people->ReadOnly = true;
-            this->view_sortData_people->RowHeadersWidth = 51;
-            this->view_sortData_people->RowTemplate->Height = 24;
-            this->view_sortData_people->Size = System::Drawing::Size(651, 301);
-            this->view_sortData_people->TabIndex = 6;
-            // 
-            // dataGridViewTextBoxColumn31
-            // 
-            this->dataGridViewTextBoxColumn31->HeaderText = L"Mã công dân";
-            this->dataGridViewTextBoxColumn31->MinimumWidth = 6;
-            this->dataGridViewTextBoxColumn31->Name = L"dataGridViewTextBoxColumn31";
-            this->dataGridViewTextBoxColumn31->ReadOnly = true;
-            this->dataGridViewTextBoxColumn31->Width = 125;
-            // 
-            // dataGridViewTextBoxColumn32
-            // 
-            this->dataGridViewTextBoxColumn32->HeaderText = L"Họ và tên";
-            this->dataGridViewTextBoxColumn32->MinimumWidth = 6;
-            this->dataGridViewTextBoxColumn32->Name = L"dataGridViewTextBoxColumn32";
-            this->dataGridViewTextBoxColumn32->ReadOnly = true;
-            this->dataGridViewTextBoxColumn32->Width = 125;
-            // 
-            // dataGridViewTextBoxColumn33
-            // 
-            this->dataGridViewTextBoxColumn33->HeaderText = L"Giới tính";
-            this->dataGridViewTextBoxColumn33->MinimumWidth = 6;
-            this->dataGridViewTextBoxColumn33->Name = L"dataGridViewTextBoxColumn33";
-            this->dataGridViewTextBoxColumn33->ReadOnly = true;
-            this->dataGridViewTextBoxColumn33->Width = 125;
-            // 
-            // dataGridViewTextBoxColumn34
-            // 
-            this->dataGridViewTextBoxColumn34->HeaderText = L"Ngày sinh";
-            this->dataGridViewTextBoxColumn34->MinimumWidth = 6;
-            this->dataGridViewTextBoxColumn34->Name = L"dataGridViewTextBoxColumn34";
-            this->dataGridViewTextBoxColumn34->ReadOnly = true;
-            this->dataGridViewTextBoxColumn34->Width = 125;
-            // 
-            // dataGridViewTextBoxColumn35
-            // 
-            this->dataGridViewTextBoxColumn35->HeaderText = L"SĐT";
-            this->dataGridViewTextBoxColumn35->MinimumWidth = 6;
-            this->dataGridViewTextBoxColumn35->Name = L"dataGridViewTextBoxColumn35";
-            this->dataGridViewTextBoxColumn35->ReadOnly = true;
-            this->dataGridViewTextBoxColumn35->Width = 125;
-            // 
-            // dataGridViewTextBoxColumn36
-            // 
-            this->dataGridViewTextBoxColumn36->HeaderText = L"Số BHXH";
-            this->dataGridViewTextBoxColumn36->MinimumWidth = 6;
-            this->dataGridViewTextBoxColumn36->Name = L"dataGridViewTextBoxColumn36";
-            this->dataGridViewTextBoxColumn36->ReadOnly = true;
-            this->dataGridViewTextBoxColumn36->Width = 125;
-            // 
-            // dataGridViewTextBoxColumn37
-            // 
-            this->dataGridViewTextBoxColumn37->HeaderText = L"Số CMND/CCCD";
-            this->dataGridViewTextBoxColumn37->MinimumWidth = 6;
-            this->dataGridViewTextBoxColumn37->Name = L"dataGridViewTextBoxColumn37";
-            this->dataGridViewTextBoxColumn37->ReadOnly = true;
-            this->dataGridViewTextBoxColumn37->Width = 125;
-            // 
-            // dataGridViewTextBoxColumn38
-            // 
-            this->dataGridViewTextBoxColumn38->HeaderText = L"Địa chỉ";
-            this->dataGridViewTextBoxColumn38->MinimumWidth = 6;
-            this->dataGridViewTextBoxColumn38->Name = L"dataGridViewTextBoxColumn38";
-            this->dataGridViewTextBoxColumn38->ReadOnly = true;
-            this->dataGridViewTextBoxColumn38->Width = 125;
-            // 
-            // dataGridViewTextBoxColumn39
-            // 
-            this->dataGridViewTextBoxColumn39->HeaderText = L"Mã đăng ký";
-            this->dataGridViewTextBoxColumn39->MinimumWidth = 6;
-            this->dataGridViewTextBoxColumn39->Name = L"dataGridViewTextBoxColumn39";
-            this->dataGridViewTextBoxColumn39->ReadOnly = true;
-            this->dataGridViewTextBoxColumn39->Width = 125;
-            // 
-            // dataGridViewTextBoxColumn40
-            // 
-            this->dataGridViewTextBoxColumn40->HeaderText = L"Ngày đăng ký";
-            this->dataGridViewTextBoxColumn40->MinimumWidth = 6;
-            this->dataGridViewTextBoxColumn40->Name = L"dataGridViewTextBoxColumn40";
-            this->dataGridViewTextBoxColumn40->ReadOnly = true;
-            this->dataGridViewTextBoxColumn40->Width = 125;
-            // 
-            // dataGridViewTextBoxColumn41
-            // 
-            this->dataGridViewTextBoxColumn41->HeaderText = L"Nơi đăng ký";
-            this->dataGridViewTextBoxColumn41->MinimumWidth = 6;
-            this->dataGridViewTextBoxColumn41->Name = L"dataGridViewTextBoxColumn41";
-            this->dataGridViewTextBoxColumn41->ReadOnly = true;
-            this->dataGridViewTextBoxColumn41->Width = 125;
-            // 
-            // dataGridViewTextBoxColumn42
-            // 
-            this->dataGridViewTextBoxColumn42->HeaderText = L"Tiêm mũi 1";
-            this->dataGridViewTextBoxColumn42->MinimumWidth = 6;
-            this->dataGridViewTextBoxColumn42->Name = L"dataGridViewTextBoxColumn42";
-            this->dataGridViewTextBoxColumn42->ReadOnly = true;
-            this->dataGridViewTextBoxColumn42->Width = 125;
-            // 
-            // dataGridViewTextBoxColumn43
-            // 
-            this->dataGridViewTextBoxColumn43->HeaderText = L"Ngày tiêm mũi 1";
-            this->dataGridViewTextBoxColumn43->MinimumWidth = 6;
-            this->dataGridViewTextBoxColumn43->Name = L"dataGridViewTextBoxColumn43";
-            this->dataGridViewTextBoxColumn43->ReadOnly = true;
-            this->dataGridViewTextBoxColumn43->Width = 125;
-            // 
-            // dataGridViewTextBoxColumn44
-            // 
-            this->dataGridViewTextBoxColumn44->HeaderText = L"Tiêm mũi 2";
-            this->dataGridViewTextBoxColumn44->MinimumWidth = 6;
-            this->dataGridViewTextBoxColumn44->Name = L"dataGridViewTextBoxColumn44";
-            this->dataGridViewTextBoxColumn44->ReadOnly = true;
-            this->dataGridViewTextBoxColumn44->Width = 125;
-            // 
-            // dataGridViewTextBoxColumn45
-            // 
-            this->dataGridViewTextBoxColumn45->HeaderText = L"Ngày tiêm mũi 2";
-            this->dataGridViewTextBoxColumn45->MinimumWidth = 6;
-            this->dataGridViewTextBoxColumn45->Name = L"dataGridViewTextBoxColumn45";
-            this->dataGridViewTextBoxColumn45->ReadOnly = true;
-            this->dataGridViewTextBoxColumn45->Width = 125;
-            // 
-            // bt_view_sortData
-            // 
-            this->bt_view_sortData->Anchor = System::Windows::Forms::AnchorStyles::Top;
-            this->bt_view_sortData->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(57)), static_cast<System::Int32>(static_cast<System::Byte>(162)),
-                static_cast<System::Int32>(static_cast<System::Byte>(219)));
-            this->bt_view_sortData->Font = (gcnew System::Drawing::Font(L"MS Reference Sans Serif", 9, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
-                static_cast<System::Byte>(0)));
-            this->bt_view_sortData->Location = System::Drawing::Point(483, 68);
-            this->bt_view_sortData->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
-            this->bt_view_sortData->Name = L"bt_view_sortData";
-            this->bt_view_sortData->Size = System::Drawing::Size(105, 35);
-            this->bt_view_sortData->TabIndex = 5;
-            this->bt_view_sortData->Text = L"Xem";
-            this->bt_view_sortData->UseVisualStyleBackColor = false;
-            this->bt_view_sortData->Visible = false;
-            this->bt_view_sortData->Click += gcnew System::EventHandler(this, &Form1::button3_Click_2);
-            // 
-            // bt_sortData
-            // 
-            this->bt_sortData->Anchor = System::Windows::Forms::AnchorStyles::Top;
-            this->bt_sortData->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(57)), static_cast<System::Int32>(static_cast<System::Byte>(162)),
-                static_cast<System::Int32>(static_cast<System::Byte>(219)));
-            this->bt_sortData->Font = (gcnew System::Drawing::Font(L"MS Reference Sans Serif", 9, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
-                static_cast<System::Byte>(0)));
-            this->bt_sortData->Location = System::Drawing::Point(483, 21);
-            this->bt_sortData->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
-            this->bt_sortData->Name = L"bt_sortData";
-            this->bt_sortData->Size = System::Drawing::Size(105, 35);
-            this->bt_sortData->TabIndex = 4;
-            this->bt_sortData->Text = L"Sắp xếp";
-            this->bt_sortData->UseVisualStyleBackColor = false;
-            this->bt_sortData->Click += gcnew System::EventHandler(this, &Form1::bt_sortData_Click);
-            // 
-            // box_sortType
-            // 
-            this->box_sortType->Anchor = System::Windows::Forms::AnchorStyles::Top;
-            this->box_sortType->FormattingEnabled = true;
-            this->box_sortType->Items->AddRange(gcnew cli::array< System::Object^  >(2) { L"Tăng dần", L"Giảm dần" });
-            this->box_sortType->Location = System::Drawing::Point(250, 71);
-            this->box_sortType->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
-            this->box_sortType->Name = L"box_sortType";
-            this->box_sortType->Size = System::Drawing::Size(203, 27);
-            this->box_sortType->TabIndex = 3;
-            // 
-            // box_sortSelect
-            // 
-            this->box_sortSelect->Anchor = System::Windows::Forms::AnchorStyles::Top;
-            this->box_sortSelect->FormattingEnabled = true;
-            this->box_sortSelect->Items->AddRange(gcnew cli::array< System::Object^  >(4) {
-                L"Mã công dân", L"Ngày đăng ký", L"Ngày tiêm mũi 1",
-                    L"Ngày tiêm mũi 2"
-            });
-            this->box_sortSelect->Location = System::Drawing::Point(250, 26);
-            this->box_sortSelect->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
-            this->box_sortSelect->Name = L"box_sortSelect";
-            this->box_sortSelect->Size = System::Drawing::Size(203, 27);
-            this->box_sortSelect->TabIndex = 2;
-            // 
-            // label6
-            // 
-            this->label6->Anchor = System::Windows::Forms::AnchorStyles::Top;
-            this->label6->AutoSize = true;
-            this->label6->Location = System::Drawing::Point(100, 74);
-            this->label6->Name = L"label6";
-            this->label6->Size = System::Drawing::Size(121, 19);
-            this->label6->TabIndex = 1;
-            this->label6->Text = L"Thứ tự sắp xếp";
-            // 
-            // label5
-            // 
-            this->label5->Anchor = System::Windows::Forms::AnchorStyles::Top;
-            this->label5->AutoSize = true;
-            this->label5->Location = System::Drawing::Point(112, 29);
-            this->label5->Name = L"label5";
-            this->label5->Size = System::Drawing::Size(108, 19);
-            this->label5->TabIndex = 0;
-            this->label5->Text = L"Sắp xếp theo";
             // 
             // box_inputFile
             // 
@@ -3054,6 +2785,256 @@ private: System::Windows::Forms::Label^ label30;
             this->label7->TabIndex = 0;
             this->label7->Text = L"Nhập mã công dân của đối tượng cần xoá";
             // 
+            // box_sortData
+            // 
+            this->box_sortData->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Bottom)
+                | System::Windows::Forms::AnchorStyles::Left)
+                | System::Windows::Forms::AnchorStyles::Right));
+            this->box_sortData->Controls->Add(this->view_sortData_people);
+            this->box_sortData->Controls->Add(this->bt_view_sortData);
+            this->box_sortData->Controls->Add(this->bt_sortData);
+            this->box_sortData->Controls->Add(this->box_sortType);
+            this->box_sortData->Controls->Add(this->box_sortSelect);
+            this->box_sortData->Controls->Add(this->label6);
+            this->box_sortData->Controls->Add(this->label5);
+            this->box_sortData->Font = (gcnew System::Drawing::Font(L"MS Reference Sans Serif", 9, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+                static_cast<System::Byte>(0)));
+            this->box_sortData->Location = System::Drawing::Point(0, 50);
+            this->box_sortData->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
+            this->box_sortData->Name = L"box_sortData";
+            this->box_sortData->Padding = System::Windows::Forms::Padding(3, 2, 3, 2);
+            this->box_sortData->Size = System::Drawing::Size(653, 417);
+            this->box_sortData->TabIndex = 3;
+            this->box_sortData->TabStop = false;
+            this->box_sortData->Text = L"Sắp xếp dữ liệu";
+            this->box_sortData->Visible = false;
+            // 
+            // view_sortData_people
+            // 
+            this->view_sortData_people->AllowUserToAddRows = false;
+            this->view_sortData_people->AllowUserToDeleteRows = false;
+            this->view_sortData_people->Anchor = static_cast<System::Windows::Forms::AnchorStyles>((((System::Windows::Forms::AnchorStyles::Top | System::Windows::Forms::AnchorStyles::Bottom)
+                | System::Windows::Forms::AnchorStyles::Left)
+                | System::Windows::Forms::AnchorStyles::Right));
+            this->view_sortData_people->BackgroundColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(162)),
+                static_cast<System::Int32>(static_cast<System::Byte>(219)), static_cast<System::Int32>(static_cast<System::Byte>(250)));
+            this->view_sortData_people->ColumnHeadersHeightSizeMode = System::Windows::Forms::DataGridViewColumnHeadersHeightSizeMode::AutoSize;
+            this->view_sortData_people->Columns->AddRange(gcnew cli::array< System::Windows::Forms::DataGridViewColumn^  >(15) {
+                this->dataGridViewTextBoxColumn31,
+                    this->dataGridViewTextBoxColumn32, this->dataGridViewTextBoxColumn33, this->dataGridViewTextBoxColumn34, this->dataGridViewTextBoxColumn35,
+                    this->dataGridViewTextBoxColumn36, this->dataGridViewTextBoxColumn37, this->dataGridViewTextBoxColumn38, this->dataGridViewTextBoxColumn39,
+                    this->dataGridViewTextBoxColumn40, this->dataGridViewTextBoxColumn41, this->dataGridViewTextBoxColumn42, this->dataGridViewTextBoxColumn43,
+                    this->dataGridViewTextBoxColumn44, this->dataGridViewTextBoxColumn45
+            });
+            this->view_sortData_people->GridColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(162)),
+                static_cast<System::Int32>(static_cast<System::Byte>(219)), static_cast<System::Int32>(static_cast<System::Byte>(250)));
+            this->view_sortData_people->Location = System::Drawing::Point(4, 117);
+            this->view_sortData_people->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
+            this->view_sortData_people->Name = L"view_sortData_people";
+            this->view_sortData_people->ReadOnly = true;
+            this->view_sortData_people->RowHeadersWidth = 51;
+            this->view_sortData_people->RowTemplate->Height = 24;
+            this->view_sortData_people->Size = System::Drawing::Size(651, 301);
+            this->view_sortData_people->TabIndex = 6;
+            // 
+            // dataGridViewTextBoxColumn31
+            // 
+            this->dataGridViewTextBoxColumn31->HeaderText = L"Mã công dân";
+            this->dataGridViewTextBoxColumn31->MinimumWidth = 6;
+            this->dataGridViewTextBoxColumn31->Name = L"dataGridViewTextBoxColumn31";
+            this->dataGridViewTextBoxColumn31->ReadOnly = true;
+            this->dataGridViewTextBoxColumn31->Width = 125;
+            // 
+            // dataGridViewTextBoxColumn32
+            // 
+            this->dataGridViewTextBoxColumn32->HeaderText = L"Họ và tên";
+            this->dataGridViewTextBoxColumn32->MinimumWidth = 6;
+            this->dataGridViewTextBoxColumn32->Name = L"dataGridViewTextBoxColumn32";
+            this->dataGridViewTextBoxColumn32->ReadOnly = true;
+            this->dataGridViewTextBoxColumn32->Width = 125;
+            // 
+            // dataGridViewTextBoxColumn33
+            // 
+            this->dataGridViewTextBoxColumn33->HeaderText = L"Giới tính";
+            this->dataGridViewTextBoxColumn33->MinimumWidth = 6;
+            this->dataGridViewTextBoxColumn33->Name = L"dataGridViewTextBoxColumn33";
+            this->dataGridViewTextBoxColumn33->ReadOnly = true;
+            this->dataGridViewTextBoxColumn33->Width = 125;
+            // 
+            // dataGridViewTextBoxColumn34
+            // 
+            this->dataGridViewTextBoxColumn34->HeaderText = L"Ngày sinh";
+            this->dataGridViewTextBoxColumn34->MinimumWidth = 6;
+            this->dataGridViewTextBoxColumn34->Name = L"dataGridViewTextBoxColumn34";
+            this->dataGridViewTextBoxColumn34->ReadOnly = true;
+            this->dataGridViewTextBoxColumn34->Width = 125;
+            // 
+            // dataGridViewTextBoxColumn35
+            // 
+            this->dataGridViewTextBoxColumn35->HeaderText = L"SĐT";
+            this->dataGridViewTextBoxColumn35->MinimumWidth = 6;
+            this->dataGridViewTextBoxColumn35->Name = L"dataGridViewTextBoxColumn35";
+            this->dataGridViewTextBoxColumn35->ReadOnly = true;
+            this->dataGridViewTextBoxColumn35->Width = 125;
+            // 
+            // dataGridViewTextBoxColumn36
+            // 
+            this->dataGridViewTextBoxColumn36->HeaderText = L"Số BHXH";
+            this->dataGridViewTextBoxColumn36->MinimumWidth = 6;
+            this->dataGridViewTextBoxColumn36->Name = L"dataGridViewTextBoxColumn36";
+            this->dataGridViewTextBoxColumn36->ReadOnly = true;
+            this->dataGridViewTextBoxColumn36->Width = 125;
+            // 
+            // dataGridViewTextBoxColumn37
+            // 
+            this->dataGridViewTextBoxColumn37->HeaderText = L"Số CMND/CCCD";
+            this->dataGridViewTextBoxColumn37->MinimumWidth = 6;
+            this->dataGridViewTextBoxColumn37->Name = L"dataGridViewTextBoxColumn37";
+            this->dataGridViewTextBoxColumn37->ReadOnly = true;
+            this->dataGridViewTextBoxColumn37->Width = 125;
+            // 
+            // dataGridViewTextBoxColumn38
+            // 
+            this->dataGridViewTextBoxColumn38->HeaderText = L"Địa chỉ";
+            this->dataGridViewTextBoxColumn38->MinimumWidth = 6;
+            this->dataGridViewTextBoxColumn38->Name = L"dataGridViewTextBoxColumn38";
+            this->dataGridViewTextBoxColumn38->ReadOnly = true;
+            this->dataGridViewTextBoxColumn38->Width = 125;
+            // 
+            // dataGridViewTextBoxColumn39
+            // 
+            this->dataGridViewTextBoxColumn39->HeaderText = L"Mã đăng ký";
+            this->dataGridViewTextBoxColumn39->MinimumWidth = 6;
+            this->dataGridViewTextBoxColumn39->Name = L"dataGridViewTextBoxColumn39";
+            this->dataGridViewTextBoxColumn39->ReadOnly = true;
+            this->dataGridViewTextBoxColumn39->Width = 125;
+            // 
+            // dataGridViewTextBoxColumn40
+            // 
+            this->dataGridViewTextBoxColumn40->HeaderText = L"Ngày đăng ký";
+            this->dataGridViewTextBoxColumn40->MinimumWidth = 6;
+            this->dataGridViewTextBoxColumn40->Name = L"dataGridViewTextBoxColumn40";
+            this->dataGridViewTextBoxColumn40->ReadOnly = true;
+            this->dataGridViewTextBoxColumn40->Width = 125;
+            // 
+            // dataGridViewTextBoxColumn41
+            // 
+            this->dataGridViewTextBoxColumn41->HeaderText = L"Nơi đăng ký";
+            this->dataGridViewTextBoxColumn41->MinimumWidth = 6;
+            this->dataGridViewTextBoxColumn41->Name = L"dataGridViewTextBoxColumn41";
+            this->dataGridViewTextBoxColumn41->ReadOnly = true;
+            this->dataGridViewTextBoxColumn41->Width = 125;
+            // 
+            // dataGridViewTextBoxColumn42
+            // 
+            this->dataGridViewTextBoxColumn42->HeaderText = L"Tiêm mũi 1";
+            this->dataGridViewTextBoxColumn42->MinimumWidth = 6;
+            this->dataGridViewTextBoxColumn42->Name = L"dataGridViewTextBoxColumn42";
+            this->dataGridViewTextBoxColumn42->ReadOnly = true;
+            this->dataGridViewTextBoxColumn42->Width = 125;
+            // 
+            // dataGridViewTextBoxColumn43
+            // 
+            this->dataGridViewTextBoxColumn43->HeaderText = L"Ngày tiêm mũi 1";
+            this->dataGridViewTextBoxColumn43->MinimumWidth = 6;
+            this->dataGridViewTextBoxColumn43->Name = L"dataGridViewTextBoxColumn43";
+            this->dataGridViewTextBoxColumn43->ReadOnly = true;
+            this->dataGridViewTextBoxColumn43->Width = 125;
+            // 
+            // dataGridViewTextBoxColumn44
+            // 
+            this->dataGridViewTextBoxColumn44->HeaderText = L"Tiêm mũi 2";
+            this->dataGridViewTextBoxColumn44->MinimumWidth = 6;
+            this->dataGridViewTextBoxColumn44->Name = L"dataGridViewTextBoxColumn44";
+            this->dataGridViewTextBoxColumn44->ReadOnly = true;
+            this->dataGridViewTextBoxColumn44->Width = 125;
+            // 
+            // dataGridViewTextBoxColumn45
+            // 
+            this->dataGridViewTextBoxColumn45->HeaderText = L"Ngày tiêm mũi 2";
+            this->dataGridViewTextBoxColumn45->MinimumWidth = 6;
+            this->dataGridViewTextBoxColumn45->Name = L"dataGridViewTextBoxColumn45";
+            this->dataGridViewTextBoxColumn45->ReadOnly = true;
+            this->dataGridViewTextBoxColumn45->Width = 125;
+            // 
+            // bt_view_sortData
+            // 
+            this->bt_view_sortData->Anchor = System::Windows::Forms::AnchorStyles::Top;
+            this->bt_view_sortData->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(57)), static_cast<System::Int32>(static_cast<System::Byte>(162)),
+                static_cast<System::Int32>(static_cast<System::Byte>(219)));
+            this->bt_view_sortData->Font = (gcnew System::Drawing::Font(L"MS Reference Sans Serif", 9, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+                static_cast<System::Byte>(0)));
+            this->bt_view_sortData->Location = System::Drawing::Point(483, 68);
+            this->bt_view_sortData->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
+            this->bt_view_sortData->Name = L"bt_view_sortData";
+            this->bt_view_sortData->Size = System::Drawing::Size(105, 35);
+            this->bt_view_sortData->TabIndex = 5;
+            this->bt_view_sortData->Text = L"Xem";
+            this->bt_view_sortData->UseVisualStyleBackColor = false;
+            this->bt_view_sortData->Visible = false;
+            this->bt_view_sortData->Click += gcnew System::EventHandler(this, &Form1::button3_Click_2);
+            // 
+            // bt_sortData
+            // 
+            this->bt_sortData->Anchor = System::Windows::Forms::AnchorStyles::Top;
+            this->bt_sortData->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(57)), static_cast<System::Int32>(static_cast<System::Byte>(162)),
+                static_cast<System::Int32>(static_cast<System::Byte>(219)));
+            this->bt_sortData->Font = (gcnew System::Drawing::Font(L"MS Reference Sans Serif", 9, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+                static_cast<System::Byte>(0)));
+            this->bt_sortData->Location = System::Drawing::Point(483, 21);
+            this->bt_sortData->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
+            this->bt_sortData->Name = L"bt_sortData";
+            this->bt_sortData->Size = System::Drawing::Size(105, 35);
+            this->bt_sortData->TabIndex = 4;
+            this->bt_sortData->Text = L"Sắp xếp";
+            this->bt_sortData->UseVisualStyleBackColor = false;
+            this->bt_sortData->Click += gcnew System::EventHandler(this, &Form1::bt_sortData_Click);
+            // 
+            // box_sortType
+            // 
+            this->box_sortType->Anchor = System::Windows::Forms::AnchorStyles::Top;
+            this->box_sortType->FormattingEnabled = true;
+            this->box_sortType->Items->AddRange(gcnew cli::array< System::Object^  >(2) { L"Tăng dần", L"Giảm dần" });
+            this->box_sortType->Location = System::Drawing::Point(250, 71);
+            this->box_sortType->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
+            this->box_sortType->Name = L"box_sortType";
+            this->box_sortType->Size = System::Drawing::Size(203, 27);
+            this->box_sortType->TabIndex = 3;
+            // 
+            // box_sortSelect
+            // 
+            this->box_sortSelect->Anchor = System::Windows::Forms::AnchorStyles::Top;
+            this->box_sortSelect->FormattingEnabled = true;
+            this->box_sortSelect->Items->AddRange(gcnew cli::array< System::Object^  >(4) {
+                L"Mã công dân", L"Ngày đăng ký", L"Ngày tiêm mũi 1",
+                    L"Ngày tiêm mũi 2"
+            });
+            this->box_sortSelect->Location = System::Drawing::Point(250, 26);
+            this->box_sortSelect->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
+            this->box_sortSelect->Name = L"box_sortSelect";
+            this->box_sortSelect->Size = System::Drawing::Size(203, 27);
+            this->box_sortSelect->TabIndex = 2;
+            // 
+            // label6
+            // 
+            this->label6->Anchor = System::Windows::Forms::AnchorStyles::Top;
+            this->label6->AutoSize = true;
+            this->label6->Location = System::Drawing::Point(100, 74);
+            this->label6->Name = L"label6";
+            this->label6->Size = System::Drawing::Size(121, 19);
+            this->label6->TabIndex = 1;
+            this->label6->Text = L"Thứ tự sắp xếp";
+            // 
+            // label5
+            // 
+            this->label5->Anchor = System::Windows::Forms::AnchorStyles::Top;
+            this->label5->AutoSize = true;
+            this->label5->Location = System::Drawing::Point(112, 29);
+            this->label5->Name = L"label5";
+            this->label5->Size = System::Drawing::Size(108, 19);
+            this->label5->TabIndex = 0;
+            this->label5->Text = L"Sắp xếp theo";
+            // 
             // accountManager_newFullname
             // 
             this->accountManager_newFullname->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(232)),
@@ -3661,9 +3642,6 @@ private: System::Windows::Forms::Label^ label30;
             this->boxDataManager->PerformLayout();
             this->dataManager_menu->ResumeLayout(false);
             this->dataManager_menu->PerformLayout();
-            this->box_sortData->ResumeLayout(false);
-            this->box_sortData->PerformLayout();
-            (cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->view_sortData_people))->EndInit();
             this->box_inputFile->ResumeLayout(false);
             this->box_inputFile->PerformLayout();
             this->box_inputHand->ResumeLayout(false);
@@ -3686,6 +3664,9 @@ private: System::Windows::Forms::Label^ label30;
             (cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->view_filterData))->EndInit();
             this->box_deleteData->ResumeLayout(false);
             this->box_deleteData->PerformLayout();
+            this->box_sortData->ResumeLayout(false);
+            this->box_sortData->PerformLayout();
+            (cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->view_sortData_people))->EndInit();
             this->Manager->ResumeLayout(false);
             this->loginTab->ResumeLayout(false);
             this->loginTab->PerformLayout();
@@ -3735,12 +3716,10 @@ private: System::Windows::Forms::Label^ label30;
     }
 
     private: System::Void bt_showPassword_MouseDown(System::Object^ sender, System::Windows::Forms::MouseEventArgs^ e) {
-        //this->loginBox_password->PasswordChar = char::MinValue;
         this->loginBox_password->PasswordChar = '\0';
 
     }
     private: System::Void bt_showPassword_MouseUp(System::Object^ sender, System::Windows::Forms::MouseEventArgs^ e) {
-        //this->loginBox_password->PasswordChar = char::MaxValue;
         this->loginBox_password->PasswordChar = '*';
     }
     private: System::Void bt_saveUsername_Click(System::Object^ sender, System::EventArgs^ e) {
@@ -3817,6 +3796,8 @@ private: System::Windows::Forms::Label^ label30;
     }
     private: System::Void bt_logout_Click(System::Object^ sender, System::EventArgs^ e) {
         loginStatus = false;
+        hasFile = false;
+        hasSort = false;
         checkStatus();
     }
     private: System::Void bt_refresh_Click(System::Object^ sender, System::EventArgs^ e) {
@@ -4878,6 +4859,8 @@ private: System::Void accountManagerTab_Click(System::Object^ sender, System::Ev
 }
 private: System::Void Form1_Load(System::Object^ sender, System::EventArgs^ e) {
 }
+
+
 
 };
 }
